@@ -336,3 +336,10 @@ Bu dosya, **1380 SayÄ±lÄ± Su ÃœrÃ¼nleri Kanunu** ve idari para cezalarÄ
 - **Vercel Yayınla Butonu Entegrasyonu:** Vite proxy (ite.config.js) yeniden yapılandırılarak, sistemdeki 'SİTEYİ YAYINLA' butonunun arka planda doğrudan Vercel'e deploy atması (
 px vercel --prod) sağlandı.
 - **Genel Temizlik ve Optimizasyon:** Proje başlangıç bat dosyası güncellendi (SISTEMI_BASLAT_Balikcilik_Yonetimi.bat), geçici destek scriptleri temizlendi ve Netlify kalıntıları yok edildi.
+
+## 27.08.2026 - Supabase Bulut Veritabanı ve Vercel Canlı Yayın (Global) Geçişi
+- **Supabase (PostgreSQL) Entegrasyonu:** Sistemin tüm veritabanı altyapısı yerel JSON (sinopTesisler_Master.json) tabanlı hantal yapıdan kurtarılarak, modern ve bulut tabanlı **Supabase PostgreSQL** mimarisine taşındı.
+- **Dinamik Şema (DDL):** projeKafesList ve mevcutKafesList gibi dinamik array JSONB yapılarını barındıran devasa 47 sütunlu özel bir veritabanı şeması (supabase_setup_balikcilik_V2.sql) tasarlanıp bulutta inşa edildi.
+- **CRUD Operasyonları Yenilendi:** TesisYonetimi.jsx, HaritaRadar.jsx ve SunumModu.jsx bileşenlerindeki veri okuma ve yazma işlemleri tamamen Supabase JS İstemcisi üzerinden asenkron (wait supabase.from('tesisler').select('*')) olarak çalışacak şekilde yeniden kodlandı.
+- **Git Geçmişi Sıfırlaması (Büyük Temizlik):** Eski '.zip' yedekleri nedeniyle 1GB boyutuna ulaşan ve Push işlemlerini kitleyen '.git' geçmişi tamamen imha edildi. Proje sıfırdan küçük, hafif ve tertemiz bir commit ile GitHub'a yüklendi.
+- **Vercel Canlı Yayını & Çevresel Değişkenler:** Proje resmi olarak Vercel üzerinden dünyaya açıldı. Vite ile Supabase arasındaki güvenlik köprüsünü kuran .env.local ve .env şifreleme dosyaları oluşturuldu ve Vercel CLI (Komut Satırı) üzerinden başarılı bir şekilde canlı ortama enjekte edilerek (Redeploy) sistemin bulut üzerinde pürüzsüz çalışması sağlandı.

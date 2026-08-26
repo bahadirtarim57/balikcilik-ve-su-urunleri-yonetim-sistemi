@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Presentation, Home, Fish, Archive, BookOpen, Calculator, Settings, Users, Scale, PieChart, Shield, LogOut, UserCog, Database, FileText, Rocket, TrendingUp, Ship, CheckCircle, AlertTriangle, MapPin, Building2, FileBadge , ChevronDown, ChevronUp} from 'lucide-react';
 import { getMinistryName, PERSONELLER } from '../utils/excelData';
@@ -19,53 +19,53 @@ const defaultSections = [
   },
   {
     id: 'section-ruhsat',
-    title: 'RUHSAT İŞLEMLERİ',
+    title: 'RUHSAT Ä°ÅLEMLERÄ°',
     items: [
-      { id: '/ruhsat', label: 'Ruhsat İşlemleri', iconName: 'FileBadge', link: '/ruhsat' }
+      { id: '/ruhsat', label: 'Ruhsat Ä°ÅŸlemleri', iconName: 'FileBadge', link: '/ruhsat' }
     ]
   },
   {
     id: 'section-stok',
-    title: 'STOK İŞLEMLERİ',
+    title: 'STOK Ä°ÅLEMLERÄ°',
     items: [
-      { id: '/stok-tespiti', label: 'Stok İşlemleri', iconName: 'Database', link: '/stok-tespiti' }
+      { id: '/stok-tespiti', label: 'Stok Ä°ÅŸlemleri', iconName: 'Database', link: '/stok-tespiti' }
     ]
   },
   {
     id: 'section-tesis',
-    title: 'YETİŞTİRİCİLİK İŞLEMLERİ',
+    title: 'YETÄ°ÅTÄ°RÄ°CÄ°LÄ°K Ä°ÅLEMLERÄ°',
     items: [
-      { id: '/tesis-yonetimi', label: 'Tesis Yönetimi', iconName: 'Building2', link: '/tesis-yonetimi' },
-      { id: '/sunum-modu', label: 'Yetiştiricilik Sunumu', iconName: 'Presentation', link: '/sunum-modu' },
+      { id: '/tesis-yonetimi', label: 'Tesis YÃ¶netimi', iconName: 'Building2', link: '/tesis-yonetimi' },
+      { id: '/sunum-modu', label: 'YetiÅŸtiricilik Sunumu', iconName: 'Presentation', link: '/sunum-modu' },
       { id: '/harita-radar', label: 'Harita', iconName: 'Map', link: '/harita-radar' }
     ]
   },
   {
     id: 'section-ipc',
-    title: '1380 SAYILI YASA İHLALLERİ',
+    title: 'BALIKÇILIK VE SU ÜRÜNLERİ YÖNETİMİ°',
     items: [
       { id: '/kanun-maddeleri', label: 'Kanun Rehberi', iconName: 'BookOpen', link: '/kanun-maddeleri' },
-      { id: '/hesaplama', label: 'İhlal Karşılığı İPC Hazırlama', iconName: 'Calculator', link: '/hesaplama' },
-      { id: '/cezalar', label: 'İPC Cetveli', iconName: 'Fish', link: '/cezalar' },
-      { id: '/formlar/idari-para-cezasi', label: 'EK-10: İdari Para Cezası', iconName: 'FileText', link: '/formlar/idari-para-cezasi' },
+      { id: '/hesaplama', label: 'Ä°hlal KarÅŸÄ±lÄ±ÄŸÄ± Ä°PC HazÄ±rlama', iconName: 'Calculator', link: '/hesaplama' },
+      { id: '/cezalar', label: 'Ä°PC Cetveli', iconName: 'Fish', link: '/cezalar' },
+      { id: '/formlar/idari-para-cezasi', label: 'EK-10: Ä°dari Para CezasÄ±', iconName: 'FileText', link: '/formlar/idari-para-cezasi' },
       { id: '/formlar/tutanak-ve-tebligat', label: 'EK-11: Tutanak ve Tebligat', iconName: 'FileText', link: '/formlar/tutanak-ve-tebligat' },
-      { id: '/formlar/el-koyma', label: 'EK-12: Zaptetme Tutanağı', iconName: 'FileText', link: '/formlar/el-koyma' },
-      { id: '/formlar/mulkiyetin-kamuya-gecirilmesi', label: 'Mülkiyetin Kamuya Geç.', iconName: 'FileText', link: '/formlar/mulkiyetin-kamuya-gecirilmesi' },
+      { id: '/formlar/el-koyma', label: 'EK-12: Zaptetme TutanaÄŸÄ±', iconName: 'FileText', link: '/formlar/el-koyma' },
+      { id: '/formlar/mulkiyetin-kamuya-gecirilmesi', label: 'MÃ¼lkiyetin Kamuya GeÃ§.', iconName: 'FileText', link: '/formlar/mulkiyetin-kamuya-gecirilmesi' },
       { id: '/formlar/denetim-formu', label: 'Denetim Formu', iconName: 'FileText', link: '/formlar/denetim-formu' },
-      { id: '/raporlar', label: 'İstatistik & İcmal', iconName: 'PieChart', link: '/raporlar' },
-      { id: '/arsiv', label: 'Ceza Arşivi / Sicil', iconName: 'Archive', link: '/arsiv' }
+      { id: '/raporlar', label: 'Ä°statistik & Ä°cmal', iconName: 'PieChart', link: '/raporlar' },
+      { id: '/arsiv', label: 'Ceza ArÅŸivi / Sicil', iconName: 'Archive', link: '/arsiv' }
     ]
   },
   {
     id: 'section-ayarlar',
-    title: 'SİSTEM AYARLARI',
+    title: 'SÄ°STEM AYARLARI',
     items: [
       { id: '/personel', label: 'Personel Listesi', iconName: 'Users', link: '/personel' },
-      { id: '/ayarlar', label: 'Kurum Ayarları', iconName: 'Settings', link: '/ayarlar' },
-      { id: '/veri-yonetimi', label: 'Veri Yönetimi', iconName: 'Database', link: '/veri-yonetimi' },
-      { id: '/yeniden-degerlendirme', label: 'Yeniden Değerlendirme', iconName: 'TrendingUp', link: '/yeniden-degerlendirme' },
-      { id: '/rol-atamalari', label: 'Sistem Yetki Yönetimi', iconName: 'UserCog', link: '/rol-atamalari' },
-      { id: '/yetki-matrisi', label: 'Detaylı Yetki Matrisi', iconName: 'Shield', link: '/yetki-matrisi' }
+      { id: '/ayarlar', label: 'Kurum AyarlarÄ±', iconName: 'Settings', link: '/ayarlar' },
+      { id: '/veri-yonetimi', label: 'Veri YÃ¶netimi', iconName: 'Database', link: '/veri-yonetimi' },
+      { id: '/yeniden-degerlendirme', label: 'Yeniden DeÄŸerlendirme', iconName: 'TrendingUp', link: '/yeniden-degerlendirme' },
+      { id: '/rol-atamalari', label: 'Sistem Yetki YÃ¶netimi', iconName: 'UserCog', link: '/rol-atamalari' },
+      { id: '/yetki-matrisi', label: 'DetaylÄ± Yetki Matrisi', iconName: 'Shield', link: '/yetki-matrisi' }
     ]
   }
 ];
@@ -87,7 +87,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
     sections.forEach(sec => {
       if (sec.id !== 'section-genel' && sec.id !== 'section-ayarlar') {
         const visibleItems = sec.items.filter(item => hasAccess(item.id));
-        if (visibleItems.length > 0 || currentRole === 'Genel Koordinatör') coreCount++;
+        if (visibleItems.length > 0 || currentRole === 'Genel KoordinatÃ¶r') coreCount++;
       }
     });
     if (coreCount === 1 && id !== 'section-genel' && id !== 'section-ayarlar' && expandedSections[id]) {
@@ -163,19 +163,19 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
   });
 
   const handlePublish = async () => {
-    if (!window.confirm("Sitenin yeni sürümünü Vercel'da yayınlamak istediğinize emin misiniz? Bu işlem 20-30 saniye sürebilir.")) return;
+    if (!window.confirm("Sitenin yeni sÃ¼rÃ¼mÃ¼nÃ¼ Vercel'da yayÄ±nlamak istediÄŸinize emin misiniz? Bu iÅŸlem 20-30 saniye sÃ¼rebilir.")) return;
     setIsPublishing(true);
-    const publishToast = toast.loading("Sistem derleniyor ve yayınlanıyor... Lütfen bekleyin 🚀");
+    const publishToast = toast.loading("Sistem derleniyor ve yayÄ±nlanÄ±yor... LÃ¼tfen bekleyin ğŸš€");
     try {
       const res = await fetch('/api/publish', { method: 'POST' });
       const data = await res.json();
       if (data.success) {
-        toast.success("Site başarıyla yayınlandı! Tüm değişiklikler canlıda.", { id: publishToast });
+        toast.success("Site baÅŸarÄ±yla yayÄ±nlandÄ±! TÃ¼m deÄŸiÅŸiklikler canlÄ±da.", { id: publishToast });
       } else {
-        toast.error("Yayınlama hatası: " + data.error, { id: publishToast });
+        toast.error("YayÄ±nlama hatasÄ±: " + data.error, { id: publishToast });
       }
     } catch (err) {
-      toast.error("Yayınlama başlatılamadı. Sunucu bağlantısını kontrol edin.", { id: publishToast });
+      toast.error("YayÄ±nlama baÅŸlatÄ±lamadÄ±. Sunucu baÄŸlantÄ±sÄ±nÄ± kontrol edin.", { id: publishToast });
     } finally {
       setIsPublishing(false);
     }
@@ -203,25 +203,25 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
     } else {
       const formRoutes = ['/formlar/idari-para-cezasi', '/formlar/el-koyma', '/formlar/mulkiyetin-kamuya-gecirilmesi', '/formlar/denetim-formu'];
       setRolePermissions({
-        'Genel Koordinatör': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', '/ayarlar', '/rol-atamalari', '/yetki-matrisi', '/yeniden-degerlendirme', '/ruhsat', ...formRoutes],
-        'Yetkili Yönetici': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', '/ayarlar', '/rol-atamalari', '/yetki-matrisi', '/yeniden-degerlendirme', '/ruhsat', ...formRoutes],
-        'İl Müdürü': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', ...formRoutes],
-        'İl Müdür Yardımcısı': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', ...formRoutes],
-        'Şube Müdürü': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', ...formRoutes],
-        'İlçe Müdürü': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', ...formRoutes],
+        'Genel KoordinatÃ¶r': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', '/ayarlar', '/rol-atamalari', '/yetki-matrisi', '/yeniden-degerlendirme', '/ruhsat', ...formRoutes],
+        'Yetkili YÃ¶netici': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', '/ayarlar', '/rol-atamalari', '/yetki-matrisi', '/yeniden-degerlendirme', '/ruhsat', ...formRoutes],
+        'Ä°l MÃ¼dÃ¼rÃ¼': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', ...formRoutes],
+        'Ä°l MÃ¼dÃ¼r YardÄ±mcÄ±sÄ±': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', ...formRoutes],
+        'Åube MÃ¼dÃ¼rÃ¼': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', ...formRoutes],
+        'Ä°lÃ§e MÃ¼dÃ¼rÃ¼': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/personel', ...formRoutes],
         'Birim Sorumlusu': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', '/raporlar', '/veri-yonetimi', '/personel', '/rol-atamalari', '/yeniden-degerlendirme', ...formRoutes],
         'Personel': ['/', '/cezalar', '/kanun-maddeleri', '/hesaplama', '/arsiv', ...formRoutes]
       });
     }
   }, []);
 
-  const realRole = currentUser?.sicil === 'admin' ? 'Genel Koordinatör' : (userRoles[currentUser?.sicil || currentUser?.adSoyad] || 'Personel');
+  const realRole = currentUser?.sicil === 'admin' ? 'Genel KoordinatÃ¶r' : (userRoles[currentUser?.sicil || currentUser?.adSoyad] || 'Personel');
   const currentRole = currentUser?.impersonated ? currentUser.role : realRole;
   const isViewingAsPersonel = !!originalAdminUser;
   const isManager = realRole !== 'Personel';
 
   const hasAccess = (menuId) => {
-    if (currentRole === 'Genel Koordinatör') return true;
+    if (currentRole === 'Genel KoordinatÃ¶r') return true;
     if (menuId.startsWith('/formlar/')) return true;
     let checkPath = menuId;
     if (menuId.startsWith('/ruhsat/')) checkPath = '/ruhsat';
@@ -231,13 +231,13 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
 
   const handleAdminReset = () => {
     logout();
-    toast.success('Güvenli çıkış yapıldı.');
+    toast.success('GÃ¼venli Ã§Ä±kÄ±ÅŸ yapÄ±ldÄ±.');
   };
 
   const toggleViewMode = () => {
     if (isViewingAsPersonel) {
       stopImpersonating();
-      toast.success('Yönetici görünümüne dönüldü.', { icon: '🛡️' });
+      toast.success('YÃ¶netici gÃ¶rÃ¼nÃ¼mÃ¼ne dÃ¶nÃ¼ldÃ¼.', { icon: 'ğŸ›¡ï¸' });
     }
   };
 
@@ -250,7 +250,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
     sections.forEach(sec => {
       if (sec.id !== 'section-genel' && sec.id !== 'section-ayarlar') {
         const visibleItems = sec.items.filter(item => hasAccess(item.id));
-        if (visibleItems.length > 0 || currentRole === 'Genel Koordinatör') {
+        if (visibleItems.length > 0 || currentRole === 'Genel KoordinatÃ¶r') {
           coreCount++;
           singleCoreId = sec.id;
         }
@@ -308,16 +308,16 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
           {ministryName}
         </div>
         <div style={{ fontSize: '12px', color: '#475569', fontWeight: '600', marginBottom: '2px' }}>
-          {selectedCity ? `${selectedCity} İl Tarım ve Orman Müdürlüğü` : 'İl Seçilmedi'}
+          {selectedCity ? `${selectedCity} Ä°l TarÄ±m ve Orman MÃ¼dÃ¼rlÃ¼ÄŸÃ¼` : 'Ä°l SeÃ§ilmedi'}
         </div>
         <div style={{ fontSize: '12px', color: '#64748b', marginBottom: '16px' }}>
-          {selectedUnit || 'Birim Seçilmedi'}
+          {selectedUnit || 'Birim SeÃ§ilmedi'}
         </div>
         
         <div style={{ width: '40px', height: '2px', background: '#10b981', marginBottom: '12px' }}></div>
 
         <div style={{ fontSize: '16px', fontWeight: '800', color: '#0f172a', lineHeight: '1.2', letterSpacing: '0.5px' }}>
-          ŞUBE YÖNETİM SİSTEMİ
+          ÅUBE YÃ–NETÄ°M SÄ°STEMÄ°
         </div>
       </div>
       
@@ -328,7 +328,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
               <div ref={provided.innerRef} {...provided.droppableProps}>
                 {sections.map((section, index) => {
                   const visibleItems = section.items.filter(item => hasAccess(item.id));
-                  if (visibleItems.length === 0 && currentRole !== 'Genel Koordinatör') return null;
+                  if (visibleItems.length === 0 && currentRole !== 'Genel KoordinatÃ¶r') return null;
 
                   return (
                     <Draggable key={section.id} draggableId={section.id} index={index}>
@@ -423,7 +423,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
             </div>
             <div style={{ flex: 1, overflow: 'hidden' }}>
               <div style={{ fontSize: '13px', fontWeight: 700, color: '#1e293b', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                {currentUser?.adSoyad || 'Sistem Yöneticisi'}
+                {currentUser?.adSoyad || 'Sistem YÃ¶neticisi'}
               </div>
               <div style={{ fontSize: '11px', color: '#64748b', fontWeight: 600 }}>
                 {currentRole}
@@ -433,24 +433,24 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
           
           {isViewingAsPersonel && (
             <button onClick={toggleViewMode} style={{ width: '100%', background: '#3b82f6', border: 'none', padding: '6px 0', borderRadius: '6px', fontSize: '12px', fontWeight: 600, color: 'white', cursor: 'pointer', marginBottom: '6px' }}>
-              Yönetici Görünümüne Dön
+              YÃ¶netici GÃ¶rÃ¼nÃ¼mÃ¼ne DÃ¶n
             </button>
           )}
 
           {isManager && !isViewingAsPersonel && (
             <button onClick={() => setIsGhostLoginModalOpen(true)} style={{ width: '100%', background: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%)', border: '1px solid #d8b4fe', padding: '6px 0', borderRadius: '6px', fontSize: '12px', fontWeight: 600, color: '#9333ea', cursor: 'pointer', marginBottom: '6px' }}>
-              Personel Olarak Görün
+              Personel Olarak GÃ¶rÃ¼n
             </button>
           )}
           
           <button onClick={handleAdminReset} style={{ width: '100%', background: 'white', border: '1px solid #e2e8f0', padding: '6px 0', borderRadius: '6px', fontSize: '12px', fontWeight: 600, color: '#ef4444', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', marginBottom: '6px' }}>
-            <LogOut size={14} /> Güvenli Çıkış
+            <LogOut size={14} /> GÃ¼venli Ã‡Ä±kÄ±ÅŸ
           </button>
           
           {window.location.hostname === 'localhost' && (
             <button onClick={handlePublish} disabled={isPublishing} style={{ width: '100%', background: isPublishing ? '#94a3b8' : '#10b981', border: 'none', padding: '8px 0', borderRadius: '6px', fontSize: '12px', fontWeight: 600, color: 'white', cursor: isPublishing ? 'wait' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', transition: 'all 0.2s' }}>
               <Rocket size={14} className={isPublishing ? "animate-pulse" : ""} />
-              {isPublishing ? 'YAYINLANIYOR...' : 'SİTEYİ YAYINLA'}
+              {isPublishing ? 'YAYINLANIYOR...' : 'SÄ°TEYÄ° YAYINLA'}
             </button>
           )}
         </div>
@@ -462,3 +462,4 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
 };
 
 export default Sidebar;
+
