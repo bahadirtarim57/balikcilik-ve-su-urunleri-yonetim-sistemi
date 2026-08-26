@@ -1,0 +1,1203 @@
+import React, { useState, useEffect } from 'react';
+import { X, Search, Save, Plus, AlertCircle, FileEdit, FolderPlus } from 'lucide-react';
+import { toast } from 'react-hot-toast';
+import { TURKEY_DATA } from '../data/turkey';
+import { useAuth } from '../context/AuthContext';
+import './ArchiveEditor.css';
+
+function ArchiveEditorModal({ ruhsatData, onSave, onClose }) {
+  const { user } = useAuth();
+  const isReadOnly = user?.role === 'Personel' || !user;
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResult, setSearchResult] = useState(null);
+  const [isNewRecord, setIsNewRecord] = useState(false);
+  const [activeTab, setActiveTab] = useState(ruhsatData.sheets[0] || '');
+  const [formData, setFormData] = useState({});
+  const [isEditing, setIsEditing] = useState(false);
+  const [searchError, setSearchError] = useState(false);
+  const [panoramicData, setPanoramicData] = useState({});
+  const [showPenaltyGroup, setShowPenaltyGroup] = useState(false);
+  const [showPersonPenaltyGroup, setShowPersonPenaltyGroup] = useState(false);
+  const [showTransferGroup, setShowTransferGroup] = useState(false);
+  const [showCancelGroup, setShowCancelGroup] = useState(false);
+
+  const handleSearch = () => {
+    if (!searchTerm.trim()) {
+      setSearchResult(null);
+      setIsNewRecord(false);
+      setSearchError(false);
+      setShowPenaltyGroup(false);
+      setShowPersonPenaltyGroup(false);
+      setShowTransferGroup(false);
+      setShowCancelGroup(false);
+      return;
+    }
+    const lowerSearch = searchTerm.toLowerCase().trim();
+    
+    const data = ruhsatData.data['TÜM KAYITLAR'] || [];
+    const foundIndex = data.findIndex(row => 
+      Object.values(row).some(val => 
+        val && val.toString().toLowerCase().includes(lowerSearch)
+      )
+    );
+    
+    if (foundIndex !== -1) {
+      const combinedData = data[foundIndex];
+      const recordStatus = combinedData['KAYIT DURUMU'] || 'DENİZ';
+      
+      setSearchResult({ index: foundIndex, row: combinedData });
+      setActiveTab(recordStatus);
+      setPanoramicData(combinedData);
+      
+      const initialForm = { ...combinedData };
+      setFormData(initialForm);
+      
+      setIsNewRecord(false);
+      setIsEditing(false);
+      setSearchError(false);
+      setShowPenaltyGroup(false);
+      setShowPersonPenaltyGroup(false);
+      setShowTransferGroup(false);
+      setShowCancelGroup(false);
+      return;
+    }
+    
+    setSearchError(true);
+    setSearchResult(null);
+    setPanoramicData({});
+    setShowPenaltyGroup(false);
+    setShowPersonPenaltyGroup(false);
+    setShowTransferGroup(false);
+    setShowCancelGroup(false);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') handleSearch();
+  };
+
+  const handleStartNew = () => {
+    setIsNewRecord(true);
+    setIsEditing(true);
+    setSearchResult(null);
+    setSearchTerm('');
+    setSearchError(false);
+    setPanoramicData({});
+    setShowPenaltyGroup(false);
+    setShowPersonPenaltyGroup(false);
+    setShowTransferGroup(false);
+    setShowCancelGroup(false);
+    
+    const newForm = {};
+    const data = ruhsatData?.data?.['TÜM KAYITLAR'] || [];
+    let realHeaders = [];
+    if (data.length > 0) {
+      // Find the row with the most keys to ensure we get all headers
+      let maxKeys = 0;
+      data.forEach(row => {
+        const keys = Object.keys(row);
+        if (keys.length > maxKeys) {
+          maxKeys = keys.length;
+          realHeaders = keys;
+        }
+      });
+    }
+
+    realHeaders.forEach(k => {
+      newForm[k] = '';
+    });
+
+    setFormData(newForm);
+    setActiveTab('DENİZ'); // Varsayılan durum
+  };
+
+  useEffect(() => {
+    if (searchResult) {
+      const data = ruhsatData.data['TÜM KAYITLAR'] || [];
+      let headers = [];
+      if (data.length > 0) {
+         let maxKeys = 0;
+         data.forEach(row => {
+            const keys = Object.keys(row).filter(k => !k.includes('__EMPTY') && k !== 'KAYIT DURUMU');
+            if (keys.length > maxKeys) {
+               maxKeys = keys.length;
+               headers = keys;
+            }
+         });
+      }
+      
+      setFormData(prev => {
+        const newForm = { ...prev };
+        headers.forEach(k => {
+          if (newForm[k] === undefined) {
+             if (searchResult.row && searchResult.row[k] !== undefined) {
+                newForm[k] = searchResult.row[k];
+             } else {
+                newForm[k] = '';
+             }
+          }
+        });
+        
+        return newForm;
+      });
+    }
+  }, [searchResult, ruhsatData]);
+
+  const handleInputChange = (key, value) => {
+    setFormData(prev => {
+      const newForm = { ...prev, [key]: value };
+      
+      if (key === 'VİZE TARİHİ' && value) {
+        const parts = value.trim().split('.');
+        if (parts.length === 3 && parts[2].length === 4) {
+          const day = parts[0];
+          const month = parts[1];
+          const year = parseInt(parts[2], 10);
+          
+          if (!isNaN(year)) {
+            if ('VİZE BİTİŞ TARİHİ' in prev) newForm['VİZE BİTİŞ TARİHİ'] = `${day}.${month}.${year + 2}`;
+            if ('RUHSAT İPTAL TARİHİ' in prev) newForm['RUHSAT İPTAL TARİHİ'] = `${day}.${month}.${year + 5}`;
+          }
+        }
+      }
+
+      if (key.includes('CEZA TARİHİ')) {
+        const isSahis = key.includes('ŞAHIS');
+        const possibleKeys = isSahis 
+            ? ['ŞAHIS 1.CEZA TARİHİ', 'ŞAHIS 2.CEZA TARİHİ']
+            : ['1.CEZA TARİHİ', '2.CEZA TARİHİ', '3.CEZA TARİHİ'];
+        let allDatesStr = "";
+        possibleKeys.forEach(k => {
+          if (newForm[k]) allDatesStr += newForm[k] + ",";
+        });
+
+        const dateRegex = /(\d{1,2})[./-](\d{1,2})[./-](\d{4})/g;
+        let match;
+        let validDates = [];
+        while ((match = dateRegex.exec(allDatesStr)) !== null) {
+          const d = parseInt(match[1], 10);
+          const m = parseInt(match[2], 10) - 1;
+          const y = parseInt(match[3], 10);
+          const dateObj = new Date(y, m, d);
+          if (!isNaN(dateObj.getTime())) {
+            validDates.push(dateObj);
+          }
+        }
+
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const twoYearsAgo = new Date(today);
+        twoYearsAgo.setFullYear(today.getFullYear() - 2);
+
+        let activePenaltyCount = 0;
+        let latestActiveDate = null;
+
+        validDates.forEach(d => {
+          if (d >= twoYearsAgo && d <= today) {
+            activePenaltyCount++;
+            if (!latestActiveDate || d > latestActiveDate) {
+              latestActiveDate = new Date(d);
+            }
+          }
+        });
+
+        if (latestActiveDate) {
+            latestActiveDate.setFullYear(latestActiveDate.getFullYear() + 2);
+            const dd = String(latestActiveDate.getDate()).padStart(2, '0');
+            const mm = String(latestActiveDate.getMonth() + 1).padStart(2, '0');
+            const yyyy = latestActiveDate.getFullYear();
+            if ('CEZANIN SONA ERME TARİHİ' in prev || activeTab === 'GEMİ CEZA') {
+               newForm['CEZANIN SONA ERME TARİHİ'] = `${dd}.${mm}.${yyyy}`;
+            }
+        } else {
+            if ('CEZANIN SONA ERME TARİHİ' in prev || activeTab === 'GEMİ CEZA') {
+               newForm['CEZANIN SONA ERME TARİHİ'] = '';
+            }
+        }
+
+        if (!isSahis) {
+            if (activePenaltyCount >= 3) {
+                if ('RUHSAT İPTAL NEDENİ' in prev || activeTab === 'GEMİ CEZA') {
+                   newForm['RUHSAT İPTAL NEDENİ'] = '3 KERE CEZA İHLALİ';
+                }
+            } else {
+                if ('RUHSAT İPTAL NEDENİ' in prev || activeTab === 'GEMİ CEZA') {
+                   // Only clear it if it was our auto-generated text
+                   if (newForm['RUHSAT İPTAL NEDENİ'] === '3 KERE CEZA İHLALİ') {
+                       newForm['RUHSAT İPTAL NEDENİ'] = '';
+                   }
+                }
+            }
+            
+            // Auto-fill el koyma süreleri for Gemi
+            if (activePenaltyCount === 1) {
+                if (!newForm['EL KOYMA SÜRESİ']) newForm['EL KOYMA SÜRESİ'] = '1 AY';
+            } else if (activePenaltyCount === 2) {
+                if (!newForm['2. EL KOYMA SÜRESİ']) newForm['2. EL KOYMA SÜRESİ'] = '3 AY';
+            }
+        } else {
+            // Auto-fill el koyma süreleri for Şahıs
+            if (activePenaltyCount === 1) {
+                if (!newForm['EL KOYMA SÜRESİ (gün)']) newForm['EL KOYMA SÜRESİ (gün)'] = '30'; // Example default for Şahıs
+            }
+        }
+      }
+      
+      // AUTO-CALCULATE RUHSAT TESLİM TARİHİ
+      if (key.includes('EL KOYMA TARİHİ') || key.includes('EL KOYMA SÜRESİ') || key.includes('CEZA TARİHİ')) {
+          let targetDate = null;
+          let durationMonths = 0;
+          
+          if (newForm['RUHSAT 2. EL KOYMA TARİHİ'] && newForm['2. EL KOYMA SÜRESİ']) {
+              targetDate = newForm['RUHSAT 2. EL KOYMA TARİHİ'];
+              const match = newForm['2. EL KOYMA SÜRESİ'].match(/(\d+)/);
+              if (match) durationMonths = parseInt(match[1], 10);
+          } else if (newForm['RUHSAT EL KOYMA TARİHİ'] && newForm['EL KOYMA SÜRESİ']) {
+              targetDate = newForm['RUHSAT EL KOYMA TARİHİ'];
+              const match = newForm['EL KOYMA SÜRESİ'].match(/(\d+)/);
+              if (match) durationMonths = parseInt(match[1], 10);
+          }
+          
+          if (targetDate && durationMonths > 0) {
+              const parts = targetDate.trim().split('.');
+              if (parts.length === 3) {
+                  const day = parseInt(parts[0], 10);
+                  let month = parseInt(parts[1], 10) - 1;
+                  let year = parseInt(parts[2], 10);
+                  
+                  month += durationMonths;
+                  while (month > 11) {
+                      month -= 12;
+                      year++;
+                  }
+                  
+                  const d = new Date(year, month, day);
+                  if (!isNaN(d.getTime())) {
+                      const dd = String(d.getDate()).padStart(2, '0');
+                      const mm = String(d.getMonth() + 1).padStart(2, '0');
+                      const yyyy = d.getFullYear();
+                      newForm['RUHSAT TESLİM TARİHİ'] = `${dd}.${mm}.${yyyy}`;
+                  }
+              }
+          } else if (!targetDate) {
+              newForm['RUHSAT TESLİM TARİHİ'] = '';
+          }
+      }
+      
+      // AUTO-CALCULATE ŞAHIS CEZA SONA ERME
+      if (key.includes('ŞAHIS') && key.includes('CEZA TARİHİ')) {
+          const parseDateStr = (dateStr) => {
+             if (!dateStr || typeof dateStr !== 'string') return null;
+             const parts = dateStr.trim().split('.');
+             if (parts.length === 3) return new Date(parts[2], parts[1] - 1, parts[0]);
+             return null;
+          };
+          const p1 = parseDateStr(newForm['ŞAHIS 1. CEZA TARİHİ']);
+          const p2 = parseDateStr(newForm['ŞAHIS 2. CEZA TARİHİ']);
+          const p3 = parseDateStr(newForm['ŞAHIS 3. CEZA TARİHİ']);
+          const pValid = [p1, p2, p3].filter(d => d !== null);
+          if (pValid.length > 0) {
+              let latest = pValid[0];
+              pValid.forEach(d => { if (d > latest) latest = d; });
+              const endD = new Date(latest);
+              endD.setFullYear(endD.getFullYear() + 2);
+              newForm['ŞAHIS CEZASI SONA ERME TARİHİ'] = `${String(endD.getDate()).padStart(2, '0')}.${String(endD.getMonth() + 1).padStart(2, '0')}.${endD.getFullYear()}`;
+          } else {
+              newForm['ŞAHIS CEZASI SONA ERME TARİHİ'] = '';
+          }
+      }
+      
+      return newForm;
+    });
+  };
+
+  const calculateStatus = (dateStr) => {
+    if (!dateStr) return { text: 'Veri Yok', color: '#94a3b8', bgColor: '#f8fafc', icon: '-' };
+    
+    const parts = String(dateStr).trim().split('.');
+    if (parts.length !== 3) return { text: 'HATALI TARİH', color: '#64748b', bgColor: '#f1f5f9', icon: '⚠️' };
+    
+    const day = parseInt(parts[0], 10);
+    const month = parseInt(parts[1], 10) - 1;
+    const year = parseInt(parts[2], 10);
+    
+    const expiryDate = new Date(year, month, day);
+    if (isNaN(expiryDate.getTime())) return { text: 'HATALI TARİH', color: '#64748b', bgColor: '#f1f5f9', icon: '⚠️' };
+    
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    const diffTime = expiryDate.getTime() - today.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays < 0) {
+      return { text: `SÜRE DOLDU (${Math.abs(diffDays)} Gün Gecikti)`, color: '#991b1b', bgColor: '#fecaca', icon: '🚨' };
+    }
+    if (diffDays <= 30) {
+      return { text: `KRİTİK (${diffDays} Gün Kaldı)`, color: '#b91c1c', bgColor: '#fee2e2', icon: '⚠️' };
+    }
+    if (diffDays <= 90) {
+      return { text: `YAKLAŞIYOR (${diffDays} Gün Kaldı)`, color: '#b45309', bgColor: '#fef3c7', icon: '⏳' };
+    }
+    
+    return { text: `UYGUN (${diffDays} Gün Var)`, color: '#15803d', bgColor: '#dcfce7', icon: '✅' };
+  };
+
+  const calculatePenaltyStatus = (currentFormData) => {
+    const possibleKeys = ['CEZA TARİHİ', '1. CEZA TARİHİ', '2. CEZA TARİHİ', '3. CEZA TARİHİ', '1.CEZA TARİHİ', '2.CEZA TARİHİ', '3.CEZA TARİHİ'];
+    let allDatesStr = "";
+    possibleKeys.forEach(k => {
+      if (currentFormData[k]) {
+        allDatesStr += currentFormData[k] + ",";
+      }
+    });
+    
+    if (!allDatesStr.trim()) return { text: 'Temiz (Ceza Yok)', color: '#64748b', bgColor: '#f1f5f9', icon: '✅', label: 'GEMİ CEZA DURUMU' };
+
+    const dateRegex = /(\d{1,2})[./-](\d{1,2})[./-](\d{4})/g;
+    let match;
+    let validDates = [];
+    
+    while ((match = dateRegex.exec(allDatesStr)) !== null) {
+      const day = parseInt(match[1], 10);
+      const month = parseInt(match[2], 10) - 1;
+      const year = parseInt(match[3], 10);
+      const d = new Date(year, month, day);
+      if (!isNaN(d.getTime())) {
+        validDates.push(d);
+      }
+    }
+    
+    if (validDates.length === 0) {
+       if (allDatesStr.replace(/,/g, '').trim()) {
+           return { text: 'Tarih Formatı Tanınmadı', color: '#64748b', bgColor: '#f1f5f9', icon: '❓', label: 'GEMİ CEZA DURUMU' };
+       }
+       return { text: 'Temiz (Ceza Yok)', color: '#64748b', bgColor: '#f1f5f9', icon: '✅', label: 'GEMİ CEZA DURUMU' };
+    }
+    
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const twoYearsAgo = new Date(today);
+    twoYearsAgo.setFullYear(today.getFullYear() - 2);
+    
+    let activePenaltyCount = 0;
+    let expiredPenaltyCount = 0;
+    let latestActiveDate = null;
+    
+    validDates.forEach(d => {
+      if (d >= twoYearsAgo && d <= today) {
+        activePenaltyCount++;
+        if (!latestActiveDate || d > latestActiveDate) {
+           latestActiveDate = new Date(d);
+        }
+      } else {
+        expiredPenaltyCount++;
+      }
+    });
+
+    let endDateText = "";
+    if (latestActiveDate) {
+      const endD = new Date(latestActiveDate);
+      endD.setFullYear(endD.getFullYear() + 2);
+      const dd = String(endD.getDate()).padStart(2, '0');
+      const mm = String(endD.getMonth() + 1).padStart(2, '0');
+      const yyyy = endD.getFullYear();
+      endDateText = ` (Bitiş: ${dd}.${mm}.${yyyy})`;
+    }
+    
+    if (activePenaltyCount === 0) {
+      return { text: `TEMİZ (${expiredPenaltyCount} Eski Ceza Silindi)`, color: '#15803d', bgColor: '#dcfce7', icon: '✨', label: 'GEMİ CEZA DURUMU' };
+    } else if (activePenaltyCount === 1) {
+      return { text: `1 AY YAPTIRIM (1 Aktif Ceza)${endDateText}`, color: '#b45309', bgColor: '#fef3c7', icon: '⚠️', label: 'GEMİ CEZA DURUMU' };
+    } else if (activePenaltyCount === 2) {
+      return { text: `3 AY YAPTIRIM (2 Aktif Ceza)${endDateText}`, color: '#b91c1c', bgColor: '#fee2e2', icon: '🚨', label: 'GEMİ CEZA DURUMU' };
+    } else {
+      return { text: 'İPTAL (3+ Aktif Ceza) - RUHSAT İPTALİ', color: '#7f1d1d', bgColor: '#fca5a5', icon: '❌', label: 'GEMİ CEZA DURUMU' };
+    }
+  };
+
+  const getPersonCezaStatusBadge = () => {
+    const parseDateStr = (dateStr) => {
+       if (!dateStr || typeof dateStr !== 'string') return null;
+       const parts = dateStr.trim().split('.');
+       if (parts.length === 3) return new Date(parts[2], parts[1] - 1, parts[0]);
+       return null;
+    };
+    
+    const d1 = parseDateStr(formData['ŞAHIS 1. CEZA TARİHİ']);
+    const d2 = parseDateStr(formData['ŞAHIS 2. CEZA TARİHİ']);
+    const d3 = parseDateStr(formData['ŞAHIS 3. CEZA TARİHİ']);
+    
+    const validDates = [d1, d2, d3].filter(d => d !== null);
+    
+    if (validDates.length === 0) {
+       return { text: 'Şahıs Cezası Yok', color: '#64748b', bgColor: '#f1f5f9', icon: '👤', label: 'ŞAHIS CEZA DURUMU' };
+    }
+    
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const twoYearsAgo = new Date(today);
+    twoYearsAgo.setFullYear(today.getFullYear() - 2);
+    
+    let activePenaltyCount = 0;
+    let expiredPenaltyCount = 0;
+    let latestActiveDate = null;
+    
+    validDates.forEach(d => {
+      if (d >= twoYearsAgo && d <= today) {
+        activePenaltyCount++;
+        if (!latestActiveDate || d > latestActiveDate) {
+           latestActiveDate = new Date(d);
+        }
+      } else {
+        expiredPenaltyCount++;
+      }
+    });
+
+    let endDateText = "";
+    if (latestActiveDate) {
+      const endD = new Date(latestActiveDate);
+      endD.setFullYear(endD.getFullYear() + 2);
+      const dd = String(endD.getDate()).padStart(2, '0');
+      const mm = String(endD.getMonth() + 1).padStart(2, '0');
+      const yyyy = endD.getFullYear();
+      endDateText = ` (Bitiş: ${dd}.${mm}.${yyyy})`;
+    }
+    
+    if (activePenaltyCount === 0) {
+      return { text: `TEMİZ (${expiredPenaltyCount} Eski Ceza Silindi)`, color: '#15803d', bgColor: '#dcfce7', icon: '✨', label: 'ŞAHIS CEZA DURUMU' };
+    } else {
+      return { text: `${activePenaltyCount} Aktif Ceza${endDateText}`, color: '#b91c1c', bgColor: '#fee2e2', icon: '🚨', label: 'ŞAHIS CEZA DURUMU' };
+    }
+  };
+
+  const handleSave = () => {
+    if (Object.keys(formData).length === 0) {
+       toast.error('Kaydedilecek veri yok!');
+       return;
+    }
+    
+    let pendingFormData = { ...formData };
+
+    if (showTransferGroup) {
+       const confirmCancel = window.confirm('DİKKAT: Bu teknenin il dışına nakil işlemi gerçekleştiriliyor. Aynı zamanda ruhsatı da iptal edilsin mi?\n\n[Tamam] = Ruhsatı İptal Et ve Nakil İşle\n[İptal] = Sadece Nakil İşle (Ruhsat geçerli kalır)');
+       if (confirmCancel) {
+           pendingFormData['RUHSAT İPTALİ'] = pendingFormData['RUHSAT İPTALİ'] || 'İL DIŞINA NAKİL NEDENİYLE İPTAL';
+           if (pendingFormData['GİDİŞ TARİHİ'] && !pendingFormData['FİİLİ İPTAL TARİHİ']) {
+               pendingFormData['FİİLİ İPTAL TARİHİ'] = pendingFormData['GİDİŞ TARİHİ'];
+           }
+       }
+    }
+
+    if (showCancelGroup) {
+       const confirmDirectCancel = window.confirm('DİKKAT: Bu geminin ruhsatı iptal edilecek! Onaylıyor musunuz?');
+       if (!confirmDirectCancel) {
+           return; // İptal edilirse kaydetme işlemini iptal et
+       }
+       if (!pendingFormData['RUHSAT İPTALİ']) {
+           pendingFormData['RUHSAT İPTALİ'] = 'İPTAL EDİLDİ (Neden Belirtilmedi)';
+       }
+    }
+
+    const newData = { ...ruhsatData };
+    
+    // Otomatik Durum Kontrolü
+    const isTransferred = Boolean(pendingFormData['GİTTİĞİ İL'] && pendingFormData['GİTTİĞİ İL'].trim() !== '');
+    const isCancelled = Boolean(pendingFormData['RUHSAT İPTALİ'] && pendingFormData['RUHSAT İPTALİ'].trim() !== '');
+    
+    let targetStatus = activeTab || 'DENİZ'; // Formdan seçilen "KAYIT DURUMU"
+    
+    if (isTransferred) {
+        targetStatus = 'BAŞKA İLE GİDENLER';
+    } else if (isCancelled) {
+        targetStatus = 'RUHSAT İPTALLERİ';
+    }
+    
+    if (!newData.data['TÜM KAYITLAR']) newData.data['TÜM KAYITLAR'] = [];
+    
+    pendingFormData['KAYIT DURUMU'] = targetStatus;
+    
+    if (isNewRecord) {
+      newData.data['TÜM KAYITLAR'].unshift(pendingFormData);
+      toast.success(targetStatus === 'BAŞKA İLE GİDENLER' ? 'Tekne Nakil Listesine eklendi!' : 'Yeni kayıt başarıyla eklendi!', { icon: '✅' });
+    } else if (searchResult) {
+      const { index } = searchResult;
+      newData.data['TÜM KAYITLAR'][index] = pendingFormData;
+      
+      if (targetStatus === 'BAŞKA İLE GİDENLER') {
+          toast.success(`Tekne "BAŞKA İLE GİDENLER" listesine taşındı!`, { icon: '✈️' });
+      } else if (targetStatus === 'RUHSAT İPTALLERİ') {
+          toast.success(`Teknenin ruhsatı iptal edildi!`, { icon: '🛑' });
+      } else {
+          toast.success('Kayıt başarıyla güncellendi!', { icon: '📝' });
+      }
+    }
+    
+    onSave(newData);
+    onClose();
+  };
+
+  const isCancelledRecord = formData && formData['KAYIT DURUMU'] === 'RUHSAT İPTALLERİ';
+  const isEffectivelyReadOnly = !isEditing || isCancelledRecord;
+
+  return (
+    <div className="editor-overlay">
+      <div className="editor-container">
+        
+        <div className="editor-header">
+          <div className="editor-header-title">
+            <div className="editor-header-icon">
+              <FileEdit size={28} strokeWidth={2.5} />
+            </div>
+            <div>
+              <h2>Kayıt Düzenleyici / Veri Merkezi</h2>
+              <p>Ruhsat ve Ceza arşivine kalıcı veri girişi ve taşıma işlemleri</p>
+            </div>
+          </div>
+          <button onClick={onClose} className="editor-close-btn">
+            <X size={24} />
+          </button>
+        </div>
+
+        <div className="editor-content">
+          <div className="editor-search-bar">
+            <div className="search-input-wrapper">
+              <Search size={20} className="search-icon" />
+              <input 
+                type="text" 
+                placeholder="Düzenlenecek Tekneyi Ara (Plaka, İsim vb.)" 
+                value={searchTerm}
+                onChange={e => setSearchTerm(e.target.value)}
+                onKeyDown={handleKeyDown}
+              />
+              <button className="search-btn" onClick={handleSearch}>Bul</button>
+            </div>
+            <div className="divider-text">veya</div>
+            {(() => {
+              if (searchError) return null;
+              if (searchResult && !isEditing) {
+                return (
+                  <button className="new-record-btn" style={{ backgroundColor: isReadOnly ? '#94a3b8' : (isCancelledRecord ? '#64748b' : '#0ea5e9'), borderColor: isReadOnly ? '#94a3b8' : (isCancelledRecord ? '#64748b' : '#0ea5e9'), cursor: isReadOnly ? 'not-allowed' : 'pointer', opacity: isReadOnly ? 0.7 : 1 }} onClick={() => !isReadOnly && setIsEditing(true)} title={isReadOnly ? "Bu işlemi yapmak için yetkiniz bulunmamaktadır." : ""}>
+                    <FileEdit size={20} /> {isCancelledRecord ? 'Sadece Görüntüle' : 'Kaydı Düzenle'}
+                  </button>
+                );
+              }
+              if ((searchResult && isEditing) || isNewRecord) {
+                return (
+                  <button className="new-record-btn" style={{ backgroundColor: '#ef4444', borderColor: '#ef4444', color: 'white', cursor: 'pointer' }} onClick={() => { setIsEditing(false); setIsNewRecord(false); setSearchResult(null); setSearchTerm(''); }}>
+                    <X size={20} /> Kapat
+                  </button>
+                );
+              }
+              return (
+                <button className="new-record-btn" style={{ backgroundColor: isReadOnly ? '#94a3b8' : undefined, borderColor: isReadOnly ? '#94a3b8' : undefined, cursor: isReadOnly ? 'not-allowed' : 'pointer', opacity: isReadOnly ? 0.7 : 1 }} onClick={() => !isReadOnly && handleStartNew()} title={isReadOnly ? "Bu işlemi yapmak için yetkiniz bulunmamaktadır." : ""}>
+                  <Plus size={20} /> Yeni Kayıt Oluştur
+                </button>
+              );
+            })()}
+          </div>
+
+          {(searchResult || isNewRecord) && (
+            <div className="editor-form-area">
+              <div className="form-header" style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '24px' }}>
+                <h3 style={{ margin: 0, fontSize: '20px', color: '#1e293b' }}>
+                  {isNewRecord ? 'Yeni Kayıt Oluşturuluyor' : (isEditing ? (isCancelledRecord ? 'Kayıt Görüntüleniyor (Salt Okunur)' : 'Kayıt Düzenleniyor') : 'Gemi Sicil Özeti (Dashboard)')}
+                </h3>
+                
+                {(() => {
+
+                  if (isCancelledRecord) {
+                    return (
+                      <div style={{ backgroundColor: '#fef2f2', border: '2px dashed #dc2626', padding: '16px', borderRadius: '12px', textAlign: 'center' }}>
+                         <h3 style={{ color: '#dc2626', margin: 0, fontSize: '18px', fontWeight: '800', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                           🛑 DİKKAT: BU KAYDIN RUHSATI İPTAL EDİLMİŞTİR
+                         </h3>
+                         <p style={{ color: '#b91c1c', margin: '8px 0 0 0', fontSize: '14px', fontWeight: '600' }}>
+                           Bu kayıt arşiv modundadır. Veriler sadece okunabilir; işlem yapma yetkisi sadece sistem yöneticisindedir.
+                         </p>
+                      </div>
+                    );
+                  }
+                  return null;
+                })()}
+                
+
+              </div>
+
+              {isNewRecord && (
+                <div className="info-banner">
+                  <AlertCircle size={20} />
+                  <span>Şu anda <strong>{activeTab}</strong> sekmesinin sütun formatına göre boş bir kayıt oluşturuyorsunuz. Sekmeyi yukarıdan değiştirebilirsiniz.</span>
+                </div>
+              )}
+
+
+
+              {(() => {
+                if (isNewRecord) return null;
+                if (isCancelledRecord) return null;
+
+                if (formData && formData['KAYIT DURUMU'] === 'BAŞKA İLE GİDENLER') {
+                  return (
+                    <div className="status-badges-container" style={{ marginBottom: '24px' }}>
+                       <div style={{ padding: '24px', borderRadius: '12px', backgroundColor: '#fee2e2', border: '2px dashed #ef4444', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px' }}>
+                          <span style={{ fontSize: '32px' }}>✈️</span>
+                          <div style={{ fontSize: '20px', fontWeight: '800', color: '#b91c1c', letterSpacing: '0.5px' }}>⚠️ DİKKAT: BU KAYIT İL DIŞINA GİTMİŞTİR</div>
+                       </div>
+                    </div>
+                  );
+                }
+
+                const displayData = { ...panoramicData, ...formData };
+                const vizeStatus = calculateStatus(displayData['VİZE BİTİŞ TARİHİ']);
+                const ruhsatStatus = calculateStatus(displayData['RUHSAT İPTAL TARİHİ']);
+                
+                return (
+                  <div className="status-badges-container" style={{ display: 'flex', gap: '16px', marginBottom: '24px' }}>
+                    <div 
+                      className="status-badge hover-effect" 
+                      onClick={() => { 
+                          if (displayData['KAYIT DURUMU']) setActiveTab(displayData['KAYIT DURUMU']); 
+                          setIsEditing(true); 
+                      }}
+                      style={{ flex: 1, padding: '16px', borderRadius: '12px', backgroundColor: vizeStatus.bgColor, border: `1px solid ${vizeStatus.color}40`, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', cursor: 'pointer', transition: 'all 0.2s' }}
+                      title="Vize işlemlerini düzenlemek için tıklayın"
+                    >
+                      <div style={{ fontSize: '11px', fontWeight: '700', color: vizeStatus.color, opacity: 0.8, marginBottom: '4px', textTransform: 'uppercase' }}>Vize Durumu</div>
+                      <div style={{ fontSize: '15px', fontWeight: '800', color: vizeStatus.color, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span>{vizeStatus.icon}</span> {vizeStatus.text}
+                      </div>
+                    </div>
+                    
+                    <div 
+                      className="status-badge hover-effect" 
+                      onClick={() => { 
+                          if (displayData['KAYIT DURUMU'] && displayData['KAYIT DURUMU'] !== 'DENİZ') {
+                              setActiveTab(displayData['KAYIT DURUMU']);
+                          } else {
+                              setActiveTab('DENİZ');
+                          }
+                          setIsEditing(true); 
+                          setShowCancelGroup(true);
+                          setShowPenaltyGroup(false);
+                          setShowPersonPenaltyGroup(false);
+                          setShowTransferGroup(false);
+                      }}
+                      style={{ flex: 1, padding: '16px', borderRadius: '12px', backgroundColor: ruhsatStatus.bgColor, border: `1px solid ${ruhsatStatus.color}40`, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', cursor: 'pointer', transition: 'all 0.2s' }}
+                      title="Ruhsat durumunu düzenlemek için tıklayın"
+                    >
+                      <div style={{ fontSize: '11px', fontWeight: '700', color: ruhsatStatus.color, opacity: 0.8, marginBottom: '4px', textTransform: 'uppercase' }}>Ruhsat İptal Durumu</div>
+                      <div style={{ fontSize: '15px', fontWeight: '800', color: ruhsatStatus.color, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span>{ruhsatStatus.icon}</span> {ruhsatStatus.text}
+                      </div>
+                    </div>
+
+                    {(() => {
+                      const cezaStatus = calculatePenaltyStatus(displayData);
+                      return (
+                        <div 
+                          className="status-badge" 
+                          style={{ flex: 1, padding: '16px', borderRadius: '12px', backgroundColor: cezaStatus.bgColor, border: `1px solid ${cezaStatus.color}40`, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', cursor: 'pointer', transition: 'all 0.2s' }}
+                          title="Gemi ceza ve yaptırımlarını düzenlemek için tıklayın"
+                          onClick={() => {
+                              if (displayData['KAYIT DURUMU'] && displayData['KAYIT DURUMU'] !== 'DENİZ') {
+                                  setActiveTab(displayData['KAYIT DURUMU']);
+                              } else {
+                                  setActiveTab('DENİZ');
+                              }
+                              setIsEditing(true);
+                              setShowPenaltyGroup(true);
+                              setShowCancelGroup(false);
+                              setShowPersonPenaltyGroup(false);
+                              setShowTransferGroup(false);
+                          }}
+                        >
+                          <div style={{ fontSize: '11px', fontWeight: '700', color: cezaStatus.color, opacity: 0.8, marginBottom: '4px', textTransform: 'uppercase' }}>{cezaStatus.label}</div>
+                          <div style={{ fontSize: '15px', fontWeight: '800', color: cezaStatus.color, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <span>{cezaStatus.icon}</span> {cezaStatus.text}
+                          </div>
+                        </div>
+                      );
+                    })()}
+
+                    {(() => {
+                      const pCezaStatus = getPersonCezaStatusBadge();
+                      return (
+                        <div 
+                          className="status-badge" 
+                          style={{ flex: 1, padding: '16px', borderRadius: '12px', backgroundColor: pCezaStatus.bgColor, border: `1px solid ${pCezaStatus.color}40`, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', cursor: 'pointer', transition: 'all 0.2s' }}
+                          title="Şahıs (Gerçek Kişi) cezalarını düzenlemek için tıklayın"
+                          onClick={() => {
+                              if (displayData['KAYIT DURUMU'] && displayData['KAYIT DURUMU'] !== 'DENİZ') {
+                                  setActiveTab(displayData['KAYIT DURUMU']);
+                              } else {
+                                  setActiveTab('DENİZ');
+                              }
+                              setIsEditing(true);
+                              setShowPersonPenaltyGroup(true);
+                              setShowPenaltyGroup(false);
+                              setShowCancelGroup(false);
+                              setShowTransferGroup(false);
+                          }}
+                        >
+                          <div style={{ fontSize: '11px', fontWeight: '700', color: pCezaStatus.color, opacity: 0.8, marginBottom: '4px', textTransform: 'uppercase' }}>{pCezaStatus.label}</div>
+                          <div style={{ fontSize: '15px', fontWeight: '800', color: pCezaStatus.color, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <span>{pCezaStatus.icon}</span> {pCezaStatus.text}
+                          </div>
+                        </div>
+                      );
+                    })()}
+                  </div>
+                );
+              })()}
+
+              {isEditing && activeTab === 'DENİZ' && !isCancelledRecord && (
+                  <div className="action-buttons-panel" style={{ display: 'flex', gap: '12px', marginBottom: '32px', padding: '16px', backgroundColor: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 2px 4px rgba(0,0,0,0.02)', flexWrap: 'wrap' }}>
+                      <div style={{ fontWeight: '800', color: '#334155', display: 'flex', alignItems: 'center', marginRight: '12px', letterSpacing: '0.5px' }}>
+                          ⚡ HIZLI AKSİYONLAR:
+                      </div>
+                      <button 
+                          onClick={() => {
+                              setShowPenaltyGroup(!showPenaltyGroup);
+                              setShowPersonPenaltyGroup(false);
+                              setShowTransferGroup(false);
+                              setShowCancelGroup(false);
+                          }}
+                          style={{ padding: '8px 16px', backgroundColor: 'white', border: '1px solid #fca5a5', borderRadius: '8px', fontWeight: 'bold', color: '#b91c1c', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 1px 2px rgba(220,38,38,0.1)', transition: 'all 0.2s' }}
+                          onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#fef2f2'}
+                          onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'white'}
+                      >
+                          🚨 Gemi Cezası İşle
+                      </button>
+                      
+                      {!isNewRecord && (
+                          <>
+                              <button 
+                                  onClick={() => {
+                                      setShowPersonPenaltyGroup(!showPersonPenaltyGroup);
+                                      setShowPenaltyGroup(false);
+                                      setShowTransferGroup(false);
+                                      setShowCancelGroup(false);
+                                  }}
+                                  style={{ padding: '8px 16px', backgroundColor: 'white', border: '1px solid #f87171', borderRadius: '8px', fontWeight: 'bold', color: '#991b1b', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 1px 2px rgba(153,27,27,0.1)', transition: 'all 0.2s' }}
+                                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#fef2f2'}
+                                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'white'}
+                              >
+                                  👤 Şahıs Cezası İşle
+                              </button>
+                              <button 
+                                  onClick={() => {
+                                      setShowTransferGroup(!showTransferGroup);
+                                      setShowPenaltyGroup(false);
+                                      setShowPersonPenaltyGroup(false);
+                                      setShowCancelGroup(false);
+                                  }}
+                                  style={{ padding: '8px 16px', backgroundColor: 'white', border: '1px solid #7dd3fc', borderRadius: '8px', fontWeight: 'bold', color: '#0369a1', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 1px 2px rgba(3,105,161,0.1)', transition: 'all 0.2s' }}
+                                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#f0f9ff'}
+                                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'white'}
+                              >
+                                  ✈️ İl Dışına Nakil Yap
+                              </button>
+                              <button 
+                                  onClick={() => {
+                                      setShowCancelGroup(!showCancelGroup);
+                                      setShowPenaltyGroup(false);
+                                      setShowPersonPenaltyGroup(false);
+                                      setShowTransferGroup(false);
+                                  }}
+                                  style={{ padding: '8px 16px', backgroundColor: 'white', border: '1px solid #cbd5e1', borderRadius: '8px', fontWeight: 'bold', color: '#475569', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', transition: 'all 0.2s' }}
+                                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#f1f5f9'}
+                                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'white'}
+                              >
+                                  🛑 Ruhsat İptal İşlemi
+                              </button>
+                          </>
+                      )}
+                  </div>
+              )}
+
+              {(isEditing || isNewRecord) && (
+                <div className="editor-fields-wrapper" style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                  {(() => {
+                    const hiddenKeys = ['VİZEYE 1 AY', 'VİZE DOLMUŞ', 'İPTALE 1 AY', 'İPTAL', 'KAYIT DURUMU'];
+                    const allFormKeys = Object.keys(formData).filter(k => !hiddenKeys.includes(k) && !k.startsWith('İsimsiz Sütun'));
+                    
+                    let activeFieldGroups = [];
+
+                    // Always use the universal groups for editing or new records
+                    if (true) {
+                      const denizGroups = [
+                        {
+                          id: 'arsiv',
+                          title: '📁 Arşiv ve Fiziksel Dosya Kütüğü',
+                          keys: ['SIRA NO', 'SAYFA NO', 'YENİ DEFTER SAYFA NO']
+                        },
+                        {
+                          id: 'kimlik',
+                          title: '⚓ Gemi Kimlik ve Kayıt Bilgileri',
+                          keys: ['FAALİYET KATEGORİSİ', 'HOLOGRAM', 'DENİZ PLAKASI', 'İÇ SU PLAKASI', 'YEDEK GEMİ PLAKASI', 'ESKİ PLAKASI', 'GEMİ ADI', 'BAĞLAMA NUMARASI', 'BAĞLAMA LİMANI', 'TAM BOY', 'TESCİL BOY', 'KÜTÜK BOY', 'EN', 'DERİNLİK', 'GROSTONAJ', 'GEMİ TÜRÜ', 'YAPI MALZEMESİ', 'YAPIM YILI', 'BOY HAKKI', '12 MÜ', 'AV ARACI', 'VİZE TARİHİ', 'VİZE BİTİŞ TARİHİ', 'ANA GEMİ PLAKASI']
+                        },
+                        {
+                          id: 'sahip',
+                          title: '👤 Ruhsat Sahibi İletişim Bilgileri',
+                          keys: ['GEMİ SAHİBİ', 'TC KİMLİK NO', 'ADRESİ', 'TELEFON', 'İLİ', 'İLÇESİ', 'YET.TES. NUMARASI', 'VERGİ NO', 'YARDIMCI GEMİ FAALİYET ALANI']
+                        },
+                        {
+                          id: 'ceza',
+                          title: '⚖️ Gemiye Ait Ceza, İhlal ve Yaptırımlar',
+                          keys: ['GEMİ İ.P.C. (CEZA) MADDESİ', '1.CEZA TARİHİ', 'EL KOYMA SÜRESİ', 'RUHSAT EL KOYMA TARİHİ', '2.CEZA TARİHİ', '2. EL KOYMA SÜRESİ', 'RUHSAT 2. EL KOYMA TARİHİ', 'RUHSAT TESLİM TARİHİ', 'CEZANIN SONA ERME TARİHİ']
+                        },
+                        {
+                          id: 'sahisCeza',
+                          title: '👤 Şahsa (Gerçek Kişiye) Ait Ceza ve Yaptırımlar',
+                          keys: ['Adı Soyadı', 'T.C. KİMLİK NUMARASI', 'ŞAHIS İ.P.C. (CEZA) MADDESİ', 'ŞAHIS 1.CEZA TARİHİ', 'EL KOYMA SÜRESİ (gün)', 'ŞAHIS 2.CEZA TARİHİ', 'ŞAHIS RUHSAT EL KOYMA TARİHİ', 'ŞAHIS RUHSAT TESLİM TARİHİ', 'ŞAHIS CEZANIN SONA ERME TARİHİ', 'CEZA YEDİĞİ GEMİ PLAKASI']
+                        },
+                        {
+                          id: 'nakil',
+                          title: '🚢 Nakil ve Liman Değişikliği (Başka İle Gidenler)',
+                          keys: ['GİDİŞ TARİHİ', 'GİTTİĞİ İL', 'GİTTİĞİ İLÇE']
+                        },
+                        {
+                          id: 'iptal',
+                          title: '🛑 Ruhsat İptal İşlemleri',
+                          keys: ['RUHSAT İPTAL TARİHİ', 'RUHSAT İPTAL NEDENİ']
+                        }
+                      ];
+                      
+                      // Ensure required dropdown keys exist in allFormKeys for DENİZ tab
+                      if (!allFormKeys.includes('İL') && !allFormKeys.includes('İLİ')) allFormKeys.push('İL');
+                      if (!allFormKeys.includes('İLÇE') && !allFormKeys.includes('İLÇESİ')) allFormKeys.push('İLÇE');
+                      if (!allFormKeys.includes('GİTTİĞİ İL')) allFormKeys.push('GİTTİĞİ İL');
+                      if (!allFormKeys.includes('GİTTİĞİ İLÇE')) allFormKeys.push('GİTTİĞİ İLÇE');
+                      if (!allFormKeys.includes('GİDİŞ TARİHİ')) allFormKeys.push('GİDİŞ TARİHİ');
+                      if (!allFormKeys.includes('FİİLİ İPTAL TARİHİ')) allFormKeys.push('FİİLİ İPTAL TARİHİ');
+
+                      const mappedKeys = new Set(denizGroups.flatMap(g => g.keys));
+                      
+                      activeFieldGroups = [...denizGroups];
+                    } else {
+                      activeFieldGroups = [
+                        {
+                          id: 'saf_sekme',
+                          title: `📌 ${activeTab} İşlem Modülü Bilgileri`,
+                          keys: allFormKeys
+                        }
+                      ];
+                    }
+
+                    return (
+                      <div className="form-groups-container" style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                        {activeFieldGroups.map(group => {
+                          const groupKeys = group.keys;
+                          if (groupKeys.length === 0) return null;
+                          
+                          // Kesin Gizlilik Kuralı: Sadece butona basıldığında açılsın (İptal durumu hariç).
+                          let hasData = false;
+                          groupKeys.forEach(k => {
+                             if (k !== 'FAALİYET KATEGORİSİ' && formData[k] !== undefined && formData[k] !== null && String(formData[k]).trim() !== '') {
+                                 hasData = true;
+                             }
+                          });
+
+                          let isVisible = false;
+                          const anyActionActive = showPenaltyGroup || showPersonPenaltyGroup || showTransferGroup || showCancelGroup;
+                          
+                          if (anyActionActive) {
+                             if (showPenaltyGroup) isVisible = (group.id === 'ceza');
+                             if (showPersonPenaltyGroup) isVisible = (group.id === 'sahisCeza');
+                             if (showTransferGroup) isVisible = (group.id === 'nakil');
+                             if (showCancelGroup) isVisible = (group.id === 'iptal');
+                          } else {
+                             isVisible = hasData || group.id === 'kimlik' || group.id === 'arsiv' || isNewRecord;
+                          }
+                          
+                          if (!isVisible) return null;
+                          
+                          return (
+                        <div key={group.id} className="form-group-section" style={{ backgroundColor: '#f8fafc', padding: '24px', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+                          <h4 style={{ margin: '0 0 20px 0', color: '#0f172a', fontSize: '15px', display: 'flex', alignItems: 'center', gap: '8px', borderBottom: '2px solid #e2e8f0', paddingBottom: '12px' }}>
+                            {group.title}
+                          </h4>
+                          <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '16px' }}>
+                            {groupKeys.map(key => {
+                              // If key isn't explicitly in formData, it might be a virtual key like FAALİYET KATEGORİSİ
+                              const value = key === 'FAALİYET KATEGORİSİ' ? activeTab : formData[key];
+                              const isReadonly = key === 'VİZE BİTİŞ TARİHİ' || key === 'RUHSAT İPTAL TARİHİ' || key === '12 MÜ';
+                              
+                              let isExpiredPenalty = false;
+                              if (value && (key === '1.CEZA TARİHİ' || key === '2.CEZA TARİHİ' || key === '3.CEZA TARİHİ' || key === 'ŞAHIS 1.CEZA TARİHİ' || key === 'ŞAHIS 2.CEZA TARİHİ' || key === 'ŞAHIS 3.CEZA TARİHİ')) {
+                                  const parts = String(value).trim().split('.');
+                                  if (parts.length === 3) {
+                                      const d = new Date(parts[2], parts[1] - 1, parts[0]);
+                                      const today = new Date();
+                                      today.setHours(0, 0, 0, 0);
+                                      const twoYearsAgo = new Date(today);
+                                      twoYearsAgo.setFullYear(today.getFullYear() - 2);
+                                      if (!isNaN(d.getTime()) && d < twoYearsAgo) {
+                                          isExpiredPenalty = true;
+                                      }
+                                  }
+                              }
+                              
+                              return (
+                                <div className="form-group" key={key} style={{ margin: 0, opacity: isExpiredPenalty ? 0.7 : 1 }}>
+                                  <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', fontSize: '11px', fontWeight: '700', color: '#475569', textTransform: 'uppercase' }}>
+                                    {activeTab === 'HOLOGROM' && key === 'RESİM VAR MI YOKMU' ? 'DÜZENLENME NEDENİ' : key}
+                                    <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                                      {isReadonly && (
+                                        <span style={{ fontSize: '10px', color: '#94a3b8', fontWeight: '500', textTransform: 'none' }}>
+                                          (Otomatik)
+                                        </span>
+                                      )}
+                                      {isExpiredPenalty && (
+                                        <span style={{ fontSize: '10px', color: '#ef4444', fontWeight: '700', textTransform: 'none', backgroundColor: '#fee2e2', padding: '2px 6px', borderRadius: '4px' }}>
+                                          Zaman Aşımı
+                                        </span>
+                                      )}
+                                    </div>
+                                  </label>
+                                  {key === 'İL' || key === 'İLİ' || key === 'GİTTİĞİ İL' ? (
+                                    <select
+                                      value={value || ''}
+                                      onChange={e => {
+                                        handleInputChange(key, e.target.value);
+                                        const isDestination = key === 'GİTTİĞİ İL';
+                                        let ilceKey = null;
+                                        if (isDestination) {
+                                          ilceKey = formData['GİTTİĞİ İLÇE'] !== undefined ? 'GİTTİĞİ İLÇE' : null;
+                                        } else {
+                                          ilceKey = formData['İLÇE'] !== undefined ? 'İLÇE' : (formData['İLÇESİ'] !== undefined ? 'İLÇESİ' : null);
+                                        }
+                                        if (ilceKey) handleInputChange(ilceKey, '');
+                                      }}
+                                      disabled={isEffectivelyReadOnly}
+                                      style={{
+                                        width: '100%',
+                                        padding: '10px 12px',
+                                        borderRadius: '8px',
+                                        border: '1px solid #cbd5e1',
+                                        fontSize: '14px',
+                                        transition: 'all 0.2s',
+                                        backgroundColor: isEffectivelyReadOnly ? 'rgba(255, 255, 255, 0.4)' : 'white',
+                                        borderColor: isEffectivelyReadOnly ? 'transparent' : '#cbd5e1',
+                                        boxShadow: isEffectivelyReadOnly ? 'none' : '0 1px 2px rgba(0,0,0,0.05)',
+                                        color: '#1e293b',
+                                        appearance: isEffectivelyReadOnly ? 'none' : 'auto',
+                                        cursor: isEffectivelyReadOnly ? 'default' : 'pointer'
+                                      }}
+                                    >
+                                      <option value="">Seçiniz...</option>
+                                      {Object.keys(TURKEY_DATA)
+                                        .sort((a, b) => a.localeCompare(b, 'tr'))
+                                        .map(city => (
+                                          <option key={city} value={city}>{city}</option>
+                                      ))}
+                                    </select>
+                                  ) : key === 'İLÇE' || key === 'İLÇESİ' || key === 'GİTTİĞİ İLÇE' ? (
+                                    <select
+                                      value={value || ''}
+                                      onChange={e => handleInputChange(key, e.target.value)}
+                                      disabled={isEffectivelyReadOnly}
+                                      style={{
+                                        width: '100%',
+                                        padding: '10px 12px',
+                                        borderRadius: '8px',
+                                        border: '1px solid #cbd5e1',
+                                        fontSize: '14px',
+                                        transition: 'all 0.2s',
+                                        backgroundColor: isEffectivelyReadOnly ? 'rgba(255, 255, 255, 0.4)' : 'white',
+                                        borderColor: isEffectivelyReadOnly ? 'transparent' : '#cbd5e1',
+                                        boxShadow: isEffectivelyReadOnly ? 'none' : '0 1px 2px rgba(0,0,0,0.05)',
+                                        color: '#1e293b',
+                                        appearance: isEffectivelyReadOnly ? 'none' : 'auto',
+                                        cursor: isEffectivelyReadOnly ? 'default' : 'pointer'
+                                      }}
+                                    >
+                                      <option value="">Seçiniz...</option>
+                                      {(() => {
+                                        let cityKey = null;
+                                        if (key === 'GİTTİĞİ İLÇE') {
+                                          cityKey = formData['GİTTİĞİ İL'] !== undefined ? 'GİTTİĞİ İL' : null;
+                                        } else {
+                                          cityKey = formData['İL'] !== undefined ? 'İL' : (formData['İLİ'] !== undefined ? 'İLİ' : null);
+                                        }
+                                        const selectedCity = cityKey ? formData[cityKey] : null;
+                                        const districts = selectedCity && TURKEY_DATA[selectedCity] ? [...TURKEY_DATA[selectedCity]] : [];
+                                        return districts
+                                          .sort((a, b) => a.localeCompare(b, 'tr'))
+                                          .map(district => (
+                                            <option key={district} value={district}>{district}</option>
+                                        ));
+                                      })()}
+                                    </select>
+                                  ) : key === 'FAALİYET KATEGORİSİ' ? (
+                                    <select
+                                      value={value || 'DENİZ'}
+                                      onChange={e => {
+                                        setActiveTab(e.target.value);
+                                        handleInputChange('KAYIT DURUMU', e.target.value);
+                                      }}
+                                      disabled={isEffectivelyReadOnly}
+                                      style={{
+                                        width: '100%',
+                                        padding: '10px 12px',
+                                        borderRadius: '8px',
+                                        border: '1px solid #cbd5e1',
+                                        fontSize: '14px',
+                                        transition: 'all 0.2s',
+                                        backgroundColor: isEffectivelyReadOnly ? 'rgba(255, 255, 255, 0.4)' : '#eff6ff',
+                                        borderColor: isEffectivelyReadOnly ? 'transparent' : '#3b82f6',
+                                        color: '#1e3a8a',
+                                        fontWeight: '700',
+                                        appearance: isEffectivelyReadOnly ? 'none' : 'auto',
+                                        cursor: isEffectivelyReadOnly ? 'default' : 'pointer'
+                                      }}
+                                    >
+                                      {['DENİZ', 'İÇSU', 'YEDEK', 'HOLOGROM'].map(cat => (
+                                        <option key={cat} value={cat}>{cat}</option>
+                                      ))}
+                                    </select>
+                                  ) : (
+                                    <input 
+                                      type="text" 
+                                      value={value || ''} 
+                                      onChange={e => {
+                                        const val = e.target.value;
+                                        handleInputChange(key, val);
+                                        
+                                        // Auto-calculate 12 MÜ based on TESCİL BOY
+                                        if (key === 'TESCİL BOY' || key === 'TAM BOY') {
+                                          const parsedVal = parseFloat(val.replace(',', '.'));
+                                          if (!isNaN(parsedVal)) {
+                                            const isOver12 = parsedVal > 12;
+                                            handleInputChange('12 MÜ', isOver12 ? '12 M ÜSTÜ' : '12 M ALTI');
+                                          } else {
+                                            handleInputChange('12 MÜ', '');
+                                          }
+                                        }
+                                      }}
+                                      placeholder={isReadonly ? 'Otomatik' : `${key}...`}
+                                      disabled={isEffectivelyReadOnly || isReadonly}
+                                      style={{
+                                        width: '100%',
+                                        padding: '10px 12px',
+                                        borderRadius: '8px',
+                                        border: '1px solid #cbd5e1',
+                                        fontSize: '14px',
+                                        transition: 'all 0.2s',
+                                        ...(isReadonly ? {
+                                          backgroundColor: '#f1f5f9',
+                                          color: '#94a3b8',
+                                          cursor: 'not-allowed',
+                                          borderStyle: 'dashed',
+                                          fontWeight: '600'
+                                        } : {}),
+                                        ...(isEffectivelyReadOnly && !isReadonly ? {
+                                          backgroundColor: 'white',
+                                          borderColor: 'transparent',
+                                          boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+                                          color: '#1e293b'
+                                        } : {}),
+                                        ...(isEffectivelyReadOnly ? { cursor: 'default' } : {}),
+                                        ...(isExpiredPenalty ? { textDecoration: 'line-through', color: '#ef4444' } : {})
+                                      }}
+                                    />
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                );
+              })()}
+              </div>
+            )}
+
+              <div className="form-actions">
+                <button className="cancel-btn" onClick={() => { 
+                  if (isEditing && !isNewRecord) {
+                    setIsEditing(false); // Dashboard'a dön
+                    setShowPenaltyGroup(false);
+                    setShowPersonPenaltyGroup(false);
+                    setShowTransferGroup(false);
+                    setShowCancelGroup(false);
+                  } else {
+                    setSearchResult(null); 
+                    setIsNewRecord(false); 
+                    setShowPenaltyGroup(false);
+                    setShowPersonPenaltyGroup(false);
+                    setShowTransferGroup(false);
+                    setShowCancelGroup(false);
+                  }
+                }}>
+                  {isEditing && !isNewRecord ? (isCancelledRecord ? 'Kapat' : 'Düzenlemekten Vazgeç') : 'Kapat'}
+                </button>
+                {isEditing && !isCancelledRecord && (
+                  <button className="save-btn" onClick={() => !isEffectivelyReadOnly && handleSave()} style={{ cursor: isEffectivelyReadOnly ? 'not-allowed' : 'pointer', opacity: isEffectivelyReadOnly ? 0.6 : 1, backgroundColor: isEffectivelyReadOnly ? '#94a3b8' : undefined, borderColor: isEffectivelyReadOnly ? '#94a3b8' : undefined }} title={isEffectivelyReadOnly ? "Yetkiniz yok" : ""}>
+                    <Save size={20} />
+                    Veritabanına İşle
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
+          
+          {!searchResult && !isNewRecord && (
+             <div className="empty-state">
+                {searchError ? (
+                  <>
+                    <AlertCircle size={64} className="empty-icon" style={{ color: '#ef4444' }} />
+                    <h3 style={{ color: '#ef4444' }}>Böyle Bir Kayıt Yoktur</h3>
+                    <p>Aradığınız plaka veya isme ait bir gemi/tekne kaydı bulunamadı.</p>
+                    
+                    <div style={{ display: 'flex', gap: '16px', marginTop: '32px' }}>
+                      <button 
+                        onClick={() => !isReadOnly && handleStartNew()} 
+                        className="save-btn" 
+                        style={{ padding: '12px 24px', fontSize: '15px', cursor: isReadOnly ? 'not-allowed' : 'pointer', opacity: isReadOnly ? 0.6 : 1, backgroundColor: isReadOnly ? '#94a3b8' : '#0ea5e9', borderColor: isReadOnly ? '#94a3b8' : '#0ea5e9' }}
+                        title={isReadOnly ? "Yetkiniz Yok" : ""}
+                      >
+                        <Plus size={20} /> Sıfır Yeni Kayıt Oluştur
+                      </button>
+                      <button 
+                        onClick={() => { 
+                          if (isReadOnly) return;
+                          handleStartNew(); 
+                          toast.success('Nakil gelen tekne için boş kayıt formu açıldı.', { icon: '🚢' });
+                        }} 
+                        className="cancel-btn" 
+                        style={{ 
+                          padding: '12px 24px', 
+                          fontSize: '15px',
+                          backgroundColor: isReadOnly ? '#f1f5f9' : '#f0fdf4', 
+                          color: isReadOnly ? '#94a3b8' : '#166534', 
+                          border: `1px solid ${isReadOnly ? '#e2e8f0' : '#bbf7d0'}`,
+                          cursor: isReadOnly ? 'not-allowed' : 'pointer',
+                          fontWeight: '600'
+                        }}
+                        title={isReadOnly ? "Yetkiniz Yok" : ""}
+                      >
+                        <FolderPlus size={20} /> Başka İlden Nakil Gelen Tekne
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <FileEdit size={64} className="empty-icon" />
+                    <h3>Sistem Hazır</h3>
+                    <p>Düzenlemek istediğiniz veriyi aratın veya sıfırdan yeni kayıt oluşturun.</p>
+                  </>
+                )}
+             </div>
+          )}
+
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default ArchiveEditorModal;

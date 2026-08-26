@@ -1,0 +1,5779 @@
+{
+  "TümCezalar": [
+    {
+      "id": "ceza-4",
+      "kategori": "Ruhsatsız Ticari Avcılık",
+      "ihlal_nedeni": "Ruhsat tezkeresini yeniletmeden Ticari Avcılık (Kişi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "4",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "9473",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-5",
+      "kategori": "Ruhsatsız Ticari Avcılık",
+      "ihlal_nedeni": "Ruhsat tezkeresini Almadan İç Sularda Ticari Avcılık (Kişi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "4",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "18954",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-6",
+      "kategori": "Ruhsatsız Ticari Avcılık",
+      "ihlal_nedeni": "Ruhsat tezkeresini Almadan Denizlerde Ticari Avcılık (Kişi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "4",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "37914",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-7",
+      "kategori": "Ruhsatsız Ticari Avcılık",
+      "ihlal_nedeni": "Ruhsat tezkeresini Almadan Dalarak Su Ürünleri Avcılık (Kişi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "4",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-8",
+      "kategori": "Ruhsatsız Ticari Avcılık",
+      "ihlal_nedeni": "Ruhsat tez. Almadan Su Ürün. Avcılık- 5 metre altı (Gemi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "4",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkieti kamuya geçirilir. Gırdır, Orta su trolü,dip trolü, algarna veya dalaraksu ürünleri avcılığında gemi dahil tüm istihsal vasıtalarına el konur.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-9",
+      "kategori": "Ruhsatsız Ticari Avcılık",
+      "ihlal_nedeni": "Ruhsat tez. Almadan Su Ürün. Avcılık- 5m ile 10m arası (Gemi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "4",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkieti kamuya geçirilir. Gırdır, Orta su trolü,dip trolü, algarna veya dalaraksu ürünleri avcılığında gemi dahil tüm istihsal vasıtalarına el konur.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-10",
+      "kategori": "Ruhsatsız Ticari Avcılık",
+      "ihlal_nedeni": "Ruhsat tez. Almadan Su Ürün. Avcılık- 10m ile 12m arası (Gemi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "4",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "142217",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkieti kamuya geçirilir. Gırdır, Orta su trolü,dip trolü, algarna veya dalaraksu ürünleri avcılığında gemi dahil tüm istihsal vasıtalarına el konur.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-11",
+      "kategori": "Ruhsatsız Ticari Avcılık",
+      "ihlal_nedeni": "Ruhsat tez. Almadan Su Ürün. Avcılık- 12m ile 18m arası (Gemi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "4",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "237034",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkieti kamuya geçirilir. Gırdır, Orta su trolü,dip trolü, algarna veya dalaraksu ürünleri avcılığında gemi dahil tüm istihsal vasıtalarına el konur.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-12",
+      "kategori": "Ruhsatsız Ticari Avcılık",
+      "ihlal_nedeni": "Ruhsat tez. Almadan Su Ürün. Avcılık- 18m ile 22m arası (Gemi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "4",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "331855",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkieti kamuya geçirilir. Gırdır, Orta su trolü,dip trolü, algarna veya dalaraksu ürünleri avcılığında gemi dahil tüm istihsal vasıtalarına el konur.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-13",
+      "kategori": "Ruhsatsız Ticari Avcılık",
+      "ihlal_nedeni": "Ruhsat tez. Almadan Su Ürün. Avcılık- 22m ile 35 m arası (Gemi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "4",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "379267",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkieti kamuya geçirilir. Gırdır, Orta su trolü,dip trolü, algarna veya dalaraksu ürünleri avcılığında gemi dahil tüm istihsal vasıtalarına el konur.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-14",
+      "kategori": "Ruhsatsız Ticari Avcılık",
+      "ihlal_nedeni": "Ruhsat tez. Almadan Su Ürün. Avcılık- 35m ve üstü (Gemi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "4",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkieti kamuya geçirilir. Gırdır, Orta su trolü,dip trolü, algarna veya dalaraksu ürünleri avcılığında gemi dahil tüm istihsal vasıtalarına el konur.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-15",
+      "kategori": "Amatör Avcılık",
+      "ihlal_nedeni": "Amatör avcılık ihlal (Gemi Kullanmamışsa)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "6",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "2356",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-16",
+      "kategori": "Amatör Avcılık",
+      "ihlal_nedeni": "Amatör avcılık ihlal-iç su (Gemi Kullanmışsa)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "6",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "18954",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-17",
+      "kategori": "Amatör Avcılık",
+      "ihlal_nedeni": "Amatör avcılık ihlal-deniz (Gemi Kullanmışsa)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "6",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "28433",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-18",
+      "kategori": "Amatör Avcılık",
+      "ihlal_nedeni": "Amatör avcılık birden fazla ihlal (Gemi Kullanmamışsa)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "6",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "4730",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-19",
+      "kategori": "Amatör Avcılık",
+      "ihlal_nedeni": "Amatör avcılık birden fazla ihlal-iç su (Gemi Kullanmışsa)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "6",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "28433",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-20",
+      "kategori": "Amatör Avcılık",
+      "ihlal_nedeni": "Amatör avcılık birden fazla ihlal-deniz (Gemi Kullanmışsa)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "6",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-21",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "Av Miktarı, Bölge ve av araçlarına ait alınan izinlere aykırı faaliyet (Kişi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-22",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "Av miktarı, bölge ve av araçlarına ait alınan izinlere aykırı faaliyet - Gemi (Kum Midyesi av miktarı ve bölge ihlali, Ortasu, Algarna, Hamsi Avcılık, Kum Midyesi avcılık izin belgeleri vs) - 5 m. altı (Gemi)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-23",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "Av miktarı, bölge ve av araçlarına ait alınan izinlere aykırı faaliyet - Gemi (Kum Midyesi av miktarı ve bölge ihlali, Ortasu, Algarna, Hamsi Avcılık, Kum Midyesi avcılık izin belgeleri vs) - 5m - 10m altı",
+      "kanun_maddesi": "3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-24",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "Av miktarı, bölge ve av araçlarına ait alınan izinlere aykırı faaliyet - Gemi (Kum Midyesi av miktarı ve bölge ihlali, Ortasu, Algarna, Hamsi Avcılık, Kum Midyesi avcılık izin belgeleri vs) - 10m - 12m altı",
+      "kanun_maddesi": "3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "142217",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-25",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "Av miktarı, bölge ve av araçlarına ait alınan izinlere aykırı faaliyet - Gemi (Kum Midyesi av miktarı ve bölge ihlali, Ortasu, Algarna, Hamsi Avcılık, Kum Midyesi avcılık izin belgeleri vs) - 12m - 18m altı",
+      "kanun_maddesi": "3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "237034",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-26",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "Av miktarı, bölge ve av araçlarına ait alınan izinlere aykırı faaliyet - Gemi (Kum Midyesi av miktarı ve bölge ihlali, Ortasu, Algarna, Hamsi Avcılık, Kum Midyesi avcılık izin belgeleri vs) - 18m - 22m altı",
+      "kanun_maddesi": "3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "331855",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-27",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "Av miktarı, bölge ve av araçlarına ait alınan izinlere aykırı faaliyet - Gemi (Kum Midyesi av miktarı ve bölge ihlali, Ortasu, Algarna, Hamsi Avcılık, Kum Midyesi avcılık izin belgeleri vs) - 22m - 35m altı",
+      "kanun_maddesi": "3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "379267",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-28",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "Av miktarı, bölge ve av araçlarına ait alınan izinlere aykırı faaliyet - Gemi (Kum Midyesi av miktarı ve bölge ihlali, Ortasu, Algarna, Hamsi Avcılık, Kum Midyesi avcılık izin belgeleri vs) - 35 m. ve üstü",
+      "kanun_maddesi": "3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-29",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "Ruhsat Kod Numarasının Gemiye Yazılmaması - 12 m. den küçük",
+      "kanun_maddesi": "3",
+      "yonetmelik": "5",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-30",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "Ruhsat Kod Numarasının Gemiye Yazılmaması - 12 m. ve üstü",
+      "kanun_maddesi": "3",
+      "yonetmelik": "5",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-31",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "İzin ve ruhsat belgesini göstermeme (kişi-donatan vs.)",
+      "kanun_maddesi": "3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "9473",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-32",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "İstihsal Yerlerinde Değişiklik (İç Su)",
+      "kanun_maddesi": "7",
+      "yonetmelik": "7",
+      "teblig": "-",
+      "madde_36_bendi": "c",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet (Kum, Çakıl vb.)",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-33",
+      "kategori": "Avcılık için Alınan İzinlere Aykırı Davranma",
+      "ihlal_nedeni": "İstihsal Yerlerinde Değişiklik (Deniz)",
+      "kanun_maddesi": "7",
+      "yonetmelik": "7",
+      "teblig": "-",
+      "madde_36_bendi": "c",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet (Kum, Çakıl vb.)",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-34",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Akarsulardan su alımlarında filtre vb. tedbirleri almama",
+      "kanun_maddesi": "9",
+      "yonetmelik": "8",
+      "teblig": "-",
+      "madde_36_bendi": "d",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-35",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Akarsu üzerinde bulunan yetiştiricilik tesisinin suyunu kesme/bırakmama",
+      "kanun_maddesi": "9",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "d",
+      "para_cezasi_tl": "237034",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-36",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Akarsu, göllerde su alımlarında tedbirleri almama",
+      "kanun_maddesi": "9",
+      "yonetmelik": "8",
+      "teblig": "-",
+      "madde_36_bendi": "d",
+      "para_cezasi_tl": "237034",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-37",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "HES'lerin can suyunu bırakmaması",
+      "kanun_maddesi": "9",
+      "yonetmelik": "8",
+      "teblig": "-",
+      "madde_36_bendi": "d",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-38",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Patlayıcı, öldürücü, uyuşturucu,elektroşok vb ile avcılık",
+      "kanun_maddesi": "19",
+      "yonetmelik": "9",
+      "teblig": "-",
+      "madde_36_bendi": "g",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-39",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Sulara zararlı madde dökülmesi (Kişi)",
+      "kanun_maddesi": "20",
+      "yonetmelik": "11",
+      "teblig": "-",
+      "madde_36_bendi": "h",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-40",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Sulara zararlı madde dökülmesi (Gıda/Tarım İşletmesi)",
+      "kanun_maddesi": "20",
+      "yonetmelik": "11",
+      "teblig": "-",
+      "madde_36_bendi": "h",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-41",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Sulara zararlı madde dökülmesi (Sanayi İşletmesi)",
+      "kanun_maddesi": "20",
+      "yonetmelik": "11",
+      "teblig": "-",
+      "madde_36_bendi": "h",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-42",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Yabancıların Su Ürünleri İstihsal Yasağı İhlali",
+      "kanun_maddesi": "21",
+      "yonetmelik": "5",
+      "teblig": "-",
+      "madde_36_bendi": "i",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat,teçhizat vb. zapt ve mülkiyeti kamuya geçirilir. (Gemi Dahil)",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-43",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Akarsulara engel (ağ, bent, çit) koyma",
+      "kanun_maddesi": "22",
+      "yonetmelik": "8",
+      "teblig": "-",
+      "madde_36_bendi": "j",
+      "para_cezasi_tl": "16106",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-44",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Balık Geçidi Yapmayanlara (Yaptırması için 18 ay süre verilir, yaptırmaması halinde İPC uygulanır.",
+      "kanun_maddesi": "22-2",
+      "yonetmelik": "8",
+      "teblig": "-",
+      "madde_36_bendi": "j",
+      "para_cezasi_tl": "2370440",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-45",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Balık Geçidi İşlevsiz olması durumunda gerekli tedbirleri almayanlara",
+      "kanun_maddesi": "22-2",
+      "yonetmelik": "8",
+      "teblig": "-",
+      "madde_36_bendi": "j",
+      "para_cezasi_tl": "1896350",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-46",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Balık Geçidi Çalıştırmayanlara",
+      "kanun_maddesi": "22-2",
+      "yonetmelik": "8",
+      "teblig": "-",
+      "madde_36_bendi": "j",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-47",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Amatör Avcılı Kurallarını İhlal Kişi",
+      "kanun_maddesi": "23a/b",
+      "yonetmelik": "6",
+      "teblig": "-",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "4730",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi hariç) (kullanımı yasak olan istihsal vasıtalarına doğrudan el koyulur, tekrarı halinde gemi hariç tüm istihsal vasıtalarına el konulur.",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-48",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "Amatör Avcılı Kurallarını İhlal Gemi Sahibi",
+      "kanun_maddesi": "23a/b",
+      "yonetmelik": "6",
+      "teblig": "-",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "7105",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi hariç) (kullanımı yasak olan istihsal vasıtalarına doğrudan el koyulur, tekrarı halinde gemi hariç tüm istihsal vasıtalarına el konulur.",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-49",
+      "kategori": "Akarsularda Aykırılıklar",
+      "ihlal_nedeni": "23 üncü madde hükümlerine aykırı faaliyet yapan kişi (Tayfa)",
+      "kanun_maddesi": "23a/b",
+      "yonetmelik": "16/14",
+      "teblig": "-",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "16106",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-50",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Yasak zamanda gırgır ağları ile istihsal yapmak",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14",
+      "teblig": "12",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-51",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Gırgır ağı ölçüm belgesi olmaması",
+      "kanun_maddesi": "23-a",
+      "yonetmelik": "14",
+      "teblig": "12/7",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71046"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-52",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Parekata ve fanyalı ağ ile kalkan avcılığı",
+      "kanun_maddesi": "23-a",
+      "yonetmelik": "14",
+      "teblig": "21/1-d",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71046"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-53",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Salyangoz avcılığı yasağı ihlali (05:00 - 20:00 dışı)",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14",
+      "teblig": "29/1-ç",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-54",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Birden fazla faal algarna ile avlanma",
+      "kanun_maddesi": "23-a",
+      "yonetmelik": "17/5",
+      "teblig": "29/1-c(4)",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-55",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "90 kulaçtan daha derin gırgır ağı kullanımı",
+      "kanun_maddesi": "23-a",
+      "yonetmelik": "14",
+      "teblig": "12/5",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-56",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Derinlik yasağına (18-24 metre) aykırı avcılık",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14",
+      "teblig": "12/6-a",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-57",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Yasak zamanda av aracını gemilerde/istihsal yerlerinde bulundurmak",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/7",
+      "teblig": "Deniz: 50/10 İçsu: 51/5",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-58",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Tüp, Nargile, Zıpkın, Su altı tüfeği vs. balık avcılık yapmak",
+      "kanun_maddesi": "23-a",
+      "yonetmelik": "17/8",
+      "teblig": "49/11",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (3 tekrar sonunda)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-59",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Misina ağlarıyla avcılık kurallarını ihlal (Denizde)",
+      "kanun_maddesi": "23-a",
+      "yonetmelik": "14",
+      "teblig": "14/2-ç",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-60",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Şamandıralara plaka yazılmaması / Markasız av aracı",
+      "kanun_maddesi": "23-a",
+      "yonetmelik": "15/3 - 14",
+      "teblig": "49/2",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-61",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Manyat, ığrıp, trata, tarlakoz vb. sürütme ağları ile avcılık",
+      "kanun_maddesi": "23-a",
+      "yonetmelik": "14",
+      "teblig": "14/1",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-62",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "12 metreden küçük tekne ile gırgır avcılığı",
+      "kanun_maddesi": "23-a",
+      "yonetmelik": "13",
+      "teblig": "-",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-63",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "İkinci av aracı bulundurma (12 m ve üzeri teknelerde)",
+      "kanun_maddesi": "23-a",
+      "yonetmelik": "14",
+      "teblig": "50/11",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "-",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-64",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Tırıvırı ile Avcılık",
+      "kanun_maddesi": "23-a",
+      "yonetmelik": "14",
+      "teblig": "49/13",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-65",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Zaman, yer yasağını ihlal (Algarna ile Deniz Salyangozu avcılığı)",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14",
+      "teblig": "29/c",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-66",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Zaman, yer yasağını ihlal (Beyaz Kum Midyesi)",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14",
+      "teblig": "28/1,9",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-67",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Kalkan Avcılığı kuralları ihlal (Zaman, av aracı, izin belgesi vs.)",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14 - 14 - 15/4",
+      "teblig": "21/1-a",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-68",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Palamut Avcılığı Kurallarını İhlal (Zaman, av aracı)",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14 - 14",
+      "teblig": "20/1",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-69",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Tebliğ ile belirlenen akarsuların deniz ile birleştiği noktadan (Mansap) 500 m yarıçap içerisinde ticari avcılık",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "17/6",
+      "teblig": "49/19",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-70",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Liman, barınak, barınma yeri, çekek yerinde avcılık",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14",
+      "teblig": "50/8",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-71",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Serpme ile ticari avcılık (İç Su)",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14",
+      "teblig": "6/2 tebliğ 13-2",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-72",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Avlanması yasak olan su ürünlerini (Tür yasağı) avlama",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14",
+      "teblig": "16/1",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "56040",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (3.tekrarda gemi hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-73",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Yasak boyda su ürünü avlama",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14",
+      "teblig": "17/1",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "56040",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-74",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Işık ile avcılık",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14",
+      "teblig": "13",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "1422237",
+        "boy_12_alti": "474079",
+        "boy_12_22": "948158",
+        "boy_22_ustu": "1422237"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Aykırılığa neden olan kamuya geçici)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-75",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "İç sular, Marmara deniz ve boğazlarda trol avcılığı (Kişiler)",
+      "kanun_maddesi": "24-1/a",
+      "yonetmelik": "16/14",
+      "teblig": "9-1",
+      "madde_36_bendi": "l",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-76",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "İç sular, Marmara deniz ve boğazlarda her türlü trol avcılığı (Gemi donatanı veya sahibi)",
+      "kanun_maddesi": "24-1/a",
+      "yonetmelik": "16/14",
+      "teblig": "9",
+      "madde_36_bendi": "l",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "189630",
+        "boy_12_22": "379260",
+        "boy_22_ustu": "568890"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "(İstanbul ve Çanakkale Boğazları ile Marmara Denizinde) İstihsal vasıtaları zapt ve mülkiyeti kamuya geçirilir. Tekrarı halinde 1 yıldan 3 yıla kadar (5000-1000 gün adli para cezası) hapis cezasıi su ürünleri ve istihsal vasıtalarına el koyularak mülkiyeti kamuya geçirilir. (Gemi dahil)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-77",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Dip Trolüne ilişkin yasakların ihlali (Kişi-Tayfa)",
+      "kanun_maddesi": "24/b",
+      "yonetmelik": "Ağlar 14 Yer/zaman vs 16/14",
+      "teblig": "10",
+      "madde_36_bendi": "l",
+      "para_cezasi_tl": "66357",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-78",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Dip Trolüne ilişkin yasakların ihlali (DONATAN VEYA SAHİP)",
+      "kanun_maddesi": "24/b",
+      "yonetmelik": "Ağlar 14 Yer/zaman vs 16/14",
+      "teblig": "10",
+      "madde_36_bendi": "l",
+      "para_cezasi_tl": "66357",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "66357",
+        "boy_12_22": "132714",
+        "boy_22_ustu": "199071"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi Hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-79",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Orta Su Trolüne ilişkin yasakların ihlali (KİŞİ)",
+      "kanun_maddesi": "24/c",
+      "yonetmelik": "Ağlar 14 Yer, zaman vs 16/14",
+      "teblig": "11",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "16106",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-80",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Orta Su Trolüne ilişkin yasakların ihlali (DONATAN VEYA SAHİP)",
+      "kanun_maddesi": "24/c",
+      "yonetmelik": "Ağlar 14 Yer, zaman vs 16/14",
+      "teblig": "11",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "1 Ay",
+        "kez_2": "3 Ay",
+        "kez_3": "İPTAL"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-81",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Bilgi, belge vermemek (Seyir Defteri)",
+      "kanun_maddesi": "28",
+      "yonetmelik": "16/14",
+      "teblig": "48/10",
+      "madde_36_bendi": "n",
+      "para_cezasi_tl": "6627",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "6627",
+        "boy_12_22": "13254",
+        "boy_22_ustu": "19881"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-82",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Yasak su ürünlerinin satışı, nakli, vb. (Av sezonunda)",
+      "kanun_maddesi": "25/1",
+      "yonetmelik": "16/14",
+      "teblig": "16-17",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-83",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Yasak su ürünlerinin satışı, nakli, vb. (Yasak zamanda)",
+      "kanun_maddesi": "25/1",
+      "yonetmelik": "16/2 16/14",
+      "teblig": "16-17 veya 49/20",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-84",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Avlanması yasak olan su ürünlerinin imalatta kullanılması(muhafaza, işleme vb.)",
+      "kanun_maddesi": "25/1",
+      "yonetmelik": "16/14",
+      "teblig": "16 17 49/20",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-85",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Yasak vasıta ve usullerle İzinsiz ilmi teknik çalışma yapmak",
+      "kanun_maddesi": "29",
+      "yonetmelik": "16/9",
+      "teblig": "49/18",
+      "madde_36_bendi": "o",
+      "para_cezasi_tl": "8048",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat,vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-86",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerini izinsiz yurt dışına çıkarma Deniz Patlıcanı (500 gr'dan fazla 10 kg'a kadar)",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "237034",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-87",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerini izinsiz yurt dışına çıkarma Deniz Patlıcanı (10 kg dahil 100 kg'a kadar)",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-88",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerini izinsiz yurt dışına çıkarma Deniz Patlıcanı (100 kg dahil ve daha fazlası)",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "948169",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-89",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerini izinsiz yurt dışına çıkarma Çift Kabuklu Yumuşakca (2 kg'dan fazla 100 kg'a kadar)",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-90",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerini izinsiz yurt dışına çıkarma Çift Kabuklu Yumuşakca (100 kg dahil 300 kg'a kadar)",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "284449",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-91",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerini izinsiz yurt dışına çıkarma Çift Kabuklu Yumuşakca (300 kg dahil ve daha fazlası)",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "948169",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-92",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerini izinsiz yurt dışına çıkarma Sülük (10 adetten fazla 100 adete kadar)",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-93",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerini izinsiz yurt dışına çıkarma Sülük (100 adet dahil ve daha fazlası)",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-94",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerini izinsiz yurt dışına çıkarma Endemik veya koruma altındaki türleri canlı olarak",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-95",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerinin izinsiz yurt içine sokulması 1000 adete kadar",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-96",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerinin izinsiz yurt içine sokulması 1000 adet dahil 3000 adete kadar",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-97",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerinin izinsiz yurt içine sokulması 3000 adet dahil 5000 adete kadar",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "142217",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-98",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Su Ürünlerinin izinsiz yurt içine sokulması 5000 adet dahil ve daha fazlası",
+      "kanun_maddesi": "25-3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir.",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-99",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "BAGİS'in afet vb. durumda işlevsiz olduğunun 15 gün içinde bildirilmeme",
+      "kanun_maddesi": "Ek madde 4",
+      "yonetmelik": "13",
+      "teblig": "9/3",
+      "madde_36_bendi": "p",
+      "para_cezasi_tl": "9473",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "9473",
+        "boy_12_22": "15098",
+        "boy_22_ustu": "22647"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-100",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "BAGİS arızasını bildirmeme (12 saat içinde)",
+      "kanun_maddesi": "Ek madde 4",
+      "yonetmelik": "13",
+      "teblig": "8/1",
+      "madde_36_bendi": "p",
+      "para_cezasi_tl": "16106",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "16106",
+        "boy_12_22": "32212",
+        "boy_22_ustu": "48318"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-101",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "BAGİS Cihazını teslim etmeme (15 gün içinde)",
+      "kanun_maddesi": "Ek madde 4",
+      "yonetmelik": "13",
+      "teblig": "9/1",
+      "madde_36_bendi": "p",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "47397",
+        "boy_12_22": "94397",
+        "boy_22_ustu": "142191"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-102",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "BAGİS cihazını takmama, çalıştırmama",
+      "kanun_maddesi": "Ek madde 4",
+      "yonetmelik": "13",
+      "teblig": "5",
+      "madde_36_bendi": "p",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "47397",
+        "boy_12_22": "94397",
+        "boy_22_ustu": "142191"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-103",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "BAGİS arızası giderilmeden avcılık yapma",
+      "kanun_maddesi": "Ek madde 4",
+      "yonetmelik": "13",
+      "teblig": "8/2",
+      "madde_36_bendi": "p",
+      "para_cezasi_tl": "16106",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "16106",
+        "boy_12_22": "32212",
+        "boy_22_ustu": "22647"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-104",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "İstihsal edilen ürünü karaya çıkış noktalarından boşaltmamak Tam boyu 12 metreden küçük balıkçı gemileri",
+      "kanun_maddesi": "Ek madde 5",
+      "yonetmelik": "16/15",
+      "teblig": "49/26",
+      "madde_36_bendi": "r",
+      "para_cezasi_tl": "9473",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-105",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "İstihsal edilen ürünü karaya çıkış noktalarından boşaltmamak Tam boyu 12 metre dahil, 22 metreden küçük balıkçı gemileri",
+      "kanun_maddesi": "Ek madde 5",
+      "yonetmelik": "16/15",
+      "teblig": "49/26",
+      "madde_36_bendi": "r",
+      "para_cezasi_tl": "28433",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-106",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "İstihsal edilen ürünü karaya çıkış noktalarından boşaltmamak Tam boyu 22 metre dahil, daha büyük balıkçı gemileri",
+      "kanun_maddesi": "Ek madde 5",
+      "yonetmelik": "16/15",
+      "teblig": "49/26",
+      "madde_36_bendi": "r",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-107",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Uluslararası sularda izinsiz avcılık yapmak (12 metreden küçük Ruhsatlı Balıkçı Gemisi)",
+      "kanun_maddesi": "Ek madde 7",
+      "yonetmelik": "18",
+      "teblig": "50/4",
+      "madde_36_bendi": "t",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-108",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Uluslararası sularda izinsiz avcılık yapmak (12 metre dahil, 22 metreden küçük Ruhsatlı Balıkçı Gemisi)",
+      "kanun_maddesi": "Ek madde 7",
+      "yonetmelik": "18",
+      "teblig": "50/4",
+      "madde_36_bendi": "t",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-109",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Uluslararası sularda izinsiz avcılık yapmak (22 metre dahil, daha büyük Ruhsatlı Balıkçı Gemisi)",
+      "kanun_maddesi": "Ek madde 7",
+      "yonetmelik": "18",
+      "teblig": "50/4",
+      "madde_36_bendi": "t",
+      "para_cezasi_tl": "284449",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-110",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Uluslararası sularda izinsiz avcılık yapmak (12 metreden küçük Ruhsatsız Gemi)",
+      "kanun_maddesi": "Ek madde 7",
+      "yonetmelik": "18",
+      "teblig": "50/4",
+      "madde_36_bendi": "t",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-111",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Uluslararası sularda izinsiz avcılık yapmak (12 metre dahil, 22 metreden küçük Ruhsatsız Gemi)",
+      "kanun_maddesi": "Ek madde 7",
+      "yonetmelik": "18",
+      "teblig": "50/4",
+      "madde_36_bendi": "t",
+      "para_cezasi_tl": "379267",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-112",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Uluslararası sularda izinsiz avcılık yapmak (22 metre dahil, daha büyük Ruhsatsız Gemi)",
+      "kanun_maddesi": "Ek madde 7",
+      "yonetmelik": "18",
+      "teblig": "50/4",
+      "madde_36_bendi": "t",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-113",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "İzinsiz Balıklandırma Yapmak (Gerçek Kişi)",
+      "kanun_maddesi": "Ek madde 6",
+      "yonetmelik": "16/10",
+      "teblig": "49/22",
+      "madde_36_bendi": "s",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-114",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "İzinsiz Balıklandırma Yapmak (Tüzel Kişi)",
+      "kanun_maddesi": "Ek madde 6",
+      "yonetmelik": "16/10",
+      "teblig": "49/22",
+      "madde_36_bendi": "s",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-115",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Nakil Belgesi bulundurmamak",
+      "kanun_maddesi": "Ek madde 5",
+      "yonetmelik": "16/15",
+      "teblig": "46",
+      "madde_36_bendi": "r",
+      "para_cezasi_tl": "18954",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-116",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Nakil Belgesini istenilen şekil ve zamanda göndermemek",
+      "kanun_maddesi": "Ek madde 5",
+      "yonetmelik": "16/15",
+      "teblig": "46",
+      "madde_36_bendi": "r",
+      "para_cezasi_tl": "9473",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-117",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Kotaya Tabi Ürünün Belgesiz Nakli",
+      "kanun_maddesi": "25",
+      "yonetmelik": "16/15",
+      "teblig": "46/4",
+      "madde_36_bendi": "m",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-118",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Hedef Dışı Türün E-Seyirde Bildirilmemesi",
+      "kanun_maddesi": "28",
+      "yonetmelik": "16/14",
+      "teblig": "18-b",
+      "madde_36_bendi": "n",
+      "para_cezasi_tl": "6627",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "6627",
+        "boy_12_22": "13254",
+        "boy_22_ustu": "19881"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-119",
+      "kategori": "Su Ürünleri Avcılık Kurallarına Aykırılık",
+      "ihlal_nedeni": "Yetiştiricilik tesislerine mesafe yasağına uymama (Gırgır 3 Katı)",
+      "kanun_maddesi": "23-b",
+      "yonetmelik": "16/14",
+      "teblig": "49-15",
+      "madde_36_bendi": "k",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "71076",
+        "boy_12_alti": "23692",
+        "boy_12_22": "47384",
+        "boy_22_ustu": "71076"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Evet",
+      "el_koyma_vasita": "Evet (Gemi hariç)",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-120",
+      "kategori": "İstihsal hakkını kiralayanların yönetmelik kurallarına aykırı hareket etmesi",
+      "ihlal_nedeni": "Avcılığa ait güncel kayıtların tutulmaması veya bulundurulmaması",
+      "kanun_maddesi": "4",
+      "yonetmelik": "Su Ürünleri Üretiminde Kiralama Yön. Mad 13/1",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Kira Feshi",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-121",
+      "kategori": "İstihsal hakkını kiralayanların yönetmelik kurallarına aykırı hareket etmesi",
+      "ihlal_nedeni": "İstihsal alanının şeklinin ve özelliğinin değiştirilmesi veya değiştirilmesine izin verilmesi",
+      "kanun_maddesi": "4",
+      "yonetmelik": "Su Ürünleri Üretiminde Kiralama Yön. Mad 13/1",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Kira Feshi",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-122",
+      "kategori": "İstihsal hakkını kiralayanların yönetmelik kurallarına aykırı hareket etmesi",
+      "ihlal_nedeni": "Kira süresi sonunda veya sözleşmenin feshedilmesi halinde kiralanan yerin müdürlüğe istenilen şartlarda teslim edilmemesi",
+      "kanun_maddesi": "4",
+      "yonetmelik": "Su Ürünleri Üretiminde Kiralama Yön. Mad 13/1",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "142217",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Kira Feshi",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-123",
+      "kategori": "İstihsal hakkını kiralayanların yönetmelik kurallarına aykırı hareket etmesi",
+      "ihlal_nedeni": "Kiralama teknik şartnamesinde belirtilen miktardan %10'a kadar fazla avcılık yaptırılması",
+      "kanun_maddesi": "4",
+      "yonetmelik": "Su Ürünleri Üretiminde Kiralama Yön. Mad 13/1",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Kira Feshi",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-124",
+      "kategori": "İstihsal hakkını kiralayanların yönetmelik kurallarına aykırı hareket etmesi",
+      "ihlal_nedeni": "Kiralama teknik şartnamesinde belirtilen miktardan %10 dahil %50'ye kadar fazla avcılık yaptırılması",
+      "kanun_maddesi": "4",
+      "yonetmelik": "Su Ürünleri Üretiminde Kiralama Yön. Mad 13/1",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Kira Feshi",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-125",
+      "kategori": "İstihsal hakkını kiralayanların yönetmelik kurallarına aykırı hareket etmesi",
+      "ihlal_nedeni": "Kiralama teknik şartnamesinde belirtilen miktardan %50 dahil fazla avcılık yaptırılması",
+      "kanun_maddesi": "4",
+      "yonetmelik": "Su Ürünleri Üretiminde Kiralama Yön. Mad 13/1",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Kira Feshi",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-126",
+      "kategori": "İstihsal hakkını kiralayanların yönetmelik kurallarına aykırı hareket etmesi",
+      "ihlal_nedeni": "Kiracıların kiralama haklarını başkalarına devretmesi",
+      "kanun_maddesi": "4",
+      "yonetmelik": "Su Ürünleri Üretiminde Kiralama Yön. Mad 13/1",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "237034",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Kira Feshi",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-127",
+      "kategori": "Balıkçı Barınakları Mevzuatlarına Aykırılık",
+      "ihlal_nedeni": "Balıkçı barınaklarında bağlama planı yapılmaması",
+      "kanun_maddesi": "17",
+      "yonetmelik": "Balıkçı Barınakları Yönetmeliği 9",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-128",
+      "kategori": "Balıkçı Barınakları Mevzuatlarına Aykırılık",
+      "ihlal_nedeni": "Balıkçı barınaklarında ticari amaçla su ürünleri avcılığına izin verilmesi",
+      "kanun_maddesi": "17",
+      "yonetmelik": "Balıkçı Barınakları Yönetmeliği 9",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "23692",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-129",
+      "kategori": "Balıkçı Barınakları Mevzuatlarına Aykırılık",
+      "ihlal_nedeni": "Balıkçı barınaklarında mevzuata aykırı yapı yapılması",
+      "kanun_maddesi": "17",
+      "yonetmelik": "Balıkçı Barınakları Yönetmeliği 13, 9",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "237034",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-130",
+      "kategori": "Balıkçı Barınakları Mevzuatlarına Aykırılık",
+      "ihlal_nedeni": "Balıkçı barınakları ile barınaklarda bulunan alt ve üst yapıların amaç dışı kullanılması veya kullandırılması",
+      "kanun_maddesi": "17",
+      "yonetmelik": "Balıkçı Barınakları Yönetmeliği 13, 19, 9",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "142217",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-131",
+      "kategori": "Balıkçı Barınakları Mevzuatlarına Aykırılık",
+      "ihlal_nedeni": "Kiralanan barınak ve barınaktaki üst yapıların kiralayanlar tarafından üçüncü şahıslara kiralanması, devredilmesi veya ortak alınması",
+      "kanun_maddesi": "17",
+      "yonetmelik": "Balıkçı Barınakları Yönetmeliği 8, 9",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "237034",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-132",
+      "kategori": "Balıkçı Barınakları Mevzuatlarına Aykırılık",
+      "ihlal_nedeni": "Bakanlıkça belirtilen gemilerin barınaklardan yararlanmasına izin verilmemesi",
+      "kanun_maddesi": "17",
+      "yonetmelik": "Balıkçı Barınakları Yönetmeliği 8, 9, 4, 19",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "142217",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-133",
+      "kategori": "İzinsiz Su Ürünleri Yetiştiricilik Tesisi Kurma",
+      "ihlal_nedeni": "Kuluçkahane (Kapasitesi milyondan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-134",
+      "kategori": "İzinsiz Su Ürünleri Yetiştiricilik Tesisi Kurma",
+      "ihlal_nedeni": "Kuluçkahane (Kapasitesi 1 milyon dahil-5 milyondan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "284449",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-135",
+      "kategori": "İzinsiz Su Ürünleri Yetiştiricilik Tesisi Kurma",
+      "ihlal_nedeni": "Kuluçkahane (Kapasitesi 5 milyon dahil-10 milyondan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-136",
+      "kategori": "İzinsiz Su Ürünleri Yetiştiricilik Tesisi Kurma",
+      "ihlal_nedeni": "Kuluçkahane (Kapasitesi 10 milyon dahil ve fazlası)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "948169",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-137",
+      "kategori": "İzinsiz Su Ürünleri Yetiştiricilik Tesisi Kurma",
+      "ihlal_nedeni": "Büyütme Tesisi (Kapasitesi 50 ton/yıl dan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-138",
+      "kategori": "İzinsiz Su Ürünleri Yetiştiricilik Tesisi Kurma",
+      "ihlal_nedeni": "Büyütme Tesisi (Kapasitesi 50 ton/yıl dahil 250 ton/yıl dan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "284449",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-139",
+      "kategori": "İzinsiz Su Ürünleri Yetiştiricilik Tesisi Kurma",
+      "ihlal_nedeni": "Büyütme Tesisi (Kapasitesi 250 ton/yıl dahil 500 ton/yıl dan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-140",
+      "kategori": "İzinsiz Su Ürünleri Yetiştiricilik Tesisi Kurma",
+      "ihlal_nedeni": "Büyütme Tesisi (Kapasitesi 500 ton/yıl ve daha fazlası)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "948169",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-141",
+      "kategori": "Teknik Personel Bulundurmama",
+      "ihlal_nedeni": "Kapasitesi Kuluçkahanede 10 milyondan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "20",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "331855",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-142",
+      "kategori": "Teknik Personel Bulundurmama",
+      "ihlal_nedeni": "Kapasitesi Kuluçkahanede 10 milyon dahil fazlası",
+      "kanun_maddesi": "13",
+      "yonetmelik": "20",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-143",
+      "kategori": "Teknik Personel Bulundurmama",
+      "ihlal_nedeni": "Kapasitesi Büyütmede 500 ton/yıl dan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "20",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "331855",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-144",
+      "kategori": "Teknik Personel Bulundurmama",
+      "ihlal_nedeni": "Kapasitesi Büyütmede 500 ton/yıl dahil fazlası",
+      "kanun_maddesi": "13",
+      "yonetmelik": "20",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-145",
+      "kategori": "Arıtma Tesisi Kurmama veya Çalıştırmama",
+      "ihlal_nedeni": "Kapasitesi Kuluçkahanede 5 milyondan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "22",
+      "teblig": "-",
+      "madde_36_bendi": "-",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-146",
+      "kategori": "Arıtma Tesisi Kurmama veya Çalıştırmama",
+      "ihlal_nedeni": "Kapasitesi Kuluçkahanede 5 milyon dahil fazlası",
+      "kanun_maddesi": "13",
+      "yonetmelik": "22",
+      "teblig": "-",
+      "madde_36_bendi": "-",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-147",
+      "kategori": "Arıtma Tesisi Kurmama veya Çalıştırmama",
+      "ihlal_nedeni": "Kapasitesi Büyütmede 50 ton/yıl dan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "22",
+      "teblig": "-",
+      "madde_36_bendi": "-",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-148",
+      "kategori": "Arıtma Tesisi Kurmama veya Çalıştırmama",
+      "ihlal_nedeni": "Kapasitesi Büyütmede 50 ton/yıl dahil fazlası",
+      "kanun_maddesi": "13",
+      "yonetmelik": "22",
+      "teblig": "-",
+      "madde_36_bendi": "-",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-149",
+      "kategori": "Su Ürünleri Yetiştiricilik Yönetmeliği Hükümlerine Aykırılık",
+      "ihlal_nedeni": "Kuluçkahane (Kapasitesi 1 milyondan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Yetiştiricilik Yönetmeliğinde uygun madde",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-150",
+      "kategori": "Su Ürünleri Yetiştiricilik Yönetmeliği Hükümlerine Aykırılık",
+      "ihlal_nedeni": "Kuluçkahane (Kapasitesi 1 milyon dahil-5 milyondan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Yetiştiricilik Yönetmeliğinde uygun madde",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-151",
+      "kategori": "Su Ürünleri Yetiştiricilik Yönetmeliği Hükümlerine Aykırılık",
+      "ihlal_nedeni": "Kuluçkahane (Kapasitesi 5 milyon dahil-10 milyondan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Yetiştiricilik Yönetmeliğinde uygun madde",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "284449",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-152",
+      "kategori": "Su Ürünleri Yetiştiricilik Yönetmeliği Hükümlerine Aykırılık",
+      "ihlal_nedeni": "Kuluçkahane (Kapasitesi 10 milyon dahil ve fazlası)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Yetiştiricilik Yönetmeliğinde uygun madde",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-153",
+      "kategori": "Su Ürünleri Yetiştiricilik Yönetmeliği Hükümlerine Aykırılık",
+      "ihlal_nedeni": "Büyütme Tesisi (Kapasitesi 50 ton/yıldan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Yetiştiricilik Yönetmeliğinde uygun madde",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-154",
+      "kategori": "Su Ürünleri Yetiştiricilik Yönetmeliği Hükümlerine Aykırılık",
+      "ihlal_nedeni": "Büyütme Tesisi (Kapasitesi 50 ton/yıl dahil-250 ton/yıldan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Yetiştiricilik Yönetmeliğinde uygun madde",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-155",
+      "kategori": "Su Ürünleri Yetiştiricilik Yönetmeliği Hükümlerine Aykırılık",
+      "ihlal_nedeni": "Büyütme Tesisi (Kapasitesi 250 ton/yıl dahil-500 ton/yıldan az)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Yetiştiricilik Yönetmeliğinde uygun madde",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "284449",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-156",
+      "kategori": "Su Ürünleri Yetiştiricilik Yönetmeliği Hükümlerine Aykırılık",
+      "ihlal_nedeni": "Büyütme Tesisi (Kapasitesi 500 ton/yıl ve daha fazlası)",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Yetiştiricilik Yönetmeliğinde uygun madde",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "474079",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-157",
+      "kategori": "İstihsal hakkını kiralayanların yönetmelik kurallarına aykırı hareket etmesi",
+      "ihlal_nedeni": "Kiralanan su miktarı veya su alanından %10'a kadar fazla su ya da su alanı kullanması",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Su Ürünleri Üretiminde Kiralama Yönetmeliği Mad: 13/3",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "47397",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- *",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-158",
+      "kategori": "İstihsal hakkını kiralayanların yönetmelik kurallarına aykırı hareket etmesi",
+      "ihlal_nedeni": "Kiralanan su miktarı veya su alanından %10 dahil %30'a kadar fazla su ya da su alanı kullanması",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Su Ürünleri Üretiminde Kiralama Yönetmeliği Mad: 13/3",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "94811",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- *",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-159",
+      "kategori": "İstihsal hakkını kiralayanların yönetmelik kurallarına aykırı hareket etmesi",
+      "ihlal_nedeni": "Kiralanan su miktarı veya su alanından %30 dahil %60'a kadar fazla su ya da su alanı kullanması",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Su Ürünleri Üretiminde Kiralama Yönetmeliği Mad: 13/3",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "189630",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- *",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-160",
+      "kategori": "İstihsal hakkını kiralayanların yönetmelik kurallarına aykırı hareket etmesi",
+      "ihlal_nedeni": "Kiralanan su miktarı veya su alanından %60 dahil fazla su ya da su alanı kullanması",
+      "kanun_maddesi": "13",
+      "yonetmelik": "Su Ürünleri Üretiminde Kiralama Yönetmeliği Mad: 13/3",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "237034",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- *",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-166",
+      "kategori": "Kişilerin ruhsat tezkeresi almadan ticari amaçlı su ürünleri avcılığı yapması",
+      "ihlal_nedeni": "Ruhsat tezkeresini yeniletmeden ticari amaçlı su ürünleri avcılığı yapan kişilere",
+      "kanun_maddesi": "3/1",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "1000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-167",
+      "kategori": "Kişilerin ruhsat tezkeresi almadan ticari amaçlı su ürünleri avcılığı yapması",
+      "ihlal_nedeni": "Ruhsat tezkeresini almadan içsularda ticari amaçlı su ürünleri avcılığı yapan kişilere",
+      "kanun_maddesi": "3/1",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "2000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-168",
+      "kategori": "Kişilerin ruhsat tezkeresi almadan ticari amaçlı su ürünleri avcılığı yapması",
+      "ihlal_nedeni": "Ruhsat tezkeresini almadan denizlerde ticari amaçlı su ürünleri avcılığı yapan kişilere",
+      "kanun_maddesi": "3/1",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "4000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-169",
+      "kategori": "Kişilerin ruhsat tezkeresi almadan ticari amaçlı su ürünleri avcılığı yapması",
+      "ihlal_nedeni": "Ruhsat tezkeresini almadan dalarak su ürünleri avcılığı yapan kişilere",
+      "kanun_maddesi": "3/1",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-170",
+      "kategori": "Ruhsat tezkeresi alınmadan gemiler ve diğer su vasıtalarının su ürünleri faaliyetinde kullanılması",
+      "ihlal_nedeni": "Tam Boyu 5 m.'den daha küçük olanlara",
+      "kanun_maddesi": "3/1",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-171",
+      "kategori": "Ruhsat tezkeresi alınmadan gemiler ve diğer su vasıtalarının su ürünleri faaliyetinde kullanılması",
+      "ihlal_nedeni": "Tam Boyu 5 m. dahil, 10 m'den küçük olanlara",
+      "kanun_maddesi": "3/1",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "10000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-172",
+      "kategori": "Ruhsat tezkeresi alınmadan gemiler ve diğer su vasıtalarının su ürünleri faaliyetinde kullanılması",
+      "ihlal_nedeni": "Tam Boyu 10 m. dahil, 12 m'den küçük olanlara",
+      "kanun_maddesi": "3/1",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "15000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-173",
+      "kategori": "Ruhsat tezkeresi alınmadan gemiler ve diğer su vasıtalarının su ürünleri faaliyetinde kullanılması",
+      "ihlal_nedeni": "Tam Boyu 12 m. dahil, 18 m'den küçük olanlara",
+      "kanun_maddesi": "3/1",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "25000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-174",
+      "kategori": "Ruhsat tezkeresi alınmadan gemiler ve diğer su vasıtalarının su ürünleri faaliyetinde kullanılması",
+      "ihlal_nedeni": "Tam Boyu 18 m. dahil, 22 m'den küçük olanlara",
+      "kanun_maddesi": "3/1",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "35000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-175",
+      "kategori": "Ruhsat tezkeresi alınmadan gemiler ve diğer su vasıtalarının su ürünleri faaliyetinde kullanılması",
+      "ihlal_nedeni": "Tam Boyu 22 m. dahil, 35 m'den küçük olanlara",
+      "kanun_maddesi": "3/1",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "40000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-176",
+      "kategori": "Ruhsat tezkeresi alınmadan gemiler ve diğer su vasıtalarının su ürünleri faaliyetinde kullanılması",
+      "ihlal_nedeni": "Tam Boyu 35 m. dahil daha büyük olanlara",
+      "kanun_maddesi": "3/1",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "50000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-177",
+      "kategori": "Kişilerin, türlere, yerlere ve yöntemlere göre ruhsat tezkeresi almaları zorunlu olmasına karşın, ruhsat tezkeresi almadan amatör avcılık yapması",
+      "ihlal_nedeni": "Tür, yer ve yöntemlerden birine aykırılık Gemi Kullanılmamış ise",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "250",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-178",
+      "kategori": "Kişilerin, türlere, yerlere ve yöntemlere göre ruhsat tezkeresi almaları zorunlu olmasına karşın, ruhsat tezkeresi almadan amatör avcılık yapması",
+      "ihlal_nedeni": "Tür, yer ve yöntemlerden birine aykırılık Gemi Kullanılmış ise (İçsu)",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "2000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-179",
+      "kategori": "Kişilerin, türlere, yerlere ve yöntemlere göre ruhsat tezkeresi almaları zorunlu olmasına karşın, ruhsat tezkeresi almadan amatör avcılık yapması",
+      "ihlal_nedeni": "Tür, yer ve yöntemlerden birine aykırılık Gemi Kullanılmış ise (Deniz)",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "3000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-180",
+      "kategori": "Kişilerin, türlere, yerlere ve yöntemlere göre ruhsat tezkeresi almaları zorunlu olmasına karşın, ruhsat tezkeresi almadan amatör avcılık yapması",
+      "ihlal_nedeni": "Tür, yer ve yöntemlerden birden fazlasına aykırılık Gemi Kullanılmamış ise",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "500",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-181",
+      "kategori": "Kişilerin, türlere, yerlere ve yöntemlere göre ruhsat tezkeresi almaları zorunlu olmasına karşın, ruhsat tezkeresi almadan amatör avcılık yapması",
+      "ihlal_nedeni": "Tür, yer ve yöntemlerden birden fazlasına aykırılık Gemi Kullanılmış ise (İçsu)",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "3000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-182",
+      "kategori": "Kişilerin, türlere, yerlere ve yöntemlere göre ruhsat tezkeresi almaları zorunlu olmasına karşın, ruhsat tezkeresi almadan amatör avcılık yapması",
+      "ihlal_nedeni": "Tür, yer ve yöntemlerden birden fazlasına aykırılık Gemi Kullanılmış ise (Deniz)",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-183",
+      "kategori": "Türlerin avlanma miktarlarına, bölgesel avcılığa ve av araçlarına göre verilecek izindeki ticari avcılıkla ilgili usul ve esaslara aykırı faaliyette bulunması",
+      "ihlal_nedeni": "Aykırı faaliyette bulunan kişilere",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-184",
+      "kategori": "Türlerin avlanma miktarlarına, bölgesel avcılığa ve av araçlarına göre verilecek izindeki ticari avcılıkla ilgili usul ve esaslara aykırı faaliyette bulunması",
+      "ihlal_nedeni": "Tam boyu beş metreden daha küçük olan balıkçı gemilerine",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-185",
+      "kategori": "Türlerin avlanma miktarlarına, bölgesel avcılığa ve av araçlarına göre verilecek izindeki ticari avcılıkla ilgili usul ve esaslara aykırı faaliyette bulunması",
+      "ihlal_nedeni": "Tam boyu beş metre dahil, on metreden küçük olan balıkçı gemilerine",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "10000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-186",
+      "kategori": "Türlerin avlanma miktarlarına, bölgesel avcılığa ve av araçlarına göre verilecek izindeki ticari avcılıkla ilgili usul ve esaslara aykırı faaliyette bulunması",
+      "ihlal_nedeni": "Tam boyu on metre dahil, on iki metreden küçük olan balıkçı gemilerine",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "15000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-187",
+      "kategori": "Türlerin avlanma miktarlarına, bölgesel avcılığa ve av araçlarına göre verilecek izindeki ticari avcılıkla ilgili usul ve esaslara aykırı faaliyette bulunması",
+      "ihlal_nedeni": "Tam boyu on iki metre dahil, on sekiz metreden küçük olan balıkçı gemilerine",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "25000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-188",
+      "kategori": "Türlerin avlanma miktarlarına, bölgesel avcılığa ve av araçlarına göre verilecek izindeki ticari avcılıkla ilgili usul ve esaslara aykırı faaliyette bulunması",
+      "ihlal_nedeni": "Tam boyu on sekiz metre dahil, yirmi iki metreden küçük olan balıkçı gemilerine",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "35000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-189",
+      "kategori": "Türlerin avlanma miktarlarına, bölgesel avcılığa ve av araçlarına göre verilecek izindeki ticari avcılıkla ilgili usul ve esaslara aykırı faaliyette bulunması",
+      "ihlal_nedeni": "Tam boyu yirmi iki metre dahil, otuz beş metreden küçük olan balıkçı gemilerine",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "40000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-190",
+      "kategori": "Türlerin avlanma miktarlarına, bölgesel avcılığa ve av araçlarına göre verilecek izindeki ticari avcılıkla ilgili usul ve esaslara aykırı faaliyette bulunması",
+      "ihlal_nedeni": "Tam boyu otuz beş metre dahil daha büyük olan balıkçı gemilerine",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "50000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-191",
+      "kategori": "Ruhsat kod numarasının gemiye istenilen şekilde yazılmaması",
+      "ihlal_nedeni": "Tam boyu on iki metreden küçük balıkçı gemilerine",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-192",
+      "kategori": "Ruhsat kod numarasının gemiye istenilen şekilde yazılmaması",
+      "ihlal_nedeni": "Tam boyu on iki metre dahil daha büyük balıkçı gemilerine",
+      "kanun_maddesi": "3/2",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "10000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-193",
+      "kategori": "Ruhsat tezkerelerinin veya izinlerin yetkililerce talep edilmesi halinde gösterilmesi zorunludur.",
+      "ihlal_nedeni": "Ticari amaçlı su ürünleri avcılığı yapan kişilere ve gemiler için sahip ve donatanlarına",
+      "kanun_maddesi": "3/3",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "a",
+      "para_cezasi_tl": "1000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Avcılık İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-194",
+      "kategori": "İstihsal Hakkını kiralayanların yönetmelikle belirlenen kurallara aykırı hareket etmesi.",
+      "ihlal_nedeni": "Avcılığa ait güncel kayıtların tutulmaması veya bulundurulmaması",
+      "kanun_maddesi": "4",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "2500",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-195",
+      "kategori": "İstihsal Hakkını kiralayanların yönetmelikle belirlenen kurallara aykırı hareket etmesi.",
+      "ihlal_nedeni": "İstihsal alanının şeklinin ve özelliğinin değiştirilmesi veya değiştirilmesine izin verilmesi",
+      "kanun_maddesi": "4",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "10000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-196",
+      "kategori": "İstihsal Hakkını kiralayanların yönetmelikle belirlenen kurallara aykırı hareket etmesi.",
+      "ihlal_nedeni": "Kira süresinin sonunda veya sözleşmenin feshedilmesi durumunda kiralanan yerin müdürlüğe istenilen şartlarda teslim edilmemesi",
+      "kanun_maddesi": "4",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "15000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-197",
+      "kategori": "İstihsal Hakkını kiralayanların yönetmelikle belirlenen kurallara aykırı hareket etmesi.",
+      "ihlal_nedeni": "Kiralama teknik şartnamesinde belirtilen miktardan %10'a kadar fazla avcılık yaptırılması",
+      "kanun_maddesi": "4",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-198",
+      "kategori": "İstihsal Hakkını kiralayanların yönetmelikle belirlenen kurallara aykırı hareket etmesi.",
+      "ihlal_nedeni": "Kiralama teknik şartnamesinde belirtilen miktardan %10 dahil %50'ye kadar fazla avcılık yaptırılması",
+      "kanun_maddesi": "4",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "10000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-199",
+      "kategori": "İstihsal Hakkını kiralayanların yönetmelikle belirlenen kurallara aykırı hareket etmesi.",
+      "ihlal_nedeni": "Kiralama teknik şartnamesinde belirtilen miktardan %50 dahil fazla avcılık yaptırılması",
+      "kanun_maddesi": "4",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "20000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-200",
+      "kategori": "İstihsal Hakkını kiralayanların yönetmelikle belirlenen kurallara aykırı hareket etmesi.",
+      "ihlal_nedeni": "Kiracıların kiralama haklarını başkalarına devretmesi",
+      "kanun_maddesi": "4",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "b",
+      "para_cezasi_tl": "25000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Diğer İhlaller",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-201",
+      "kategori": "Kum, Çakıl, taş çıkarılması, toprak, moloz vb. maddeler dökülerek İsithsal yerlerinin değiştirilmesi",
+      "ihlal_nedeni": "İçsularda",
+      "kanun_maddesi": "7",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "c",
+      "para_cezasi_tl": "10000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-202",
+      "kategori": "Kum, Çakıl, taş çıkarılması, toprak, moloz vb. maddeler dökülerek İsithsal yerlerinin değiştirilmesi",
+      "ihlal_nedeni": "Denidlerde",
+      "kanun_maddesi": "7",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "c",
+      "para_cezasi_tl": "20000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-203",
+      "kategori": "İçsuların sulama, enerji istihsali gibi maksatlarla kullanılması halinde bu sularda mevcut su ürünlerinin yaşama, üreme, muhafaza ve istihsalini zarardan koruyacak tedbirlerin alınmaması",
+      "ihlal_nedeni": "Akarsularda kanal ark vb su alımlarında balıkların kaynaktan çıkmasını önleyecek ızgara ve filtre benzeri yapıları kurmayanlar",
+      "kanun_maddesi": "9",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "d",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-204",
+      "kategori": "İçsuların sulama, enerji istihsali gibi maksatlarla kullanılması halinde bu sularda mevcut su ürünlerinin yaşama, üreme, muhafaza ve istihsalini zarardan koruyacak tedbirlerin alınmaması",
+      "ihlal_nedeni": "Akarsular üzerinde kurulu yetiştiricilik tesislerinin ihtiyacı olan suyu bırakmayanlara veya kesenlere",
+      "kanun_maddesi": "9",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "d",
+      "para_cezasi_tl": "2000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-205",
+      "kategori": "İçsuların sulama, enerji istihsali gibi maksatlarla kullanılması halinde bu sularda mevcut su ürünlerinin yaşama, üreme, muhafaza ve istihsalini zarardan koruyacak tedbirlerin alınmaması",
+      "ihlal_nedeni": "Göllerde ve akarsularda pompa ile su alımlarında su alım yapılarına balıkların girmesini önleyecek yapı veya sistemleri kurmayanlara",
+      "kanun_maddesi": "9",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "d",
+      "para_cezasi_tl": "25000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-206",
+      "kategori": "İçsuların sulama, enerji istihsali gibi maksatlarla kullanılması halinde bu sularda mevcut su ürünlerinin yaşama, üreme, muhafaza ve istihsalini zarardan koruyacak tedbirlerin alınmaması",
+      "ihlal_nedeni": "Akarsular üzerine kurulan baraj ve regülatör gibi su yapılarından doğal su yatağına su bırakılmasını taahhüt eden suya bırakmayanlara",
+      "kanun_maddesi": "9",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "d",
+      "para_cezasi_tl": "50000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-207",
+      "kategori": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma",
+      "ihlal_nedeni": "Kuluçkahane Kapasitesi 1 milyon adet/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "10000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- xx",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-208",
+      "kategori": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma",
+      "ihlal_nedeni": "Kuluçkahane Kapasitesi 1 milyon adet/yıl dahil, 5 milyon adet/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "30000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- xx",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-209",
+      "kategori": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma",
+      "ihlal_nedeni": "Kuluçkahane Kapasitesi 5 milyon adet/yıl dahil, 10 milyon adet/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "50000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- xx",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-210",
+      "kategori": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma",
+      "ihlal_nedeni": "Kuluçkahane Kapasitesi 10 milyon adet/yıl dahil daha fazla",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "100000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- xx",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-211",
+      "kategori": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma",
+      "ihlal_nedeni": "Üretim Kapasitesi 50 ton/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "10000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- xx",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-212",
+      "kategori": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma",
+      "ihlal_nedeni": "Üretim Kapasitesi 50 ton/yıl dahil, 250 ton/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "30000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- xx",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-213",
+      "kategori": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma",
+      "ihlal_nedeni": "Üretim Kapasitesi 250 ton/yıl dahil, 500 ton/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "50000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- xx",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-214",
+      "kategori": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma",
+      "ihlal_nedeni": "Üretim Kapasitesi 500 ton/yıl dahil daha fazla",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "100000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "- xx",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": true
+    },
+    {
+      "id": "ceza-215",
+      "kategori": "Yetiştiricilik tesisinde Yönetmelik Hükümlerine uymama",
+      "ihlal_nedeni": "Kuluçkahane Kapasitesi 1 milyon adet/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-216",
+      "kategori": "Yetiştiricilik tesisinde Yönetmelik Hükümlerine uymama",
+      "ihlal_nedeni": "Kuluçkahane Kapasitesi 1 milyon adet/yıl dahil, 5 milyon adet/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "20000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-217",
+      "kategori": "Yetiştiricilik tesisinde Yönetmelik Hükümlerine uymama",
+      "ihlal_nedeni": "Kuluçkahane Kapasitesi 5 milyon adet/yıl dahil, 10 milyon adet/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "30000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-218",
+      "kategori": "Yetiştiricilik tesisinde Yönetmelik Hükümlerine uymama",
+      "ihlal_nedeni": "Kuluçkahane Kapasitesi 10 milyon adet/yıl dahil daha fazla",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "50000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-219",
+      "kategori": "Yetiştiricilik tesisinde Yönetmelik Hükümlerine uymama",
+      "ihlal_nedeni": "Üretim Kapasitesi 50 ton/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-220",
+      "kategori": "Yetiştiricilik tesisinde Yönetmelik Hükümlerine uymama",
+      "ihlal_nedeni": "Üretim Kapasitesi 50 ton/yıl dahil, 250 ton/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "20000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-221",
+      "kategori": "Yetiştiricilik tesisinde Yönetmelik Hükümlerine uymama",
+      "ihlal_nedeni": "Üretim Kapasitesi 250 ton/yıl dahil, 500 ton/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "30000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-222",
+      "kategori": "Yetiştiricilik tesisinde Yönetmelik Hükümlerine uymama",
+      "ihlal_nedeni": "Üretim Kapasitesi 500 ton/yıl dahil daha fazla",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "50000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-223",
+      "kategori": "Teknik Personel İstihdam zorunluluğuna uymama",
+      "ihlal_nedeni": "Kuluçkahane kapasitesi 10 milyondan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "35000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-224",
+      "kategori": "Teknik Personel İstihdam zorunluluğuna uymama",
+      "ihlal_nedeni": "Kuluçkahane 10 milyon dahil daha fazla",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "50000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-225",
+      "kategori": "Teknik Personel İstihdam zorunluluğuna uymama",
+      "ihlal_nedeni": "Büyütme kapasitesi 500 ton/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "35000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-226",
+      "kategori": "Teknik Personel İstihdam zorunluluğuna uymama",
+      "ihlal_nedeni": "Büyütme kapasitesi 500 ton/yıl dahil daha fazla",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "50000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Yetiştiricilik İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-227",
+      "kategori": "Arıtma sistemi kurma ve çalıştırma zorunluluğuna uymama",
+      "ihlal_nedeni": "Kuluçkahane kapasitesi 5 milyondan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-228",
+      "kategori": "Arıtma sistemi kurma ve çalıştırma zorunluluğuna uymama",
+      "ihlal_nedeni": "Kuluçkahane kapasitesi 5 milyon dahil fazla",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "50000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-229",
+      "kategori": "Arıtma sistemi kurma ve çalıştırma zorunluluğuna uymama",
+      "ihlal_nedeni": "Yetiştiricilik kapasitesi 50 ton/yıldan az",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "5000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-230",
+      "kategori": "Arıtma sistemi kurma ve çalıştırma zorunluluğuna uymama",
+      "ihlal_nedeni": "Yetiştiricilik kapasitesi 50 ton/yıl dahil fazla",
+      "kanun_maddesi": "13",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "e",
+      "para_cezasi_tl": "50000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-231",
+      "kategori": "Balıkçı Barınaklarını kiralayanların Yönetmelikle belirlenen kurallara aykırıhareket etmesi",
+      "ihlal_nedeni": "Balıkçı barınaklarında bağlama planı yapılmaması",
+      "kanun_maddesi": "17",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "2500",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-232",
+      "kategori": "Balıkçı Barınaklarını kiralayanların Yönetmelikle belirlenen kurallara aykırıhareket etmesi",
+      "ihlal_nedeni": "Balıkçı barınaklarında ticari amaçla su ürünleri avcılığına izin verilmesi",
+      "kanun_maddesi": "17",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "2500",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-233",
+      "kategori": "Balıkçı Barınaklarını kiralayanların Yönetmelikle belirlenen kurallara aykırıhareket etmesi",
+      "ihlal_nedeni": "Balıkçı barınaklarında mevzuata aykırı yapı yapılması",
+      "kanun_maddesi": "17",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "25000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-234",
+      "kategori": "Balıkçı Barınaklarını kiralayanların Yönetmelikle belirlenen kurallara aykırıhareket etmesi",
+      "ihlal_nedeni": "Balıkçı barınakları ile barınaktaki üst yapıların amaç dışı kullanılması veya kullandırılması",
+      "kanun_maddesi": "17",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "15000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-235",
+      "kategori": "Balıkçı Barınaklarını kiralayanların Yönetmelikle belirlenen kurallara aykırıhareket etmesi",
+      "ihlal_nedeni": "Kiralanan barınak ve barınaktaki üst yapıların kiracılar tarafından üçüncü şahıslara kiralanması, devredilmesi veya ortak alınması",
+      "kanun_maddesi": "17",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "25000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-236",
+      "kategori": "Balıkçı Barınaklarını kiralayanların Yönetmelikle belirlenen kurallara aykırıhareket etmesi",
+      "ihlal_nedeni": "Bakanlıkça belirtilen gemilerin barınaklardan yararlanmasına izin verilmemesi",
+      "kanun_maddesi": "17",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "f",
+      "para_cezasi_tl": "15000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Barınak İhlalleri",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-237",
+      "kategori": "Patlayıcı ve Zararlı Madde Kullanma Yasağı",
+      "ihlal_nedeni": "Bomba, torpil, dinamit, kapsül ve benzeri patlayıcı maddeler, öldürücü veya uyuşturucu maddeler, sönmemiş kireç ve tarım ilaçları ve hava tazyiki ile su ürünleri avlanması yasağı ihlali",
+      "kanun_maddesi": "18",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "g",
+      "para_cezasi_tl": "10000",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-241",
+      "kategori": "Patlayıcı ve Zararlı Madde Kullanma Yasağı",
+      "ihlal_nedeni": "0",
+      "kanun_maddesi": "-",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "-",
+      "para_cezasi_tl": "-",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    },
+    {
+      "id": "ceza-242",
+      "kategori": "Patlayıcı ve Zararlı Madde Kullanma Yasağı",
+      "ihlal_nedeni": "0",
+      "kanun_maddesi": "-",
+      "yonetmelik": "-",
+      "teblig": "-",
+      "madde_36_bendi": "-",
+      "para_cezasi_tl": "-",
+      "ceza_oranlari": {
+        "girgir": "-",
+        "boy_12_alti": "-",
+        "boy_12_22": "-",
+        "boy_22_ustu": "-"
+      },
+      "ruhsat_geri_alma": {
+        "kez_1": "-",
+        "kez_2": "-",
+        "kez_3": "-"
+      },
+      "el_koyma_urun": "Hayır",
+      "el_koyma_vasita": "Hayır",
+      "ana_baslik": "Çevre ve Su Kalitesi",
+      "tekerrur_ikikat": false
+    }
+  ]
+}

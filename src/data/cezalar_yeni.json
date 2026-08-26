@@ -1,0 +1,936 @@
+[
+  {
+    "ihlal_nedeni": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma - Kuluçkahane Kapasitesi: 1 milyondan az",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "36/1-e",
+    "madde_36_bendi": "e",
+    "para_cezasi_tl": "10.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma - Kuluçkahane Kapasitesi: 1 milyon dâhil, 5 milyondan az",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "36/1-e",
+    "madde_36_bendi": "e",
+    "para_cezasi_tl": "30.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma - Kuluçkahane Kapasitesi: 5 milyon dâhil, 10 milyondan az",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "36/1-e",
+    "madde_36_bendi": "e",
+    "para_cezasi_tl": "50.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma - Kuluçkahane Kapasitesi: 10 milyon dâhil daha fazla",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "36/1-e",
+    "madde_36_bendi": "e",
+    "para_cezasi_tl": "100.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İzinsiz olarak su ürünleri yetiştiricilik tesisi kurma - Tespit Edilen Üretim Kapasitesi: 50 ton/yıldan az",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "36/1-e",
+    "madde_36_bendi": "e",
+    "para_cezasi_tl": "10.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasi\n<truncated 14371 bytes>\nra_cezasi_2_kez": "",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İzinsiz olarak deniz patlıcanının 500 gramından, çift kabuklu yumuşakçaların 2 kilogramından, sülükte ise 10 adetten fazlasının yurt dışına çıkarılması - Çift kabuklu yumuşakçaların 300 kilogram dâhil daha fazla miktarı için",
+    "ortam": "Deniz",
+    "kanun_maddesi": "36/1-m",
+    "madde_36_bendi": "m",
+    "para_cezasi_tl": "100.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İzinsiz olarak deniz patlıcanının 500 gramından, çift kabuklu yumuşakçaların 2 kilogramından, sülükte ise 10 adetten fazlasının yurt dışına çıkarılması - Sülüğün 10 adetten fazla 100 adete kadar miktarı için",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-m",
+    "madde_36_bendi": "m",
+    "para_cezasi_tl": "10.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İzinsiz olarak deniz patlıcanının 500 gramından, çift kabuklu yumuşakçaların 2 kilogramından, sülükte ise 10 adetten fazlasının yurt dışına çıkarılması - Sülüğün 100 adet dâhil daha fazla miktarı için",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-m",
+    "madde_36_bendi": "m",
+    "para_cezasi_tl": "50.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İzinsiz olarak deniz patlıcanının 500 gramından, çift kabuklu yumuşakçaların 2 kilogramından, sülükte ise 10 adetten fazlasının yurt dışına çıkarılması - Endemik veya koruma altındaki türleri canlı olarak yurt dışına çıkaranlara",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "36/1-m",
+    "madde_36_bendi": "m",
+    "para_cezasi_tl": "50.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Balık geçidi veya diğer göç yapıları bulunduğu halde bunları çalışır vaziyette tutmayanlara, taşıma yapmayanlara ve Tarım ve Orman Bakanlığınca öngörülen tedbirleri yerine getirmeyenlere",
+    "ortam": "İç Su",
+    "kanun_maddesi": "",
+    "madde_36_bendi": "",
+    "para_cezasi_tl": "50.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Kanunun 23 üncü maddesinin birinci fıkrasının (a) bendi ile (b) bendine göre; Ticari amaçla yapılan avcılık faaliyetlerine yönelik olarak yönetmelikle getirilen hükümlere aykırı hareket etmek",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23/1-a,b",
+    "madde_36_bendi": "36(k)",
+    "para_cezasi_tl": "Kişilere: 1.700 TL, Kullanılan gemiler için: 2.500 TL, Gırgır ağları ile avlanan balıkçı gemileri için: 7.500 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç), Ruhsat İptali (Tekrarda)"
+  },
+  {
+    "ihlal_nedeni": "İçsular, Karadeniz, Marmara Denizi, İstanbul ve Çanakkale boğazlarında, gemilerdeki faaliyetlerin yürütülmesinde gerekli olan aydınlatma hariç, ağlarla avlanma amaçlı ışık kullanmak veya bu amaca uygun ışık donanımı bulundurmak",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "",
+    "madde_36_bendi": "",
+    "para_cezasi_tl": "50.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "23 üncü maddenin birinci fıkrasının (a) bendi ile (b) bendine göre amatör amaçla yapılacak avcılık faaliyetlerine yönelik olarak yönetmelikle getirilen hükümlere aykırı hareket edilmesi",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23/1-a,b",
+    "madde_36_bendi": "36(k)",
+    "para_cezasi_tl": "Kişilere: 500 TL, Kullanılan gemiler için: 750 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "24 üncü maddenin birinci fıkrasının (a) bendinde belirtilen alanlarda trol ile su ürünleri istihsalinde bulunmak",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "24/1-a",
+    "madde_36_bendi": "36(l)",
+    "para_cezasi_tl": "Kişilere: 10.000 TL, Kullanılan gemiler için: 20.000 TL",
+    "para_cezasi_2_kez": "1-3 yıl hapis ve adli para cezası",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet"
+  },
+  {
+    "ihlal_nedeni": "24 üncü maddeye göre çıkarılan yönetmelikteki dip trolüne ilişkin yasak, sınırlama ve yükümlülüklere aykırı hareket etmek",
+    "ortam": "Deniz",
+    "kanun_maddesi": "24/1-b",
+    "madde_36_bendi": "36(l)",
+    "para_cezasi_tl": "7.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İstihsal Yerlerinde Değişiklik",
+    "ortam": "İç Su",
+    "kanun_maddesi": "7",
+    "madde_36_bendi": "c",
+    "para_cezasi_tl": "94.811",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet (Kum, çakıl vs.)",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İstihsal Yerlerinde Değişiklik",
+    "ortam": "Deniz",
+    "kanun_maddesi": "7",
+    "madde_36_bendi": "c",
+    "para_cezasi_tl": "189.630",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet (Kum, çakıl vs.)",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Akarsudan su alımlarında filtre vb tedbirleri almama",
+    "ortam": "İç Su",
+    "kanun_maddesi": "9",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "47.397",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Akarsu üzerinde bulunan yetiştiricilik tesisinin suyunu kesme/bırakmama",
+    "ortam": "İç Su",
+    "kanun_maddesi": "9",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "237.034",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Akarsu, göllerde su alımlarında tedbirleri almama",
+    "ortam": "İç Su",
+    "kanun_maddesi": "9",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "237.034",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "HES'lerin can suyunu bırakmaması",
+    "ortam": "İç Su",
+    "kanun_maddesi": "9",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "474.079",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Patlayıcı, öld\n<truncated 1587 bytes>\nirilir (Gemi dahil)"
+  },
+  {
+    "ihlal_nedeni": "Akarsulara engel (ağ,bent,çitvs.) koyma",
+    "ortam": "İç Su",
+    "kanun_maddesi": "22",
+    "madde_36_bendi": "j",
+    "para_cezasi_tl": "16.106",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Balık Geçidi - Yapmayanlara",
+    "ortam": "İç Su",
+    "kanun_maddesi": "22-2",
+    "madde_36_bendi": "j",
+    "para_cezasi_tl": "2.370.440",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Balık Geçidi - İşlevsiz olması durumunda gerekli tedbirleri almayanlara",
+    "ortam": "İç Su",
+    "kanun_maddesi": "22-2",
+    "madde_36_bendi": "j",
+    "para_cezasi_tl": "1.896.350",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Balık Geçidi - Çalıştırmayanlara",
+    "ortam": "İç Su",
+    "kanun_maddesi": "22-2",
+    "madde_36_bendi": "j",
+    "para_cezasi_tl": "474.079",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Amatör Avcılık Kurallarını ihlal - Kişi",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23a/b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "4.730",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç) (kullanımı yasak olan istihsal vasıtalarına doğrudan el koyulur, tekrarı halinde gemi hariç tüm istihsal vasıtalarına el konulur)"
+  },
+  {
+    "ihlal_nedeni": "Amatör Avcılık Kurallarını ihlal - Gemi Sahibi",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23a/b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "7.105",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç) (kullanımı yasak olan istihsal vasıtalarına doğrudan el koyulur, tekrarı halinde gemi hariç tüm istihsal vasıtalarına el konulur)"
+  },
+  {
+    "ihlal_nedeni": "Zaman, yer yasağını ihlal (Beyaz Kum Midyesi)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 TL",
+    "para_cezasi_2_kez": "47.384 TL",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Zaman, yer yasağını ihlal (Algarna ile Deniz Salyangozu avcılığı)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 TL",
+    "para_cezasi_2_kez": "47.384 TL",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Palamut Avcılığı Kurallarını İhlal (Zaman, av aracı)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 TL",
+    "para_cezasi_2_kez": "47.384 TL",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Kalkan Avcılığı kuralları ihlal (Zaman, av aracı, izin belge vs.)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 TL",
+    "para_cezasi_2_kez": "47.384 TL",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Kişilerin ruhsat tezkeresi almadan ticari amaçlı su ürünleri avcılığı yapması - Ruhsat tezkeresini yeniletmeden ticari amaçlı su ürünleri avcılığı yapan kişilere",
+    "ortam": "Deniz",
+    "kanun_maddesi": "36/1-a",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "1.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "",
+    "el_koyma_vasita": ""
+  },
+  {
+    "ihlal_nedeni": "Kişilerin ruhsat tezkeresi almadan ticari amaçlı su ürünleri avcılığı yapması - Ruhsat tezkeresi almadan içsularda ticari amaçlı su ürünleri avcılığı yapan kişilere",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-a",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "2.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "",
+    "el_koyma_vasita": ""
+  },
+  {
+    "ihlal_nedeni": "Kişilerin ruhsat tezkeresi almadan ticari amaçlı su ürünleri avcılığı yapması - Ruhsat tezkeresi almadan denizlerde ticari amaçlı su ürünleri avcılığı yapan kişilere",
+    "ortam": "Deniz",
+    "kanun_maddesi": "36/1-a",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "4.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "",
+    "el_koyma_vasita": ""
+  },
+  {
+    "ihlal_nedeni": "Kişilerin ruhsat tezkeresi almadan ticari amaçlı su ürünleri avcılığı yapması - Ruhsat tezkeresini almadan dalarak su ürünleri avcılığı yapan kişilere",
+    "ortam": "Deniz",
+    "kanun_maddesi": "36/1-a",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "5.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "",
+    "el_koyma_vasita": ""
+  },
+  {
+    "ihlal_nedeni": "Ruhsat tezkeresi alınmadan gemiler ve diğer su vasıtalarının su ürünleri faaliyetinde kullanılması - Ta\n<truncated 13211 bytes>\narda kanal ark ile su alımlarında balıkların kaynaktan çıkmasını önleyecek ızgara ve filtre benzeri yapıları kurmayanlara",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-d",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "5.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "",
+    "el_koyma_vasita": ""
+  },
+  {
+    "ihlal_nedeni": "İçsuların sulama, enerji istihsali gibi maksatlarla kullanılması halinde bu sularda mevcut su ürünlerinin yaşama, üreme, muhafaza ve istihsalini zarardan koruyacak tedbirlerin alınmaması - Akarsular üzerinde kurulu su ürünleri yetiştiricilik tesisinin ihtiyacı olan suyu bırakmayanlara veya kesenlere",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-d",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "20.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "",
+    "el_koyma_vasita": ""
+  },
+  {
+    "ihlal_nedeni": "İçsuların sulama, enerji istihsali gibi maksatlarla kullanılması halinde bu sularda mevcut su ürünlerinin yaşama, üreme, muhafaza ve istihsalini zarardan koruyacak tedbirlerin alınmaması - Göllerde ve akarsularda pompa ile su alımlarında su alım yapılarına balıkların girmesini önleyecek yapı veya sistemleri kurmayanlara",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-d",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "25.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "",
+    "el_koyma_vasita": ""
+  },
+  {
+    "ihlal_nedeni": "İçsuların sulama, enerji istihsali gibi maksatlarla kullanılması halinde bu sularda mevcut su ürünlerinin yaşama, üreme, muhafaza ve istihsalini zarardan koruyacak tedbirlerin alınmaması - Akarsular üzerinde kurulan baraj ve regülatör gibi su yapılarından doğal su yatağına bırakılması taahhüt edilen suyu bırakmayanlara",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-d",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "50.000 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "",
+    "el_koyma_vasita": ""
+  },
+  {
+    "ihlal_nedeni": "İstihsal yerlerindeki değişiklikler (7 nci maddede belirtilen fiilleri ilgili mercilerden izin almaksızın yapanlara)",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-c",
+    "madde_36_bendi": "c",
+    "para_cezasi_tl": "10.000 TL",
+    "para_cezasi_2_kez": "-",
+    "el_koyma_urun": "Evet (Kum, çakıl, taş vb.)",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İstihsal yerlerindeki değişiklikler (7 nci maddede belirtilen fiilleri ilgili mercilerden izin almaksızın yapanlara)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "36/1-c",
+    "madde_36_bendi": "c",
+    "para_cezasi_tl": "20.000 TL",
+    "para_cezasi_2_kez": "-",
+    "el_koyma_urun": "Evet (Kum, çakıl, taş vb.)",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İstihsal hakkını kiralayanların yönetmelikle belirlenen kurallara aykırı hareket etmesi: Avcılığa ait güncel kayıtların tutulmaması veya bulundurulmaması",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "36/1-b",
+    "madde_36_bendi": "b",
+    "para_cezasi_tl": "2.500 TL",
+    "para_cezasi_2_kez": "5.000 TL",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Tekrarında Sözleşme İptali"
+  },
+  {
+    "ihlal_nedeni": "İstihsal hakkını kiralayanların yönetmelikle belirlenen kurallara aykırı hareket etmesi: İstihsal alanının şeklinin ve özelliğinin değiştirilmesine izin verilmesi",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "36/1-b",
+    "madde_36_bendi": "b",
+    "para_cezasi_tl": "10.000 TL",
+    "para_cezasi_2_kez": "20.000 TL",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Tekrarında Sözleşme İptali"
+  },
+  {
+    "ihlal_nedeni": "İstihsal hakkını kiralayanların yönetmelikle belirlenen kuralla\n<truncated 2530 bytes>\nda balıkların kaynaktan çıkmasını önleyecek ızgara ve filtre benzeri yapıları kurmayanlara",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-d",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "5.000 TL",
+    "para_cezasi_2_kez": "-",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İçsuların sulama, enerji istihsali gibi maksatlarla kullanılması halinde bu sularda mevcut su ürünlerinin yaşama, üreme, muhafaza ve istihsalini zarardan koruyacak tedbirlerin alınmaması: Akarsular üzerinde kurulu su ürünleri yetiştiricilik tesisinin ihtiyacı olan suyu bırakmayanlara",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-d",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "20.000 TL",
+    "para_cezasi_2_kez": "-",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İçsuların sulama, enerji istihsali gibi maksatlarla kullanılması halinde bu sularda mevcut su ürünlerinin yaşama, üreme, muhafaza ve istihsalini zarardan koruyacak tedbirlerin alınmaması: Göllerde ve akarsularda pompa ile su alımlarında su alım yapılarına balıkların girmesini önleyecek yapı veya sistemleri kurmayanlara",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-d",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "25.000 TL",
+    "para_cezasi_2_kez": "-",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İçsuların sulama, enerji istihsali gibi maksatlarla kullanılması halinde bu sularda mevcut su ürünlerinin yaşama, üreme, muhafaza ve istihsalini zarardan koruyacak tedbirlerin alınmaması: Akarsular üzerine kurulan baraj ve regülatör gibi su yapılarından doğal su yatağına bırakılması taahhüt edilen suyu bırakmayanlara",
+    "ortam": "İç Su",
+    "kanun_maddesi": "36/1-d",
+    "madde_36_bendi": "d",
+    "para_cezasi_tl": "50.000 TL",
+    "para_cezasi_2_kez": "-",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Yasak zamanda av aracını gemilerde/istihsal yerlerinde bulundurmak",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 - 71.076 TL",
+    "para_cezasi_2_kez": "2 katı",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Tüp, Nargile, Zıpkın, Su altı tüfeği vs. ile avcılık yapmak",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-a",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 - 71.076 TL",
+    "para_cezasi_2_kez": "2 katı",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (3 tekrar sonunda)"
+  },
+  {
+    "ihlal_nedeni": "Misina ağlarıyla avcılık kurallarını ihlal (Denizde)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-a",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 - 71.076 TL",
+    "para_cezasi_2_kez": "2 katı",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Markasız av aracı / Şamandıralara plaka yazılmaması",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-a",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 - 71.076 TL",
+    "para_cezasi_2_kez": "2 katı",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Avlanması yasak olan su ürünlerini (Tür yasağı) avlama",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 TL",
+    "para_cezasi_2_kez": "47.384 TL",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (3 tekrar sonunda gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Serpme ile ticari avcılık (İç Su)",
+    "ortam": "İç Su",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 TL",
+    "para_cezasi_2_kez": "47.384 TL",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Liman, barınak, barınma yeri, çekek yerinde avcılık",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 TL",
+    "para_cezasi_2_kez": "47.384 TL",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Tebliğ ile belirlenen akarsuların deniz ile birleştiği noktadan (mansap) 500 m yarıçap içerisinde ticari avcılık",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 TL",
+    "para_cezasi_2_kez": "47.384 TL",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "23 üncü madde hükümlerine aykırı faaliyet yapan kişi (Tayfa)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23/a/b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "16.106",
+    "para_cezasi_2_kez": "Suçun 2. yıl içinde tekrarı halinde 2 katı uygulanır",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Yasak zamanda gırgır ağları ile istihsal yapmak",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 (Gırgır 3 katı: 71.076, Tekne Boyu <12: 23.692, 12-22 2 katı: 47.384, 22< 3 katı: 71.076)",
+    "para_cezasi_2_kez": "Suçun 2 yıl içinde tekrarı halinde 2 katı uygulanır",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Gırgır ağı ölçüm belgesi olmaması",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-a",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 (Gırgır 3 katı: 71.046, Tekne Boyu <12: 23.692, 12-22 2 katı: 47.384, 22< 3 katı: 71.046)",
+    "para_cezasi_2_kez": "Suçun 2 yıl içinde tekrarı halinde 2 katı uygulanır",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Parekate ve fanyalı ağ ile kalkan avcılığı",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-a",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 (Gırgır 3 katı: 71.046, Tekne Boyu <12: 23.692, 12-22 2 katı: 47.384, 22< 3 katı: 71.046)",
+    "para_cezasi_2_kez": "Suçun 2 yıl içinde tekrarı halinde 2 katı uygulanır",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "12 metreden küçük tekne ile gırgır avcılığı",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-a",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 TL (Gırgır ağı ile avlanıyorsa 3 katı: 71.076 TL)",
+    "para_cezasi_2_kez": "2 katı",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç). Ruhsatı Geri Alma: 1. Kez 1 ay, 2. Kez 3 ay, 3. Kez İPTAL"
+  },
+  {
+    "ihlal_nedeni": "Manyat, tığrıp, trata, vb. sürütme ağları ile avcılık",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-a",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "Tekne boyuna göre: <12m: 23.692 TL, 12-22m: 47.384 TL, 22m<: 71.076 TL",
+    "para_cezasi_2_kez": "2 katı",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç). Ruhsatı Geri Alma: 1. Kez 1 ay, 2. Kez 3 ay, 3. Kez İPTAL"
+  },
+  {
+    "ihlal_nedeni": "Tırıvırı ile avcılık",
+    "ortam": "Her ikisi",
+    "kanun_maddesi": "23-a",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "Tekne boyuna göre: <12m: 23.692 TL, 12-22m: 47.384 TL, 22m<: 71.076 TL",
+    "para_cezasi_2_kez": "2 katı",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç). Ruhsatı Geri Alma: 1. Kez 1 ay, 2. Kez 3 ay, 3. Kez İPTAL"
+  },
+  {
+    "ihlal_nedeni": "İkinci av aracı bulundurma (12 metre ve üzeri teknelerde)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-a",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "Temel İPC: 23.692 TL. Tekne boyuna göre: Gırgır (3 katı): 71.076 TL, 12-22m (2 katı): 47.384 TL, 22m< (3 katı): 71.076 TL",
+    "para_cezasi_2_kez": "2 katı",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç). Ruhsatı Geri Alma: 1. Kez 1 ay, 2. Kez 3 ay, 3. Kez İPTAL"
+  },
+  {
+    "ihlal_nedeni": "Ruhsat tezkeresini yeniletmeden ticari avcılık",
+    "ortam": "Deniz",
+    "kanun_maddesi": "3",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "9.473 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Ruhsat tezkeresi almadan ticari avcılık (İçsu)",
+    "ortam": "İç Su",
+    "kanun_maddesi": "3",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "18.954 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Ruhsat tezkeresi almadan ticari avcılık (Deniz)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "3",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "37.914 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Ruhsat tezkeresini almadan su ürünleri avcılık (Dalarak)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "3",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "47.397 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet"
+  },
+  {
+    "ihlal_nedeni": "Ruhsat tezkeresi almadan su ürünleri avcılığı - Gemi (5 metre altı)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "3",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "47.397 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir. Gırgır, Orta su trolü, dip trolü, algarna veya dalarak su ürünleri avcılığında gemi dahil tüm istihsal vasıtalarına el konur."
+  },
+  {
+    "ihlal_nedeni": "Ruhsat tezkeresi almadan su ürünleri avcılı\n<truncated 6873 bytes>\nl 22 m. altı",
+    "ortam": "Deniz",
+    "kanun_maddesi": "3",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "331.855 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Av miktarı, bölge ve av araçlarına ait alınan izinlere aykırı faaliyet - Gemi (Kum Midyesi av miktarı ve bölge ihlali, Ortasu, Algarna, Hamsi Avcılık, Kum Midyesi avcılık İzin Belgeleri vs) - 22 m. dahil 35 m. altı",
+    "ortam": "Deniz",
+    "kanun_maddesi": "3",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "379.267 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Av miktarı, bölge ve av araçlarına ait alınan izinlere aykırı faaliyet - Gemi (Kum Midyesi av miktarı ve bölge ihlali, Ortasu, Algarna, Hamsi Avcılık, Kum Midyesi avcılık İzin Belgeleri vs) - 35 m. ve üstü",
+    "ortam": "Deniz",
+    "kanun_maddesi": "3",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "474.079 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Ruhsat kod numarasının gemiye yazılmaması - 12 m. den küçük",
+    "ortam": "Deniz",
+    "kanun_maddesi": "3",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "47.397 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Ruhsat kod numarasının gemiye yazılmaması - 12 m. ve üstü",
+    "ortam": "Deniz",
+    "kanun_maddesi": "3",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "94.811 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "İzin ve ruhsat belgesini göstermeme (kişi-donatan vs.)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "3",
+    "madde_36_bendi": "a",
+    "para_cezasi_tl": "9.473 TL",
+    "para_cezasi_2_kez": "",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır"
+  },
+  {
+    "ihlal_nedeni": "Balıkçı barınaklarında bağlama planı yapılmaması",
+    "ortam": "Deniz",
+    "kanun_maddesi": "17",
+    "madde_36_bendi": "36/1-f",
+    "para_cezasi_tl": "2.500 TL",
+    "para_cezasi_2_kez": "5.000 TL",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır (Aynı kabahatin tekrarı halinde kira sözleşmeleri iptal edilir)"
+  },
+  {
+    "ihlal_nedeni": "Balıkçı barınaklarında ticari amaçla su ürünleri avcılığına izin verilmesi",
+    "ortam": "Deniz",
+    "kanun_maddesi": "17",
+    "madde_36_bendi": "36/1-f",
+    "para_cezasi_tl": "2.500 TL",
+    "para_cezasi_2_kez": "5.000 TL",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır (Aynı kabahatin tekrarı halinde kira sözleşmeleri iptal edilir)"
+  },
+  {
+    "ihlal_nedeni": "Balıkçı barınaklarında mevzuata aykırı yapı yapılması",
+    "ortam": "Deniz",
+    "kanun_maddesi": "17",
+    "madde_36_bendi": "36/1-f",
+    "para_cezasi_tl": "25.000 TL",
+    "para_cezasi_2_kez": "50.000 TL",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır (Aynı kabahatin tekrarı halinde kira sözleşmeleri iptal edilir)"
+  },
+  {
+    "ihlal_nedeni": "Balıkçı barınakları ile barınaklarda bulunan alt ve üst yapıların amaç dışı kullanılması veya kullandırılması",
+    "ortam": "Deniz",
+    "kanun_maddesi": "17",
+    "madde_36_bendi": "36/1-f",
+    "para_cezasi_tl": "15.000 TL",
+    "para_cezasi_2_kez": "30.000 TL",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır (Aynı kabahatin tekrarı halinde kira sözleşmeleri iptal edilir)"
+  },
+  {
+    "ihlal_nedeni": "Kiralanan barınak ve barınaktaki üst yapıların kiralayanlar tarafından üçüncü şahıslara kiralanması, devredilmesi veya ortak alınması",
+    "ortam": "Deniz",
+    "kanun_maddesi": "17",
+    "madde_36_bendi": "36/1-f",
+    "para_cezasi_tl": "25.000 TL",
+    "para_cezasi_2_kez": "50.000 TL",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır (Aynı kabahatin tekrarı halinde kira sözleşmeleri iptal edilir)"
+  },
+  {
+    "ihlal_nedeni": "Bakanlıkça belirtilen gemilerin barınaklardan yararlanmasına izin verilmemesi",
+    "ortam": "Deniz",
+    "kanun_maddesi": "17",
+    "madde_36_bendi": "36/1-f",
+    "para_cezasi_tl": "15.000 TL",
+    "para_cezasi_2_kez": "30.000 TL",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır (Aynı kabahatin tekrarı halinde kira sözleşmeleri iptal edilir)"
+  },
+  {
+    "ihlal_nedeni": "Bomba, torpil, dinamit, kapsül ve benzeri patlayıcı maddeler, öldürücü veya uyuşturucu maddeler, sönmemiş kireç ve Tarım Orman ve Köyişleri Bakanlığının müsaadesi alınmaksızın elektrik cereyanı, elektroşok ve hava tazyiki ile su ürünleri avlamak",
+    "ortam": "Deniz",
+    "kanun_maddesi": "19",
+    "madde_36_bendi": "36/1-g",
+    "para_cezasi_tl": "10.000 TL",
+    "para_cezasi_2_kez": "Belirtilmemiş",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Eşya, alet, edevat, teçhizat)"
+  },
+  {
+    "ihlal_nedeni": "İç sular, Marmara denizi ve boğazlarda her türlü trol avcılığı (Kişiler)",
+    "ortam": "İç Su, Deniz",
+    "kanun_maddesi": "24-1/a",
+    "madde_36_bendi": "l",
+    "para_cezasi_tl": "94.811 TL",
+    "para_cezasi_2_kez": "2 katı uygulanır",
+    "el_koyma_urun": "-",
+    "el_koyma_vasita": "-"
+  },
+  {
+    "ihlal_nedeni": "İç sular, Marmara denizi ve boğazlarda her türlü trol avcılığı (Gemi donatanı veya sahibi)",
+    "ortam": "İç Su, Deniz",
+    "kanun_maddesi": "24-1/a",
+    "madde_36_bendi": "l",
+    "para_cezasi_tl": "<12m: 189.630 TL, 12-22m: 379.260 TL, >22m: 568.890 TL",
+    "para_cezasi_2_kez": "2 katı uygulanır",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "(İstanbul ve Çanakkale Boğazları ile Marmara Denizinde) istihsal vasıtaları zapt ve mülkiyeti kamuya geçirilir. Tekrarı halinde 1 yıldan 3 yıla kadar (5000-1000 gün adli para cezası) hapis cezası, su ürünleri istihsal vasıtalarına el koyularak mülkiyeti kamuya geçirilir (Gemi dahil). Ruhsatı Geri Alma: 1.Kez: 1 (bir) ay, 2.Kez: 3 (üç) ay, 3.Kez: İPTAL"
+  },
+  {
+    "ihlal_nedeni": "Işık ile avcılık",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "<12m: 474.079 TL, 12-22m: 948.158 TL, >22m: 1.422.237 TL",
+    "para_cezasi_2_kez": "2 katı uygulanır",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Aykırılığa neden olan av aracı, eşya, alet, edevat, teçhizat vb. zapt ve mülkiyeti kamuya geçirilir. Ruhsatı Geri Alma: 1.Kez: 1 (bir) ay, 2.Kez: 3 (üç) ay, 3.Kez: İPTAL"
+  },
+  {
+    "ihlal_nedeni": "Yasak boyda su ürünü avlama",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "Gırgır: 56.640 TL (Tekne boyuna göre katı), <12m: 23.692 TL, 12-22m: 47.384 TL, >22m: 71.076 TL",
+    "para_cezasi_2_kez": "2 katı uygulanır",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (3 tekrar sonunda Gemi hariç). Ruhsatı Geri Alma: 1.Kez: 1 (bir) ay, 2.Kez: 3 (üç) ay, 3.Kez: İPTAL"
+  },
+  {
+    "ihlal_nedeni": "Dip Trolüne ilişkin yasakların ihlali (DONATAN VEYA SAHİP)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "24/b",
+    "madde_36_bendi": "l",
+    "para_cezasi_tl": "Tekne Boyu < 12: 66.357 TL, 12-22: 132.714 TL, 22<: 199.071 TL",
+    "para_cezasi_2_kez": "Suçun 2 yıl içinde tekrarı halinde 2 katı uygulanır (12-22 m için 2 Katı, 22< m için 3 Katı)",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç) (Ruhsatı Geri Alma: 1.Kez 1 ay, 2.Kez 3 ay, 3.Kez İPTAL)"
+  },
+  {
+    "ihlal_nedeni": "Dip Trolüne ilişkin yasakların ihlali (KİŞİ tayfa)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "24/b",
+    "madde_36_bendi": "l",
+    "para_cezasi_tl": "66.357 TL",
+    "para_cezasi_2_kez": "Suçun 2 yıl içinde tekrarı halinde 2 katı uygulanır",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır (Ruhsatı Geri Alma: 1.Kez 1 ay, 2.Kez 3 ay, 3.Kez İPTAL)"
+  },
+  {
+    "ihlal_nedeni": "Orta Su Trolüne ilişkin yasakların ihlali (DONATAN VEYA SAHİP)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "24/c",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "Tekne Boyu < 12: 23.692 TL, 12-22: 47.384 TL, 22<: 71.076 TL",
+    "para_cezasi_2_kez": "Suçun 2 yıl içinde tekrarı halinde 2 katı uygulanır (12-22 m için 2 Katı, 22< m için 3 Katı)",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç) (Ruhsatı Geri Alma: 1.Kez 1 ay, 2.Kez 3 ay, 3.Kez İPTAL)"
+  },
+  {
+    "ihlal_nedeni": "Orta Su Trolüne ilişkin yasakların ihlali (KİŞİ)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "24/c",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "16.106 TL",
+    "para_cezasi_2_kez": "Suçun 2 yıl içinde tekrarı halinde 2 katı uygulanır",
+    "el_koyma_urun": "Hayır",
+    "el_koyma_vasita": "Hayır (Ruhsatı Geri Alma: 1.Kez 1 ay, 2.Kez 3 ay, 3.Kez İPTAL)"
+  },
+  {
+    "ihlal_nedeni": "Salyangoz avcılığı (05:00-20:00)",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "Tekne Boyu <12: 23.692 TL, 12-22: 47.384 TL, 22<: 71.076 TL",
+    "para_cezasi_2_kez": "Suçun 2 yıl içinde tekrarı halinde 2 katı uygulanır",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Birden fazla algarna ile avlanma",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-a",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "Tekne Boyu <12: 71.076 TL (3 katı), 12-22: 47.384 TL, 22<: 71.076 TL",
+    "para_cezasi_2_kez": "Suçun 2 yıl içinde tekrarı halinde 2 katı uygulanır",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "Derinlik yasağına (18-24 metreden sığda vb) aykırı avcılık",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-b",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "23.692 TL",
+    "para_cezasi_2_kez": "Suçun 2 yıl içinde tekrarı halinde 2 katı uygulanır",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  },
+  {
+    "ihlal_nedeni": "90 kulaçtan daha derin gırgır ağı",
+    "ortam": "Deniz",
+    "kanun_maddesi": "23-a",
+    "madde_36_bendi": "k",
+    "para_cezasi_tl": "Tekne Boyu <12: 71.076 TL (3 katı), 12-22: 47.384 TL, 22<: 71.076 TL",
+    "para_cezasi_2_kez": "Suçun 2 yıl içinde tekrarı halinde 2 katı uygulanır",
+    "el_koyma_urun": "Evet",
+    "el_koyma_vasita": "Evet (Gemi hariç)"
+  }
+]

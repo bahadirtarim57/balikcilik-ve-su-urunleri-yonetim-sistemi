@@ -1,0 +1,2563 @@
+TEBLİĞLER
+Tarım ve Orman Bakanlığından:
+6/1 NUMARALI TİCARİ AMAÇLI SU ÜRÜNLERİ AVCILIĞININ
+DÜZENLENMESİ HAKKINDA TEBLİĞ
+(TEBLİĞ NO: 2024/20)
+BİRİNCİ BÖLÜM
+Başlangıç Hükümleri
+Amaç ve kapsam
+MADDE 1- (1) Bu Tebliğin amacı; 1/9/2024 - 31/8/2028 tarihleri arasında ticari amaçlı
+su ürünleri avcılığında uygulanmak üzere bilimsel, çevresel, ekonomik ve sosyal hususlar göz
+önüne alınarak su ürünleri kaynaklarının korunması, sürdürülebilir işletilmesinin sağlanması
+için su ürünleri avcılığına ilişkin yükümlülük, sınırlama ve yasakları düzenlemektir.
+Dayanak
+MADDE 2- (1) Bu Tebliğ; 22/3/1971 tarihli ve 1380 sayılı Su Ürünleri Kanunu ve
+10/3/1995 tarihli ve 22223 sayılı Resmî Gazete’de yayımlanan Su Ürünleri Yönetmeliğine da-
+yanılarak hazırlanmıştır.
+Tanımlar
+MADDE 3- (1) Bu Tebliğde geçen;
+a) Ağ gözü açıklığı: Ağ ıslakken, ağ ipinin ve düğümünün kalınlığına bakılmaksızın,
+gergin halde bir ağ gözünün karşılıklı iki düğümü arasındaki mesafe (Ek-1) olup ağın akış yönü
+dikkate alınarak, birbirini takip eden yirmi ağ gözünde yapılan ölçümün ortalamasını,
+b) Akarsu: Belirli bir yatak içinde sürekli veya zaman zaman akan nehir, çay, ırmak,
+dere olarak adlandırılan suları,
+c) Akdeniz: 29° D (doğu) boylamı ile Suriye sınırı arasında kalan suları,
+ç) Alamana ağı: Fanyalı ve fanyasız olabilen, mapa ve tel bulunmayan, alttan büzül-
+meyen, büzmeye yarayacak herhangi bir düzeneği bulunmayan ve sürütülmeyen voli ağları
+olarak da adlandırılan çevirme ağlarını,
+d) Bakanlık: Tarım ve Orman Bakanlığını,
+e) Balık boyu: Ölçülen metoda göre tam boy veya çatal boy olarak yapılan balık boyu
+ölçümünü, tam boy; ağzı kapalı iken balık başının ön ucu ile kuyruk yüzgecinin en uzun ışınının
+bitim noktası arasındaki izdüşüm uzunluğunu, çatal boy; alt çene ucu ile kuyruk yüzgecinin
+çatalı arasındaki uzunluğu (Ek-1),
+f) Çanakkale Boğazı: Kuzeyde Çankaya Burnu (40° 25’ 13.32” K - 26° 41’ 59.22” D)
+ile (40° 24’ 13.80” K - 26° 45’ 27.90” D) koordinat noktasını; güneyde Mehmetçik Burnu Fe-
+neri (40° 2’ 27.90” K - 26° 11’ 18.06” D) ile Kumkale Burnu Fenerini (40° 0’ 30.66” K - 26°
+11’ 54.24” D) birleştiren hatlar arasında kalan suları (Harita-1),
+g) Çapari: Bir beden üzerinde her biri ayrı köstek ile bağlı, ikiden fazla tüylü veya tüy-
+süz, yemli veya yemsiz iğne bulunan olta takımını,
+ğ) Çevirme ağı: Balıkların etrafını çevirmek ve bunları ağ içerisinde hapsetmek suretiyle
+yakalanmalarını sağlayan istihsal vasıtasını,
+h) Dip trolü: Su ürünleri avcılığında, kapı kullanılarak deniz zeminine temas etmek su-
+reti ile çekilen trol ağlarını,
+ı) Dolanan (sürüklenen) ağ (Drift-Net): Mantar yakası plastik yüzdürücüler ile donatıl-
+mış, kurşun yakası olmayan veya ağırlık takılsa dahi takılan ağırlık yeterli olmadığı için kendi
+ağırlığı ile suda asılı kalarak, rüzgâr ve akıntı etkisiyle su yüzeyinde hareket eden uzatma ağı
+çeşidini,
+i) Ege Denizi: Meriç Nehrinin denize döküldüğü yer ile 29° D (doğu) boylamı arasında
+kalan suları,
+j) Gırgır ağı: Alttan büzülen çevirme ağlarını,
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 21
+k) İğne büyüklüğü (ağız açıklığı): Olta iğnesi bedeninin dış düzlemi ile olta iğnesi ucu
+arasındaki dik mesafeyi (Ek-1),
+l) İl müdürlüğü: Tarım ve Orman Bakanlığı il müdürlüklerini,
+m) İlçe müdürlüğü: Tarım ve Orman Bakanlığı ilçe müdürlüklerini,
+n) İstanbul Boğazı: Kuzeyde Türkeli (Rumeli) Feneri (41° 14’ 7.56” K - 29° 6’ 45.84”
+D) ile Anadolu Fenerini (41° 13’ 6.06” K - 29° 9’ 10.38” D); güneyde Ahırkapı Feneri (41° 0’
+44.34” K - 28° 59’ 7.56” D) ve Kadıköy İnci Burnu Mendirek Fenerini (40° 59’ 33.18” K - 29°
+0’ 53.58” D) birleştiren hatlar arasında kalan suları (Harita-2),
+o) İstiridye boyu: Büyük kabuğun (sol kabuğun) baştaki tepe noktasından (umbo) dikey
+olarak inen çap uzunluğunu,
+ö) Karides boyu: Göz yuvalarının iç kısmından kabuğun (karapaksın) arka kenarına ka-
+dar olan uzunluğunu (Ek-1),
+p) Kerevit, deniz böceği ve ıstakoz boyu: Burnun dikenimsi ucundan kuyruk yelpaze-
+sinin sonuna kadar olan kısmın uzunluğunu (Ek-1),
+r) Kum midyesi boyu: Kabukların birleşme noktasından dikey olarak inen çap uzunlu-
+ğunu (Ek-1),
+s) Liman: Yükleme, boşaltma ve barınma amacı ile kullanılan, dalga hareketlerinin
+olumsuz etkisinden korunmak için mendireklerle çevrilmiş korunaklı su alanını,
+ş) Mavi yengeç boyu: Kabuğun (karapaksın) sağ ve sol taraflarındaki sivri çıkıntıların
+uçları arasındaki izdüşüm uzunluğunu (Ek-1),
+t) Mesafe: Anakara sahilinden veya özel olarak belirtilen kara parçalarından deniz isti-
+kametinde her yöne olan uzaklığı,
+u) Mil: 1852 metrelik deniz mili uzunluğunu,
+ü) Ortasu trolü: Pelajik balıkların avcılığında kullanılan, dibe temas etmeksizin suyun
+ortasından veya yüzeyine yakın kısmından çekilen trol ağlarını,
+v) Rekreasyonel balıkçılık: İnsanların dinlenme, eğlence ve spor amacı ile gönüllü ola-
+rak katılabilecekleri şekilde lagünlerde, nehirlerde, baraj gölü, göl ve düzenlenmiş bir alanda
+yürütülen istihsal faaliyetini,
+y) Su ürünleri istihsal hakkı: Dalyan, lagün ve iç sulardaki ticari, amatör ve rekreasyonel
+amaçlı su ürünleri avcılık hakkını,
+z) Tarih aralığı: Başlangıç ve bitişini gösteren günlerin, yapılan düzenlemeye dâhil ol-
+duğu ve belirtilen ayların bu Tebliğin geçerli olduğu yıllara ait ayları ifade ettiği zaman aralı-
+ğını,
+aa) Ticari amaçlı amatör balıkçılık turizmi: Yerli ve yabancı amatör balıkçıların 6/2 Nu-
+maralı Amatör Amaçlı Su Ürünleri Avcılığının Düzenlenmesi Hakkında Tebliğ ile getirilen ku-
+rallara uymak kaydıyla katıldıkları amatör balıkçılık amaçlı turizm etkinliğini,
+bb) Uzatma ağı: Balıkların galsamalarından ağa takılması veya ağa vurdukları esnada
+yaptıkları hareketlerle ağlara sarılması ya da sık gözlü ağa çarparak, seyrek gözlü ağda torba
+yapmak suretiyle yakalanmalarını sağlayan istihsal vasıtasını,
+ifade eder.
+İKİNCİ BÖLÜM
+Yer Yasakları
+Akdeniz’deki yer yasakları
+MADDE 4- (1) Akdeniz’deki yer yasakları aşağıda belirtilmiştir:
+a) Hatay İli, Dörtyol İlçesi, İsdemir Özel Güvenlik Bölgesinde; (36° 42’ 20.444’’ K -
+36° 11’ 35.487’’ D), (36° 42’ 20.572’’ K - 36° 11’ 34.813’’ D), (36° 42’ 25.448’’ K - 36° 11’
+16.412’’ D), (36° 42’ 30.323’’ K - 36° 10’ 58.010’’ D), (36° 42’ 36.952’’ K - 36° 10’ 32.978’’
+D), (36° 42’ 40.379’’ K - 36° 10’ 31.342’’ D), (36° 42’ 44.050’’ K - 36° 10’ 30.624’’ D), (36°
+43’ 19.686’’ K - 36° 10’ 28.723’’ D), (36° 43’ 28.145’’ K - 36° 10’ 38.587’’ D), (36° 43’ 28.391’’
+Sayfa : 22                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+K - 36° 10’ 53.566’’ D), (36° 43’ 27.038’’ K - 36° 10’ 55.250’’ D), (36° 43’ 44.027’’ K - 36° 11’
+05.418’’ D), (36° 44’ 17.424’’ K - 36° 10’ 39.303’’ D), (36° 44’ 52.327’’ K - 36° 10’ 42.527’’
+D), (36° 45’ 07.106’’ K - 36° 11’ 07.316’’ D), (36° 45’ 07.633’’ K - 36° 11’ 21.085’’ D), (36°
+45’ 10.469’’ K - 36° 11’ 31.262’’ D), (36° 45’ 10.006’’ K - 36° 11’ 34.572’’ D) koordinat nok-
+talarını birleştiren alanda (Harita-3-1),
+b) Hatay İli, Dörtyol İlçesi, Botaş Petrol Yükleme İskelesi Özel Güvenlik Bölgesinde;
+(36° 50’ 55” K - 36° 07’ 24” D), (36° 50’ 55” K - 36° 08’ 40” D), (36° 51’ 54” K -36° 07’ 24”
+D), (36° 51’ 54” K - 36° 08’ 40” D) koordinat noktalarını birleştiren alanda (Harita-3-2),
+c) Adana İli, Ceyhan İlçesi, Botaş Petrol Yükleme İskelesi Özel Güvenlik Bölgesinde;
+(36° 52’ 08” K - 35° 55’ 06” D), (36° 50’ 30” K - 35° 56’ 02” D), (36° 51’ 30” K - 35° 58’ 24”
+D), (36° 53’ 24” K - 35° 56’ 42” D) koordinat noktalarını birleştiren alanda (Harita-3-3),
+ç) Adana İli, Yumurtalık İlçesi, Sugözü Elektrik Santralinin bulunduğu (36° 50’ 24” K
+- 35° 53’ 48” D), (36° 50’ 06” K - 35° 54’ 36” D), (36° 49’ 42” K - 35° 54’ 12” D), (36° 49’
+26” K - 35° 53’ 54” D), (36° 50’ 00” K - 35° 53’ 00” D) koordinat noktalarını birleştiren alanda
+(Harita-3-4),
+d) Adana İli, Yumurtalık İlçesi, Yumurtalık Balıkçı Barınağı Feneri (36° 45’ 58.80” K
+- 35° 47’ 43.02” D), Kale (36° 46’ 8.04” K - 35° 47’ 49.02” D) ve Emniyet Tesisleri (36° 46’
+25.50” K - 35° 47’ 43.62” D) arasında çekilen hattın batısında kalan alanda (Harita-3-5),
+e) Adana İli, Yumurtalık İlçesi, Kokar Burnu (36° 42’ 35.46” K - 35° 42’ 55.26” D) ile
+Yumurtalık Balıkçı Barınağı (36° 46’ 2.64” K - 35° 47’ 29.88” D) arasında çekilen hattın batı-
+sında kalan alanda uzatma ağları dışındaki avlanma araçlarıyla (Harita-3-6),
+f) Mersin İli, Erdemli İlçesi, ODTÜ Deniz Bilimleri Enstitüsü sınırları içerisinde (36°
+33’ 35.94” K - 34° 14’ 57.54” D), (36° 33’ 29.82” K - 34° 15’ 16.56” D), (36° 34’ 4.14” K -
+34° 15’ 52.50” D) koordinat noktalarını birleştiren alanda (Harita-4-1),
+g) Mersin İli, Taşucu İlçesi, Ağalar Koyunda bulunan deniz askeri güvenlik bölgesinin
+yer aldığı (36° 16’ 32” K - 33° 49’ 29” D), (36° 16’ 17” N - 33° 50’ 21” E), (36° 16’ 51” K -
+33° 51’ 5” D), (36° 17’ 34” K - 33° 50’ 50” D) koordinat noktalarını birleştiren hattın batısında
+kalan alanda (Harita-4-2),
+ğ) Mersin İli, Aydıncık İlçesi, Sancak Burnu (36° 7’ 28.80” K - 33° 23’ 36.48” D) ile
+Bozyazı İlçesi Kızılliman Burnu (36° 4’ 14.58” K- 33° 4’ 42.48” D) arasında kalan karasula-
+rımızda uzatma ağları ve parakete dışındaki avlanma araçlarıyla (Harita-4-3),
+h) Mersin İli, Anamur İlçesi, Kızılliman mevkii Arap Burnu (36° 5’ 12.00” K - 33° 5’
+27.96” D) ile Gökçevlik (36° 6’ 30.00” K - 33° 6’ 37.98” D) mevkii arasında kıyıdan itibaren
+200 metre mesafe içerisinde (Harita-4-4),
+ı) Mersin İli, Anamur İlçesi ile Kuzey Kıbrıs Türk Cumhuriyeti (K.K.T.C.) Girne ara-
+sında kurulan K.K.T.C. su temin hattının bulunduğu (36° 01’ 52.18’’ K - 32° 48’ 42.01’’ D),
+(36° 01’ 02.78’’ K - 32° 48’ 04.86’’ D), (35° 49’ 40.30’’ K - 32° 53’ 01.61’’ D), (35° 35’ 57.62’’
+K - 32° 58’ 52.32’’ D), (35° 35’ 30.91’’ N - 33° 01’ 15.24’’ D), (35° 50’ 06.11’’ K - 32° 54’
+21.49’’ D) koordinat noktalarını birleştiren alanda (Harita-4-5),
+i) Mersin İli, Anamur İlçesi, Karaağan Burnu merkezde kalacak şekilde (36° 2’ 16.92”
+K- 32° 41’ 54.42” D), (36° 2’ 7.74” K - 32° 43’ 9.00” D) koordinat noktaları arasındaki 1 millik
+sahil şeridinde, kıyıdan itibaren 200 metre mesafe içerisinde (Harita-4-6),
+j) Su ürünleri ile ilgili araştırmalar yapmak amacıyla Akdeniz Su Ürünleri Araştırma,
+Üretme ve Eğitim Enstitüsü Müdürlüğüne tahsis edilmiş olan Antalya İli, Demre İlçesi, Bey-
+melek Lagünü ile Lagüne ait her iki mendireği birleştiren hattın deniz tarafındaki 1 millik alan
+içerisinde ve Acıgöl’de (Harita-5),
+k) Antalya İli, Kaş İlçesinde;
+1) Üçağız Limanında; (36° 11’ 32.04” K - 29° 50’ 59.88” D) ve (36° 11’ 32.16” K - 29°
+51’ 13.80” D) koordinat noktalarını birleştiren hattın kuzeyinde kalan karasularımızda (Hari-
+ta-6-1),
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 23
+2) Sıcak Denizde; (36° 10’ 16.08” K - 29° 48’ 42.54” D) ve (36° 10’ 1.62” K - 29° 48’
+42.90” D) koordinat noktalarını birleştiren hattın batısında kalan alanda (Harita-6-2),
+3) Aperlia mevkiinde; (36° 9’ 16.98” K - 29° 45’ 19.68” D) ve (36° 8’ 33.06” K - 29°
+45’ 25.26” D) koordinat noktalarını birleştiren hattın doğusunda kalan alanda (Harita-6-3),
+4) Ufakdere mevkiinde; (36° 8’ 47.28” K - 29° 39’ 53.76” D) ile (36° 9’ 7.74” K- 29°
+40’ 45.96” D) koordinat noktalarını birleştiren hattın kuzeyinde kalan alanda (Harita-6-4),
+5) Beşadalar mevkiinde; (36° 10’ 03’’ K - 29° 37’ 31’’ D), (36° 09’ 10’’ K - 29° 36’ 50’’
+D), (36° 08’ 52’’ K - 29° 36’ 59’’ D), (36° 09’ 05’’ K - 29° 38’ 08’’ D), (36° 09’ 25’’ K - 29° 38’
+29’’ D) koordinat noktalarını birleştiren alanda (Harita-6-5),
+6) İnceburun mevkiinde; (36° 11’ 33.72” K - 29° 38’ 57.24” D) ile (36° 10’ 59.46” K-
+29° 38’ 31.62” D) koordinat noktalarını birleştiren hattın güneyinde kalan alanda (Harita-6-6),
+7) Çondur Burnu mevkiinde; (36° 11’ 15’’ K - 29° 36’ 17’’ D), (36° 11’ 12’’ K - 29° 36’
+40’’ D), (36° 11’ 49’’ K - 29° 37’ 01’’ D) koordinat noktalarını birleştiren hattın batısında kalan
+alanda (Harita-6-7),
+8) Bucak Denizinde; (36° 12’ 20.27’’ K - 29° 36’ 6.66’’ D) ve (36° 11’ 49.06’’ K - 29°
+36’ 12.85’’ D) koordinat noktalarını birleştiren hattın doğusunda kalan alanda (Harita-6-8),
+su ürünleri avcılığı yasaktır.
+(2) Anamur Burnu (36° 0’ 54.36” K - 32° 48’ 12.00” D) ile Eşen Çayı (36° 17’ 35.40”
+K- 29° 15’ 49.20” D) arasında kalan karasularımızda (Harita-7), 1 Nisan - 31 Ekim tarihleri
+arasında köpek balığı avcılığı yasaktır.
+Ege Denizi’ndeki yer yasakları
+MADDE 5- (1) Ege Denizi’ndeki yer yasakları aşağıda belirtilmiştir:
+a) Muğla İli, Fethiye İlçesinde;
+1) Ölüdeniz mevkiinde; (36° 32’ 36.54” K - 29° 6’ 39.66” D) ile (36° 32’ 16.56” K -
+29° 7’ 32.40” D) koordinat noktalarını birleştiren hattın kuzeybatısında kalan alanda (Harita-
+8-1),
+2) Fethiye Limanında, Fethiye Adası Feneri (36° 38’ 49.44” K - 29° 5’ 53.76” D) ile
+Paçarız Burnunu (36° 38’ 31.02” K - 29° 6’ 4.50” D) birleştiren hattın doğusunda kalan alanda
+(Harita-8-2),
+3) Gökgemiler Koyunda; (36° 38’ 20.04” K - 28° 49’ 51.54” D), (36° 37’ 35.76” K -
+28° 49’ 33.60” D) koordinat noktalarını birleştiren hattın doğusunda kalan alanda (Harita-8-
+3),
+4) Hamam Koyu ve Yavansu Koyunda; (36° 39’ 16.44” K - 28° 51’ 58.50” D), (36° 38’
+52.44” K- 28° 52’ 40.44” D) koordinat noktalarını birleştiren hattın güneybatısında kalan alanda
+(Harita-8-4),
+5) Tersane Adası ve Domuz Adası arasında (36° 40’ 7.98” K - 28° 54’ 38.58” D), (36°
+40’ 0.42” K - 28° 54’ 9.96” D) koordinat hattı ile (36° 38’ 23.46” K - 28° 54’ 23.58” D), (36°
+39’ 17.52” K- 28° 54’ 56.04” D) koordinat hattı arasında kalan alanda (Harita-8-5),
+6) Zeytinli Ada ile (36° 42’ 2.22” K - 28° 55’ 24.72” D), (36° 41’ 58.74” K - 28° 55’
+51.30” D), (36° 41’ 32.46” K - 28° 55’ 46.38” D), (36° 41’ 34.32” K - 28° 55’ 21.06” D) koor-
+dinat noktalarını birleştiren hattın arasında kalan alanda (Harita-8-6),
+7) Boynuzbükü Koyunda; (36° 42’ 28.86” K - 28° 54’ 31.68” D), (36° 42’ 47.22” K -
+28° 54’ 33.00” D) koordinat noktalarını birleştiren hattın batısında kalan alanda (Harita-8-7),
+8) Göcek Koyunda; (36° 44’ 7.74” K - 28° 55’ 46.68” D), (36° 44’ 18.54” K - 28° 56’
+55.44” D) koordinat noktalarını birleştiren hattın kuzeyinde kalan alanda (Harita-8-8),
+b) Muğla İli, Köyceğiz Dalyanını Akdeniz’e bağlayan kanalın başladığı İztuzu Sahi-
+linde, Akiye Burnu (36° 47’ 56.70” K - 28° 35’ 40.26” D) ile Kamışlı Yalı Zeytin Horozu Ka-
+yalığı (36° 46’ 19.20” K - 28° 37’ 4.20” D) koordinatlarını birleştiren hattın doğusunda kalan
+alanda (Harita-9-1),
+Sayfa : 24                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+c) Muğla İli, Köyceğiz İlçesinde; (36° 48’ 56.22” K - 28° 28’ 41.88” D), (36° 48’ 43.20”
+K - 28° 28’ 41.46” D), (36° 47’ 2.40” K - 28° 24’ 23.94” D), (36° 47’ 15.84” K - 28° 24’ 22.56”
+D) koordinat noktalarını birleştiren hattın kuzeyinde kalan Aksaz Limanında bulunan deniz
+askeri yasak bölgesinde; belirtilen alanda ikamet eden balıkçıların faaliyetleri için Muğla İl
+Müdürlüğü ile yetkili Komutanlık arasında belirlenen esaslar dâhilinde tanınan istisnalar hariç
+olmak üzere (Harita-9-2),
+ç) Muğla İli, Marmaris İlçesi, Yalancı Boğazın her iki tarafında; (36° 48’ 49.02” K -
+28° 18’ 17.64” D), (36° 48’ 59.64” K - 28° 18’ 50.94” D), (36° 49’ 10.38” K - 28° 18’ 3.60”
+D), (36° 49’ 18.24” K- 28° 18’ 46.08” D) koordinat noktalarını birleştiren alanda (Harita-9-3),
+d) Hisarönü Körfezinde;
+1) Bozburun ve Söğüt koylarını birleştiren (36° 40’ 29.45’’ K - 28° 2’ 25.76’’ D), (36°
+37’ 58.3’’ K - 28° 5’ 6.43’’ D) koordinat noktaları arasında çekilen hattın kuzey doğusunda
+kalan alanda (Harita-10-1),
+2) Selimiye Koyunda; (36° 43’ 6.71’’ K - 28° 6’ 46.66’’ D) ile (36° 43’ 5.45’’ K - 28°
+5’ 7.15’’ D) koordinat noktaları arasında çekilen hattın güneyinde kalan alanda (Harita-10-2),
+3) Hisarönü Körfezinde; (36° 47’ 41.14’’ K - 28° 5’ 30.88’’ D) ile (36° 46’ 29.5’’ K -
+28° 6’ 47.74’’ D) koordinat noktalarını birleştiren hattın kuzey doğusunda kalan alanda (Hari-
+ta-10-3),
+4) (36° 46’ 21.66” K - 28° 2’ 13.38” D) ile (36° 46’ 21.96” K - 28° 2’ 22.44” D) koor-
+dinat noktaları arasında çekilen hattın kuzeyinde kalan alanda (Harita-10-4),
+5) Kurucabük ve Çiftlik koylarında; (36° 44’ 40.56” K - 27° 52’ 14.16” D) ile (36° 44’
+31.38” K- 27° 55’ 18.30” D) koordinat noktaları arasında çekilen hattın kuzeyinde kalan alanda
+(Harita-10-5),
+6) Kargı Koyunda; (36° 42’ 6.84” K - 27° 41’ 9.30” D) ile (36° 41’ 49.44” K - 27° 40’
+47.22” D) koordinat noktaları arasında çekilen hattın batısında kalan alanda (Harita-10-6),
+e) Gökova Körfezinde;
+1) Bördübet Limanında; (36° 49’ 48.60” K - 28° 2’ 17.58” D) ile (36° 48’ 2.70” K - 28°
+2’ 33.12” D) koordinat noktalarını birleştiren hattın doğusunda kalan alanda (Harita-11-1),
+2) Löngöz Koyunda; (36° 56’ 26.94” K - 28° 5’ 47.82” D) ile (36° 56’ 15.36” K - 28°
+5’ 31.74” D) koordinat noktalarını birleştiren hattın güneyinde kalan alanda (Harita-11-2),
+3) İngiliz Limanında (Değirmen Bükü); (36° 56’ 41.46” K - 28° 9’ 29.76” D) ile (36°
+56’ 5.28” K - 28° 8’ 20.04” D) koordinat noktalarını birleştiren hattın güneydoğusunda kalan
+alanda (Harita-11-3),
+4) Boncuk Koyu- Karaca Limanında; Domuz Burnu (36° 58’ 55.98” K - 28° 11’ 48.90”
+D) ile Andızlı Burnunu (36° 56’ 54.72” K - 28° 10’ 48.30” D) birleştiren hattın doğusunda
+kalan alanda (Harita-11-4),
+5) Çamlı Limanında; Çapa Burnu (36° 59’ 56.58” K - 28° 13’ 14.52” D) ile (37° 0’
+9.18” K - 28° 14’ 45.66” D) koordinat noktasını birleştiren hattın güneydoğusunda kalan alanda
+(Harita-11-5),
+6) Akyakada; (37° 3’ 2.46” K - 28° 18’ 36.00” D) ile (37° 1’ 27.66” K - 28° 18’ 35.88”
+D) koordinat noktalarını birleştiren hattın doğusunda kalan alanda (Harita-11-6),
+7) Akbük Limanında; (37° 1’ 25.86” K - 28° 6’ 51.78” D) ile (37° 2’ 6.48” K - 28° 6’
+54.90” D) koordinat noktalarını birleştiren hattın batısında kalan alanda (Harita-11-7),
+f) Muğla İli, Bodrum Yarımadasında; Kızılyar Burnu (37° 9’ 30.48” K - 27° 19’ 21.48”
+D) ile Gemitaşı (37° 9’ 5.28” K - 27° 15’ 42.54” D), Büyük Kiremit Adası (37° 5’ 10.14” K -
+27° 12’ 50.04” D), Çavuşadası (37° 2’ 58.86” K - 27° 12’ 13.68” D) ve Karabakla Burnunu
+(37° 2’ 23.22” K - 27° 13’ 48.72” D) birleştiren hattın doğusunda kalan alanda, uzatma ağları
+ve parakete dışındaki avlanma araçlarıyla (Harita-12-1),
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 25
+g) Muğla İli, Güllük Körfezinde; İncegöl Burnu (37° 13’ 49.62” K - 27° 30’ 21.90” D)
+ile Saplıburun (37° 8’ 3.66” K - 27° 24’ 46.62” D) arasında çekilen hattın doğusunda kalan
+alanda sürütme ve gırgır ağlarıyla (Harita-12-2),
+ğ) Aydın İli, Dilek Geçidinde; Kuşadası Dilek Yarımadası Büyük Menderes Deltası
+Milli Parkı sahilinde bulunan Zeytin Burnu (37° 41’ 15.36” K - 27° 3’ 55.80” D) ile Tavşan
+Adası (37° 39’ 11.00” K - 27° 00’ 21.12” D) arasında kalan alanda, sahilden itibaren 200 met-
+relik mesafe içinde (Harita-12-3),
+h) Kuşadası Körfezinde; Güvercinada (37° 51’ 50.10” K - 27° 14’ 47.34” D) ile Setur
+Marina Mendireğinin (37° 52’ 22.92” K - 27° 15’ 39.54” D) güneydoğusunda kalan alanda
+(Harita-12-4),
+ı) İzmir İli, Seferihisar İlçesi, Sığacık Koyunda; Dalyan Burnu (38° 11’ 57.18” K - 26°
+46’ 33.96” D) ile Minaretaşı (38° 12’ 10.92” K - 26° 46’ 44.28” D) arasında çekilen hattın
+güney doğusunda kalan alanda (Harita-13-1),
+i) İzmir İli, Çeşme İlçesinde; Fener Burnu (38° 19’ 26.22” K - 26° 17’ 0.90” D) ile kar-
+şısındaki (38° 19’ 42.36” K - 26° 17’ 45.12” D) koordinatlarını birleştiren hattın güneydoğu-
+sunda kalan alanda (Harita-13-2),
+j) İzmir İli, Karaburun Yarımadası Mordoğan Beldesinde; Ardıç Burnu (38° 31’ 53.22”
+K - 26° 37’ 28.68” D) ile (38° 31’ 54.18” K - 26° 37’ 41.34” D), (38° 31’ 20.82” K - 26° 37’
+41.34”D) koordinat noktalarını Ege Üniversitesi Ziraat Deneme İstasyonuna (38° 31’ 20.82”
+K - 26° 37’ 28.86” D) birleştiren alanda (Harita-13-3),
+k) İzmir Körfezinde, Uzunada Deniz Komutanlığı Deniz Askeri Yasak Bölgesinin yer
+aldığı Uzunada’nın kıyısından itibaren 500 metrelik mesafe içinde (Harita-13-4),
+l) İzmir Körfezinde; balıkçı gemilerinin bölgede bulunan balıkçı barınaklarına giriş ve
+çıkışları serbest olmak üzere; İnciraltı Kent Ormanı (38° 24’ 54” K - 27° 3’ 36” D) ile Şemikler
+(Mavişehir) Balıkçı Barınağı (38° 27’ 59” K- 27° 4’ 45” D) arasında çekilen hattın doğusunda
+kalan alanda (Harita-13-5),
+m) Karasularımızın İzmir İli sınırları içinde kalan kısmında, ahtapot avcılığına getirilen
+zaman yasağına uymak şartıyla, kuzeyde Kapan Burnu (38° 32’ 41.34” K - 26° 48’ 52.80” D)
+ile güneyde Çilazmak Burnu (38° 27’ 3.60” K - 26° 54’ 16.62” D) arasında kalan sahil şeridinde,
+10 metreden daha sığ sularda pinter ile (Harita-13-6),
+n) İzmir Körfezinde; Ardıç Burnu (38° 31’ 56.40” K - 26° 37’ 30.60” D) ile Eskifener
+Burnu (38° 40’ 15.60” K - 26° 44’ 58.80” D) arasında çekilen hattın güneyinde kalan alanda
+her türlü dreç ve tarak ile (Harita-14),
+o) İzmir İli, Foça İlçesinde; (38° 39’ 56.52” K - 26° 44’ 6.84” D), (38° 39’ 5.94” K -
+26° 43’ 2.70” D), (38° 37’ 31.02” K - 26° 43’ 6.00” D), (38° 36’ 32.16” K - 26° 44’ 18.66” D),
+(38° 36’ 34.20” K - 26° 46’ 27.84” D), (38° 36’ 52.56” K - 26° 47’ 9.72” D) koordinat nokta-
+larını birleştiren hattın doğusunda kalan deniz askeri yasak bölgesinde (Harita-15-1),
+ö) İzmir İli, Foça İlçesinde; Arslan Burnu (38° 44’ 36.12” K - 26° 44’ 26.10” D) ile
+(38° 44’ 31.98” K - 26° 40’ 52.98” D), (38° 39’ 36.96” K - 26° 39’ 59.76” D) ve Deveboynu
+Burnunu (38° 39’ 19.56” K - 26° 43’ 22.20” D) birleştiren alan içerisinde uzatma ağları, para-
+kete ve ağ dalyanları dışındaki avlanma araçlarıyla (Harita-15-2),
+p) İzmir İli, Aliağa İlçesi, Karaağaç mevkiinde; Ege Gaz A.Ş. LNG Terminaline ait (38°
+49’ 2.82” K - 26° 54’ 42.18” D), (38° 49’ 8.22” K - 26° 54’ 26.70” D), (38° 49’ 42.30” K - 26°
+54’ 46.02” D), (38° 49’ 31.08” K - 26° 55’ 18.42” D) koordinatları arasında kalan özel güvenlik
+bölgesinin yer aldığı alanda (Harita-15-3),
+r) Balıkesir İli, Edremit İlçesinde; yapay resif bloklarının bulunduğu (39° 33’ 17.64” K
+- 26° 40’ 22.26” D), (39° 33’ 13.44” K - 26° 41’ 31.98” D), (39° 33’ 29.28” K - 26° 42’ 18.60”
+D), (39° 33’ 21.48” K - 26° 42’ 21.54” D), (39° 33’ 1.44” K - 26° 41’ 34.86” D), (39° 33’ 6.18”
+K - 26° 40’ 18.72” D) koordinat noktaları arasında kalan alanda (Harita-16),
+Sayfa : 26                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+s) Çanakkale İli, Gökçeada İlçesinde; Gökçeada Deniz Parkının bulunduğu Yıldız Koyu
+(40° 14’ 3” K - 25° 54’ 14” D) ile Çiftlik Koyu (40° 14’ 17” K - 25° 56’ 07” D) arasında kıyıdan
+itibaren 1 mil mesafedeki alanda (Harita-17),
+su ürünleri avcılığı yasaktır.
+(2) Balıkesir İli, Ayvalık Limanında; Dalyan Boğazı girişindeki geçit fenerlerinden ilk
+iki geçit fenerini (39° 19’ 32.40” K - 26° 38’ 25.68” D), (39° 19’ 8.28” K - 26° 38’ 35.46” D)
+birleştiren hattın doğusunda kalan alanda, 15 Haziran - 31 Ağustos tarihleri arasındaki dönem
+dışında ağız açıklığı 7.2 mm’den büyük iğnelerle yapılacak avcılık hariç olmak üzere; her türlü
+istihsal vasıtası ile su ürünleri avcılığı yasaktır (Harita-18).
+Marmara Denizi’ndeki yer yasakları
+MADDE 6- (1) Marmara Denizi’ndeki yer yasakları aşağıda belirtilmiştir:
+a) Çanakkale İli, Deniz Polisi Eğitim Merkezi Müdürlüğünün bulunduğu (40° 3’ 59.76”
+K - 26° 21’ 4.02” D), (40° 3’ 22.50” K - 26° 20’ 56.34” D), (40° 3’ 26.04” K - 26° 21’ 22.80”
+D), (40° 3’ 58.02” K - 26° 21’ 21.36” D) koordinat noktalarını birleştiren alan içerisinde (Ha-
+rita-19-1),
+b) Çanakkale İli, Dardanos mercan resiflerinin bulunduğu (40° 04’ 21.82’’ K - 26° 21’
+13.24’’ D), (40° 04’ 21.61’’ K - 26° 21’ 09.62’’ D), (40° 04’ 18.86’’ K - 26° 21’ 10.77’’ D), (40°
+04’ 19.13’’ K - 26° 21’ 14.21’’ D) koordinat noktalarını birleştiren alan içerisinde (Harita-19-
+2),
+c) Çanakkale İli, Maydos İskelesi Nara Burnunu kapsayan deniz askeri güvenlik böl-
+gesinin yer aldığı (40° 11’ 49.02” K - 26° 25’ 20.58” D), (40° 9’ 25.32” K - 26° 24’ 33.00” D)
+koordinat noktaları arasında kalan alanda kıyıdan itibaren 200 metrelik mesafe içinde (Harita-
+19-3),
+ç) Çanakkale İli, Gelibolu İlçesi ile Lapseki İlçesi arasında bulunan 1915 Çanakkale
+Köprüsünün yer aldığı (40° 19’ 35” K - 26° 39’ 2” D), (40° 20’ 42” K - 26° 36’ 52” D), (40°
+21’ 8” K - 26° 37’ 21” D), (40° 19’ 58” K - 26° 39’ 40” D) koordinat noktaları arasında kalan
+deniz alanında, (Harita-19-4),
+d) Çanakkale İli, Biga İlçesi, İÇDAŞ limanında; (40° 24’ 41.28” K - 27° 2’ 19.02” D),
+(40° 23’ 54.54” K - 27° 2’ 33.66” D) koordinat noktalarını birleştiren hat ile mendirek arasında
+kalan alanda (Harita-19-5),
+e) Avustralya Denizaltısı (A-E 2) batığının bulunduğu (40° 32’ 50” K - 27° 16’ 00” D)
+koordinat noktasında (Harita-20-1),
+f) Balıkesir İli, Gönen Çayı ağzı (40° 19’ 38” K - 27° 38’ 00” D) ile Denizkent (40° 18’
+15” K - 27° 30’ 45” D) arasında kalan alanda 3 mil içerisinde, 15 Nisan - 31 Ağustos tarihleri
+arasında (Harita-20-2),
+g) Balıkesir İli, Erdek İlçesi, Çınar Limanı doğu burnu, (40° 23’ 29.82” K - 27° 48’
+32.16” D), (40° 23’ 4.38” K - 27° 48’ 31.98” D) koordinat noktası, Seyitgazi Burnu, (40° 23’
+5.46” K - 27° 48’ 7.26” D) Tavşanlı Adası Burnu, (40° 22’ 39.30” K - 27° 47’ 25.50” D), Zeytin
+Adası güney burnu, (40° 23’ 39.18” K - 27° 47’ 16.38” D) ve liman mendireğini, (40° 23’
+42.60” K - 27° 47’ 16.50” D) birleştiren hat ile sahil şeridi arasında kalan alanda (Harita-20-
+3),
+ğ) Bursa İli, İmralı Adası etrafında; (40° 37’ 00” K - 28° 27’ 00” D), (40° 37’ 00” K -
+28° 37’ 00” D), (40° 28’ 00” K - 28° 37’ 00” D), (40° 28’ 00” K - 28° 27’ 00” D) koordinat
+noktalarını birleştiren alan içerisinde (Harita-20-4),
+h) Yalova İli, belediye kanalizasyon sisteminin bulunduğu (40° 39’ 30.12” K - 29° 14’
+52.62” D), (40° 39’ 58.14” K - 29° 14’ 52.62” D), (40° 39’ 58.14” K - 29° 15’ 1.32” D), (40°
+39’ 29.28” K - 29° 15’ 1.32” D) koordinat noktaları içinde kalan alanda (Harita-21-1),
+ı) Yalova İli, İDO İskelesinin önünde, (40° 39’ 42.41’’ K - 29° 16’ 43.24’’ D), (40° 39’
+46.16’’ K - 29° 16’ 43.93’’ D), (40° 39’ 45.69’’ K - 29° 16’ 49.46’’ D), (40° 39’ 36.87’’ K - 29°
+16’ 47.06’’ D) koordinatları arasında kalan alanda (Harita-21-2 ),
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 27
+i) Yalova İli, Altınova İlçesi ile Kocaeli İli, Gebze İlçesi arasında bulunan Muallim Pig-
+Hersek Pig boru hattının batısı (40° 46’ 44.54’’ K - 29° 29’ 51.18’’D), (40° 43’ 25.82’’ K - 29°
+29’ 16.87’’ D) ile Osmangazi Köprüsünün doğusu (40° 44’ 12.7’’ K - 29° 30’ 59.22’’ D), (40°
+46’ 8.11’’ K - 29° 31’ 22.69’’ D) koordinatları arasında kalan alanda (Harita-21-3),
+j) Yalova İli, Altınova İlçesi, Hersek Burnu (40° 44’ 27.90” K - 29° 30’ 53.64” D) ile
+Kocaeli İli, Karamürsel İlçesinde, Büyükdere Burnu (40° 41’ 40.92” K - 29° 37’ 8.28” D) ara-
+sında kalan alanda, kıyıdan itibaren 500 metre mesafe içerisinde (Harita-21-4),
+k) İzmit Körfezinde;
+1) Dilburnu mevkiinde bulunan deniz askeri yasak bölgesinin yer aldığı (40° 44’ 20.40”
+K - 29° 30’ 43.02” D), (40° 44’ 35.22” K - 29° 30’ 47.88” D), (40° 44’ 34.02” K - 29° 31’
+42.84” D), (40° 44’ 8.70” K - 29° 31’ 43.56” D) koordinat noktaları arasında kalan alan içinde
+(Harita-22-1),
+2) Kestane Burnu bölgesinde bulunan deniz askeri yasak bölgesinin yer aldığı (40° 42’
+30.54” K - 29° 42’ 27.30” D), (40° 42’ 45.84” K - 29° 42’ 26.88” D), (40° 42’ 54.12” K - 29°
+42’ 52.80” D), (40° 42’ 52.80” K - 29° 43’ 50.28” D), (40° 42’ 43.62” K - 29° 43’ 49.86” D)
+koordinat noktaları arasında kalan alan içinde (Harita-22-2),
+3) Yüzbaşılar-Kavaklı arasını kapsayan deniz askeri yasak bölgesinin yer aldığı (40°
+43’ 38.34” K - 29° 47’ 56.76” D), (40° 43’ 19.62” K - 29° 49’ 48.78” D) koordinat noktaları
+arasında kalan alanda, kıyıdan itibaren 750 metrelik mesafe içinde (Harita-22-3),
+4) Başiskele mevkiinde bulunan deniz askeri güvenlik bölgesinin yer aldığı (40° 43’
+1.02” K - 29° 55’ 31.38” D), (40° 43’ 9.78” K - 29° 55’ 25.62” D), (40° 43’ 28.20” K - 29° 56’
+4.02” D), (40° 43’ 12.54” K - 29° 56’ 13.50” D) koordinat noktalarını birleştiren alan içinde
+(Harita-22-4),
+l) İstanbul İli, Caddebostan sahilindeki (40° 57’ 41.04” K - 29° 4’ 19.62” D) koordinat
+noktası, Kınalıadanın kuzeybatısındaki (40° 53’ 31.56” K - 29° 1’ 0.84” D) koordinat noktası,
+Büyükadanın kuzeyindeki (40° 49’ 55.86” K - 29° 7’ 22.08” D) koordinat noktası, Sedef Ada-
+sının doğu ucundaki (40° 50’ 53.52” K - 29° 9’ 0.36” D) koordinat noktası ile Kartal sahilindeki
+(40° 54’ 4.68” K - 29° 9’ 27.36” D) koordinat noktasını birleştiren hattın içerisinde kalan alanda
+uzatma, çapari ve olta dışında her türlü istihsal vasıtasıyla (Harita-23),
+m) İstanbul Boğazında;
+1) Selviburnu- Umuryeri mevkii deniz askeri güvenlik bölgesinin yer aldığı (41° 9’
+40.56” K - 29° 4’ 22.08” D), (41° 8’ 30.78” K - 29° 4’ 19.56” D) koordinat noktaları arasında
+kalan alanda kıyıdan itibaren 200 metrelik mesafe içerisinde (Harita-24-1),
+2) Anadolu Kavağı İskelesi mevkiinde bulunan deniz askeri güvenlik bölgesinin yer
+aldığı (41° 10’ 28.02” K - 29° 5’ 16.08” D) , (41° 10’ 28.08” K - 29° 5’ 12.54” D), (41° 10’
+38.52” K - 29° 5’ 10.50” D), (41° 10’ 42.54” K - 29° 5’ 11.28” D), (41° 10’ 44.10” K - 29° 5’
+13.26” D), (41° 10’ 45.66” K - 29° 5’ 19.32” D), (41° 10’ 44.10” K - 29° 5’ 20.16” D) koordinat
+noktalarını birleştiren alan içerisinde (Harita-24-2),
+3) Keçilik Koyunda bulunan deniz askeri güvenlik bölgesinin yer aldığı (41° 11’ 32.88”
+K - 29° 7’ 8.16” D), (41° 11’ 11.40” K - 29° 6’ 57.12” D) koordinat noktalarını birleştiren hattın
+doğusunda kalan alanda (Harita-24-3),
+n) İstanbul İli, Haliç içinde Yeni Galata Köprüsünden (41° 1’ 5.40” K - 28° 58’ 19.44”
+D), (41° 1’ 18.24” K - 28° 58’ 28.80” D) itibaren Alibeyköy ve Kağıthane dere ağızlarına (41°
+3’ 51.66” K - 28° 56’ 53.82” D), (41° 3’ 53.22” K - 28° 56’ 37.74” D) kadar olan alanda (Ha-
+rita-25-1),
+o) Ambarlı Limanında; (40° 58’ 22.80” K - 28° 42’ 37.14” D) ile (40° 57’ 26.70” K -
+28° 40’ 20.04” D) koordinat noktalarını birleştiren hattın kuzeyinde kalan alanda (Harita-25-2),
+Sayfa : 28                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+ö) İstanbul İli, Silivri İlçesinde; TPAO Kuzey Marmara Doğalgaz Üretim Platformu ve
+buna ait deniz dibi boru hatlarının bulunduğu; (41° 4’ 23.76” K - 28° 11’ 26.70” D), (41° 3’
+0.60” K - 28° 11’ 22.08” D), (41° 3’ 0.36”K - 28° 12’ 2.52” D), (41° 4’ 19.80” K - 28° 12’
+8.10” D) koordinat noktalarını birleştiren alanda (Harita-25-3),
+p) Tekirdağ İli, Marmara Ereğlisinde; Botaş Doğalgaz Terminali işletme sahası, Trakya
+Unı-Mar doğalgaz çevrim santralleri ve Bütangaz A.Ş.’ye ait deniz dibi boru hatları ile şaman-
+dıra sistemlerinin bulunduğu; (40° 58’ 00” K - 27° 58’ 06” D), (40° 58’ 00” K - 28° 00’ 24”
+D), (41° 01’ 50” K - 28° 00’ 24” D) koordinat noktalarını birleştiren alanda (Harita-25-4),
+r) Tekirdağ İli, Altınova açıklarında; belediye kanalizasyon sisteminin bulunduğu (40°
+57’ 10.56” K - 27° 29’ 31.02” D), (40° 56’ 29.04” K - 27° 30’ 45.06” D), (40° 56’ 16.44” K -
+27° 30’ 36.24” D), (40° 56’ 56.10” K - 27° 29’ 25.92” D) koordinat noktalarını birleştiren
+alanda (Harita-25-5),
+s) İstanbul ve Çanakkale Boğazlarında trafik ayırım şeridinde,
+su ürünleri avcılığı yasaktır.
+Karadeniz’deki yer yasakları
+MADDE 7- (1) Karadeniz’deki yer yasakları aşağıda belirtilmiştir:
+a) Bulgaristan sınırındaki Mutludere’nin denize döküldüğü yerin güneyinde bulunan
+Nusret Bulca gözetleme kulesinden (41° 58’ 48” K - 28° 01’ 36” D) itibaren doğuya çizilen
+(90°) 12 millik hattın kuzeyinde (Harita-26-1),
+b) İstanbul İli, Kelağra (Galere) Burnu (41° 14’ 8.94” K - 29° 15’ 20.88” D) ile Dalyan
+Burnu (Kilyos başı) (41° 15’ 29.46” K - 29° 2’ 19.14” D) arasında kalan karasularımızda al-
+garna, dreç, tarak ve hidrolik sistem ile (Harita-26-2),
+c) İstanbul İli, Riva Deresinin denize döküldüğü yerin batısında kalan Soğan Yarımadası
+mevkiinde bulunan deniz askeri güvenlik bölgesinin yer aldığı (41° 13’ 17.64” K - 29° 12’
+2.10” D), (41° 13’ 29.82” K - 29° 11’ 53.64” D), (41° 13’ 28.98” K - 29° 12’ 52.86” D), (41°
+13’ 23.88” K - 29° 12’ 55.38” D) koordinat noktalarını birleştiren alan içinde (Harita-27),
+ç) Düzce İli, Akçakoca İlçesi açıklarında doğalgaz üretim platformu ve iletim hattı bo-
+rularının bulunduğu, (41° 5’ 45.68” K - 31° 11’ 59.22” D), (41° 7’ 50.00” K - 31° 11’ 40.00”
+D), (41° 8’ 58.00” K - 31° 10’ 20.00” D), (41° 9’ 20.00” K - 31° 8’ 60.00” D), (41° 9’ 30.00”
+K - 31° 7’ 10.00” D), (41° 9’ 60.00” K - 31° 5’ 0.00” D), (41° 10’ 60.00” K - 31° 7’ 10.00” D),
+(41° 11’ 30.00” K - 31° 8’ 60.00” D), (41° 10’ 40.00” K - 31° 11’ 40.00” D), (41° 11’ 5.00” K
+- 31° 14’ 20.00” D), (41° 9’ 30.00” K - 31° 13’ 50.00” D), (41° 7’ 50.00” K - 31° 14’ 0.00” D),
+(41° 6’ 10.00” K - 31° 14’ 10.00” D) koordinat noktalarını birleştiren alanda (Harita-28),
+d) Zonguldak Belediyesine ait arıtma tesisinin bulunduğu (41° 26’ 55.57” K - 31° 45’
+07.64” D), (41° 27’ 08.25” K - 31° 45’ 10.43” D) ile (41° 27’ 14.56” K - 31° 44’ 39.18” D) ve
+(41° 26’ 58.12” K - 31° 44’ 24.69” D) koordinat noktalarını birleştiren alanda (Harita-29-1),
+e) Sinop İli, Ayancık İlçesi belediye kanalizasyon sisteminin bulunduğu (41° 56’ 58.44”
+K - 34° 35’ 8.94” D), (41° 57’ 50.34” K - 34° 34’ 45.12” D), (41° 57’ 54.72” K - 34° 35’ 10.44”
+D) ve (41° 56’ 58.20” K - 34° 35’ 36.12” D) koordinat noktalarını birleştiren alanda (Harita-
+29-2),
+f) Samsun İli, Canik Balıkçı Barınağı mendireği (41° 16’ 15.90” K - 36° 23’ 3.24” D)
+ile Tekkeköy Tersane Limanı mendireği (41° 15’ 5.70” K - 36° 28’ 30.42” D) arasında çekilen
+hattın güneyinde kalan, Petrol Ofisi Dolum Tesisleri, ETİ Bakır Tesisleri ve Cengiz Enerji Tesis-
+lerinin yer aldığı alanda (Harita-30-1),
+g) Samsun İli, Bilgin Samsun Doğalgaz Kombine Çevrim Santralinin bulunduğu (41°
+9’ 24.81” K - 37° 9’ 5.85” D), (41° 9’ 24.53” K - 37° 9’ 41.43” D), (41° 8’ 52.42” K - 37° 9’
+41.05” D), (41° 8’ 53.97” K - 37° 9’ 5.23” D) koordinat noktalarını birleştiren alanda ( Harita-
+30-2),
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 29
+ğ) Ordu-Giresun Havalimanının bulunduğu (40° 58’ 6.24” K - 38° 3’ 19.92” D), (40°
+58’ 33.54” K - 38° 3’ 20.64” D), (40° 58’ 33.96” K - 38° 4’ 26.16” D), (40° 58’ 6.18” K - 38°
+7’ 8.34” D), (40° 57’ 26.10” K - 38° 7’ 8.16” D) koordinat noktalarını birleştiren alan içinde
+(Harita-31-1),
+h) Trabzon İli, Yomra İlçesinde Su Ürünleri Merkez Araştırma Enstitüsünün bulunduğu
+bölgede (40° 58’ 7.14” K - 39° 50’ 29.82” D), (40° 58’ 25.44” K - 39° 51’ 2.58” D), (40° 58’
+22.50” K - 39° 51’ 6.36” D), (40° 58’ 4.14” K - 39° 50’ 33.84” D) koordinat noktalarını birleş-
+tiren alanda (Harita-31-2),
+ı) Trabzon İli, Sürmene İlçesinde; balıkçı barınağı (40° 54’ 49.38” K - 40° 10’ 30.00”
+D) ile Kastel Deresi (40° 54’ 45.84” K - 40° 9’ 9.48” D) arasında kalan sahil şeridinin denize
+doğru 1 km’lik kısmında (Harita-31-3),
+i) Rize İli, Çayeli Bakır İşletmelerine ait derin deniz deşarj boru hattının bulunduğu
+(41° 4’ 56.82” K - 40° 42’ 15.00” D), (41° 4’ 54.00” K - 40° 42’ 9.00” D), (41° 6’ 0.00” K -
+40° 41’ 9.00” D), (41° 6’ 0.00” K - 40° 41’ 15.00” D) koordinat noktaları arasında kalan alan
+içinde (Harita-32-1),
+j) Rize - Artvin Havalimanının bulunduğu (41° 10’ 03.13” K - 40° 49’ 28.60” D), (41°
+10’ 43.13” K - 40° 49’ 09.60” D), (41° 10’ 58.26” K - 40° 52’ 38.83” D), (41° 11’ 34.19” K -
+40° 52’ 26.16” D), koordinat noktalarını birleştiren alan içinde (Harita-32-2),
+k) Artvin İli, Kemalpaşa İlçesi; Sarp Köyü açıklarında (41° 34’ 48” K - 41° 17’ 13” D)
+ile (41° 30’ 42” K - 41° 32’ 12” D) koordinat noktasını birleştiren hattın Gürcistan sınırına
+kadar olan kısmında (Harita-32-3),
+su ürünleri avcılığı yasaktır.
+Diğer yer yasakları
+MADDE 8- (1) Denizlerimizdeki diğer yer yasakları aşağıda belirtilmiştir:
+a) Deniz kaplumbağası üreme alanı olarak tespit edilen yerlerde (MUĞLA; Dalyan,
+Ekincik, Dalaman, Fethiye-Çalış, ANTALYA; Patara, Demre, Kumluca, Tekirova, Belek, Kı-
+zılot, Gazipaşa, Demirtaş, Olympos-Çıralı, MERSİN; Alata, Anamur, Kazanlı, Göksu Deltası,
+Davultepe, ODTÜ Kocahasanlı, ADANA; Akyatan, Yumurtalık, HATAY; Samandağ) I (a) gru-
+bu maden çıkarılması ve 1 Nisan - 30 Eylül tarihleri arasında sürat teknelerinin kıyıdan 1 mil
+mesafe içerisinde 8 milden daha süratli seyretmeleri yasaktır. Deniz kaplumbağalarının üreme
+zamanlarında il müdürlüklerince gerekli koruma tedbirleri alınır.
+b) Kültür ve tabiat varlıklarını korumak amacıyla belirlenen ve 5/4/2016 tarihli ve
+2016/8743 sayılı Bakanlar Kurulu Kararı ile yürürlüğe konulan ve aynı Bakanlar Kurulu Ka-
+rarının eki Karadeniz’de yer alan dalışa yasak alanlar 9/12/2018 tarihli ve 435 sayılı Cumhur-
+başkanı Kararı ile güncellenen, Ege’de yer alan dalışa yasak alanlar ise 1/4/2020 tarihli ve
+2339 sayılı Cumhurbaşkanı Kararı, 27/7/2020 tarihli ve 2802 sayılı Cumhurbaşkanı Kararı,
+5/1/2022 tarihli ve 5068 sayılı Cumhurbaşkanı Kararı ile dalışa yasak alanlara ilişkin koordi-
+natları güncellenen ve ilan edilen bölgelerde dalış yapılarak su ürünleri avcılığı yapmak ya-
+saktır.
+c) Akdeniz fokunun yaşadığı sualtı veya su üstü girişli kıyı mağaralarında ışık kullan-
+mak, her türlü vasıta ile dalış yapmak, yüzerek veya herhangi bir deniz vasıtasıyla girmek, ma-
+ğara girişlerinde beklemek, demirlemek yasaktır.
+ç) Turmeos I ve Turcyos I denizaltı kablolarının geçtiği güzergâhlarda, kabloların 100
+metre sağında ve solunda dip trolü ile su ürünleri avcılığı yasaktır.
+d) 1 Nisan - 15 Kasım tarihleri arasındaki dönemde, sahilden itibaren uzaklığı 200 met-
+reyi geçmeyen, şamandıralarla çevrilmiş yüzme alanları içinde su ürünleri avcılığı yasaktır.
+e) Yapay resif sahası olarak deniz seyir haritalarında belirtilen alanlarda olta, çapari ve
+parakete dışında her türlü istihsal vasıtasıyla su ürünleri avcılığı yasaktır.
+Sayfa : 30                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+ÜÇÜNCÜ BÖLÜM
+Av Vasıtaları ve Yöntemlerine İlişkin Yasaklar
+Her türlü trol yasağı
+MADDE 9- (1) 1380 sayılı Kanunun 24 üncü maddesinde belirtilen içsular, Marmara
+Denizi ile İstanbul ve Çanakkale Boğazlarında her türlü trol ile su ürünleri avcılığı yasaktır.
+(2) Akdeniz’de;
+a) Antalya İli, Side Beldesinde; Selimiye Feneri (36° 45’ 55.68” K - 31° 23’ 5.52” D)
+ile Gazipaşa İlçesi, Kesik Burnu (36° 9’ 57.84” K - 32° 23’ 25.08” D) arasındaki karasuları-
+mızda (Harita-33-1),
+b) Antalya İli, Finike İlçesi, Finike Körfezinde; (36° 16’ 23.88” K - 30° 9’ 5.82” D) ko-
+ordinat noktası ile Akçaörgü Burnu (36° 16’ 13.26” K - 30° 22’ 5.64” D) arasında çekilen hattın
+kuzeyinde kalan alanda (Harita-33-2),
+her türlü trol ile avcılık yapılması yasaktır.
+(3) Ege Denizi’nde;
+a) Köyceğiz Limanında; Kızılburun (36° 47’ 12.30” K - 28° 32’ 26.70” D) ile Bozbu-
+runu (36° 45’ 36.90” K - 28° 36’ 46.20” D) birleştiren hattın kuzeyinde kalan alanda (Harita-
+34-1),
+b) Yeşilova Körfezinde; Kızılada (36° 39’ 2.10” K - 28° 2’ 25.56” D) ile karşısındaki
+Karaburun (36° 36’ 33.48” K - 28° 3’ 1.26” D) arasında çekilen hattın doğusunda kalan sahada
+(Harita-34-2),
+c) Hisarönü Körfezinde; Dil (Lindos) Burnu (36° 45’ 33.42” K - 28° 0’ 43.62” D) ile
+karşısındaki Ağıl Burnunu (36° 41’ 38.28” K - 27° 58’ 41.88” D) birleştiren hattın doğusunda
+kalan alanda (Harita-34-3),
+ç) Gökova Körfezinde;
+1) Mersincik Burnu (36° 50’ 9.66” K - 28° 0’ 6.66” D) ile Gerence Burnunu (36° 48’
+5.58” K - 27° 59’ 31.08” D) birleştiren hattın doğusunda kalan alanda (Harita-34-4),
+2) Ören Burnu (37° 1’ 3.30” K - 27° 56’ 45.06” D) ile karşısındaki Teke Burnunu (36°
+54’ 24.60” K - 28° 0’ 55.26” D) birleştiren hattın doğusunda kalan alanda (Harita-34-5),
+d) Güllük Körfezinde; Kazıklı Limanı, Çam Limanı ve Asin Körfezinin içinde yer al-
+dığı, Karaburun (37° 18’ 14.58” K - 27° 25’ 55.56” D), Teke Burnu (37° 15’ 3.42” K - 27° 27’
+25.44” D), İncegöl Burnu (37° 13’ 49.62” K - 27° 30’ 21.90” D), İnce Burun (37° 11’ 39.72”
+K - 27° 31’ 37.86” D) ve Saplıburunu (37° 8’ 3.66” K - 27° 24’ 46.62” D) birleştiren hattın do-
+ğusunda kalan alanda (Harita-35-1),
+e) Dilek Geçidinde; Çatal Burnu (37° 38’ 28.26” K - 27° 4’ 45.54” D) ile Tekağaç Burnu
+(37° 21’ 20.40” K - 27° 11’ 38.58” D) arasında çekilen hattın doğusunda kalan alanda (Harita-
+35-2),
+f) Kuşadası Körfezinde; Sünger Burnu (38° 0’ 51.84” K - 27° 4’ 32.40” D) ile Yalancı
+Burnu (37° 51’ 39.00” K - 27° 14’ 23.94” D) arasında çekilen hattın doğusunda kalan alanda
+(Harita-35-3),
+g) Sığacık Körfezinde; Gök Liman (38° 8’ 26.70” K - 26° 37’ 28.50” D) ile Killik Burnu
+(38° 9’ 49.74” K - 26° 46’ 30.90” D) arasında çekilen hattın kuzeyinde kalan alanda (Harita-
+35-4),
+ğ) Ildır Körfezinde; Çolak Burnu (38° 26’ 42.96” K - 26° 23’ 47.46” D) ile Çeşme Uç-
+burnu (38° 22’ 35.58” K - 26° 17’ 8.46” D) arasında çekilen hattın güneydoğusunda kalan alan-
+da (Harita-36-1),
+h) İzmir Körfezinde; Ardıç Burnu (38° 31’ 56.82” K - 26° 37’ 30.60” D) ile Deveboy-
+nunu (38° 39’ 4.20” K - 26° 43’ 30.54” D) birleştiren hattın güneydoğusunda kalan alanda (Ha-
+rita-36-2),
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 31
+ı) Çandarlı Körfezinde; Kemikli Burnu (38° 55’ 3.06” K - 26° 51’ 3.96” D) ile Aliağa
+Taşlı Burun (38° 50’ 3.78” K - 26° 56’ 34.02” D) arasında çekilen hattın kuzeydoğusunda kalan
+alanda (Harita-36-3),
+i) Dikili Körfezinde; Madra Çayı (39° 9’ 58.86” K - 26° 45’ 60.00” D) ile Adatepe (Kil-
+lik) Burnu (39° 2’ 29.58” K - 26° 48’ 44.16” D) arasında çekilen hattın doğusunda kalan alanda
+(Harita-36-4),
+j) Edremit Körfezinde; Küçükkuyu Balıkçı Barınağı (39° 32’ 45” K - 26° 36’ 5” D) ile
+Küçük Maden Adası (39° 23’ 8.10” K - 26° 34’ 7.14” D), Güneş Adası Feneri (39° 19’ 44.16”
+K - 26° 32’ 26.46” D), Çıplak Ada Yumru Burnu (39° 16’ 43.32” K - 26° 34’ 39.18” D) ve Eğ-
+ribucak Burnunu (39° 16’ 23.94” K - 26° 36’ 35.34” D) birleştiren hattın doğusunda kalan alan-
+da (Harita-36-5),
+k) Babakaleyi (39° 28’ 41” K - 26° 3’ 51” D), Bozcaada Eskifener Burnu (39° 47’
+19.14” K - 26° 3’ 8.22” D), Bozcaada Batı Burnu (39° 50’ 15.54” K - 25° 57’ 45.24” D), Gök-
+çeada Aydıncık Burnu (40° 9’ 48.06” K - 26° 0’ 33.24” D), Gökçeada Kaşkaval Burnu (40°
+14’ 28.74” K - 25° 56’ 33.36” D), Büyük Kemikli Burnu (40° 18’ 58.74” K - 26° 12’ 54.30”
+D) ve Boztepe Burnu (40° 37’ 8.40” K - 26° 4’ 24.18” D) ile birleştiren hattın doğusunda kalan
+alanda (Harita-37),
+l) Babakaleden geçen (39° 28’ 41” K) enleminin kuzeyinde kalan karasularımızda,
+20.00- 05.00 saatleri arasında,
+her türlü trol ile su ürünleri avcılığı yasaktır.
+(4) Karadeniz’de;
+a) Zonguldak İli, Alacaağzı Burnu (41° 21’ 55.20” K - 31° 32’ 0.00” D) ile Bartın İli,
+Amasra İlçesi, Tekke Burnu (41° 43’ 29.10” K - 32° 19’ 15.48” D) arasında kalan karasuları-
+mızda (Harita-38-1),
+b) Sinop İli, İnceburun (42° 5’ 57.54” K - 34° 56’ 41.70” D) ile Samsun İli, Yakakent
+İlçesinde, Çayağzı Burnu (41° 41’ 2.40” K - 35° 25’ 11.58” D) arasında kalan karasularımızda,
+(Harita-38-2),
+c) Ordu İli, Ünye İlçesi, Taşkana Burnundan; (41° 8’ 43.50” K - 37° 17’ 31.86” D) Gür-
+cistan sınırına kadar olan karasularımızda (Harita-38-3),
+her türlü trol ile su ürünleri avcılığı yasaktır.
+(5) Her türlü trol avcılığının yasaklandığı yerlerde, yasak alan içerisinde yer alan balıkçı
+barınaklarından, Bakanlıkça izin verilen balıkçı barınaklarına geçiş amacı ile giriş ve çıkış ser-
+besttir. Mesafe yasağı içinde yer alan bölgelerdeki balıkçı barınaklarının kullanımı herhangi
+bir izine tabi değildir.
+Dip trolüne ilişkin yasaklar
+MADDE 10- (1) 9 uncu maddede belirtilen yerlerde Tebliğ dönemi boyunca, trol av-
+cılığına açık tüm karasularımızda ise Akdeniz’de 15 Nisan - 15 Eylül, diğer denizlerimizde 15
+Nisan - 31 Ağustos tarihleri arasında, dip trolü ile su ürünleri avcılığı yasaktır.
+(2) Akdeniz’de;
+a) Hatay İli, Suriye sınırı ile Akıncı Burnu (36° 18’ 27.36” K - 35° 46’ 44.70” D) ara-
+sında kalan karasularımızda 1 mil içerisinde (Harita-39-1),
+b) Akıncı Burnu ile Adana İli, Yumurtalık Balıkçı Barınağı (36° 45’ 59.28” K - 35° 47’
+28.26” D) arasında kalan karasularımızda 2 mil içerisinde (Harita-39-2),
+c) Yumurtalık Balıkçı Barınağı ile Mersin İli, Karaduvar Balıkçı Barınağı (36° 48’
+32.76” K - 34° 41’ 52.38” D) arasında kalan karasularımızda 3 mil içerisinde (Harita-39-3),
+ç) Karaduvar Balıkçı Barınağı ile Susanoğlu - Atakent (36° 24’ 58.26” K - 34° 5’ 27.48”
+D) arasında kalan karasularımızda 2 mil içerisinde (Harita-39-4),
+d) Susanoğlu - Atakent (36° 24’ 58.26” K - 34° 5’ 27.48” D) ile İncekumburnu (36° 14’
+32.00” K - 33° 56’ 59.00” D) arasında kalan karasularımızda 3 mil içerisinde (Harita-39-5),
+Sayfa : 32                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+e) İncekumburnu ile Kızılliman Burnu (36° 4’ 14.58” K - 33° 4’ 42.48” D) arasında ka-
+lan karasularımızda 2 mil içerisinde (Harita-39-6),
+f) Kızılliman Burnu (36° 4’ 14.58” K - 33° 4’ 42.48” D) ile Antalya İli, Gazipaşa İlçesi,
+Kesik Burnu (36° 9’ 57.84” K - 32° 23’ 25.08” D) arasında kalan karasularımızda 1,5 mil içe-
+risinde (Harita-39-7),
+g) Antalya İli, Side Beldesinde; Selimiye Feneri (36° 45’ 55.68” K - 31° 23’ 54.12” D)
+ile Finike İlçesi, Finike Körfezinde (36° 16’ 23.88” K - 30° 9’ 5.82” D) koordinat noktası ara-
+sındaki karasularımızda sahilden itibaren 3 mil içerisinde (Harita-39-8),
+ğ) Antalya İli, Finike İlçesi, Finike Körfezinde; (36° 16’ 23.88” K - 30° 9’ 5.82” D) ko-
+ordinatları ile Ege Denizi sınırı arasında kalan karasularımızda 2 mil içerisinde (Harita-39-9),
+h) Mersin İli, Silifke İlçesi, Dana Adasında, sahilinden itibaren 2 mil içerisinde (Hari-
+ta-39-10),
+dip trolü ile su ürünleri avcılığı yasaktır.
+(3) Ege Denizi’nde;
+a) Muğla İli, Fethiye Körfezinde (29° 00’ D - 28° 50’ D) boylamları arasında 2 mil içe-
+risinde (Harita-40-1),
+b) Fethiye Körfezinde (28° 50’ D) boylamı ile Aydın İli, Dilek Geçidinde Tavşan Adası
+(37° 39’ 3.42” K - 27° 0’ 3.48” D) arasında 1.5 mil içerisinde (Harita-40-2),
+c) Dilek Geçidinde; Tavşan Adası ile Zeytin Burnu (37° 41’ 15.36” K - 27° 3’ 55.80”
+D) arasında 200 metrelik mesafe içerisinde (Harita-40-3),
+ç) Zeytin Burnu ile İzmir Sığacık Teke Burnu (38° 6’ 21.36” K - 26° 35’ 37.20” D) ara-
+sında 1.5 mil içerisinde (Harita-40-4),
+d) Sığacık Teke Burnu ile Çeşme Karaabdullah Burnu (38° 15’ 57.30” K - 26° 14’
+22.38” D) arasında 3 mil içerisinde (Harita-40-5),
+e) Çeşme Karaabdullah Burnu ile Edirne Boztepe Burnu (40° 37’ 8.40” K - 26° 4’
+24.18” D) arasında 1.5 mil içerisinde (Harita-40-6),
+f) Boztepe Burnu ile Meriç Nehrinin denize döküldüğü yer arasında 3 mil içerisinde
+(Harita-40-7),
+g) Bozcaada’da; sahilinden itibaren 3 mil içerisinde (Harita-40-8),
+ğ) Gökçeada’da; adanın kuzeyinde, Kömür Burnu (40° 9’ 31.44” K - 25° 40’ 35.28”D)
+ve Kaşkaval Burnu (40° 14’ 28.74” K - 25° 56’ 33.36” D) arasında kalan karasularımızda sa-
+hilden itibaren 1,5 mil, adanın diğer taraflarında ise 3 mil içerisinde kalan alanda (Harita-40-
+9),
+h) Güllük Körfezinde; Kızılyar Burnu (37° 9’ 30.48” K - 27° 19’ 21.48” D) ile Tekağaç
+Burnu (37° 21’ 20.40” K - 27° 11’ 38.58” D) arasında çekilen hattın doğusunda kalan alanda
+1 Aralık - 15 Şubat tarihleri arasında (Harita-41),
+dip trolü ile su ürünleri avcılığı yasaktır.
+(4) Karadeniz’de;
+a) Bulgaristan sınırı ile Zonguldak İli, Alacaağzı Burnu (41° 21’ 55.20” K - 31° 32’
+0.00”D) arasında 3 mil içerisinde (Harita-42-1),
+b) Bartın İli, Amasra İlçesi, Tekke Burnu (41° 43’ 29.10” K - 32° 19’ 15.48” D) ile Kas-
+tamonu İli, Cide İlçesi, Kerempe Burnu (42° 1’ 4.32” K - 33° 20’ 27.54” D) arasında 2 mil içe-
+risinde (Harita-42-2),
+c) Kerempe Burnu ile Sinop İli, İnceburun (42° 5’ 57.54” K - 34° 56’ 41.70” D) arasında
+3 mil içerisinde (Harita-42-3),
+ç) Samsun İli, Yakakent İlçesi, Çayağzı Burnu (41° 41’ 2.40” K - 35° 25’ 11.58” D) ile
+Ordu İli, Ünye İlçesi, Taşkana Burnu (41° 8’ 43.50” K - 37° 17’ 31.86” D) arasında 3 mil içe-
+risinde (Harita-42-4),
+dip trolü ile su ürünleri avcılığı yasaktır.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 33
+(5) Ege ve Akdeniz’de kullanılacak dip trolü ağlarının torba ağ göz açıklığı baklava
+(rombik) gözlü ağlarda 44 mm’den, kare gözlü ağlarda 40 mm’den, torba dışına konulan mu-
+hafazanın ağ göz açıklıkları ise bu ölçülerin iki katından küçük olamaz.
+(6) Karadeniz’de torba ağ göz açıklığı 40 mm’den, torba dışına konulan muhafazanın
+ağ göz açıklığı ise 80 mm’den küçük olamaz.
+(7) Karadeniz’de baklava (rombik) gözlü ağlarda torba ağ göz açıklığı, 1 Eylül 2028
+tarihinden sonra 44 mm olarak uygulanacaktır.
+(8) Dip trolü ağlarında torba göz açıklığından daha küçük gözlü ağ kullanılması, ağın
+torba kısmında muhafaza ve torba ağından başka ağ bulundurulması yasaktır.
+(9) Dip trol ağlarının torba kısmında misina (tek kat-olta misinası) ağların kullanılması
+yasaktır.
+(10) Asgari göz açıklığı ölçülerinden küçük dip trolü ağlarının gemilerde bulundurul-
+ması ve dip trolünün birden fazla gemiyle çekilmesi yasaktır.
+(11) 1000 metreden derin sularda dip trolü ile avcılık yapılması yasaktır.
+(12) Dip trolü ağları, trol avcılığının yasaklandığı yer ve zamanlarda gemilerde toplan-
+mış olarak nakledilebilir. Trol kapıları asılı vaziyette bulundurulamaz. Kapıların asılı olduğu
+yerlerin (matafora) geminin içerisine dönük olması zorunludur.
+(13) Marmara Denizi’nden geçecek trol gemileri ile ilk hareket noktası Marmara Denizi
+etrafındaki yerleşim yerleri olan ve diğer karasularımıza trol avcılığı yapmak üzere gidecek
+gemilerin, il/ilçe müdürlüklerinden Ek-4’te yer alan “Geçiş İzin Belgesi”ni alarak ağlarını ve
+kapılarını mühürletmesi zorunludur. Ağlar ambarda, kapılar ise güvertede veya ambarda bu-
+lundurulmalıdır. “Geçiş İzin Belgesi” alan gemilerin en geç 3 gün içerisinde geçiş yapmaları
+zorunludur.
+(14) Limanlar, balıkçı barınakları, barınma ve çekek yerlerinde dip trolü avcılığının ya-
+sak olduğu tarihlerde mühürsüz olarak trol ağ ve kapıları bulundurulamaz.
+(15) Marmara Denizi ile İstanbul ve Çanakkale Boğazlarındaki limanlar, balıkçı barı-
+nakları, barınma ve çekek yerlerinde Tebliğ dönemi boyunca, mühürsüz olarak trol ağ ve ka-
+pıları bulundurulamaz.
+Ortasu trolüne ilişkin yasaklar
+MADDE 11- (1) Karadeniz’de her türlü trol avcılığının yasaklandığı yerler ile Marmara
+Denizi, Ege Denizi ve Akdeniz’de ortasu trolü ile su ürünleri avcılığı yasaktır.
+(2) Ortasu trolü, kullanımına izin verilen yer ve zamanlarda sadece çift gemi ile çeki-
+lebilir. Ortasu trolü ile avcılık yapacak balıkçı gemileri için, gemi ruhsat tezkeresinin verildiği
+il/ilçe müdürlüğünden Ek-2’de yer alan avcılık “İzin Belgesi”nin alınması zorunludur.
+(3) Karadeniz’de ortasu trolünün 24 metreden daha sığ sularda çekilmesi ve 15 Nisan
+- 31 Ağustos tarihleri arasında su ürünleri istihsalinde kullanılması yasaktır. Ancak Karade-
+niz’de; 15 Nisan - 15 Mayıs tarihleri arasında Samsun İli, Yakakent İlçesi, Çayağzı Burnu (41°
+41’ 2.40” K - 35° 25’ 11.58” D) ile Ordu İli, Ünye İlçesi, Taşkana Burnu (41° 8’ 43.50” K - 37°
+17’ 31.86” D) (Harita-42-4) arasında ortasu trolü ile çaça balığı avcılığı serbesttir.
+(4) Ortasu trolü avcılığı yapan balıkçı gemilerinde bu faaliyetleri sırasında barbunya,
+tekir, kalkan, mezgit gibi dip balıkları bulundurulamaz.
+(5) Ortasu trolü avcılığı yapan balıkçı gemilerinin avladıkları çaça balıklarını Bakan-
+lıkça belirlenen yerlerden karaya çıkarması zorunludur.
+Çevirme ağlarına ilişkin yasaklar
+MADDE 12- (1) Akdeniz’de;
+a) Mersin İli, Taşucu Körfezinde; Güvercinada (36° 14’ 42.36” K - 33° 48’ 25.20” D)
+ile İncekumburnu (36° 14’ 1.50” K - 33° 57’ 45.66” D) arasında çekilen hattın kuzeyinde kalan
+alan içinde (Harita-43-1),
+Sayfa : 34                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+b) Muğla İli, Fethiye Körfezinde; (36° 35’ 19.08” K - 28° 50’ 45.72” D), (36° 32’ 37.56”
+K - 29° 0’ 31.02” D) koordinatlarını birleştiren hattın kuzeyinde kalan alanda kıyıdan itibaren
+2 mil içerisinde (Harita-43-2),
+gırgır ağları ile su ürünleri avcılığı yasaktır.
+(2) Ege Denizi’nde;
+a) Köyceğiz, İztuzu sahilinde; Akiye Burnu (36° 47’ 56.70” K - 28° 35’ 40.26” D) ile
+Bozburunu (36° 45’ 36.24” K - 28° 36’ 46.20” D) birleştiren hattın doğusunda kalan alanda
+(Harita-44-1),
+b) Hisarönü Körfezinde; Dil (Lindos) Burnu (36° 45’ 33.42” K - 28° 0’ 43.62” D) ile
+karşısındaki Ağıl Burnunu (36° 41’ 38.28” K - 27° 58’ 41.88” D) birleştiren hattın doğusunda
+kalan alanda (Harita-44-2),
+c) Gökova Körfezinde; Ören Burnu (37° 1’ 3.30” K - 27° 56’ 45.06” D) ile karşısındaki
+Teke Burnunu (36° 54’ 24.60” K - 28° 0’ 49.26” D) birleştiren hattın doğusunda kalan alanda
+(Harita-44-3),
+ç) Güvercinlik Körfezinde; Sıralık Burnu (37° 7’ 42.72” K - 27° 32’ 16.92” D) ile kar-
+şısındaki Pina (Kimse) Burnunu (37° 9’ 8.94” K - 27° 33’ 1.38” D) birleştiren hattın doğusunda
+kalan alanda (Harita-44-4),
+d) Asin Körfezinde; İncegöl Burnu (37° 13’ 49.62” K - 27° 30’ 21.90” D) ile İnce Burun
+(37° 11’ 39.72” K - 27° 31’ 37.86” D) arasında çekilen hattın kuzeydoğusunda kalan alanda
+(Harita-44-5),
+e) Kazıklı Limanında; Karaburun (37° 18’ 15.06” K - 27° 25’ 56.10” D) ile Teke Bur-
+nunu (37° 15’ 21.00” K - 27° 27’ 18.54” D) birleştiren hattın kuzeydoğusunda kalan alanda
+(Harita-44-6),
+f) Çandarlı Körfezinde; Kemikli Burnu (38° 55’ 3.06” K - 26° 51’ 3.96” D) ile Aliağa
+Taşlı Burun (38° 50’ 3.78” K - 26° 56’ 34.02” D) arasında çekilen hattın kuzeydoğusunda kalan
+alanda (Harita-44-7),
+g) Saros Körfezinde; Kuşburnu (40° 30’ 38.82” K - 26° 38’ 11.58” D) ile karşısındaki
+(40° 38’ 17.70” K - 26° 38’ 11.58” D) koordinat noktalarını birleştiren hattın doğusunda kalan
+alanda (Harita-44-8),
+gırgır ağları ile su ürünleri avcılığı yasaktır.
+(3) Marmara Denizi’nde;
+a) Çanakkale Boğazında; Nara Burnu Feneri (40° 11’ 49.38” K - 26° 24’ 5.58” D) ile
+Akbaş Feneri (40° 13’ 16.56” K - 26° 25’ 29.46” D) ve Kepez Feneri (Kanlıdere) (40° 5’ 30.36”
+K - 26° 21’ 48.96” D) ile Soğandere (Karanfil Burnu) Feneri (40° 6’ 25.74” K - 26° 19’ 42.96”
+D) arasında kalan alanda (Harita-45-1),
+b) Gemlik Körfezinde; Sarıburun (40° 28’ 23.40” K - 29° 1’ 10.92” D) ile Kurşunlu
+Balıkçı Barınağını (40° 21’ 51.00” K - 29° 2’ 5.94” D) birleştiren hattın doğusunda kalan alanda
+(Harita-45-2),
+c) İzmit Körfezinde; Dil Burnu Fenerini (40° 44’ 25.80” K - 29° 30’ 54.72” D), Dil İs-
+kelesi Kaba Burnuna (40° 46’ 0.60” K - 29° 31’ 4.92” D) birleştiren hattın doğusunda kalan
+alanda (Harita-45-3),
+ç) İstanbul Boğazında; Ahırkapı (41° 00’ 27” K - 28° 59’ 05” D) ve Kadıköy İnci Burnu
+Mendirek Fenerini ( 40° 59’ 33.00” K - 29° 00’ 53.00” D) birleştiren hat ile Yeniköy Vapur İs-
+kelesi (41° 07’ 18.03” K - 29° 04’ 15.72” D) ve Çubuklu Kozaltı Burnunu (41° 6’ 35.94” K -
+29° 4’ 58.38” D) birleştiren hat arasında kalan alanda (Harita-45-4),
+d) Büyükçekmece Koyunda; (40° 59’ 23.46” K - 28° 32’ 43.20” D) koordinat noktası
+ile karşısındaki Manda Burnunu (40° 58’ 35.40” K - 28° 35’ 48.36” D) birleştiren hattın kuze-
+yindeki alanda (Harita-45-5),
+gırgır ağları ile su ürünleri avcılığı yasaktır.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 35
+(4) Bu Tebliğin 22 nci ve 23 üncü maddeleri ile gırgır ağı kullanımı için verilen izin
+hariç olmak üzere, Akdeniz’de 15 Nisan - 15 Eylül, diğer denizlerimizde 15 Nisan - 31 Ağustos
+tarihleri arasında, gırgır ağları ile su ürünleri avcılığı yasaktır.
+(5) Ağ derinliği 164 metreden (90 kulaç) daha fazla olan gırgır ağlarının kullanımı ya-
+saktır. Ancak ton balığı türlerinin [mavi yüzgeçli orkinos, yazılı orkinos, gobene (tombik), uzun
+kanat orkinos (tulina)] avcılığında kullanılan gırgır ağları bu kapsam dışındadır.
+(6) Gırgır ağları ile avcılığın yapılabileceği derinlikler aşağıda belirtilmiştir:
+a) Karadeniz’de, 1 Eylül - 15 Aralık tarihleri arasında kıyıdan itibaren 18 metre derin-
+likten, 16 Aralık - 14 Nisan tarihleri arasında 24 metre derinlikten, diğer denizlerimizde ise
+dönem boyunca kıyıdan itibaren 24 metre derinlikten sığ sularda gırgır ağları ile avcılık yapıl-
+ması yasaktır.
+b) Akdeniz’de; Susanoğlu - Atakent (36° 24’ 58.26” K - 34° 5’ 27.48” D) ile Akıncı
+Burnu (36° 18’ 27.36” K - 35° 46’ 44.70” D) arasında kalan alanda, 11 metre derinlikten itibaren
+daha derin sularda; uzunluğu en fazla 3 boy (600 metre) ve ağ derinliği en fazla 33 metre (18
+kulaç) olan gırgır ağları ile avcılık yapılması serbesttir (Harita-46). Avcılık yapacak balıkçı ge-
+milerinde bom direği, ağ makarası direği, vinç, power-block ve bu amaçla kullanılabilecek do-
+nanım bulundurulamaz; ağın alttan büzülmesi için gerekli olan donanım haricinde mekanik
+güç kullanılamaz.
+(7) Gırgır ağı kullanan balıkçı gemileri için Bakanlık il veya ilçe müdürlüklerinden ağ-
+larının derinliğini gösterir, bir av sezonu geçerli olan, Ek-3’te yer alan “Ağ Ölçüm Belgesi”nin
+alınması zorunludur.
+(8) Alamana (voli) ağları ile ilgili hususlar aşağıda belirtilmiştir:
+a) Alamana (voli) ağları ile 15 Nisan - 15 Mayıs tarihleri arasında su ürünleri avcılığı
+yasaktır.
+b) Ağ derinliği 30 metreden veya 17 kulaçtan daha fazla olan ve ağ göz açıklığı 16
+mm’den daha küçük olan alamana (voli) ağlarının su ürünleri avcılığında kullanımı yasaktır.
+c) Alamana (voli) ağlarının bu maddenin ikinci fıkrasının (c) bendinde belirtilen alanda
+kullanımı yasaktır.
+ç) Asin körfezinde; (37° 13’ 42.00” K - 27° 35’ 22.00” D) ile (37° 14’ 26.88” K - 27°
+31’ 54.84” D) koordinatları arasında çekilen hattın kuzeyinde kalan alanda alamana (voli) ağları
+ile avcılık yasaktır (Harita-47).
+(9) Çevirme ağları kullanılarak belirli bir alanı kapatmak sureti ile bu ağlara dalarak ve
+elle çekerek kıyıda dar bir saha içerisine toplamak suretiyle (elleme veya eleme adı verilen
+yöntemle) su ürünleri avcılığı yasaktır.
+Işıkla avcılığa ilişkin yasaklar
+MADDE 13- (1) Akdeniz’de; Anamur Burnu (36° 0’ 54.36” K - 32° 48’ 12.00” D) ile
+Suriye sınırı arasında kalan karasularımızda ışıkla avcılık yasaktır (Harita-48),
+(2) Ege Denizi’nde;
+a) Kardak Kayalıklarının doğusu (37° 2’ 59.93’’ K - 27° 9’ 39.17’’ D), Topan Adasının
+güneyi (37° 0’ 2.3’’ K - 27° 11’ 20.54’’ D), Çatal Adanın kuzey burnu (37° 1’ 19.31’’ K - 27°
+13’ 19.16’’ D) ile Çavuş Adasının kuzey burnunu (37° 3’ 4.86’’ K - 27° 12’ 37.15’’ D) birleştiren
+koordinat noktaları arasında kalan alanda 1 Aralık - 31 Ocak tarihleri arasında (Harita-49-1),
+b) Güllük Körfezinde; Kapalı Burnu (37° 18’ 25.44” K - 27° 24’ 47.82” D) ile Kızılyar
+Burnunu (37° 9’ 33.96” K - 27° 19’ 34.56” D) birleştiren hattın doğusunda kalan alanda (Ha-
+rita-49-2),
+c) Ildır Körfezinde; Çolak Burnu (38° 26’ 42.96” K - 26° 23’ 47.46” D) ile Çeşme Uç-
+burnu (38° 22’ 35.58” K - 26° 17’ 8.46” D) arasında çekilen hattın doğusunda kalan alanda
+(Harita-49-3),
+Sayfa : 36                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+ç) İzmir Körfezinde; Ardıç Burnu (38° 31’ 57.30” K - 26° 37’ 31.50” D) ile Kapan Bur-
+nu (38° 32’ 41.34” K - 26° 48’ 52.80” D) arasında çekilen hattın güneyinde kalan alanda (Ha-
+rita-49-4),
+d) Çandarlı Körfezinde; Kemikli Burnu (38° 55’ 3.06” K - 26° 51’ 3.96” D) ile Aliağa
+Taşlı Burun (38° 50’ 3.78” K - 26° 56’ 34.02” D) arasında çekilen hattın kuzeydoğusunda kalan
+alanda (Harita-49-5),
+e) Küçükkuyu Balıkçı Barınağı (39° 32’ 45.00” K - 26° 36’ 5.00” D) ile Küçük Maden
+Adası (39° 23’ 8.10” K - 26° 34’ 7.14” D), Güneş Adası Feneri (39° 19’ 44.16” K - 26° 32’
+26.46” D), Çıplak Ada Yumru Burnu (39° 16’ 43.32” K - 26° 34’ 33.78” D) ve Eğribucak Bur-
+nunu (39° 16’ 23.94” K - 26° 36’ 35.34” D) birleştiren hattın doğusunda kalan alanda (Harita-
+49-6),
+f) Babakale (39° 28’ 41” K - 26° 3’ 51” D) ile Küçükkuyu Balıkçı Barınağı (39° 32’
+45” K - 26° 36’ 5” D) arasında kalan alanda 2 mil içerisinde (Harita-49-7),
+g) Babakaleyi (39° 28’ 41” K - 26° 3’ 51” D), Bozcaada Eskifener Burnu (39° 47’
+19.14” K - 26° 3’ 8.22” D), Bozcaada batı burnu (39° 50’ 15.54” K - 25° 57’ 45.24” D), Gök-
+çeada Aydıncık Burnu (40° 9’ 48.06” K - 26° 0’ 33.24” D), Gökçeada Kaşkaval Burnu (40°
+14’ 28.74” K - 25° 56’ 33.36” D), Büyük Kemikli Burnu (40° 18’ 58.74” K - 26° 12’ 54.30”
+D) ve Boztepe Burnu (40° 37’ 8.40” K - 26° 4’ 24.18” D) ile birleştiren hattın doğusunda kalan
+alanda (Harita-49-8),
+ışıkla avcılık yasaktır.
+(3) Meriç Nehrinin denize döküldüğü yer ile Anamur Burnu (36° 0’ 54.36” K - 32° 48’
+12.00” D ) arasında kalan karasularımızda 15 Nisan - 31 Ağustos tarihleri arasında ışıkla avcılık
+yasaktır.
+(4) İçsular, Karadeniz, Marmara Denizi, İstanbul ve Çanakkale Boğazlarında ışıkla av-
+cılık yasaktır.
+(5) Işıkla avcılık yapmak üzere, ışıkla avcılığın serbest olduğu alanlara Karadeniz, Mar-
+mara Denizi ile İstanbul ve Çanakkale Boğazlarından geçecek gemiler için, geçiş güzergâhını
+beyan etmek şartıyla, geminin bulunduğu yere en yakın il/ ilçe müdürlüğünden Ek-4’te yer
+alan “Geçiş İzin Belgesi”nin alınması ve gemilerin en geç 3 gün içerisinde geçiş yapmaları zo-
+runludur.
+(6) Işıkla avcılık yapacak balıkçı gemileri, sadece bir gemiyi ışık gemisi olarak kulla-
+nabilir. İzin belgelerinde belirtilen ışık gemisi dışında, başka bir gemiyi ışık gemisi olarak kul-
+lanamaz.
+(7) Gırgır gemilerindeki hizmet botları, ışık teknesi olarak da kullanılabilir. Balıkçı ge-
+misine ait hizmet botunun ışık teknesi olarak kullanılması durumunda, başka bir gemi ışık ge-
+misi olarak kullanamaz.
+(8) Işık teknelerinde personel bulundurulması ve iki ayrı takımın ışık tekneleri arasında
+en az 200 metre mesafe bulunması zorunludur.
+(9) Işıkla avcılık izni bulunmayan gemilerin, gırgır ağları ile avcılık yapan balıkçı ge-
+milerine destek amacıyla, 100 watttan daha fazla aydınlatma ile deniz yüzeyini aydınlatması
+yasaktır.
+(10) Işıkla avcılık yapacak balıkçı gemileri için, istihsalde bulunacakları yerin bulun-
+duğu il/ilçe müdürlüklerinden birine müracaat edilerek Ek-2’de yer alan avcılık “İzin
+Belgesi”nin alınması zorunludur. Bu maddenin on altıncı fıkrası hariç olmak üzere gırgır ağı
+olmayan balıkçı gemilerine ışıkla avcılık izni verilmez, bu ağlar olmadan ışıkla avcılık faali-
+yetinde bulunulamaz.
+(11) Su ürünleri avcılığında 100 watta kadar olan aydınlatma gücünün kullanımı mü-
+saadeye bağlı değildir. Işıkla avcılığa izin verilen alanlarda kullanılacak ışık takatı; ana tekne,
+yardımcı ve taşıyıcı tekneler dahil toplam 8000 wattı geçemez.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 37
+(12) Gemi güvertesini aydınlatacak ışık kaynaklarının hareket kabiliyeti olmayacak şe-
+kilde sabit olması zorunludur.
+(13) Işıkla avcılıkta aydınlatma ancak su üstünde yapılır.
+(14) 30 metreden daha sığ sularda ve balık çiftliklerinin kafeslerine 300 metreden daha
+yakın mesafede ışık yakılması yasaktır.
+(15) Gırgır ağları ile yapılan avcılıkta, etrafı çevrilmiş balıkların ağın ağzından kaçma-
+sını önlemek için kısa süreli olarak yakılıp söndürülen, 12 veya 24 volt, 100 wattan küçük tek
+lamba ışık kaynağı olarak değerlendirilmez.
+(16) Işıkla avcılığın serbest olduğu alan ve bölgelerde mekanize oltalarla gemide ışık
+kullanılarak yapılacak kalamar avcılığına ilişkin usul ve esaslar Bakanlıkça belirlenir.
+(17) 12 metrenin altındaki balıkçı gemilerinde 50 wattan küçük ışık kaynağı veya 1
+adet lüks olarak adlandırılan LPG kaynaklı lamba ışık kaynağı olarak kullanılabilir.
+(18) Işıkla avcılık izni olmayan gemilerde ışıkla avcılığa ilişkin teçhizat bulundurula-
+maz.
+(19) Su ürünleri avcılığında ışık kaynağı olarak beyaz ışık kullanımı yasaktır. Kullanı-
+lacak ışık kaynaklarına ilişkin teknik özellikler ile kullanım ve kontrolüne ilişkin usul ve esaslar
+Bakanlıkça belirlenir.
+Sürütme, uzatma ve diğer avlanma araçları ile avcılığa ilişkin yasaklar
+MADDE 14- (1) Bütün karasularımızda ığrıp, trata, tarlakoz, manyat ve benzeri kıyı
+sürütme ağları ile su ürünleri avcılığı ve bu ağlar ile ağları kullanmaya yarayacak donanımların
+balıkçı gemilerinde bulundurulması yasaktır.
+(2) Uzatma ağları ile ilgili hususlar aşağıda belirtilmiştir:
+a) Ağ derinliği 30 metre veya 17 kulaçtan daha fazla olan uzatma ağlarının ve bu Teb-
+liğde yer alan daha büyük ağ göz açıklığı düzenlemeleri saklı kalmak kaydıyla ağ göz açıklığı
+16 mm’den daha küçük olan uzatma ağlarının su ürünleri avcılığında kullanımı yasaktır.
+b) Bir balıkçı gemisinde donamlı olarak 6000 metreden daha fazla uzatma ağı bulun-
+durulamaz, kullanılamaz.
+c) Denize bırakılan uzatma ağlarının gündüz flâma (şamandıra), gece ise ışıklı şaman-
+dıra ile işaretlendirilmesi zorunludur.
+ç) Denizlerde yapılan su ürünleri avcılığında monofilament (tek kat) ve multimonofi-
+lament (çoklu tek kat) misina ağlarının kullanımına ilişkin düzenlemeler aşağıda belirtilmiş-
+tir:
+1) İstanbul Boğazı ile Karadeniz ve Marmara Denizi’nde 34 mm’den, Çanakkale Bo-
+ğazı ile Ege Denizi ve Akdeniz’de 64 mm’den daha küçük göz açıklığına sahip monofilament
+(tek kat) ve multimonofilament (çoklu tek kat) misina ağlarının kullanılması yasaktır.
+2) 500 metreden daha uzun monofilament (tek kat) ve multimonofilament (çoklu tek
+kat) misina ağlarının balıkçı gemilerinde bulundurulması ve kullanılması yasaktır.
+3) Monofilament (tek kat) ve multimonofilament (çoklu tek kat) misina ağları ile avcılık
+yapacak balıkçı gemileri için gemi ruhsat tezkeresinin verildiği il/ilçe müdürlüğünden Ek-2’de
+yer alan avcılık “İzin Belgesi”nin alınması zorunludur.
+4) Monofilament (tek kat) ve multimonofilament (çoklu tek kat) misina ağları ile yasa-
+dışı avcılık faaliyetinde bulunan balıkçı gemilerinin Ek-2’de yer alan avcılık “İzin Belgesi”
+iptal edilir. İptal edilen iznin geçerli olduğu yıl boyunca yeni izin belgesi düzenlenmez.
+(3) Marmara Denizi’nde; karides avcılığında kullanımına izin verilen manyat ile karides
+için getirilen düzenlemelere uymak şartıyla karides avcılığı yapılabilir.
+(4) Algarnanın, Ege Denizi’nde ve Akdeniz’de tamamen; Karadeniz’de deniz salyan-
+gozu avcılığı, Marmara Denizi’nde ise karides avcılığı dışında kullanımı yasaktır.
+Sayfa : 38                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+(5) Trabzon İli, Of İlçesinde; Solaklı Deresi ile Sarp sınır kapısı arasındaki Solaklı, Bal-
+tacı (Of), İyidere, Büyükçay (Çayeli), Fırtına Deresi (Ardeşen), Çağlayan (Fındıklı), Kapisre
+(Arhavi) Hopa Çayı ve Osmaniye Deresinin (Kemalpaşa) denize döküldükleri yerler merkez
+olmak üzere, derelerin sağındaki ve solundaki sahil kesiminde her iki yöne doğru birer km’lik
+ve denize doğru 500 metrelik mesafeyi birleştiren alan içinde, 1 Nisan - 30 Haziran tarihleri
+arasında her türlü sabit ağ kurulması ve su altı tüfeği ile avcılık yapılması yasaktır.
+(6) Akdeniz’de, demir iskelet üzerine tel sarılmak suretiyle yapılan kafes kullanılarak
+su ürünleri avcılığı yapılması yasaktır.
+(7) Dolanan (drift-net) ağların su ürünleri avcılığında kullanılması ile gemilerde, balıkçı
+barınaklarında, barınma ve çekek yerlerinde bulundurulması yasaktır.
+Parakete ile avcılığa ilişkin yasaklar
+MADDE 15- (1) Denize bırakılan paraketelerin gündüz flâma (şamandıra), gece ise
+ışıklı şamandıra ile işaretlendirilmesi zorunludur.
+(2) Parakete ile yapılan su ürünleri avcılığında, büyüklüğü (ağız açıklığı) 7,2 mm’den
+küçük iğnelerin kullanılması yasaktır.
+(3) Kılıç ve uzun kanat orkinos (tulina) avcılığında kullanılan paraketelerde, büyüklüğü
+(ağız açıklığı) 2,8 cm ve daha büyük dairesel (yuvarlak) iğnelerin kullanılması zorunludur. Bu
+iğnelerin çapraz boyunlu olması halinde açıları 10 dereceden fazla olamaz.
+(4) Parakete ile kalkan avcılığı yasaktır.
+Avlanması yasak türler
+MADDE 16- (1) Çizelgede yer alan türlerin, içsular dahil bütün sularımızda avlanması,
+toplanması, gemilerde bulundurulması, karaya çıkarılması, nakledilmesi ve satılması yasaktır.
+Taraf olduğumuz uluslararası sözleşmeler ile verilen istisnalar bu düzenlemenin dışındadır.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 39
+Boy ve ağırlık yasakları
+MADDE 17- (1) Aşağıda avlanabilir asgari boyları ve ağırlıkları belirtilen su ürünle-
+rinin daha küçüklerinin avlanması, gemilerde bulundurulması, karaya çıkarılması, nakledilmesi
+ve satılması yasaktır.
+Sayfa : 40                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 41
+(2) Balon balığı türleri (Lagocephalus sceleratus, Lagocephalus spadiceus, Lagocep-
+halus suezensis, Lagocephalus guentheri, Lagocephalus lagocephalus, Sphoeroides pachygas-
+ter, Tylerius spinosissimus, Torquigener flavimaculosus)’nin avcılığı izne tabi olup avcılığına
+ilişkin usul ve esaslar Bakanlıkça belirlenir.
+(3) Pervane/Ay balığının (Mola mola) karaya çıkarılması ve satılması yasaktır.
+Hedef dışı (tesadüfi, arızi) avcılık
+MADDE 18- (1) Bu Tebliğin 16 ncı maddesi ile avlanması yasaklanan türler hariç, he-
+def dışı olarak avlanan su ürünleri ile ilgili hususlar aşağıda belirtilmiştir:
+a) Toplam avın ağırlıkça % 5 oranına kadar olan hedef dışı avlara müsaade edilir. Al-
+garna ile avlanan karideslerde ise ağırlıkça % 15’i oranında hedef dışı avlara müsaade edilir.
+Hedef dışı olarak avlanan ürünün tek birey olması halinde bu limitler dikkate alınmaz.
+b) E-seyir defterinde ve/veya “Nakil/Menşe Belgesi”nde hedef dışı avın tür ve mikta-
+rının bildirim yapılması zorunludur. Hedef dışı avın nakliyle satışı aşamasında Nakil/Menşe
+Belgesinin ürün beraberinde bulundurulması zorunludur.
+c) Avcılık faaliyeti sırasında hedef türün yakalanamayıp, sadece hedef dışı türün yaka-
+lanması durumunda bu türler hedef dışı avcılık kapsamında değerlendirilmez ve yasadışı avcılık
+olarak kabul edilir.
+ç) Hedef dışı olarak mavi yüzgeçli orkinos yakalanması durumunda, il/ilçe müdürlük-
+lerince karaya çıkış yerlerinde tespitinin yapılarak e-BCD düzenlenmesi zorunludur.
+(2) Bu Tebliğin 16 ncı maddesinde belirtilen avlanması yasak türler ile deniz kuşlarının
+hedef dışı olarak yakalanması durumunda;
+a) Canlı olarak ve zarar görmeden suya iadeleri esastır. Bu işlem için Balıkçılık ve Su
+Ürünleri Genel Müdürlüğü internet sitesinde yayınlanan “Hassas Türleri Koruma
+Kılavuzları”nda belirtilen aşamaların uygulanması zorunludur.
+b) E-seyir defterinde ve/veya “Nakil/Menşe Belgesi”nde hedef dışı avcılık kısmının
+doldurularak bildiriminin yapılması zorunludur.
+(3) Bu Tebliğin 17 nci ve 38 inci maddesi ile avlanabilir asgari boyları ve ağırlıkları
+belirtilen türlerden; hamsi, sardalya ve istavritte ağırlıkça %15, diğer su ürünlerine ise ağırlıkça
+%5 oranında küçük boylara ve 8-30 kg arası veya 75-115 cm arasındaki mavi yüzgeçli orki-
+noslar için en fazla %5 oranında istisna tanınır. İstisnaların tespiti mavi yüzgeçli orkinoslarda
+ürün adeti, diğer türlerde ise kontrol edilen ürün miktarı üzerinden yapılır.
+(4) Özel avcılık izniyle yapılan avcılık sırasında, zaman yasağına tabi olmayan türlerin
+avcılığı, bu Tebliğde yer alan diğer düzenlemelerde aksi belirtilmediği sürece serbesttir.
+(5) Dalma yöntemiyle yapılan su ürünleri avcılığında hedef dışı avcılık yapılması ya-
+saktır.
+(6) Bakanlık, hedef dışı avcılığın izlenmesi, azaltılması ve önlenmesi amacıyla ilave
+yükümlülük getirebilir.
+Hamsi, sardalya ve istavrit avcılığı
+MADDE 19- (1) Hamsi ile ilgili düzenlemeler aşağıda belirtilmiştir:
+a) Gırgır, ortasu trolü ve alamana (voli) ağlarıyla hamsi avcılığı yapacak balıkçı gemileri
+için, gemi ruhsat tezkeresinin verildiği il/ilçe müdürlüğünden Ek-2’de yer alan avcılık “İzin
+Belgesi”nin alınması zorunludur.
+Sayfa : 42                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+b) Hamsi avcılığı, her av sezonu için Bakanlıkça belirlenerek ilan edilen kota miktarınca
+yapılır. Kota miktarının dolması durumunda avcılık sona erer. Kotanın avlanmayan miktarı bir
+sonraki av sezonuna devredilmez. Kota kapsamında avlanan hamsinin, Bakanlıkça belirlenen
+yerlerden karaya çıkarılması zorunludur. Kotanın uygulanmasına ilişkin usul ve esaslar Ba-
+kanlıkça belirlenir.
+c) Marmara Denizi ve Karadeniz’de, gırgır ağları ile hamsi avcılığı 15.00 - 09.00 saatleri
+arasında yapılır. Gırgır ağları, belirtilen saatler dışında, hamsi avlamak amacıyla denizde bu-
+lundurulamaz. Bakanlık stok durumuna göre avlanma zamanlarında düzenleme yapabilir.
+ç) Bakanlık, stokların korunması ve avcılığın sürdürülebilirliğinin sağlanması amacı
+ile hamsi avcılığına; alan, avlanabilecek ve karaya çıkarılabilecek miktarlar, avcılıkta kullanı-
+lacak alet ve ekipmanlar, karaya çıkış noktası, zaman ve nakliyesiyle ilgili yasak, sınırlama ve
+yükümlülükler getirebilir.
+(2) Dökme olarak balık unu yağı fabrikalarına gönderilecekler hariç; hamsi, istavrit ve
+sardalya balıklarının naklinde kullanılacak kasaların dıştan dışa ölçülerinin en fazla (54cm x
+9cm x 37cm) boyutunda ve 11 cm ayak boyunda; kutuların dıştan dışa ölçülerinin ise en fazla
+(59 cm x 13 cm x 39 cm) boyutunda olması zorunludur.
+(3) Uzatma ağları ile sardalya avcılığı dönem boyunca serbesttir.
+(4) Marmara Denizi’nden avcılık yoluyla elde edilen hamsi, istavrit, sardalya başta ol-
+mak üzere su ürünlerinin dökme olarak balık unu yağı fabrikalarına nakledilmesi yasaktır.
+Palamut-torik avcılığı
+MADDE 20- (1) Tüm karasularımızda, 1 Nisan - 31 Ağustos tarihleri arasında ağ dal-
+yanları dâhil, her türlü istihsal vasıtası ile palamut ve torik avcılığı yasaktır. Ancak 15 - 31
+Ağustos tarihleri arasında çapari ile palamut avcılığı serbesttir.
+(2) Muğla İli, Gökova ve Güllük Körfezlerinde; palamut ağlarının 07.00 - 19.00 saatleri
+arasında denizde bırakılması yasaktır.
+Kalkan, dil ve pisi avcılığı
+MADDE 21- (1) Kalkan avcılığına ilişkin düzenlemeler aşağıda belirtilmiştir:
+a) 15 Nisan - 15 Haziran tarihleri arasında her türlü istihsal vasıtası ile kalkan avcılığı
+yapılması ve kalkan ağlarının denizde bırakılması yasaktır.
+b) Kalkan avcılığında kullanılacak ağların göz açıklığı 400 mm’den küçük olamaz.
+c) Uzatma ağı ile kalkan avcılığı yapacak balıkçı gemileri için, gemi ruhsat tezkeresinin
+verildiği il/ilçe müdürlüğünden Ek-2’de yer alan “İzin Belgesi”nin alınması zorunludur.
+ç) Avlanan kalkan balıklarının Bakanlıkça belirlenen yerlerden karaya çıkarılması zo-
+runludur.
+d) Parakete ve fanyalı ağlar ile kalkan avcılığı yasaktır.
+e) Av yasağından önce avlanılarak il/ilçe müdürlüklerine stok tespiti yaptırılan kalkan
+balıklarının, yasağın başlamasından itibaren en geç 7 gün içerisinde pazarlanması zorunludur.
+f) Kalkan avcılığı, her av sezonu için Bakanlıkça belirlenerek ilan edilen kota miktarınca
+yapılır. Kota miktarının dolması durumunda avcılık sona erer. Kotanın avlanmayan miktarı bir
+sonraki av sezonuna devredilmez. Kotanın uygulanmasına ilişkin usul ve esaslar Bakanlıkça
+belirlenir.
+(2) Dil ve pisi avcılığına ilişkin düzenlemeler aşağıda belirtilmiştir:
+a) Bütün karasularımızda, 1 Ocak - 15 Şubat tarihleri arasında her türlü istihsal vasıtası
+ile dil ve pisi avcılığı yasaktır.
+b) Dil ve pisi avcılığında kullanılacak ağların göz açıklığı 80 mm’den küçük olamaz.
+Mavi yüzgeçli orkinos avcılığı
+MADDE 22- (1) Mavi yüzgeçli orkinos avcılığı ile ilgili hususlar aşağıda belirtilmiş-
+tir:
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 43
+a) Mavi yüzgeçli orkinos avcılığı, üyesi olduğumuz Atlantik Ton Balıklarının Korun-
+ması Uluslararası Komisyonu (ICCAT) tarafından yıllar bazında ülkemize tahsis edilen kota
+miktarınca ve ülkemize ait onaylanan mavi yüzgeçli orkinos avcılık yönetim planı dahilinde
+Bakanlıkça belirlenerek ilan edilen usul ve esaslar kapsamında yapılır.
+b) Kotanın avcılığı, gırgır avcılığı yapan ve Bakanlıkça belirlenen yönteme göre tespit
+edilen sayıdaki her bir gemiye verilen av kotası dahilinde yapılır. Bu kapsamda olmayanlar ta-
+rafından yapılacak orkinos avcılığı ise ülkemize ait orkinos avcılık yönetim planı dahilinde
+Bakanlığın belirleyeceği usul ve esaslar doğrultusunda yapılır.
+c) Kota miktarının dolması durumunda avcılık sona erer. Kotanın avlanmayan miktarı
+bir sonraki av sezonuna devredilmez.
+ç) Bakanlıkça ruhsat tezkeresi düzenlenmiş balıkçı gemilerinin, başka ülkelerin avcılık
+kotaları kapsamındaki mavi yüzgeçli orkinoslara yönelik herhangi bir faaliyette bulunmak
+üzere kiraya verilmesi, başka ülke bayraklı gemilerin de ülkemiz kotası dahilindeki mavi yüz-
+geçli orkinoslara yönelik herhangi bir faaliyette bulunmak üzere kiralanması yasaktır.
+d) Mavi yüzgeçli orkinos avcılığında, uçak veya helikopter ya da herhangi bir insansız
+hava aracı kullanımı yasaktır.
+e) Akdeniz ve Ege Denizi’ndeki karasularımızda ve bunlara bitişik uluslararası sularda
+1 Temmuz - 14 Mayıs tarihleri arasında, diğer alanlarda 1 Temmuz - 25 Mayıs tarihleri arasında
+mavi yüzgeçli orkinos avcılığı yasaktır.
+(2) Mavi yüzgeçli orkinos faaliyetinde av, taşıma, destek ve yardımcı gemi olacak ge-
+milerin, il/ilçe müdürlüklerinden Ek-2’de yer alan “İzin Belgesi”ni alması zorunludur. Bu ge-
+miler yalnızca bir faaliyet için izin alabilirler. İzin Belgesi’nin düzenlenmesine ilişkin usul ve
+esaslar Bakanlıkça belirlenir.
+(3) Bakanlıkça belirlenen usul ve esaslara aykırı olarak avcılık faaliyetinde bulunan ba-
+lıkçı gemilerinin “İzin Belgesi” iptal edilir. İptal edilen iznin geçerli olduğu av dönemi için
+yeni izin belgesi düzenlenmez.
+(4) Elektronik Orkinos Yakalama Dokümanı (eBCD) olmaksızın, mavi yüzgeçli orkinos
+ve mavi yüzgeçli orkinostan elde edilen ürünlerin (iç organlar ve yumurta hariç) gemilerde bu-
+lundurulması, gemiler tarafından çekilen kafeslerde taşınması ile satışı, nakli ve orkinos yetiş-
+tiricilik (besicilik) tesisinde bulundurulması yasaktır. Elektronik Orkinos Yakalama Dokümanı
+(eBCD)’nın kullandırılması, yetkilendirilmesi ve sınırlandırılması Bakanlık tarafından yapılır.
+(5) Mavi yüzgeçli orkinos faaliyetlerine ilişkin usul ve esaslar, üyesi olduğumuz At-
+lantik Ton Balıklarının Korunması Uluslararası Komisyonu (ICCAT) tarafından getirilen dü-
+zenlemeler kapsamında Bakanlıkça belirlenir. Av, taşıma, destek ve yardımcı gemi sahip/do-
+natanları ile orkinos yetiştiricilik (besicilik) tesisi yetkilileri ve ihracatçı firmalar bu maddede
+belirtilen kurallar dışında, üyesi olduğumuz Atlantik Ton Balıklarının Korunması Uluslararası
+Komisyonu (ICCAT) tarafından getirilen düzenlemelere ve bu kapsamda Bakanlık tarafından
+belirlenen usul ve esaslara uymak zorundadır.
+Yazılı orkinos, çizgili orkinos ve gobene (tombik) avcılığı
+MADDE 23- (1) Yazılı orkinos, çizgili orkinos ve gobene (tombik) avcılığına ilişkin
+düzenlemeler aşağıda belirtilmiştir:
+a) Gırgır ağları ve diğer avlanma araçları ile avcılığın serbest olduğu yer ve zamanda,
+bu avlanma araçları ile yazılı orkinos, çizgili orkinos ve gobene (tombik) avcılığı serbesttir.
+b) Karasularımızda gırgır ağları ile avcılığın yasak olduğu zamanda; Akıncı Burnu (36°
+18’ 27. 36” K - 35° 46’ 44.70” D) ile Ceyhan Nehrinin denize döküldüğü yer (36° 34’ 6.06” K
+- 35° 33’ 23.10” D) arasında çekilen hattın kuzeyinde kalan İskenderun Körfezi hariç olmak
+üzere; Suriye sınırı ile Datça Yarımadası İskandil Burnu (36° 42’ 37.62” K - 27° 21’ 43.26” D)
+arasında kalan alanda, kıyıdan itibaren 6 millik mesafe dışında, gırgır ağları ile yazılı orkinos,
+çizgili orkinos ve gobene (tombik) avcılığı dönem boyunca serbesttir (Harita-50).
+Sayfa : 44                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+c) Bu türleri (b) bendi kapsamında 15 Nisan - 15 Eylül tarihleri arasındaki dönemde
+avlayacak balıkçı gemileri için Ek-2’de yer alan avcılık “İzin Belgesi”nin alınması ve Bakan-
+lıkça belirlenen karaya çıkış noktalarından çıkartılması zorunludur. İzin verilen dönemde, bu
+madde ile izin verilen türler ve uzun kanat orkinos (tulina) hariç başka türlerin avcılığının ya-
+pılması durumunda, avcılık izin belgesi iptal edilir. İptal edilen iznin geçerli olduğu av dönemi
+için yeni izin belgesi düzenlenmez.
+Akya, sarıkuyruk ve lambuka avcılığı
+MADDE 24- (1) 15 Nisan - 15 Mayıs tarihleri arasında akya ve sarıkuyruk avcılığı ya-
+saktır.
+(2) Muğla İli, Gökova ve Güllük Körfezlerinde akya ve sarıkuyruk ağlarının 07.00 -
+19.00 saatleri arasında denizde bırakılması yasaktır.
+(3) 1 Ocak - 14 Ağustos tarihleri arasında her türlü istihsal vasıtası ile lambuka avcılığı
+yasaktır.
+Kılıç ve uzun kanat orkinos (tulina) avcılığı
+MADDE 25- (1) 15 Şubat - 15 Mart ve 1 Ekim - 30 Kasım tarihleri arasında kılıç ve
+uzun kanat orkinosun (tulina) avlanması, gemide bulundurulması, başka bir gemiye aktarılması,
+sevkiyatı veya karaya çıkartılması yasaktır.
+(2) Kılıç ve uzun kanat orkinos (tulina) avcılığı yapacak gemiler için bir önceki yılın
+31 Aralık tarihine kadar ruhsat tezkeresinin verildiği il/ilçe müdürlüğünden Ek-2’de yer alan
+avlanma “İzin Belgesi”nin alınması ve ürünlerin Bakanlıkça belirlenen karaya çıkış noktala-
+rından çıkartılması zorunludur.
+(3) Üyesi olduğumuz Atlantik Ton Balıklarının Korunması Uluslararası Komisyonu
+(ICCAT) kapsamında takibi yapılan kılıç ve uzun kanat orkinos (tulina) avcılığına Bakanlıkça
+kısmi veya genel yasaklama getirilebilir.
+(4) Kılıç ve uzun kanat orkinos (tulina) avcılığı yapan balıkçı gemilerinde bu faaliyetleri
+sırasında dip trolü ağı, kapıları ve ırgatı ile dip balıkları bulundurulamaz.
+(5) Kılıç ve uzun kanat orkinos (tulina) avcılığında dolanan (drift-net) ağların kullanımı
+yasaktır.
+(6) Bu Tebliğin 23 üncü maddesinin birinci fıkrasının (c) bendi kapsamında izin alan
+gemiler, uzun kanat orkinos (tulina) avcılığı da yapabilir.
+Orfoz ve lagos avcılığı
+MADDE 26- (1) Bütün karasularımızda orfoz avcılığı yasaktır.
+(2) Lagos avcılığı ile ilgili hususlar aşağıda belirtilmiştir:
+a) Bütün karasularımızda, 1 Haziran - 31 Ağustos tarihleri arasında her türlü istihsal
+vasıtası ile lagos (Epinephelus spp.) avcılığı yasaktır.
+b) Sepet, pinter ve benzeri tuzaklar ve dalarak zıpkın veya su altı tüfeği ile lagos avcılığı
+yapılması yasaktır.
+Karides avcılığı
+MADDE 27- (1) Marmara Denizi hariç, bütün karasularımızda, İstanbul ve Çanakkale
+Boğazlarında algarna ile karides avcılığı yasaktır.
+(2) Akdeniz’de;
+a) Hatay İlinde; Suriye sınırı ile Akıncı Burnu (36° 18’ 27.36” K - 35° 46’ 44.70” D)
+arasında kalan karasularımızda 1 mil içerisinde (Harita-51-1),
+b) Akıncı Burnu ile Adana İli, Yumurtalık Balıkçı Barınağı (36° 45’ 59.28” K - 35° 47’
+28.26” D) arasında kalan karasularımızda 2 mil içerisinde (Harita-51-2),
+c) Yumurtalık Balıkçı Barınağı ile Mersin İli, Karaduvar Balıkçı Barınağı (36° 48’
+32.76” K - 34° 41’ 52.38” D) arasında kalan karasularımızda 3 mil içerisinde (Harita-51-3),
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 45
+ç) Karaduvar Balıkçı Barınağı ile Susanoğlu - Atakent (36° 24’ 58.26” K - 34° 5’ 27.48”
+D) arasında kalan karasularımızda 2 mil içerisinde (Harita-51-4),
+d) Susanoğlu - Atakent (36° 24’ 58.26” K - 34° 5’ 27.48” D) ile İncekumburnu (36°
+14’ 2.64” K - 33° 56’ 58.74” D) arasında kalan karasularımızda 3 mil içerisinde (Harita-51-5),
+e) İncekumburnu ile Kızılliman Burnu (36° 4’ 14.58” K - 33° 4’ 42.48” D) arasında ka-
+lan karasularımızda 2 mil içerisinde (Harita-51-6),
+f) Kızılliman Burnu (36° 4’ 14.58” K - 33° 4’ 42.48” D) ile Antalya İli, Gazipaşa İlçesi,
+Kesik Burnu (36° 9’ 57.84 “K- 32° 23’ 25.08” D) arasında kalan karasularımızda 1,5 mil içe-
+risinde (Harita-51-7),
+g) Antalya İli, Gazipaşa İlçesi, Kesik Burnu (36° 9’ 57.84” K - 32° 23’ 25.08” D) ile
+Side Beldesi; Selimiye Feneri (36° 45’ 55.68” K - 31° 23’ 5.52” D) arasında kalan karasuları-
+mızda 2 mil içerisinde (Harita-51-8),
+ğ) Antalya İli, Side Beldesinde; Selimiye Feneri (36° 45’ 55.68” K - 31° 23’ 5.52” D)
+ile Finike İlçesi, Finike Körfezinde; (36° 16’ 23.88” K - 30° 9’ 5.82” D) koordinat noktası ara-
+sındaki karasularımızda sahilden itibaren 3 mil içerisinde (Harita-51-9),
+h) Antalya İli, Finike İlçesi, Finike Körfezinde; (36° 16’ 23.88” K - 30° 9’ 5.82” D) ko-
+ordinatları ile Ege Denizi sınırı arasında kalan karasularımızda 2 mil içerisinde (Harita-51-10),
+ı) Mersin İli, Silifke İlçesi, Dana Adasında; sahilinden itibaren 2 mil içerisinde (Hari-
+ta-51-11),
+uzatma ağları hariç her türlü istihsal vasıtası ile karides avcılığı yasaktır.
+(3) Akdeniz’de 15 Nisan - 15 Eylül, Ege Denizi’nde 15 Nisan - 31 Ağustos tarihleri
+arasında uzatma ağları hariç her türlü istihsal vasıtası ile karides avcılığı yasaktır.
+(4) Marmara Denizi’nde yapılacak karides avcılığına ilişkin hususlar aşağıda belirtil-
+miştir:
+a) Marmara Denizi ile İstanbul ve Çanakkale Boğazlarında, 15 Nisan - 31 Ağustos ve
+1 - 31 Ocak tarihleri arasında her türlü istihsal vasıtası ile karides avcılığı yasaktır. Ancak 15
+Mayıs - 1 Ağustos tarihleri arasında uzatma ağları ile oluklu karides (P. kerathurus) avcılığı
+serbesttir.
+b) Marmara Denizi’nde manyat ile karides avcılığı İstanbul ve Çanakkale Boğazları ile
+aşağıda belirtilen alanlarda yasaktır:
+1) Çanakkale İli, Şevketiye Bozburun Bankını (40° 24’ 18.48” K - 26° 55’ 0.96” D),
+Şarköy İnceburun Fenerini (40° 33’ 31.56” K - 26° 59’ 56.70” D) birleştiren hattın batısında
+kalan alanda (Harita-52-1),
+2) Erdek İlhanköyünü (40° 31’ 25.44” K - 27° 43’ 24.66” D), Ekinlik Adası (40° 33’
+24.00” K - 27° 30’ 9.00” D) ve Karabiga Karaburun Feneri (40° 28’ 12.36” K - 27° 15’ 57.24”
+D) ile birleştiren hattın güneyinde kalan alanda (Harita-52-2),
+3) Mara Burnunu (40° 24’ 6.54” K - 28° 20’ 43.44” D), Erdek Kapsül Burnu Feneri
+(40° 28’ 44.58” K - 28° 2’ 6.36” D) ile birleştiren hattın güneyinde kalan alanda (Harita-52-3),
+4) Gemlik Körfezinde; Sarıburun (40° 28’ 23.40” K - 29° 1’ 10.92” D) ile Kurşunlu
+Balıkçı Barınağını (40° 21’ 51.00” K - 29° 2’ 5.94” D) birleştiren hattın doğusunda kalan alanda
+(Harita-52-4),
+5) Yelkenkaya Burnu (40° 45’ 26.28” K - 29° 21’ 17.10” D) ile Çatal Burnunu (40° 42’
+10.38” K - 29° 22’ 52.68” D) birleştiren hattın doğusunda kalan alanda (Harita-52-5),
+6) Barbarosu (40° 54’ 28.08” K - 27° 28’ 9.42” D), Marmara Ereğlisi Feneri (40° 58’
+15.30” K - 27° 58’ 54.06” D), Büyükçekmece Değirmen Burnu Fenerini (40° 57’ 56.28” K -
+28° 37’ 19.98” D) İstanbul Maltepe (40° 55’ 7.32” K - 29° 7’ 59.82” D) ile birleştiren hattın
+kuzeyinde kalan alanda (Harita-52-6),
+Sayfa : 46                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+c) Marmara Denizi’nde algarna ile karides avcılığı İstanbul ve Çanakkale Boğazları ile
+aşağıda belirtilen alanlarda yasaktır:
+1) Çanakkale İli, Şevketiye Bozburun Bankını (40° 24’ 18.48” K - 26° 55’ 0.96” D),
+Şarköy İnceburun Fenerini (40° 33’ 31.56” K - 26° 59’ 56.70” D) birleştiren hattın batısında
+kalan alanda (Harita-53-1),
+2) Erdek İlhanköyü (40° 31’ 25.44” K - 27° 43’ 24.66” D), Ekinlik Adası (40° 33’ 24.00”
+K - 27° 30’ 9.00” D) ve Karabiga Karaburun Fenerini (40° 28’ 12.36” K - 27° 15’ 57.24” D)
+birleştiren hattın güneyinde kalan alanda (Harita-53-2),
+3) Mudanya Buruncu Burnu Fenerini (40° 22’ 30.00” K - 28° 40’ 30.00” D) Erdek Kap-
+sül Burnu Fenerine (40° 28’ 44.58” K - 28° 2’ 6.36” D) birleştiren hattın güneyinde kalan
+alanda (Harita-53-3),
+4) Yeşilköy (40° 57’ 34.98” K - 28° 48’ 52.98” D) ile Armutlu Bozburun Feneri (40°
+31’ 53.00” K - 28° 46’ 50.00” D) ve Mudanya Buruncu Burnu Fenerini (40° 22’ 30.00” K -
+28° 40’ 30.00” D) birleştiren hattın doğusunda kalan alanda (Harita-53-4),
+5) Serbest alanlarda 50 metreden daha sığ sularda.
+ç) Manyat ve algarna ile karides istihsalinde bulunacak balıkçı gemileri için, ruhsat tez-
+keresinin verildiği il/ilçe müdürlüğünden Ek-2’de yer alan avcılık “İzin Belgesi”nin alınması
+zorunludur. İzin verilen hedef tür dışındaki türlerin avcılığının yapılması yasaktır. Aykırılık ha-
+linde avcılık izin belgesi iptal edilir. İptal edilen iznin geçerli olduğu av dönemi için yeni izin
+belgesi düzenlenmez.
+d) Avlanan ürünlerin il müdürlüklerince belirlenecek yerlerden karaya çıkarılması zo-
+runludur.
+e) Karides avcılığı 05.00 ile 20.00 saatleri arasında yapılır.
+f) Kullanılacak algarnanın ağız yüksekliğinin en fazla 50 cm ve tek torbalı olması, omuz
+ve torba kısmında ağ göz açıklığının en az 32 mm ve torba boyunun en fazla 6 kulaç (11 metre)
+olması zorunludur.
+g) Bir balıkçı gemisi tarafından kullanılacak algarnaların sayısı ikiyi, toplam kiriş boyu
+ise 10 metreyi geçemez.
+ğ) Algarnada çelik halat kullanılması yasak olup, kullanılacak halatların çapı 16
+mm’den kalın olamaz.
+h) Manyatların torba ağ göz açıklığı 32 mm’den küçük olamaz.
+Çift kabuklu yumuşakça avcılığı
+MADDE 28- (1) Beyaz kum midyesine ilişkin düzenlemeler aşağıda belirtilmiştir:
+a) Marmara Denizi ile İstanbul ve Çanakkale Boğazlarında, Karadeniz’de Samsun-
+Ordu İl sınırındaki Akçay’ın denize döküldüğü (41° 8’ 52.44” K - 37° 10’ 6.72” D) yer ile Gür-
+cistan sınırı arasında kalan karasularımızda beyaz kum midyesi avcılığı yasaktır.
+b) Avcılığı açık alanlardan, 1 Eylül 2024 - 14 Nisan 2026 tarihleri arasındaki dönem-
+de;
+1) Rumeli Karaburun (41° 14’ 53.70” K - 29° 5’ 25.26” D) ile Kefken Adası Feneri
+(41° 13’ 1.02” K - 30° 15’ 4.56” D) arasında kalan karasularımızda (Harita-54-1),
+2) Bartın İli, Kurucaşile İlçesi, Tosun Burnu (41° 52’ 0.00” K - 32° 52’ 16.26” D) ile
+Samsun İli, Yakakent İlçesinde, Çayağzı Burnu (41° 41’ 2.40” K - 35° 25’ 11.58” D) arasında
+kalan karasularımızda (Harita-54-2),
+c) Avcılığı açık alanlardan, 1 Eylül 2026 - 14 Nisan 2028 tarihleri arasındaki dönem-
+de;
+1) Bulgaristan sınırı ile Rumeli Karaburun (41° 14’ 53.70” K - 29° 5’ 25.26” D) arasında
+kalan karasularımızda (Harita-55-1),
+2) Kocaeli İli, Kandıra İlçesinde; Kefken Adası Feneri (41° 13’ 1.02” K - 30° 15’ 4.56”
+D) ile Bartın İli, Kurucaşile İlçesinde; Tosun Burnu (41° 52’ 0.00” K - 32° 52’ 16.26” D) ara-
+sında kalan karasularımızda (Harita-55-2),
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 47
+3) Samsun İli, Yakakent İlçesinde; Çayağzı Burnu (41° 41’ 2.40” K - 35° 25’ 11.58” D)
+ile Samsun-Ordu İl sınırındaki Akçay’ın denize döküldüğü yer (41° 8’ 52.44” K - 37° 10’ 6.72”
+D) arasında kalan karasularımızda (Harita-55-3),
+beyaz kum midyesi avcılığında bulunulabilir. Bu alanlarda 15 Nisan - 31 Ağustos ta-
+rihleri arasında beyaz kum midyesi avcılığı yasaktır.
+ç) Beyaz kum midyesi avcılığı, her av dönemi için Bakanlıkça belirlenen av kotası kap-
+samında yapılır. Belirlenen kotadan daha fazla miktarda beyaz kum midyesinin avlanması ya-
+saktır. Av kotasının ilanı, uygulamasının takibi, kullanılacak belgeler ve bu konuda getirilecek
+usul ve esaslar Bakanlıkça belirlenir.
+d) Belirlenen av kotasının, avcılığın sona ereceği tarihten önce dolması halinde, avcılık
+Bakanlıkça durdurulur.
+e) Beyaz kum midyesi avcılığında bulunacak balıkçı gemileri için ruhsat tezkeresinin
+verildiği il/ilçe müdürlüğünden Ek-2’de yer alan avcılık “İzin Belgesi”nin alınması zorunlu-
+dur.
+f) Beyaz kum midyesi avcılığında bulunacak balıkçı gemilerinde boy uzunluğuna ba-
+kılmaksızın, avcılık verilerini kaydetmek üzere e-seyir defteri tutulması zorunludur.
+g) Avlanılan beyaz kum midyeleri, sadece il müdürlüklerince belirlenen karaya çıkış
+noktalarından çıkarılabilir.
+ğ) Beyaz kum midyesi avcılığında kullanılan algarna ve dreçlerin;
+1) Ağız açıklığı 80 cm’den, ağız derinliği 20 cm’den büyük, torba boy uzunluğu ise
+200 cm’den fazla olamaz. Hidrolik dreçlerin ağız açıklıkları 350 cm’den, boyları 300 cm’den
+fazla olamaz.
+2) Dreçlerde ve eleklerdeki metal yuvarlak çubuklar arasındaki mesafe 8,5 mm’den kü-
+çük olamaz.
+h) 5 metreden daha sığ sularda her türlü istihsal vasıtası ile beyaz kum midyesi istihsali
+yasaktır.
+ı) Algarna ve dreç ile beyaz kum midyesi istihsalinde, gemide birden fazla algarna ve
+dreç bulundurulamaz ve kullanılamaz.
+(2) Cardium türlerinin avcılığında beyaz kum midyesi için getirilen düzenlemeler esas
+alınır.
+(3) Akivades ve kidonyanın;
+a) Bütün karasularımızda, 15 Nisan - 31 Ağustos tarihleri arasında avcılığı yasaktır.
+b) Saros Körfezinde; karasularımızın Çanakkale İli sınırları içerisinde (40° 19’ 5.70”
+K - 26° 13’ 15.36” D) ile (40° 33’ 26.34” K - 26° 44’ 50.70” D) koordinat noktaları arasında
+kalan kısmında akivades ve kidonya avcılığı yasaktır (Harita-56).
+c) Akivades avcılığında kullanılan eleklerde, elek göz açıklığı 24 mm’den, kidonya is-
+tihsalinde kullanılan eleklerde, elek göz açıklığı 30 mm’den küçük olamaz.
+(4) Tarak ve istiridyenin 15 Nisan - 31 Ağustos tarihleri arasında her türlü istihsal va-
+sıtası ile avcılığı yasaktır.
+(5) Kara ve kıllı midyenin;
+a) İstanbul Boğazında; Ahırkapı (41° 0’ 26.88” K - 28° 59’ 10.44” D) ve Kadıköy İnci
+Burnu Mendirek Fenerini ( 40° 59’ 33.00” K - 29° 00’ 53.00” D) birleştiren hat ile Paşabahçe
+Fenerini (41° 6’ 58.92” K - 29° 5’ 23.28” D) ve Yeniköy Vapur İskelesini (41° 07’ 18.03” K -
+29° 04’ 15.72” D) birleştiren hat arasında kalan alanda (Harita-57-1),
+b) Çanakkale Boğazında, Nara Burnu Feneri (40° 11’ 49.38” K - 26° 24’ 54.18” D) ile
+Kepez Feneri (Kanlıdere) (40° 5’ 30.36” K - 26° 21’ 48.96” D) arasında çekilen hattın doğu-
+sunda kalan alanda (Harita-57-2),
+Sayfa : 48                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+c) İstanbul Boğazının serbest alanlarında ve diğer karasularımızda, 15 Nisan - 30 Ha-
+ziran tarihleri arasında,
+avcılığı yasaktır.
+(6) Kum şırlanının (tellina);
+a) Saros Körfezinde; karasularımızın Çanakkale İli sınırları içerisinde (40° 19’ 5.70”
+K - 26° 13’ 15.36” D) ile (40° 33’ 26.34” K - 26° 44’ 50.70” D) koordinat noktaları arasında
+kalan kısmında avcılığı yasaktır (Harita-56).
+b) Avcılığı yalnızca dalma ve toplama yöntemi ile yapılır.
+c) 15 Nisan - 31 Ağustos tarihleri arasında avcılığı yasaktır.
+ç) El dreci veya tırmıklarla toplanması halinde, işleme tesislerinde elekten geçirilerek,
+uzunluğu bu Tebliğin 17 nci maddesindeki ölçüden küçük olanlarının avlandığı sulara iadesi
+zorunludur.
+d) Karasularımızın Çanakkale İli, Biga İlçesi sınırlarında kalan kısmında avcılığı ya-
+saktır.
+(7) Yasağın başlamasından itibaren il müdürlüklerince stok tespiti yapılan beyaz kum
+midyesi, akivades, kidonya, istiridye ve kum şırlanının yasak başlama tarihinden sonra en geç
+10 gün içerisinde işlenmesi veya sevkinin yapılması zorunludur. Bakanlık tarafından onaylanan
+arındırma merkezinde bulunan canlı çift kabuklu yumuşakçalar için bu süre Bakanlıkça belir-
+lenir.
+(8) Akivades ve kum şırlanı istihsalinde bulunacakların, istihsal edilecek ürünler için
+düzenlenecek belge taleplerini, istihsal sahasının bulunduğu il/ilçe müdürlüklerine en az bir
+gün önce iletmeleri zorunludur. İstihsal faaliyeti, gerek görülmesi halinde il/ilçe müdürlükle-
+rinin nezaretinde yapılır.
+(9) İzleme ve rutin program sonucu analiz sonuçları uygun olmadığı için ürün alımına
+kapatılan çift kabuklu yumuşakça üretim alanları ile bu Tebliğ kapsamında açık olup, izleme
+ve rutin program uygulanmayan alanlarda çift kabuklu yumuşakça istihsalinde bulunulamaz.
+(10) İzmit Körfezinde; Dil Burnu Fenerini (40° 44’ 25.80” K - 29° 30’ 54.72” D), Dil
+İskelesi Kaba Burnuna (40° 46’ 0.60” K - 29° 31’ 4.92” D) birleştiren hattın doğusunda kalan
+alanda çift kabuklu yumuşakça avcılığı yasaktır (Harita-45-3).
+(11) Karasularımızın Balıkesir İli, Ayvalık İlçesi sınırları içerisinde kalan kısmında çift
+kabuklu yumuşakça avcılığı yasaktır.
+Deniz salyangozu, deniz patlıcanı ve denizkestanesi avcılığı
+MADDE 29- (1) Deniz salyangozu avcılığına ilişkin düzenlemeler aşağıda belirtilmiş-
+tir:
+a) Aşağıdaki alanlarda deniz salyangozu avcılığı her türlü av aracı ve yöntemi ile ya-
+saktır.
+1) İzmit Körfezinde; Dil Burnu Fenerini (40° 44’ 36.54” K - 29° 30’ 57.72” D), Dil İs-
+kelesi Kababurnuna (40° 46’ 6.78” K - 29° 31’ 6.24” D) birleştiren hattın doğusunda kalan
+alan (Harita-58-1),
+2) Karadeniz’de; İstanbul Boğazı girişindeki Rumeli Karaburun (41° 14’ 53.70” K -
+29° 5’ 25.26” D) ile Anadolu Karaburun (41° 12’ 56.46” K - 29° 23’ 19.26” D) arasında kalan
+karasularımız (Harita-58-2),
+3) Ege Denizi ve Akdeniz.
+b) (a) bendinde belirtilen yerler dışında kalan karasularımızda dalma yöntemi ile avcılığı
+serbesttir.
+c) Algarna kullanılarak yapılacak deniz salyangozu avcılığıyla ilgili hususlar aşağıda
+belirtilmiştir:
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 49
+1) Algarna ile deniz salyangozu avcılığı, (a) bendindeki alanlara ilave olarak Marmara
+Denizi, İstanbul ve Çanakkale Boğazlarında yasaktır. Avcılığa açık alanlarda ise 15 Nisan - 31
+Ağustos tarihleri arasında yasaktır.
+2) Avcılıkta kullanılacak algarnaların ağız genişliği azami 4 metre, ağız derinliği azami
+40 cm, torba boyu azami 1,5 metre ve torba ağ göz açıklığı 72 mm olmalıdır.
+3) Algarna ile avcılık sahilden itibaren 500 metre mesafe içerisinde yapılamaz.
+4) Balıkçı gemilerinde birden fazla algarna bulundurulamaz ve kullanılamaz.
+5) Sinop İli, Usta Burnu (41° 58’ 34.98” K - 34° 29’ 25.02” D) ile İnceburun (42° 5’
+57.54” K - 34° 56’ 41.70” D) koordinatları arasında kalan karasularımızda algarna ile deniz
+salyangozu avcılığı yasaktır (Harita-59).
+ç) Deniz salyangozu avcılığında kullanılacak balıkçı gemileri için, gemi ruhsat tezke-
+resinin verildiği il/ilçe müdürlüğünden, Ek-2’de yer alan avcılık “İzin Belgesi”nin alınması,
+avcılığının 05.00 ile 20.00 saatleri arasında yapılması zorunludur.
+d) Deniz salyangozu avcılığında bulunacak balıkçı gemilerinde zıpkın bulundurulması
+yasaktır.
+e) Algarna ile deniz salyangozu avcılığında, hedef tür dışındaki türlerin avcılığı yasaktır.
+Aykırılık halinde avcılık izin belgesi iptal edilir. İptal edilen iznin geçerli olduğu av dönemi
+için yeni izin belgesi düzenlenmez.
+(2) Deniz patlıcanı avcılığına ilişkin düzenlemeler aşağıda belirtilmiştir:
+a) Ege Denizi’nde, İzmir Körfezindeki Ardıç Burnu (38° 31’ 57.30” K - 26° 37’ 31.50”
+D) ile Kapan Burnu (38° 32’ 35.34” K - 26° 48’ 52.80” D) arasında çekilen hattın güneyinde
+kalan karasularımız hariç olmak üzere; İzmir İli, Çeşme İlçesi, Karaabdullah Burnu (38° 15’
+57.30” K - 26° 14’ 22.38” D) ile Balıkesir İli, Ayvalık İlçesi, Eğribucak Burnu (39° 16’ 23.94”
+K - 26° 36’ 35.34” D) arasında kalan karasularımız (Harita-60) dışındaki alanlarda avcılığı ya-
+saktır.
+b) 15 Nisan - 31 Ekim tarihleri arasında deniz patlıcanı avcılığı yasaktır.
+c) Deniz patlıcanı avcılığı yalnızca dalma yöntemi ile yapılır.
+ç) Deniz patlıcanı avcılığında kullanılacak balıkçı gemileri için Balıkesir veya İzmir
+il/ilçe müdürlüklerinden birine müracaat edilerek Ek-2’de yer alan avcılık “İzin Belgesi”nin
+alınması zorunludur.
+d) İzin almış balıkçı gemilerinde avcılık faaliyetleri esnasında deniz patlıcanı dışında
+su ürünleri bulundurulamaz.
+e) İzin almış balıkçı gemilerinde su altı tüfeği ve zıpkın bulundurulamaz.
+f) Gün batımı ile gün doğumu arasında deniz patlıcanı avcılığı yasaktır.
+g) Avlanılan ürünlerin Bakanlıkça belirlenen karaya çıkış noktalarından çıkarılması zo-
+runludur.
+ğ) Deniz patlıcanı avcılığı, her av dönemi için Bakanlıkça belirlenen kota miktarınca
+yapılır. Avcılığın sona ereceği tarihten önce kota miktarının dolması durumunda avcılık sona
+erer. Av sezonunda kota miktarı kadar av yapılamadığı takdirde kalan kota miktarı bir sonraki
+av sezonuna devredilmez.
+h) Kotanın ilanı, uygulama yöntemi, takibi, kullanılacak belgeler, avlanılan ürünlerin
+karaya çıkarılması ve nakli, izlenmesi, günlük avlanılabilecek miktarı ile deniz patlıcanının
+yasadışı avcılığının önlenmesi kapsamında alınacak ek tedbirlere yönelik usul ve esaslar Ba-
+kanlıkça belirlenir.
+ı) Deniz patlıcanı avcılığında bulunacak balıkçı gemileri için il/ilçe müdürlüklerinden
+Ek-6’da yer alan “Nakil/Menşe Belgesi” alınması zorunludur.
+i) Bakanlıkça belirlenen usul ve esaslara aykırı olarak deniz patlıcanı avcılığı faaliye-
+tinde bulunan balıkçı gemilerinin avcılık izin belgesi iptal edilir. İptal edilen iznin geçerli ol-
+duğu av dönemi için yeni izin belgesi düzenlenmez.
+Sayfa : 50                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+(3) Denizkestanesi avcılığına ilişkin düzenlemeler aşağıda belirtilmiştir:
+a) Denizkestanesi avcılığı yalnızca dalma yöntemi ile yapılır.
+b) Denizkestanesi avcılığında kullanılacak balıkçı gemileri için gemi ruhsat tezkeresinin
+verildiği il/ilçe müdürlüğünden Ek-2’de yer alan avcılık “İzin Belgesi”nin alınması zorunlu-
+dur.
+c) İzin almış balıkçı gemilerinde avcılık faaliyetleri esnasında denizkestanesi dışında
+su ürünleri bulundurulamaz.
+ç) İzin almış balıkçı gemilerinde su altı tüfeği ve zıpkın bulundurulamaz.
+d) Gün batımı ile gün doğumu arasında denizkestanesi avcılığı yasaktır.
+e) Denizkestanesi avcılığının uygulama yöntemi, takibi, kullanılacak belgeler, avlanılan
+ürünlerin karaya çıkarılması ve nakli, izlenmesi, günlük avlanılabilecek miktarı, zaman ve alan
+ile denizkestanesinin yasadışı avcılığının önlenmesi kapsamında alınacak ek tedbirlere yönelik
+usul ve esaslar Bakanlıkça belirlenir.
+f) Bakanlıkça belirlenen usul ve esaslara aykırı olarak denizkestanesi avcılığı faaliye-
+tinde bulunan balıkçı gemilerinin Ek-2’de yer alan avcılık “İzin Belgesi” iptal edilir. İptal edilen
+iznin geçerli olduğu av dönemi için yeni izin belgesi düzenlenmez.
+g) Denizkestanesi avcılığında bulunacak balıkçı gemileri için il/ilçe müdürlüklerinden
+Ek-6’da yer alan “Nakil/Menşe Belgesi”nin alınması zorunludur.
+Böcek, ıstakoz, karavida ve mavi yengeç avcılığı
+MADDE 30- (1) Bütün karasularımızda, 15 Nisan - 1 Eylül tarihleri arasında kalan dö-
+nem haricinde böcek ve ıstakoz avcılığı yasaktır. Ancak deniz kereviti (Nephrops norvegicus)
+türünün avcılığında zaman yasağı uygulanmaz.
+(2) Gökçeada’da; adanın kuzeyinde, Kömür Burnu (40° 9’ 31.44” K - 25° 40’ 35.28”
+D) ve Kaşkaval Burnu (40° 14’ 28.74” K - 25° 56’ 33.36” D) arasında kalan karasularımızda
+sahilden itibaren 1,5 mil, adanın diğer taraflarında ise 3 mil içerisinde kalan alanda (Harita-
+40-9),
+(3) Uzatma ağlarıyla böcek, ıstakoz avcılığında bulunacak balıkçı gemileri için, gemi
+ruhsat tezkeresinin verildiği il/ilçe müdürlüğünden Ek-2’de yer alan avcılık “İzin Belgesi”nin
+alınması zorunludur.
+(4) Bütün karasularımızda 15 Nisan - 15 Haziran tarihleri arasında karavida avcılığı
+serbesttir.
+(5) 1 Mayıs - 30 Eylül tarihleri arasında mavi yengeç avcılığı yasaktır. Ancak bu yasak
+dönemde, il müdürlüklerince belirlenecek tarihlerde, il müdürlüklerinden alınacak izin kapsa-
+mında dalyanlarda mavi yengeç avcılığı yapılabilir.
+Ahtapot avcılığı
+MADDE 31- (1) 15 Nisan - 31 Ekim tarihleri arasında ahtapot avcılığı yasaktır.
+(2) Tüp, nargile ve benzeri yapay hava kaynakları kullanılarak dalma yöntemi ile ahta-
+pot avcılığı yasaktır.
+Yosun ve sünger istihsali
+MADDE 32- (1) Yosun istihsali ile ilgili hususlar aşağıda belirtilmiştir:
+a) Caulerpa cinsi deniz yosunlarının toplanması, istihsali ve ticareti yasaktır.
+b) Gracilaria spp. türü yosunların 1 Nisan - 15 Temmuz tarihleri arasında istihsali ya-
+saktır.
+(2) Sünger istihsali ile ilgili hususlar aşağıda belirtilmiştir:
+a) Meriç Nehrinin denize döküldüğü yer ile Babakale (39° 28’ 41” K - 26° 3’ 51” D)
+arasında kalan karasularımız haricinde sünger istihsali yasaktır.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 51
+b) Sünger istihsali, avcılığa açık alanda sadece dalma yöntemi ile yapılabilir.
+c) Sünger istihsalinde bulunacak balıkçı gemileri için, gemi ruhsat tezkeresinin verildiği
+il/ilçe müdürlüğünden Ek-2’de yer alan avcılık “İzin Belgesi”nin alınması zorunludur.
+ç) İzin almış balıkçı gemilerinde bu faaliyetleri sırasında sünger dışında su ürünleri,
+zıpkın ve su altı tüfeği bulundurulamaz.
+Yem amaçlı su ürünleri
+MADDE 33- (1) Mamun, sulines ve madya gibi balık avcılığında yem amacı ile kul-
+lanılacak su ürünlerini toplayacaklarla ilgili hususlar aşağıda belirtilmiştir:
+a) Kıyılardan balıkçı gemisi olmaksızın yem amacı ile kullanılacak su ürünlerini top-
+layacakların bu Tebliğin 47 nci maddesi kapsamında gerçek kişiler için su ürünleri ruhsat tez-
+keresi sahibi olması ve istihsal edilen ürünlere menşe belgesi düzenlenmesi ile ilgili hususlara
+uymaları zorunludur.
+b) Balık yemi için kullanılacak su ürünleri ile bu ürünlerin toplanacağı alanlar ve top-
+lanma yöntemi il müdürlüklerince belirlenir. Belirlenen ürünler ile yerler dışındaki alanlardan
+ürün toplanması yasaktır. İl müdürlükleri günlük toplanacak miktar, yöntem ve zamana ilişkin
+hususlarda düzenleme yapmaya yetkilidir.
+BEŞİNCİ BÖLÜM
+Dalyan ve Lagünlerle İlgili Düzenlemeler
+Dalyan ve lagünlerde avcılık
+MADDE 34- (1) Lagün ve dalyan ağızlarının il müdürlüklerince belirlenen ve ilan edi-
+len zamanlarda açık tutulması zorunludur. Belirlenen ve ilan edilen zamanlarda lagün içinde
+avcılık yapılması yasaktır.
+(2) Lagünlere ve dalyanların kuzuluklarına gelen üreme dönemindeki tüm türlerin
+%10’unun il müdürlüğü görevlilerinin nezaretinde deniz tarafına salınması mecburidir.
+(3) Lagünlerdeki dalyan kuzuluklarının çit aralıkları dikey konumda olmalı ve 3 cm’den
+daha az olmamalıdır.
+(4) Lagün ve dalyan ağızlarının açık olduğu tarihlerde ağızdan itibaren 1 mil, kapalı
+olduğu tarihlerde 500 metre yarıçaplı mesafe içerisinde su ürünleri istihsali yasaktır.
+(5) Bafa lagün gölünde, 1 Mayıs - 31 Temmuz tarihleri arasında su ürünleri avcılığı ya-
+saktır.
+(6) Çökertme dalyanlarının 500 metrelik mesafesine 08.00 - 13.00 saatleri arasında
+uzatma ağları atılması yasaktır.
+(7) Bakanlıktan izin almış mevcut çökertme/kaldırma ağları dışında yenilerinin kurul-
+ması yasaktır.
+(8) Lagünlerde ışık ve zıpkın kullanılarak su ürünleri avcılığı yapılması yasaktır.
+(9) Daha önce izin verilerek faaliyetine devam eden mevcut ağ dalyanları dışında, yeni
+ağ dalyanlarının kurulması yasaktır. Bakanlık izni ile kurulmuş dalyanların şıra dalyanı olarak
+kullanılması ve işletilmesi yasaktır.
+(10) Dalyanlardaki su ürünleri avcılık faaliyetleri, bu Tebliğ ile getirilen tür, boy ve za-
+man yasaklarına uygun olmak zorundadır.
+(11) Yaşamlarının bir kısmını denizlerde geçiren türlerin lagünlerdeki avcılığında, sa-
+zangiller için getirilen zaman yasakları uygulanmaz. Bu türler için lagüne özel zaman bakı-
+mından getirilmiş bir düzenleme var ise bu düzenlemeler, yok ise aynı tür için denizlerde ge-
+tirilmiş olan zaman yasakları uygulanır.
+Sayfa : 52                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+ALTINCI BÖLÜM
+İçsularla İlgili Düzenlemeler
+Avlanmanın tamamen yasaklandığı içsular
+MADDE 35- (1) Avlanmanın tamamen yasaklandığı içsular aşağıdaki listede belirtil-
+miştir. Listede yer alan içsularda 45 inci maddede belirtilen yerler hariç, zaman yasaklarına
+uyulması şartı ile su bitkilerinin kesimi serbesttir.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 53
+Sayfa : 54                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+Avlanmanın kısmen yasaklandığı içsular
+MADDE 36- (1) Avlanmanın kısmen yasaklandığı içsular aşağıda belirtilmiştir:
+a) Aydın İlinde; Bafa Lagününün denizle bağlantısını sağlayan Menderes Nehri ile Men-
+deres tahliye kanalının deniz ile Tuzburgazı-Akköy karayolu üzerindeki köprü arasında kalan
+sahada 1 Nisan - 15 Ağustos tarihleri arasında su ürünleri avcılığı yasaktır.
+b) Büyük Menderes Nehri, tahliye kanalı ve buralardan beslenen azmakların bütün bö-
+lümlerinde su ürünlerinin geçmesine veya yetişmesine engel olacak şekilde ağlar kurulması,
+bent, çit ve benzeri engeller yapılması yasaktır.
+c) Büyük Menderes Nehri Kafa Bölgesinde bulunan ve balıkçıların ikamet ettiği damlar
+ile bu alanlarda barınan balıkçı gemilerinde, yasak yer ve zamanlarda her türlü avlanma mal-
+zemesinin bulundurulması yasaktır. Yasaklara uymak şartıyla balıkçı gemilerinin bu alanlara
+giriş çıkış yapması serbesttir.
+ç) Muğla İli, Köyceğiz İlçesinde; Köyceğiz Gölünü Akdeniz’e bağlayan dalyan kana-
+lında sürat motorları ile su kayağı yapılması, 1 Mayıs - 31 Ağustos tarihleri arasında ışıkların
+kanalı etkileyecek şekilde yakılması, 21.00 - 05.00 saatleri arasında her türlü teknenin gece se-
+yir yapması, ilgili kuruluşlarca seferine izin verilen teknelerin ise 3 milden fazla sürat yapmaları
+yasaktır.
+d) Köyceğiz Gölü ve deltasında ağ ile kefal balığı avcılığı dönem boyunca yasaktır.
+Sazangiller zaman yasakları
+MADDE 37- (1) Sazangillere ait zaman yasakları aşağıda belirtilmiştir:
+a) Adana, Antalya, Aydın, Denizli, Gaziantep, Hatay, İzmir, Kilis, Manisa, Mersin, Muğ-
+la ve Osmaniye il sınırları içerisinde kalan bütün sularda 1 Mart - 31 Mayıs tarihleri arasında,
+b) Afyonkarahisar, Aksaray, Amasya, Ankara, Balıkesir, Bartın, Bilecik, Bolu, Burdur,
+Bursa, Çanakkale, Çankırı, Çorum, Düzce, Edirne, Eskişehir, Isparta, İstanbul, Karabük, Ka-
+raman, Kastamonu, Kırıkkale, Kırklareli, Kırşehir, Kocaeli, Konya, Kütahya, Nevşehir, Niğde,
+Sakarya, Tekirdağ, Uşak, Yalova ve Zonguldak il sınırları içerisinde kalan bütün sularda 15
+Mart - 15 Haziran tarihleri arasında,
+c) Adıyaman, Artvin, Batman, Bingöl, Diyarbakır, Elazığ, Erzincan, Giresun, Gümüş-
+hane, Kahramanmaraş, Kayseri, Malatya, Mardin, Ordu, Rize, Samsun, Siirt, Sinop, Sivas,
+Şanlıurfa, Şırnak, Tokat, Trabzon, Tunceli ve Yozgat il sınırları içerisinde kalan bütün sularda
+1 Nisan - 30 Haziran tarihleri arasında,
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 55
+ç) Ağrı, Ardahan, Bayburt, Bitlis, Erzurum, Hakkâri, Iğdır, Kars, Muş, Van il sınırları
+içerisinde kalan bütün sularda 15 Mayıs - 15 Ağustos tarihleri arasında,
+sazangillerin avcılığı yasaktır (Harita-61).
+(2) Bu maddede yer alan bölge sınıflamalarında, iki ya da daha fazla ili kapsayan du-
+rumlarda, avlak sahası büyük olan ildeki yasak uygulanır.
+(3) Bu Tebliğ ile zaman yasağı getirilmemiş olan türler için (gümüş balığı hariç) sa-
+zangillere getirilen av yasağı uygulanır.
+(4) İstilacı türlerin avcılığına; yapılan araştırma sonuçları ve istihsal alanının özellikleri
+dikkate alınarak, zaman ve istihsal vasıtası açısından getirilen yasak ve kısıtlamalar dikkate
+alınmaksızın Bakanlıkça istisnai olarak izin verilebilir.
+Boy ve ağırlık yasakları
+MADDE 38- (1) Aşağıda avlanabilir asgari boyları ve ağırlıkları belirtilen su ürünle-
+rinin daha küçüklerinin avlanması, gemilerde bulundurulması, karaya çıkarılması, nakledilmesi
+ve satılması yasaktır.
+Yayın, inci kefali ve gümüş balıkları avcılığı
+MADDE 39- (1) Yayın balığının;
+a) Sazangillerin avcılığının yasak olduğu dönemlerde avcılığı yasaktır.
+b) Uluabat Gölü ile bu göle bağlantılı sularda dönem boyunca avcılığı yasaktır.
+(2) İnci kefali avcılığı ile ilgili hususlar aşağıda belirtilmiştir:
+a) Van Gölü havzasında ve bulunduğu tüm içsularımızda 15 Nisan - 15 Temmuz tarihleri
+arasında avcılığı yasaktır.
+b) Van Gölü ve mansaplarında uzatma ağları dışında av aracı kullanılamaz. Kullanılacak
+uzatma ağının ağ göz açıklığı 40 mm’den küçük olamaz.
+c) Kullanılmasına izin verilenler dışındaki ağların Bakanlık il müdürlüğü bilgisi dışında
+Van Gölü havzasında bulundurulması, izin alınmadan ve izin şartlarında belirtilen şartlara uy-
+madan taşınması yasaktır.
+Sayfa : 56                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+(3) Gümüş balığının (Atherina boyeri), Bakanlıktan izin alınması şartıyla, il müdürlük-
+lerince belirlenecek alanlarda, ığrıp ve manyat ağları ile avcılığı Tebliğ dönemi boyunca ser-
+besttir. Ancak il müdürlüklerince ekolojik ortamın korunması amacıyla kısmi zaman yasakları
+getirilebilir.
+Sudak, tatlısu levreği ve turna avcılığı
+MADDE 40- (1) Sudak ve tatlısu levreğinin;
+a) 15 Mart - 30 Nisan tarihleri arasında ve sazangillerin avcılığının yasak olduğu dö-
+nemde avcılığı yasaktır.
+b) Parakete ile avcılıkta yem olarak canlı balık kullanılması yasaktır.
+c) İl müdürlüklerince belirlenen karaya çıkış noktaları dışında karaya çıkarılması ya-
+saktır.
+ç) Eğirdir Gölü’nde Tebliğ dönemi boyunca avcılığı yasaktır.
+d) Beyşehir Gölü’nde dönem boyunca parakete ile avcılığı yasaktır.
+e) İl/ilçe müdürlüklerinden Ek-6’da yer alan “Nakil/Menşe Belgesi”nin alınması zo-
+runludur.
+f) “Nakil/Menşe Belgesi” olmayan ürünlerin tesislerde işlenmesi ve ihraç edilmesi ya-
+saktır.
+(2) Turna balığının;
+a) 15 Aralık - 31 Mart tarihleri arasında avcılığı yasaktır.
+b) Avcılığının yasak olduğu dönemde pinter ile su ürünleri avcılığı yasaktır.
+c) Işıklı ve Karamık Göllerinde sazan av yasağı döneminde turna avcılığı da yasaktır.
+Karabalık ve yılan balığı avcılığı
+MADDE 41- (1) Bütün içsularda 1 Nisan - 30 Haziran tarihleri arasında karabalık av-
+cılığı yasaktır.
+(2) Yılan balığı avcılığı ile ilgili hususlar aşağıda belirtilmiştir:
+a) Yılan balığı avcılığı Bakanlığın belirleyeceği kota miktarınca yapılır. Yılan balığı
+kotasının uygulanmasına ilişkin usul ve esaslar Bakanlıkça belirlenir.
+b) 1 Nisan - 30 Eylül tarihleri arasında yılan balığı avcılığı yasaktır.
+c) Yılan balığı avcılığında bulunacak balıkçı gemileri için, gemi ruhsat tezkeresinin ve-
+rildiği il/ilçe müdürlüğünden Ek-2’de yer alan “İzin Belgesi”nin alınması zorunludur.
+Alabalık avcılığı
+MADDE 42- (1) Aşağıda belirtilen yerlerde doğal alabalık avcılığı yasaktır:
+a) Ardahan, Bayburt, Erzurum, Kars, Tunceli ve Van il sınırları içerisinde yer alan akar-
+sularda ve kollarında, Aras ve Çoruh nehirleri ve kollarında,
+b) Balıkesir ve Çanakkale il sınırları içerisinde yer alan Kazdağlarındaki tüm akarsular
+ve kollarında,
+c) Muğla İli, Fethiye İlçesi, Eşen Çayının Kırkpınarlar ile Ören arasında kalan kısmında
+ve Köyceğiz İlçesi, Yuvarlak Çayda,
+ç) Iğdır İli, Tuzluca İlçesinin; Karacaören ve Üçkayalar Köyleri arasındaki 20 km’lik
+alan içerisinde kalan Ünlendi ve Hamurkesen Çaylarında,
+d) Tunceli İli, Munzur ve Pülümür Çaylarında,
+e) Konya İli, İvriz ve Delimahmut Çaylarında.
+(2) Bu maddede belirtilen yerler dışında kalan tüm içsularda 1 Ekim - 28 Şubat tarihleri
+arasında doğal alabalığın avlanması yasaktır.
+Kerevit avcılığı
+MADDE 43- (1) Bütün içsularda 15 Kasım - 15 Haziran tarihleri arasında kerevitlerin
+avlanması, nakli, pazarlaması, ihracatı ve işlenmesi yasaktır. Ancak hastalık durumu takip edi-
+lerek bu süre gerektiğinde Bakanlıkça uzatılabilir veya yeni yasaklamalar getirilebilir.
+(2) Tarım ve Orman Bakanlığına bağlı orman içi sularda kerevit avcılığı yasaktır.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 57
+(3) Her türlü yem kullanarak kerevit avcılığı yapmak yasaktır.
+(4) Kerevit avcılığında erkek dişi ayrımı yaparak sadece bir cinsin avlanması yasaktır.
+(5) Kerevitler sepetlerden çıkartılırken 10 cm’den küçük olanlar avlandıkları suya iade
+edilirler. Seçimi yapılmamış kerevitlerin livarlarda, havuzlarda, depolama yerlerinde, işleme
+tesislerinde bulundurulmaları yasaktır. Herhangi bir yerde bulundurulan kerevitlerin içinde sa-
+yısal olarak % 10 veya daha fazla oranda 10 cm’den küçük kerevit tespit edildiğinde, sağlıklı
+ise bir ayırıma tabi tutulmadan tamamı kerevitin avlandığı su kaynağına bırakılır. Hastalıklı
+veya ölü ise imha edilir.
+(6) Kerevit istihsal edilen göllerimizde karaya çıkış yerleri il müdürlüklerince tespit ve
+ilan edilir. İlan edilen yerler dışında karaya çıkış yasaktır.
+(7) Avlanılan kerevitler için il/ilçe müdürlüklerinden Ek-6’da yer alan “Nakil/Menşe
+Belgesi”nin alınması zorunludur. “Nakil/Menşe Belgesi” alınmadan kerevitlerin nakli ve pa-
+zarlaması yapılamaz.
+(8) Kaçak avlanmış canlı kerevitler öncelikle avlandığı su kaynağına iade edilir. Bunun
+mümkün olmadığı durumlarda 1380 sayılı Su Ürünleri Kanununun 34 üncü maddesinde ön-
+görülen işlemler uygulanır.
+(9) Kerevit av araç ve gereçlerinin bir sudan diğerlerine izinsiz olarak her ne suretle
+olursa olsun nakli ve dezenfekte edilmeden kullanılması yasaktır.
+Kurbağa, kara salyangozu ve sülük avcılığı
+MADDE 44- (1) Kurbağa istihsaline ilişkin hususlar aşağıda belirtilmiştir:
+a) İzleme ve rutin program sonucu ürün analizi uygun olmayan alanlarda kurbağa is-
+tihsali yasaktır.
+b) Kurbağa istihsali;
+1) Afyonkarahisar, Aksaray, Amasya, Ankara, Artvin, Balıkesir, Bartın, Batman, Bilecik,
+Bolu, Burdur, Bursa, Çanakkale, Çankırı, Çorum, Denizli, Diyarbakır, Düzce, Edirne, Elazığ,
+Eskişehir, Giresun, Isparta, İstanbul, Kahramanmaraş, Karabük, Karaman, Kastamonu, Kırık-
+kale, Kırklareli, Kırşehir, Kocaeli, Konya, Kütahya, Malatya, Nevşehir, Niğde, Ordu, Rize, Sa-
+karya, Samsun, Sinop, Tekirdağ, Tokat, Trabzon, Uşak, Yalova, Yozgat, Zonguldak illerinde 1
+Nisan - 31 Mayıs tarihleri arasında,
+2) Adana, Adıyaman, Aydın, Gaziantep, Hatay, İzmir, Kilis, Manisa, Mardin, Mersin,
+Osmaniye, Şanlıurfa, Şırnak illerinde 1 Mart - 30 Nisan tarihleri arasında,
+3) Ağrı, Ardahan, Bayburt, Bingöl, Bitlis, Erzincan, Erzurum, Gümüşhane, Hakkâri,
+Iğdır, Kars, Kayseri, Muş, Siirt, Sivas, Tunceli, Van illerinde 15 Mayıs - 15 Temmuz tarihleri
+arasında,
+4) Antalya ve Muğla illerinde Tebliğ dönemi boyunca,
+yasaktır (Harita-62).
+c) Niğde Bolkar Dağları, Karagöl ve Çiniligöl çevresinde Rana holtzi türü kurbağaların
+istihsali yasaktır.
+ç) İzleme ve rutin program sonucu ürün analizi uygun olmayan alanlardan istihsal edilen
+kurbağalar için menşe belgesi düzenlenmez.
+(2) Kara salyangozunun 1 Haziran - 31 Temmuz tarihleri arasında avlanması, toplan-
+ması yasaktır.
+(3) Sülük istihsaline ilişkin hususlar aşağıda belirtilmiştir:
+a) 15 Mart - 31 Ağustos tarihleri arasında avlanması ve toplanması yasaktır.
+b) Sülük istihsali yapılacak alanlar, uygulama yöntemi, takibi, kullanılacak belgeler,
+istihsali yapılacak alt türler, ürünlerin nakli, izlenmesi, miktarı ile sülüğün yasadışı istihsalinin
+önlenmesi kapsamında alınacak ek tedbirlere yönelik usul ve esaslar Bakanlıkça belirlenir.
+(4) Yasağın başlamasından itibaren il/ilçe müdürlüklerince stok tespiti yapılan canlı
+kurbağa, canlı kara salyangozu ve canlı sülüklerin yasak başlama tarihinden sonra en geç 10
+gün içerisinde işlenmesi veya sevkinin yapılması zorunludur.
+Sayfa : 58                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+(5) İzleme ve rutin program sonucu ürün analizi uygun olmayan alanlarda kurbağa ve
+kara salyangozu istihsali yasaktır.
+(6) Kurbağa, kara salyangozu ve sülük istihsalinde bulunacaklar 47 nci maddede belir-
+tilen esaslar dâhilinde faaliyette bulunabilir.
+Su bitkileri istihsali
+MADDE 45- (1) Kamış, saz ve benzeri su bitkilerinin kesimlerinin yasak olduğu za-
+manlar aşağıda belirtilmiştir:
+a) Eğirdir - Hoyran, Hotamış ve Beyşehir göllerinde 1 Nisan - 31 Temmuz,
+b) Karamık, Eber ve Akşehir göllerinde 1 Nisan - 31 Ekim,
+c) Van İli dahilindeki içsularda 1 Nisan - 15 Ağustos,
+ç) Göksu Deltasında yer alan Akgöl, Fiyat, Sazlı Göller ile Cırba Deresinde 1 Ocak -
+30 Eylül,
+d) Diğer içsularda 1 Mart - 31 Temmuz.
+(2) Yasak zamanlar dışında su bitkileri kesiminin il müdürlüklerinin belirleyeceği şartlar
+çerçevesinde yapılması zorunludur.
+(3) İçsularımızda su bitkilerinin yakılması, Orman Genel Müdürlüğüne bağlı orman içi
+sularda su bitkilerinin kesimleri Orman Genel Müdürlüğünün uygun görüşünün alınması ko-
+şuluyla, Balıkçılık ve Su Ürünleri Genel Müdürlüğünün iznine bağlıdır.
+YEDİNCİ BÖLÜM
+Deniz ve İçsularla İlgili Diğer Hükümler
+Nakil/Menşe Belgesi düzenlenmesi
+MADDE 46- (1) Yetiştiricilik veya avcılık yoluyla elde edilen su ürünlerinin ilk satı-
+şının yapıldığı yere, su ürünleri toptan satış merkezine, su ürünleri haline, soğuk hava deposuna,
+işleme veya başka bir yetiştiricilik tesisine nakillerinde ve canlı olanlarının naklinde Ek-6’da
+yer alan Nakil/Menşe Belgesinin bulunması zorunludur.
+(2) Bakanlıkça, türlere özel farklı bir düzenleme yapılmadığı takdirde 50 kg ve daha
+az miktardaki su ürünleri için “Nakil/Menşe Belgesi” aranmaz.
+(3) “Nakil/Menşe Belgesi” bulunan ürünler için ayrıca menşe belgesi düzenlenmesi ge-
+rekli değildir.
+(4) Nakil/Menşe Belgesi;
+a) Kota miktarınca avcılığına izin verilen türlerde,
+b) İzleme ve rutin program sonucu analiz sonuçları uygun bulunarak avcılığına izin ve-
+rilen türlerde,
+c) Van Gölü ve istihsal hakkı kiraya verilmiş alanlardan elde edilen türlerde,
+Bakanlıkça belirlenen yer ve yöntemle avlandığını göstermekte olup ürün miktarına
+bakılmaksızın her bir balıkçı gemisi için düzenlenmesi zorunludur. Bu türlerde “Nakil/Menşe
+Belgesi” bulunmaması durumunda, ürünler yasadışı elde edilmiş kabul edilir ve 1380 sayılı
+Kanunun 36 ncı maddesinin birinci fıkrasının (m) bendi hükümlerine göre işlem tesis edilir.
+(5) Bu maddenin 4 üncü fıkrasında belirtilen türler dışında diğer türlerde “Nakil/Menşe
+Belgesi” bulunmaması durumunda, 1380 sayılı Kanunun 36 ncı maddesinin birinci fıkrasının
+(r) bendi hükümlerine göre işlem tesis edilir.
+(6) “Nakil/Menşe Belgesi” il/ilçe müdürlükleri tarafından düzenlenir. Balıkçılık ve Su
+Ürünleri Genel Müdürlüğü, Nakil/Menşe Belgesi düzenleme yetkisini il/ilçe müdürlüklerinin
+yetkisi saklı kalmak şartıyla;
+a) Avcılık yoluyla elde edilen ürünlerde, su ürünleri teknisyeni, teknikeri, su ürünleri
+ve balıkçılık teknolojisi mühendisi istihdam eden balıkçı gemileri, su ürünleri kooperatif, birlik,
+üretici birlikleri veya üst birliklerine,
+b) Yetiştiricilik yoluyla elde edilen ürünlerde yetiştiricilik tesislerine,
+Bakanlıkça belirlenecek usul ve esaslar çerçevesinde verebilir.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 59
+(7) “Nakil/Menşe Belgesi”nin nakil geçerlilik süresi, belge üzerinde belirtilen nakil
+saatinden başlamak üzere 24 saattir.
+Özel Ürün Menşe Belgesi
+MADDE 47- (1) Kurbağa, sülük, kara salyangozu, kum şırlanı ve yem amaçlı su ürün-
+leri istihsal edeceklerle ilgili düzenlemeler aşağıda belirtilmiştir:
+a) Kurbağa, sülük, kara salyangozu, kum şırlanı ve yem amaçlı su ürünleri istihsal ede-
+ceklerin, istihsalde bulunacakları yerdeki il/ilçe müdürlüğüne başvurarak, gerçek kişiler için
+su ürünleri ruhsat tezkeresi alması zorunludur.
+b) Düzenlenen ruhsat tezkerelerinde istihsalde bulunulacak tür bilgisinin yer alması zo-
+runludur. Bu belge ile başka illerde de istihsal faaliyetinde bulunulabilir.
+c) Bu madde kapsamında istihsalde bulunan kişilerin, istihsal ettikleri ürünleri için Ek-
+5’te yer alan “Özel Ürün Menşe Belgesi”ni düzenlemesi, düzenledikleri menşe belgelerini is-
+tihsalin yapıldığı yerdeki il/ilçe müdürlüğüne ibraz ederek Su Ürünleri Bilgi Sistemine (SUBİS)
+kayıt ettirmesi zorunludur. Kayıt işlemi öncesi il/ilçe müdürlüklerince ürünlerin kontrolü sağ-
+lanmalıdır.
+ç) SUBİS’e kaydı yapılan menşe belgeleri, il/ilçe müdürlüklerince “Kaydedilmiştir”
+notu düşülerek onaylanıp mühürlenir. Onaylanan belgenin aslı ürün beraberinde, bir örneği ise
+onaylayan il/ilçe müdürlüğünde kalır.
+d) Onaylanmış “Özel Ürün Menşe Belgesi” bulunmayan kurbağa, sülük, kara salyan-
+gozu, kum şırlanı ve yem amaçlı su ürünlerinin nakli, satışı, depolanması ve işlenmesi yasak-
+tır.
+e) Bu madde kapsamındaki türleri istihsal edecek kişilerin, faaliyetlerine başlamadan
+en az 24 saat öncesinde, faaliyette bulunacakları alanda bulunan il/ilçe müdürlüklerine mevkii,
+kişi ve faaliyet zamanına ilişkin bildirim yapmaları zorunludur.
+Ticari amaçlı amatör balıkçılık turizm faaliyeti
+MADDE 48- (1) Ticari amaçlı amatör balıkçılık turizm faaliyeti, vergi mükellefi gerçek
+ve tüzel kişilerin sahibi olduğu, Ulaştırma ve Altyapı Bakanlığınca “Turistik Amaçlı Olta Ba-
+lıkçılığı Gemisi” cinsinde belgelendirilmiş ve “Denize Elverişlilik Belgesi” almış olan gemiler
+tarafından yapılır.
+(2) Bu gemilerin, il müdürlüklerinden 2 yıl geçerli Ek-9’da yer alan “Ticari Amaçlı
+Amatör Balıkçılık Turizm İzin Belgesi”ni alması zorunludur.
+(3) Bu belge sahibi gerçek veya tüzel kişiler, izin belgelerinde belirtilen gemilerde av-
+cılık yaptırdıkları amatör balıkçıların 6/2 Numaralı Amatör Amaçlı Su Ürünleri Avcılığının
+Düzenlenmesi Hakkında Tebliğde belirtilen kurallara uygun olarak avlanmasından sorumludur.
+6/2 Numaralı Amatör Amaçlı Su Ürünleri Avcılığının Düzenlenmesi Hakkında Tebliğde belir-
+lenen kurallara aykırı olarak avcılık yaptıranların ve avlanmasına engel olacak tedbirleri al-
+mayanların belgesine el konularak iptal edilir. İzin verilenlere ve izin belgesinde belirtilen ge-
+milere iki yıl süre ile yeni belge verilmez.
+(4) Bağlama kütüğü içsu olan gemiler denizlerde, bağlama kütüğü deniz olan gemiler
+ise içsularda ticari amaçlı amatör balıkçılık turizmi faaliyetinde bulunamaz.
+Diğer genel hükümler
+MADDE 49- (1) Gemiler için verilen ruhsat tezkeresine ait ruhsat numarasının, plaka
+olarak gemiye yazılması ve sağ, sol ve üstten görülebilecek şekilde bulundurulması zorunludur.
+Bu maddenin uygulanmasına ilişkin usul ve esaslar Bakanlıkça belirlenir.
+(2) Ticari amaçlı su ürünleri avcılığında kullanılan av araçlarının Bakanlığın belirleye-
+ceği usul ve esaslar dahilinde markalanarak Su Ürünleri Bilgi Sistemine kaydedilmesi zorun-
+ludur. Markasız ve kayıtsız av araçlarının balıkçı gemisinde bulundurulması ve kullanılması
+yasaktır.
+Sayfa : 60                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+(3) Ruhsat tezkeresi sahibi gerçek kişiler yalnızca Bakanlıkça ruhsatlandırılmış balıkçı
+gemilerinde avcılık faaliyetinde bulunabilir. Ruhsat tezkerelerinde belli bir türe yönelik avcılık
+yapacağı belirtilenler, balıkçı gemisi olmaksızın, belirtilen türlere yönelik istihsal faaliyetinde
+bulunabilir.
+(4) Bakanlıkça su ürünleri avcılığı yapmak üzere ruhsat tezkeresi düzenlenmemiş ge-
+milerde, ticari amaçlı avcılıkta kullanımına izin verilen avlanma araçları ile bu av araçlarının
+kullanımına yönelik donanım, alet ve ekipman bulundurulamaz.
+(5) Ruhsat tezkeresi askıya alınmış olan balıkçı gemilerinin, 1380 sayılı Kanun kapsa-
+mında getirilmiş düzenlemelere aykırılıklarının tespiti halinde, idari yaptırımlar askıya alınma
+işlemi dikkate alınmaksızın uygulanır.
+(6) Bakanlıkça balıkçı yardımcı gemisi olarak ruhsat tezkeresi düzenlenmiş gemiler av-
+cılık faaliyetinde bulunamaz. Bu gemilerde bom direği, power-block, matafora, ırgat gibi av-
+cılıkta kullanılacak hiçbir alet ve ekipman bulunamaz.
+(7) Bakanlıkça su ürünleri av gemisi ve balıkçı yardımcı gemisi olarak ruhsat tezkeresi
+düzenlenmiş olanlar haricindeki gemiler balık naklinde kullanılamaz. Balıkçı yardımcı gemisi
+kullanımına ilişkin usul ve esaslar Bakanlıkça belirlenir.
+(8) Gerekçeleri Bakanlıkça uygun görülenler hariç olmak üzere, faaliyetlerinin izlene-
+bilmesi ve kayıtlarının tutulabilmesi amacıyla Bakanlıkça istenen gemi izleme ve kayıt cihaz-
+larını bulundurmayan balıkçı gemilerine avcılık “İzin Belgesi” ve “Özel Tüketim Vergisi İndi-
+rilmiş Yakıt Alım Belgesi” düzenlenmez, ruhsat tezkerelerinin vize işlemleri yapılmaz.
+(9) Su ürünleri avcılığı yapmak üzere ruhsatlandırılmış 12 metre ve daha büyük boydaki
+balıkçı gemilerinin sahiplerinin/donatanlarının, Bakanlığın belirleyeceği esaslara göre, 1380
+sayılı Kanunun 28 inci maddesi gereğince, yaptıkları avcılık ve avladıkları türlere ilişkin ka-
+yıtları için e-seyir defterini doldurmaları zorunludur. Bakanlıkça ihtiyaç duyulması halinde,
+daha küçük boydaki balıkçı gemileri için de e-seyir defteri zorunluluğu getirilebilir.
+(10) Her türlü patlayıcı, öldürücü, bayıltıcı, uyuşturucu, uyutucu, uyarıcı, zehirleyici,
+aşındırıcı kimyasal maddeler, karpit, sönmemiş kireç, balık otu benzeri maddeler ile su ürünleri
+avcılığı yapılması, bu maddelerin gemilerde ve av mahallerinde bulundurulması, elektrik ce-
+reyanı ve elektroşok yöntemi ile su ürünleri avcılığı yapmaya imkân sunacak jeneratör ve do-
+nanımın, gemilerde ve avlanma mahallinde bulundurulması yasaktır.
+(11) Tüp, nargile, maske, zıpkın ile dalış yapılarak, şnorkel ve sualtı tüfekleri kullanı-
+larak su altında ticari amaçla balık avcılığı yasaktır. Dalma yöntemi ile balık dışındaki su ürün-
+leri istihsali yapacak olanların, 2/9/1997 tarihli ve 23098 sayılı Resmî Gazete’de yayımlanan
+Profesyonel Sualtıadamları Yönetmeliği kapsamında alınmış olan dalış belgesine sahip olmaları
+zorunludur.
+(12) Dalma yöntemi ile yapılacak avcılıkta kullanılan kompresör, nargile donanımı gibi
+ekipmanlar ile dalış tüplerinin, dalma yöntemi ile avcılık yapmak üzere izin belgesi almamış
+olan balıkçı gemilerinde bulundurulması yasaktır. İzin belgesi alan balıkçı gemilerinde ise söz
+konusu ekipman sadece dalma yöntemi ile avcılık yaptıkları zamanlarda bulundurulabilir. Dal-
+ma yöntemiyle avcılığına izin verilen tür dışında başka türlerin avlanması durumunda izin bel-
+gesi iptal edilir. İptal edilen iznin geçerli olduğu av dönemi için yeni izin belgesi düzenlen-
+mez.
+(13) Tırıvırı-paraşüt olarak adlandırılan av aracının üretimi, satışı, istihsal yerleri civa-
+rında bulundurulması ve su ürünleri avcılığında kullanılması yasaktır.
+(14) Yetiştiricilik yoluyla elde edilen su ürünleri, belgelenmeleri şartıyla boy, zaman
+ve yer yasaklarına tabi değildir.
+(15) Yetiştiricilik tesislerinin sınırlarına 100 metreden daha yakın mesafede her türlü
+su ürünleri avcılığı yasaktır. Ancak, Karadeniz’de Türk somonu yetiştiriciliği yapan tesisler
+için 15 Haziran - 31 Ağustos tarihleri arasında bu yasak 50 metre olarak uygulanır.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 61
+(16) Ticari amaçlı su ürünleri avcılığı yapmak üzere projeye dayalı olarak Bakanlıkça
+izin verilmiş tüm deniz ve içsu alanlarında kira müddetince kiracı dışında avcılık yapılması
+yasaktır. Kiralanmış alanlarda yapılacak istihsalle ilgili usul ve esaslar Bakanlıkça belirlenir.
+(17) Balık çiftliklerindeki kafeslerin hasara uğraması ya da deniz kazaları gibi çeşitli
+olaylar sonrası talep edilmesi halinde, yasak zaman ve yerlerde istihsal vasıtalarının kullanımına
+Bakanlıkça izin verilebilir. İzin verilen alanda, süresi belirtilmek suretiyle diğer balıkçılık faa-
+liyetlerine sınırlama veya yasaklama getirilebilir.
+(18) Devletin hüküm ve tasarrufu altında veya Hazinenin mülkiyetinde olan veya Devlet
+Su İşleri Genel Müdürlüğünce işletilen bütün istihsal sahalarında su ürünleri yönünden yapı-
+lacak her türlü bilimsel, teknik etüt ve araştırmalar ile dip trolü, elektrik cereyanı ve elektroşok
+veya yasak vasıta ve usulleri kullanacak olanlar ile bu alanlarda her nevi üretim ve ıslah çalış-
+maları yapacak olanlar, bu faaliyetlere başlamadan önce Bakanlığın iznini almak zorundadır-
+lar.
+(19) Ek-7’deki listede yer alan akarsuların denize karıştıkları yerler merkez olmak üze-
+re, denize ve akarsu yönüne doğru 500 metre yarıçaplı sahalarda su ürünleri avcılığı yasaktır.
+(20) Av yasağı döneminde avlanmış ürünlerle ilgili hususlar aşağıda belirtilmiştir:
+a) Avlanma yasağı süresince istihsali yasaklanan su ürünlerinin her ne suretle olursa
+olsun satışı, nakli ve imalatta kullanılması yasaktır. Yasak başlamadan önce avlanan, satışa su-
+nulacak ürünler ile işleme, değerlendirme ve muhafaza tesislerine konan ürünler için, yasağın
+başlamasından itibaren en geç 24 saat içerisinde ürünün ya da tesisin bulunduğu yerdeki il/ilçe
+müdürlüğüne başvuru yapılarak stok tespiti yaptırılması zorunludur. Stok tespiti yaptırılan su
+ürünleri, il/ilçe müdürlüğünden izin alınmadan kullanılamaz, satılamaz, nakledilemez ve ihraç
+edilemez.
+b) Avlanma yasağından önce stoklanmış su ürünlerinin yasak dönemdeki ihracatında,
+stok tespitini yapan il/ilçe müdürlüğünden ihracat izni alınması zorunludur.
+c) Yasak olmayan yer ve zamanlarda istihsal edilen su ürünlerinin yasak yerlere nakle-
+dilebilmesi için avlanmanın yapıldığı yerin il/ilçe müdürlüğünden Ek-6’da yer alan
+“Nakil/Menşe Belgesi”nin alınması ve istenildiğinde ilgililere gösterilmesi zorunludur.
+ç) “Nakil/Menşe Belgesi” alınarak avcılığın yasak olduğu yerlere sevk edilen su ürünleri
+için, satışın yapılacağı yerin il/ilçe müdürlüğünden ayrıca izin alınması zorunludur. Nakil/Men-
+şe Belgeli bir ürünün birden fazla yere dağıtımı, Ek-8’de yer alan “Dağıtım/Satış Belgesi” ile
+gerçekleştirilir.
+(21) Bu Tebliğ ile getirilen yasak, sınırlama ve yükümlülüklere aykırı olarak elde edilen
+ürünler için Nakil/Menşe Belgesi düzenlenmez.
+(22) Su ürünlerinin ülke çapında kontrolünün sağlanabilmesi için, deniz ve içsularda
+damızlık, yumurta, larva, yavru ve anaçlarla, sulardaki bitkilerin nakli, istihsal yerlerinde av-
+lanması, toplanması, balıklandırma yapılması veya kaynaklara diğer su ürünlerinin bırakılması
+Bakanlığın iznine bağlıdır.
+(23) Bu Tebliğde belirtilen yasak, sınırlama ve yükümlülükleri belirlemeye ve ilân et-
+meye Bakanlık yetkilidir. Mülki idareler, diğer bakanlıklar ve ilgili kamu kuruluşları, özel ve
+tüzel kişiler; bu yasaklara aykırı veya yeni yasaklama kararı alamaz, ilan edemez.
+(24) Deniz balıklarının üremek ve beslenmek için girdiği dalyan, lagünler, mansap yer-
+leri ve bunun gibi kıyı alanlarında her türlü yavru balık toplanması yasaktır.
+(25) Bakanlık görevlileri ile Bakanlıkça bilimsel amaçlı çalışmalar için görevlendiri-
+lenler, bir izine gerek kalmaksızın, balıkçı gemilerinde su ürünleri istihsaline ilişkin inceleme
+ve gözlemler yapmak amacı ile bulunabilir. Bu görevlilere gerekli kolaylığın sağlanması zo-
+runludur.
+Sayfa : 62                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+(26) Bakanlıkça balıkçı gemilerinin büyüklüğüne, avladıkları türlere ve faaliyetlerine
+göre ürünlerini karaya çıkarabilecekleri yerlere ilişkin düzenlemeler yapılabilir.
+(27) Su ürünleri istihsal alanlarında Bakanlıkça yürütülen izleme programları kapsa-
+mında, insan tüketimine uygun olmadığı tespit edilen türlerin karaya çıkarılmasına Bakanlıkça
+kısmi veya bölgesel yasaklamalar getirilebilir.
+(28) Bakanlık gerekli gördüğü durumlarda stokların korunması ve avcılığın sürdürüle-
+bilirliğinin sağlanması amacı ile su ürünleri avcılığına; alan, zaman, miktar ve nakli ile ilgili
+yasak, sınırlama ve yükümlülükler getirebilir.
+(29) Mavi yüzgeçli orkinos, kılıç, yazılı orkinos, gobene (tombik), uzun kanat orkinos
+(tulina) avcılığı yapacak 12 metre ve üzeri balıkçı gemilerinin IMO numarası almaları zorun-
+ludur.
+(30) Üyesi bulunduğumuz uluslararası kuruluşlarca alınan ve ülkemizi de bağlayıcılığı
+bulunan kararlar Bakanlıkça ilan edilir ve uygulamaya konulur.
+(31) 14/9/2023 tarihli ve 32309 sayılı Resmî Gazete’de yayımlanan Tarımsal Üretimin
+Planlanması Hakkında Yönetmelik kapsamında, üretim planlamasına dahil edilen su ürünlerinin
+avcılığı, her av dönemi için Bakanlıkça belirlenen kota miktarınca yapılır. Kotanın ilanı ve uy-
+gulama yöntemine ilişkin usul ve esaslar Bakanlıkça belirlenir.
+Denizlerle ilgili diğer hükümler
+MADDE 50- (1) Trol gemilerinde su üstü radarı veya GPS gibi mevki konumlandırıcı
+cihazlar bulundurulması zorunludur.
+(2) Marmara Denizi’nde su ürünleri avcılığında frekans çıkışı 20 Khz (dahil) ve daha
+aşağı olan sonarların kullanılması yasaktır. İstanbul ve Çanakkale Boğazlarından, Marmara
+Denizi’ne girecek olan 20 Khz’den (dahil) küçük sonarlara sahip tekneler, sonarlarını il mü-
+dürlüklerine mühürletmek, çıkışlarında müracaat ederek açtırmak zorundadırlar.
+(3) Su ürünlerinin ve yaşama ortamlarının korunması amacıyla Marmara Denizi’nde I
+(a) grubu maden çıkarılması yasaktır.
+(4) Münhasır ekonomik bölgede ve uluslararası sularda avlanılacak su ürünlerinin cins,
+çeşit, ağırlık, irilik, büyüklük gibi vasıfları, avlanabilir miktarları, zamanları ve istihsalde kul-
+lanılacak vasıtaların haiz olmaları gereken asgarî vasıf ve şartlar ile bunların kullanma usul ve
+esasları ile diğer faaliyetler Bakanlıkça tespit edilir. Başka ülkenin Münhasır Ekonomik Böl-
+gesinde ya da karasularında avcılık yapacaklar Bakanlıktan izin almak zorundadır.
+(5) Bakanlıkça farklı bir düzenleme yapılarak ilân edilmediği sürece, bu Tebliğ ile ka-
+rasularımız için getirilen düzenlemeler, bu suların bitişiğindeki uluslararası sularda ve münhasır
+ekonomik bölgede de aynı şekilde uygulanır.
+(6) Uluslararası sularda av yapacak olan gemiler yer ve zaman olarak yasak bölgelerden
+geçerlerken, kanunlarda belirtilen tedbirler haricinde, Bakanlıkça belirlenecek esaslara uymak
+zorundadırlar.
+(7) Yaptıkları anlaşmalar çerçevesinde diğer ülke karasularında avcılık yapacak balıkçı
+gemileri için Bakanlıktan izin alınması, istihsal edilen ürünlerin belirtilen esaslar doğrultusunda,
+izinlerinde gösterilen limanlardan çıkarılması zorunludur.
+(8) Limanlarda, balıkçı barınaklarında, barınma ve çekek yerlerinde ve bu yerlerin gi-
+rişindeki mendireklerin başından itibaren 100 metre yarıçaplı alanda su ürünleri avcılığı ya-
+saktır.
+(9) Hassas ekosistemlerin korunması ve balıkçılığın geliştirilmesi amacıyla kaynakların
+üretimini arttırmak ve desteklemek için tasarlanıp zemine yerleştirilen sucul canlılara özel ya-
+pay barınaklar olan yapay resiflerin, deniz ve içsulara bırakılması, tesis edilmesi Bakanlık iz-
+nine tâbidir.
+(10) Avlanma yasağı süresince gemilerde ve istihsal yerlerinde istihsal vasıtaları bu-
+lundurulamaz. Ancak yasak zaman ve yerlerden geçiş için il/ilçe müdürlüklerinden “Geçiş İzin
+Belgesi” alan gemiler için bu hüküm uygulanmaz.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 63
+(11) 12 metre ve üzeri balıkçı gemileri, ruhsat tezkerelerinde birincil av aracı olarak
+belirtilen dışındaki av araçları ile avcılık faaliyetinde bulunamaz, birincil av aracı dışında farklı
+av aracı bulunduramaz. Bu gemiler birincil av araçlarını Akdeniz’de 16 Eylül, diğer denizleri-
+mizde 1 Eylül tarihinden itibaren geçerli olmak üzere Ağustos ayı içerisinde seçerler. 1 Eylül
+tarihinden - 31 Aralık tarihine kadar ise sadece bir kez av aracı değişikliği yapabilirler. 1 Ocak
+tarihinden - 1 Ağustos tarihine kadar av aracı değişikliği yapılamaz.
+(12) 12 metre ve üzeri balıkçı gemileri için gırgır ve trol avcılığının yasak olduğu dö-
+nemde gemi ve gemi donanımının denenmesi amacı ile denize çıkılmadan önce il/ilçe müdür-
+lüklerinden izin almak zorunludur.
+(13) Deniz ürünleri yetiştiriciliği yapılan kuluçkahanelerin, denizden su alım sistemine
+su alım noktalarından itibaren 500 metre yarıçaplı mesafede, su ürünleri avcılığı yasaktır.
+(14) Karides, deniz salyangozu ve midye avcılığı için geçerli özel avcılık izni alan ge-
+miler hariç 12 metrenin altındaki gemilerde vinç, çelik halat, bom direği, matafora ve bu amaç-
+larla kullanıma yönelik uyarlanmış, modifiye edilmiş donanım, alet ve ekipman bulundurulması
+yasaktır. Sezonda karides, deniz salyangozu ve midye avcılığı için özel avcılık izni alan gemiler
+yasak dönemde üzerlerinde mühürsüz donanım bulunduramaz. Mühürleme işlemi, gemi
+sahip/donatanlarının talebi üzerine il/ilçe müdürlüklerince yapılır.
+(15) Algarna, manyat, dreç ve dalma yöntemiyle avcılık yapan balıkçı gemileri ile ticari
+amaçlı amatör balıkçılık turizm faaliyetinde bulunan gemilerin 1 Eylül 2026 tarihinden itibaren
+Bakanlıkça istenen gemi izleme ve kayıt cihazlarını işler ve çalışır vaziyette bulundurmaları
+zorunludur. Bu gemilere takılacak olan cihazlara yönelik usul ve esaslar Bakanlıkça belirlenir.
+İçsularla ilgili diğer hükümler
+MADDE 51- (1) Balıkçı gemisine ihtiyaç duyulmadan istihsal yapılan sülük, kurbağa,
+kara salyangozu gibi türler hariç olmak üzere, içsularda kiralama yapılmaksızın ticari amaçlı
+su ürünleri avcılığı yasaktır. Kiralama işlemleri devam etmekte olan, ihalesi yapılmamış veya
+kiralama işlemleri bitmemiş istihsal sahalarında kiralama işlemi kesinleşinceye kadar ticari
+olarak su ürünleri avcılığı yapılamaz.
+(2) Teknik Şartnamelerinde yer verilmesi şartıyla, su ürünleri istihsal hakkı kiraya ve-
+rilen alanlarda belge düzenlenmesi gereken asgari ağırlığa ilişkin farklı düzenlemeler yapıla-
+bilir.
+(3) Kiralanmış alanlardaki istihsal hakkı, kiralayan müstecire aittir. Bu alanlarda müs-
+tecir tarafından il müdürlüğüne bildirilen ve ruhsat tezkeresi düzenlenen balıkçı gemileri ile
+avcılık faaliyetinde bulunulabilir.
+(4) İçsularda trol ve gırgır ağları ile avcılık yapılamaz.
+(5) Avlanma yasağı süresince gemilerde ve istihsal yerleri civarında istihsal vasıtası bu-
+lundurulamaz.
+(6) Göletlerde yapılacak avcılıkla ilgili hususlar aşağıda belirtilmiştir:
+a) Göletlerde ticari amaçlı su ürünleri avcılığı yapılması yasaktır. Göletlerde sadece
+onaylanmış ve izin verilmiş projeler ile amatör ve rekreasyonel amaçlı su ürünleri avcılık hakkı
+kiraya verilebilir. Projeye dayalı olarak amatör ve rekreasyonel amaçlı kiralama yapılacak gö-
+letlerde avcılığa ilişkin usul ve esaslar Bakanlıkça belirlenir.
+b) Projeye dayalı olarak kiraya verilen göletlerde yapılacak ticari amaçlı su ürünleri
+avcılığı, su ürünleri ile ilgili zaman, boy ve tür bakımından getirilen düzenlemelere tabidir.
+(7) Akarsularda ticari amaçlı su ürünleri avcılığı yapılması yasaktır. Bu yerler ticari
+amaçlı su ürünleri avcılığı için kiraya verilemez. Ancak ülke sınırını oluşturan akarsular ve
+göllerde Bakanlığın belirleyeceği esaslar çerçevesinde ticari amaçlı su ürünleri avcılığına is-
+tisnai olarak izin verilebilir. Bakanlıkça belirlenecek esaslar, bu Tebliğ ile getirilen genel dü-
+zenlemelerden farklı olarak zaman, tür, büyüklük, miktar ve kullanılacak istihsal vasıtaları açı-
+sından farklılıklar içerebilir.
+Sayfa : 64                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+(8) İçsularda kullanılacak ağların asgari vasıf ve şartları il müdürlüklerince belirlenir
+ve ilan edilir. Asgari vasıf ve şartları belirlenenlerin dışındaki ağların kullanılması yasaktır.
+Birden fazla ile kıyısı bulunan içsularda kullanılacak ağların vasıf ve şartlarına ilişkin usul ve
+esaslar o içsuya en uzun kıyı şeridi bulunan il müdürlüğünün sekreteryasında diğer illerin de
+yer aldığı komisyonca belirlenir. Komisyonda alınan karar o içsuda kiraya verilen/verilecek
+tüm alanlarda uygulanır.
+(9) Bakanlık izni olmadan içsularda, gümüş balığı avcılığı dışında ığrıp ve manyat ağları
+ile avcılık yapılması yasaktır.
+(10) Tüm içsularda, su ürünleri avcılığının yasak olduğu dönemlerde balıkçı gemilerinin
+karaya çekilmesi zorunludur. Balıkçı gemilerinin karaya çekileceği yerler, gerektiğinde il mü-
+dürlüklerince de belirlenebilir.
+(11) İçsularda balıkçılık faaliyetinde bulunmak üzere ruhsatlandırılmış balıkçı gemile-
+rinin, ruhsatlandırıldığı istihsal sahası dışında avcılık faaliyetinde bulunması yasaktır.
+(12) Doğal göl, baraj gölü, gölet, depolama, akarsu ve bu gibi su ürünleri istihsal yer-
+lerinde sulama için kullanılan her türlü kanal ve arkların başlangıç ve bitiş kısımlarına balık
+kayıplarının önlenmesi için Bakanlıkça izin verilenler dışında, su ürünlerinin göçlerine, geçiş-
+lerine ve gelişimlerine mani olacak şekilde ağ, bent, çit ve benzeri engeller koymak yasaktır.
+(13) Av yasağından önce avlanılan ve stok tespiti yaptırılan içsu balıklarının, yasağın
+başlamasından itibaren en geç 7 gün içerisinde satışı, nakli, pazarlanması ve işlenmesi zorun-
+ludur.
+(14) Yavru hariç, canlı su ürünleri stoklamak amacıyla ticari olarak her türlü gölet, ha-
+vuz ve livar yapılması il müdürlüklerinin iznine bağlıdır.
+(15) İçsularda avlanmış olan balıkların Bakanlık izni haricinde canlı olarak taşınması
+ve nakledilmesi yasaktır.
+(16) Devlet Su İşleri Genel Müdürlüğünce işletilen bütün istihsal yerlerinde etüt, ince-
+leme ve araştırmalar yapmak üzere görevlendirilen kurum personeli için, bu görevleri süresince
+Bakanlıktan ayrıca bir izin alınması zorunlu değildir.
+(17) Balık asansörü, balık geçidi ve balık göç yapılarında su ürünleri avcılığı yasaktır.
+(18) Devlet Su İşleri Genel Müdürlüğü tarafından işletilen sulama tesislerinde baraj
+gölü, gölet ve depolama gibi rezervuarı besleyen su kaynaklarında ve su temini maksadıyla
+inşa edilmiş yaklaşım kanallarında, sulama ve drenaj kanallarında her türlü su ürünleri avcılığı
+yasaktır.
+(19) Arpa, buğday, mısır, yulaf ve benzeri yemler ile yemleme yapılarak ticari amaçlı
+su ürünleri avcılığı yapılması yasaktır. Yemlerin balıkçı gemilerinde ve av mahallerinde bu-
+lundurulması yasaktır.
+SEKİZİNCİ BÖLÜM
+Çeşitli ve Son Hükümler
+Yürürlükten kaldırılan tebliğ
+MADDE 52- (1) 22/8/2020 tarihli ve 31221 sayılı Resmî Gazete’de yayımlanan 5/1
+Numaralı Ticari Amaçlı Su Ürünleri Avcılığının Düzenlenmesi Hakkında Tebliğ (Tebliğ No:
+2020/20) yürürlükten kaldırılmıştır.
+Yürürlük
+MADDE 53- (1) Bu Tebliğ 1/9/2024 tarihinde yürürlüğe girer.
+Yürütme
+MADDE 54- (1) Bu Tebliğ hükümlerini Tarım ve Orman Bakanı yürütür.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 65
+Sayfa : 66                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 67
+Sayfa : 68                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 69
+Sayfa : 70                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 71
+Sayfa : 72                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 73
+Sayfa : 74                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 75
+Sayfa : 76                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 77
+Sayfa : 78                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 79
+Sayfa : 80                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 81
+Sayfa : 82                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 83
+Sayfa : 84                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 85
+Sayfa : 86                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 87
+Tarım ve Orman Bakanlığından:
+6/2 NUMARALI AMATÖR AMAÇLI SU ÜRÜNLERİ AVCILIĞININ 
+DÜZENLENMESİ HAKKINDA TEBLİĞ
+(TEBLİĞ NO: 2024/21)
+BİRİNCİ BÖLÜM
+Başlangıç Hükümleri
+Amaç ve kapsam
+MADDE 1- (1) Bu Tebliğin amacı; 1/9/2024 - 31/8/2028 tarihleri arasında amatör ba-
+lıkçılığın belirli kurallar çerçevesinde yapılmasını sağlamak üzere kullanımına izin verilen av-
+lanma araçları ile ticari amaç dışı su ürünleri avcılığı yapacak olanların avlanmalarına ilişkin
+usul ve esasları belirlemektir.
+Dayanak
+MADDE 2- (1) Bu Tebliğ; 22/3/1971 tarihli ve 1380 sayılı Su Ürünleri Kanunu ve
+10/3/1995 tarihli ve 22223 sayılı Resmî Gazete’de yayımlanan Su Ürünleri Yönetmeliğine da-
+yanılarak hazırlanmıştır.
+Tanımlar
+MADDE 3- (1) Bu Tebliğde geçen;
+a) Alıkonulabilir miktar: Adet ya da kg cinsinden her amatör balıkçının bu Tebliğle ge-
+tirilen kurallara uygun olarak avladığı, av günü sayısına bakılmaksızın beraberinde götürebi-
+leceği en fazla balık miktarını,
+b) Amatör balıkçı: Amatör balıkçılık etkinliğinde bulunan gerçek kişiyi,
+c) Amatör balıkçılık: Rekreasyon, spor veya dinlence amacıyla yapılan, maddi ve ticari
+kazanç gayesi gütmeyen, avlanılan ürünün satılmadığı balıkçılık etkinliğini,
+ç) Amatör balık avı yarışması: Amatör balıkçılar arasında, amatör balıkçılığı özendir-
+mek ve geliştirmek amacıyla düzenlenen ve bu Tebliğ ile getirilen kurallara uygun olarak ödüllü
+ya da ödülsüz olarak kamu kuruluşları, amatör balıkçılık dernekleri ya da federasyonlarınca
+düzenlenerek gerçekleştirilen balık avlama yarışmasını,
+d) Amatör sualtı avcısı: Gün doğumundan gün batımına kadarki sürede bu Tebliğ kap-
+samında ve güvenlik nedeni ile yasaklanmamış karasularımızda, kendi nefesi dışında ek bir
+hava kaynağı kullanmadan dalarak su altı tüfeği ve yardımcı ekipmanla su ürünleri avcılığı ya-
+pan kişiyi,
+e) Bakanlık: Tarım ve Orman Bakanlığını,
+f) Balık boyu (Toplam boy): Ölçülen metoda göre toplam boy veya çatal boy olarak
+yapılan balık boyu ölçümünü, tam boy; ağzı kapalı iken balık başının ön ucu ile kuyruk yüz-
+gecinin en uzun ışınının bitim noktası arasındaki izdüşüm uzunluğunu;  çatal boy; alt çene ucu
+ile kuyruk yüzgecinin çatalı arasındaki uzunluğu,
+g) Boy limiti: Su ürünlerinin nesillerini devam ettirebilmeleri için, üreme olgunluğuna
+geldikleri kabul edilen en küçük yasal avlanma boyunu,
+ğ) Gönüllü amatör balıkçılık kuruluşları: Amatör balıkçılık yapan kişilerin bu etkinlik-
+lerini sürdürmek ve geliştirmek üzere kurdukları tüzel kişilikleri,
+h) İstihsal yerleri: Su ürünlerinin yetiştirildiği veya doğal olarak ürediği, avlanma, üre-
+tim, yetiştirme ve istihsal yapılmak üzere içinde veya üzerinde herhangi bir istihsal vasıtasının
+veya tesisinin kurulabildiği, kullanılabildiği su sahalarını,
+Sayfa : 88                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+ı) İl müdürlüğü: Tarım ve Orman Bakanlığı il müdürlüklerini,
+i) İlçe müdürlüğü: Tarım ve Orman Bakanlığı ilçe müdürlüklerini,
+j) Liman: Yükleme, boşaltma ve barınma amacı ile kullanılan, dalga hareketlerinin
+olumsuz etkisinden korunmak için mendireklerle çevrilmiş korunaklı su alanını,
+k) Orman içi su: 31/8/1956 tarihli ve 6831 sayılı Orman Kanununun 1 inci maddesinde
+tanımlanan orman rejimine dahil Devlet eliyle işletilen veya korunan alanlar içinde kalan dere,
+tabii göl ve su ürünleri üretimi veya su biriktirme amacı ile tesis edilen göletleri,
+l) Rekreasyonel balıkçılık: İnsanların dinlenme, eğlence ve spor amacı ile gönüllü olarak
+katılabilecekleri şekilde lagünlerde, nehirlerde, baraj gölü, göl ve düzenlenmiş bir alanda yü-
+rütülen istihsal faaliyetini,
+m) Sportif balıkçılık: Sportif balık avcılığı federasyonlarınca konulan kurallara dayalı
+olarak, yakalanan balığa zarar vermeme, sağlıklı ve canlı olarak suya iade edilmesi gibi temel
+prensipler içeren bireysel balık avcılığı etkinliğini,
+n) Sportif balık avı yarışması: Sportif balık avcılığı federasyonlarınca konulan kurallara
+dayalı, yakalanan balığa zarar vermeme, sağlıklı ve canlı olarak suya iade edilmesi gibi temel
+prensipler içeren bireysel ya da takımlar arasındaki müsabaka esasına dayalı balık avcılığı et-
+kinliğini,
+o) Su ürünleri: Denizler, içsular ve suni olarak yapılmış havuz, baraj, depolama, gölet,
+dalyan ve çiftlik gibi tesislerde tabii veya suni olarak istihsal edilen, yetiştirilen su bitkileri,
+balıklar, süngerler, yumuşakçalar, memeliler, sürüngenler, kabuklular gibi canlılarla bunlardan
+imal edilen ürünleri,
+ö) Tarih aralığı: Başlangıç ve bitişini gösteren günlerin, yapılan düzenlemeye dâhil ol-
+duğu ve belirtilen ayların bu Tebliğin geçerli olduğu yıllara ait ayları ifade ettiği zaman aralı-
+ğını,
+ifade eder.
+(2) Bu Tebliğde geçen araç, gereç ve yöntem tanımlarından;
+a) Balık ağı: Balık avında kullanılan değişik ağ gözü açıklığına sahip her türlü ağı,
+b) Balık yemi: Amatör balıkçılıkta kullanılan her türlü canlı veya cansız, doğal veya
+yapay yemleri,
+c) Beden: Oltanın ucuna genellikle bir fırdöndü vasıtası ile bağlanan ve kalınlığı oltanın
+kalınlığına eşit ya da daha az olan olta ipi parçasını,
+ç) Bırakma oltası: Suyun içinde asılı veya dibe uzanmış şekilde bir ucu amatör balıkçıda
+ya da kıyıda olmayan, suya başıboş bırakılmış kontrolsüz av aracını,
+d) Çapari: Beden, kasa, köstek, köstekler ucunda iğne ve iğneye bağlanmış kanatlı hay-
+vanların kuyruk, kanat veya göğüs tüylerinden veya aynı amaçlı sentetik materyalin bir parça
+ve/veya tutamından meydana gelen yemsiz ya da yemli olarak kullanılan çok iğneli takımı,
+e) Çırpma/Çarpma olta: Üçlü çapa iğnenin olta ipine bağlanarak suya atılıp aniden çe-
+kilmesi suretiyle balığı herhangi bir yerinden yakalayan, çoğu zamanda yaralayan av aracını,
+f) Doğal yem: Doğadan elde edildiği şekliyle kullanılan, herhangi bir işlemden geçiril-
+memiş, canlı veya cansız organik yemleri,
+g) Düzen (Çökertme): Farklı göz seçenekleri bulunan, balık ve diğer su ürünlerinin av-
+lanmasında veya yakalanmasında kullanılan, misina veya ip gibi materyalden yapılmış, bir
+sopa ucuna bağlanarak suya batırmak suretiyle kullanılan içine giren canlıların dışarı çıkama-
+yacağı su ürünlerini avlamak için yapılmış tuzağı,
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 89
+ğ) Gemi: Tonajı ve adı ne olursa olsun, denizlerde ve içsularda su ürünleri araştırma-
+sında, istihsalinde, naklinde, işlenmesinde kullanılan kayık, sandal, yelkenli, şat, salmavna gibi
+vasıtalarla buharlı veya motorlu bilumum yüzer vasıtaları,
+h) Köstek: Bedene iğnenin bağlanmasını sağlayan, kalınlığı beden kalınlığından daha
+az olan, bir ucu bedene, diğer ucu olta iğnesine bağlı olta ipi parçasını,
+ı) Küspe: Ayçiçeği, mısır gibi bitkilerin preslenip kurutulması sonucu elde edilen ürü-
+nü,
+i) Mamul doğal yem: Fabrikasyon, rafinasyon gibi yöntemlerle işlenip balık avı için
+kullanıma hazır halde sunulan cansız organik yemleri,
+j) Misina: Sentetik materyalden yapılan tek başına av kabiliyeti bulunmayan olta ipi
+türünü,
+k) Olta: Mantara, kasnağa veya makaraya sarılı, olta takımının elde bulundurulan kıs-
+mını,
+l) Olta iğnesi: Çeşitli yemler takılarak balık tutmak için kullanılan, metalden yapılmış,
+tekli, ikili, üçlü olarak üretilen materyali,
+m) Olta ipi: Sentetik, doğal veya metal, tek ya da çok lifli veya çeşitli tekniklerle örü-
+lerek imal edilmiş, bir ucu mantara, kasnağa veya olta makinesine (makaraya) sarılı diğer ucu
+bedene bağlı olmak suretiyle olta takımı hazırlanmasında kullanılan tek başına avlama kabili-
+yeti olmayan materyali,
+n) Olta takımı: Olta ipi, beden, köstek ve iğneyi bir arada bulunduran avlanma kabiliyeti
+olan vasıtayı,
+o) Parakete (paragat, barigat, barikat): Suyun içinde asılı veya dibe uzanmış, serili ola-
+rak duracak şekilde düzenlenmiş, bir beden üzerinde çok sayıda kösteğe bağlı iğne taşıyan
+balık avcılığı aracını,
+ö) Pinter: Balık ve diğer su ürünlerinin avlanmasında veya yakalanmasında kullanılan
+kasnak ve ağlardan yapılmış tuzakları,
+p) Sepet: Avcılık yapmak amacıyla tel, kamış, ince ağaç dalı gibi materyallerden yapıl-
+mış, çeşitli geometrik şekillerde olabilen, içine giren canlıların dışarı çıkamayacağı düzenekte
+su ürünlerini avlamak için yapılmış tuzağı,
+r) Sualtı tüfeği: Su altında balık avında kullanılan lastik veya metal yaylı, gaz veya hava
+basınçlı tüfekleri,
+s) Tırıvırı-Paraşüt: Bir olta ipi ucuna bağlı olarak kullanılan, çeşitli ebattaki misina ağ
+parçalarından imal edilmiş ve misinadan yapılmış olması nedeniyle kolayca kopup yıllarca
+suda kalabilen, bu özelliği nedeniyle doğal yaşama büyük tehdit oluşturduğu için kullanılması
+kesinlikle yasak olan, olta ile atılabilen her türlü ağ parçasının genel adını,
+ş) Yapay yem: Tüy ve iplikten yapılan sinekler, bir veya daha çok uçlu iğne ile dona-
+tılmış yumuşak plastik yemler, muhtelif kaşıklar, döner kanatlı yemler gibi çeşitli şekillerde
+ve renkteki yemleri (Her bir yapay yem, üzerindeki iğne sayısına bakılmaksızın, tüm dona-
+nımlarıyla bir olta iğnesi eşdeğeri olarak değerlendirilir.),
+t) Yemlik uzatma ağı: Uzunluğu en fazla 5 metre, yüksekliği en fazla 1,5 metre, göz
+açıklığı en fazla 15 milimetre olan, sadece canlı yem yakalanması amacı ile kullanılan fanyasız
+uzatma ağını,
+u) Zıpkın: Bir gönder ucuna yerleştirilmiş, bir veya birden fazla sivri uca ve balığın
+kurtulmasını engelleyen damaklı düzeneğe sahip, yakalanan büyük balıkların son mukaveme-
+tini kırma ve sandala alma işlerinde de kullanılan balık avlama aracını,
+ifade eder.
+Sayfa : 90                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+(3) Bu Tebliğde geçen türler ile ilgili tanımlardan;
+a) İçsularımızdaki ekolojik açıdan potansiyel sakıncalı balık: İçsularımızda ekolojik
+ortama ve ekonomik balık stoklarımıza zarar verebilme potansiyeline sahip balıkları,
+b) İçsularımızdaki ekolojik açıdan zararlı balık: İçsularımızda ekolojik ortama ve eko-
+nomik balık stoklarımıza ciddi zararlar verebilen balıkları,
+c) Yemlik balık: Amatör avcılıkta yemlik balık olarak kullanılmak üzere yakalanarak
+bu amaçla kullanılabilecek balıkları,
+ifade eder.
+İKİNCİ BÖLÜM
+Amatör Balıkçılık Yapılması
+Türk vatandaşlarının amatör balıkçılık yapmaları
+MADDE 4- (1) Türkiye Cumhuriyeti vatandaşı gerçek kişiler, bu Tebliğ ile getirilen
+yasak, sınırlama ve sorumluluklara uymak şartıyla amatör balıkçılık yapabilirler. Bu kişilere
+müracaatları halinde, veriliş tarihinden itibaren beş yıl geçerli olmak üzere, il ve ilçe müdür-
+lüklerince Amatör Balıkçı Belgesi verilir. Bu belgenin alınması veya avcılık sırasında bulun-
+durulması zorunlu değildir. Ancak Bakanlık gerek duyulması halinde amatör amaçlı avcılık
+faaliyetlerinde türlere, yerlere ve yöntemlere göre Amatör Balıkçı Belgesi alma zorunluluğu
+getirebilir. Bununla ilgili usul ve esaslar Bakanlıkça belirlenir.
+(2) Gönüllü amatör balıkçılık kuruluşları, üyelerinin belge alma işlemini topluca yap-
+tırabilirler.
+(3) Amatör Balıkçı Belgesi Ek-1’de yer alan forma uygun olarak düzenlenir.
+Türkiye’de yabancı uyruklu kişilerin amatör balıkçılık yapmaları
+MADDE 5- (1) Ülkemizde devamlı olarak ikamet edenlerden, resmî misafir veya geçici
+olarak görevli bulunan yabancı uyruklular Misafir Amatör Balıkçı Belgesi ile avlanabilirler.
+Bu kişilere durumlarını belgelemek kaydıyla, il müdürlüklerince iki yıl süre ile geçerli olmak
+üzere Misafir Amatör Balıkçı Belgesi verilir. Misafir Amatör Balıkçı Belgesi Ek-2’de yer alan
+forma uygun olarak düzenlenir.
+(2) Yabancı turist amatör balıkçılar bu Tebliğde geçen kurallara uymak kaydıyla;
+a) Denizlerimizde tekne ile içsularımızda ise kıyıdan veya tekne ile avlanmak istemeleri
+halinde;
+1) 6/1 Numaralı Ticari Amaçlı Su Ürünleri Avcılığının Düzenlenmesi Hakkında Tebliğ
+kapsamında verilen Ticari Amaçlı Amatör Balıkçılık Turizm İznine sahip olanlar vasıtasıyla,
+2) İl/ilçe müdürlüklerinden, Ek-3’te bir örneği bulunan avlanma fişi almak suretiyle,
+b) Herhangi bir izin veya belge almaksızın;
+1) Amatör veya sportif balık avcılığı yarışmaları kapsamında,
+2) Denizlerde sadece kıyıdan olmak üzere,
+3) Rekreasyonel amaçlı su ürünleri avcılığı için kiralanan istihsal sahalarında,
+avlanabilirler.
+ÜÇÜNCÜ BÖLÜM
+Genel Düzenlemeler
+Avlanması yasak olan türler
+MADDE 6- (1) Çizelge 1’de yer alan türlerin, denizlerde ve içsularda avlanmaları ta-
+mamen yasaktır.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 91
+Sayfa : 92                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+Yemlik balıklar
+MADDE 7- (1) Çizelge 2’de yer alan yemlik balıkların, amatör avcılıkta yemlik balık
+ağı ile avlanmaları serbesttir.
+(2) İçsularda yapılan amatör balıkçılık faaliyetlerinde yem amaçlı canlı balık kullanımı
+yasaktır.
+(3) Bir amatör balıkçı livar ya da yem kovası içerisinde, çizelgede yer alan türlerden,
+en fazla 30 adet yemlik balık bulundurabilir. İçsularda livar ya da yem kovası içerisinde canlı
+olarak yemlik balık bulunduramaz.
+(4) Yemlik balıklar, avlanması hedeflenen türün avcılığının serbest olduğu dönemde
+avlanabilirler. 
+(5) Yemlik balık boyu azami 12 cm olup bundan büyük boylar, avlanabilir balık sını-
+fında değerlendirilir. 
+(6) Yasal sayı ve boy sınırlamaları dâhilindeki deniz ve tatlı su balıkları yem amacı ile
+kullanılabilir. 
+(7) İçsularda yemlik balıkların canlı olarak başka bir içsuya nakli yasaktır.
+Genel hususlar
+MADDE 8- (1) Amatör balıkçılıkla avlanmış olan her türlü su ürününün satışı, canlı
+olarak nakledilmesi ve başka kaynaklara bırakılması yasaktır.
+(2) Bu Tebliğde belirtilen avlanması yasak olan türlerin ve bunlara ait kabuk ve ben-
+zerlerinin tahnit edilmiş örneklerinin alımı, satımı, pazarlarda ve iş yerlerinde alım satım ama-
+cıyla bulundurulması ve sergilenmesi yasaktır.
+(3) Deniz ve içsularımızda yapılacak balıkçılık yarışmaları Bakanlığın iznine tabidir.
+İzin taleplerinin il/ilçe müdürlükleri aracılığıyla Bakanlığa iletilmesi zorunludur. Bu kapsamda
+izin verilen alanlarda yarışma süresince yarışmacılar dışındakilerin avcılık yapması yasaktır. 
+(4) Yasaklanan av araç ve gereçlerinin avlanma mahallinde bulundurulması yasaktır.
+(5) Deniz, göl, gölet ve baraj göllerindeki yetiştiricilik tesisleri sınırlarına 100 metreden,
+karada kurulu tesislere ise 200 metreden daha yakın mesafede avcılık yapılması yasaktır.
+(6) Tırıvırı-paraşüt olarak adlandırılan av aracının üretimi, satışı, istihsal yerleri civa-
+rında bulundurulması ve su ürünleri avcılığında kullanılması yasaktır.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 93
+(7) Elektrik akımı, elektroşok, tüp gaz ve hava tazyiki yöntemleri, ok, yay, mavzer, av
+tüfeği ve  benzeri her türlü silah, yaba, balyoz ve benzeri araçların amatör avcılıkta kullanımı
+yasaktır.
+(8) Amatör balıkçılıkta avlanma amaçlı her türlü ışık kullanımı yasaktır. Ancak, can ve
+mal güvenliği açısından 50 watt’ı geçmemek koşuluyla gemi içerisinde ve kıyıda aydınlatma
+amaçlı kullanılan ışık bu kapsamda değerlendirilmez.
+(9) Bakanlıkça, balık çiftliklerindeki kafeslerin hasara uğraması halinde amatör balık-
+çılık faaliyetlerine geçici olarak sınırlama veya yasaklama getirilebilir.
+(10) Türkiye Sualtı Sporları Federasyonu tarafından o yıl için belirlenen Zıpkınla Balık
+Avı Milli Takım Aday Kadrosu, teknik heyeti ve diğer dalış görevlilerinin Bakanlıktan izin al-
+mak kaydıyla kamp sezonunda yapacakları antrenman çalışmalarına yönelik düzenlemeler aşa-
+ğıda belirtilmiştir:
+a) Bu Tebliğin 6 ncı maddesinde belirtilen türlerin avcılığı yapılamaz. 
+b) Bakanlık izninde belirtilen sayı ve miktar limiti kapsamında avcılığa izin verilir. Ve-
+rilen iznin, izin tarihleri dışında ve bireysel olarak kullanılması yasaktır. 
+(11) Dünya Sualtı Aktiviteleri Konfederasyonuna (CMAS) bağlı ülke federasyonları
+ile yapılan ikili ya da çoklu işbirliği kapsamında, Türkiye Sualtı Sporları Federasyonu tarafın-
+dan ortak kamp yapmak üzere davet edilen ülkelerin milli sporcuları, kamp süresi boyunca bu
+maddenin onuncu fıkra hükümleri kapsamında avcılık faaliyetinde bulunabilir.
+(12) Bu Tebliğde kişi başı kullanılabilecek av aracı sayısı belirtilenlerin dışında kulla-
+nımı serbest diğer av araçlarında kişi başı bir adetten fazla av aracı kullanılamaz.
+DÖRDÜNCÜ BÖLÜM
+İçsularda Amatör Balıkçılık Yapılması
+İçsularımızdaki ekolojik açıdan potansiyel sakıncalı balıklar
+MADDE 9- (1) Çizelge 3’te yer alan içsularımızdaki ekolojik açıdan potansiyel sakın-
+calı balıkların kontrolsüz ve izinsiz olarak canlı nakledilmesi ve başka kaynaklara bırakılması
+yasaktır.
+Sayfa : 94                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+İçsularımızdaki ekolojik açıdan zararlı balıklar
+MADDE 10- (1) Çizelge 4’te yer alan içsularımızdaki ekolojik açıdan zararlı balıkların
+görüldüğü sular derhal Bakanlığın en yakın il veya ilçe müdürlüklerine, amatör balıkçılık der-
+nekleri ya da federasyonlarına bildirilmelidir. Bu grup balıklar için boy ve sayı limiti yoktur,
+kapalı sezon bulunmamaktadır. Bu balıkların canlı yem olarak kullanılması, bir içsudan başka
+bir içsuya taşınması yasaktır.
+İçsularda avlanabilecek türler ve zamanlar 
+MADDE 11- (1) Çizelge 5’te avlanabilir asgari boy ve alıkonulabilir miktar bilgileri
+belirtilen su ürünlerinden daha küçüklerinin ve belirtilen miktardan fazlasının avlanılarak alı-
+konulmaları yasaktır.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 95
+(2) Çizelge 5’te boy limitleri belirtilen türlerde  %5 küçük boylara istisna tanınır.
+(3) Adet cinsinden limit verilen türlerde kg cinsinden limitlere bakılmaz. 
+(4) Kg cinsinden limit verilen türlerde, avlanılan tür tek veya karışık olsun 5 kg’ı  ge-
+çemez. Kg cinsinden sınırlama getirilen türlerde, tek bireyin 5 kg’ı geçmesi halinde, bu birey
+yasal limitler dâhilinde kabul edilir. Avlanan balıklardan en büyüğünün hariç tutulduğu du-
+rumda, geri kalan balıkların toplam ağırlığının 4 kg’ı geçmemesi halinde, avlanan balıklar alı-
+konulabilir miktar dâhiline kabul edilir.
+(5) Alıkonulabilir miktar, her türün ayrı ayrı alıkonulacağı miktar olmayıp, av günü sa-
+yısına bakılmaksızın bir amatör balıkçının beraberinde götürebileceği toplam balık miktarıdır.
+Adet sınırlamasına tabi birden fazla türün avlandığı durumda, avlanılan balıklar tek tür gibi
+kabul edilir. Bu durumda alıkonulacak toplam balık sayısı, avlanan türlerden hiçbirinin izin
+verilen sayıdan fazla olmaması şartıyla 10’u geçemez. 
+(6) Sayı ve ağırlık sınırlamasına tabi türlerin karışık olarak avlandığı durumda, sayı sı-
+nırlamasına tabi türün alıkonulabilecek adetten fazla olmaması şartıyla, avlanan en büyük balık
+hariç tutularak geri kalan balıkların toplam ağırlığı 4 kg’ı geçemez.
+(7) Çizelge 6’da belirtilen türlerin, belirtilen bölge veya illerde belirtilen dönemlerde
+avlanmaları yasaktır (Harita-1).
+Sayfa : 96                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+İçsulardaki yer yasakları ve sınırlamalar
+MADDE 12- (1) Ek-4 ve Ek-5’te belirtilen alanlarda avlanmak tamamen yasaktır.
+İçsularda amatör avcılık 
+MADDE 13- (1) Ek- 4’te yer alan avlanmanın yasaklandığı içsular ile Ek-5’te yer alan
+avlanmanın kısmen yasaklandığı içsularda dönem boyunca avcılık yapılması yasaktır.
+(2) Çırpma/çarpma ve bırakma olta, birden fazla iğne ile donatılmış küspe, parakete,
+sualtı tüfeği, zıpkın, pinter ve sepet, düzen (çökertme)  gibi tuzakların kullanılması yasaktır.
+Yemlik uzatma ağı dışında her türlü ağın (tırıvırı, germe, uzatma, sürütme, çevirme, serpme
+ve benzeri) avlakta bulundurulması ve kullanımı yasaktır.  
+(3) Her türlü patlayıcı, öldürücü, bayıltıcı, uyuşturucu, uyutucu, uyarıcı maddeler, kar-
+pit, sönmemiş kireç, balık otu ve benzerlerinin amatör avcılıkta kullanımı ve bu malzemelerin
+av mahallinde bulundurulması yasaktır.
+(4) Bir amatör balıkçı en fazla 4 olta takımı ile avlanabilir. Olta başına iğne sayısı 3
+adedi geçemez. Ancak, alabalık avında iki olta takımından daha fazla olta takımı kullanılamaz
+ve her olta takımında iki iğne bulunabilir.
+(5) Akarsularda her türlü doğal yem kullanılarak alabalık avcılığı yasaktır. Sadece yapay
+yem kullanılarak avcılık yapılabilir. Göllerde yapılacak alabalık avcılığında ise kan kurdu, ke-
+mik kurdu, leş kurdu, sinek larvaları, canlı ya da cansız içsu ve deniz balıkları hariç, her türlü
+yapay, doğal ve mamul doğal yem kullanılabilir.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 97
+(6) Boyu 7.5 metrenin üzerindeki gemilerle amatör balık avcılığı yapılması yasaktır.
+(7) Akarsuların, göllerin ve göletlerin yatakları değiştirilerek bir kısmının kurutulması
+veya bentlenmesi yöntemi ile avcılık yapılması veya ızgaralarla balık toplanması yasaktır.
+(8) İçme suyu rezervuarlarında, akaryakıt ile çalışan kayık, motor ve benzeri araçların
+kullanılması ve su alma noktasına 300 metreden daha yakın yerlerde su ürünleri avcılığı ya-
+saktır.
+(9) Gün içinde av saati sınırlaması yoktur.
+(10) Baraj göllerinde yapılan avcılıkta Devlet Su İşleri Genel Müdürlüğü tarafından
+belirtilen güvenlik sahasında avlanmak tehlikeli ve yasaktır.
+(11) Balık asansörü, balık geçidi ve balık göç yapılarında su ürünleri avcılığı yasaktır.
+(12) Kiraya verilen istihsal sahalarında amatör avcılık aşağıdaki esaslar dâhilinde ya-
+pılır:
+a) Kiraya verilen istihsal sahalarında amatör avcılık yapılabilecek alanlar Bakanlık il
+müdürlüklerince belirlenir. İl Müdürlükleri alanların belirlenmesinde, gönüllü amatör balıkçılık
+kuruluşlarından görüş alabilir. Kiraya verilen istihsal sahası baraj gölü ise amatör balıkçılığa
+ayrılacak alan için Devlet Su İşleri Genel Müdürlüğü mahalli kuruluşundan da görüş alınır.
+b) Kiraya verilen istihsal sahalarına, kiracı tarafından; kiralama yapanı, kira süresini
+ve amatör avcılık için belirlenen alanları gösterir bilgilendirme levhaları konulur.
+c) Kafeslerde yetiştiricilik amacı ile kiraya verilen göletler hariç, projeli olarak kiraya
+verilenlerde amatör avcılık yapılması yasaktır. Sadece kafeslerde yetiştiricilik amacı ile kira-
+lanmış göletlerde ise kafeslere 100 metreden daha yakın olmamak kaydıyla amatör avcılık ser-
+besttir.
+ç) Kiraya verilen istihsal sahalarında avcılığın serbest olduğu dönemlerde ve amatör
+avcılık için belirlenen alanlarda, bu maddenin dördüncü fıkrasında belirtilen kurallara uymak
+kaydıyla avcılık yapılması serbesttir. Sadece kerevit veya gümüş avcılığı için kiralanmış olan
+istihsal sahalarında alan sınırlaması olmaksızın amatör balık avcılığı yapılabilir.
+(13) Rekreasyonel amaçlı su ürünleri avcılığı için projeye dayalı olarak kiralanan is-
+tihsal sahalarında yapılacak su ürünleri avcılığına ilişkin usul ve esaslar Bakanlıkça belirlenir.
+Orman içi sularda amatör avcılık
+MADDE 14- (1) Orman içi sulardaki amatör avcılık, bu Tebliğ kapsamındaki esaslar
+dahilinde yapılır. Ancak;
+a) Gökkuşağı alabalığı avcılığında, doğal alabalıklar için belirtilen tarih aralığındaki
+zaman yasağı geçerlidir.
+b) Tatlısu kefali avcılığında, Çizelge 6’da orman içi suyun bulunduğu ilin yer aldığı
+bölgeye ait tarih aralığındaki zaman yasağı uygulanır.
+BEŞİNCİ BÖLÜM
+Denizlerde Amatör Balıkçılık Yapılması
+Denizlerde avlanabilecek türler
+MADDE 15- (1) Çizelge 7’de avlanabilir asgari boy ve alıkonulabilir miktar bilgileri
+belirtilen su ürünlerinden daha küçüklerinin ve belirtilen miktardan fazlasının avlanılarak alı-
+konulmaları yasaktır. Tarih aralığı verilerek zaman yasağı belirtilen türlerin yasak dönemde
+avcılığı yapılamaz.
+Sayfa : 98                               RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                               Sayfa : 99
+(2) Çizelgede boy limitleri belirtilen türlerde  % 5 küçük boylara istisna tanınır.
+(3) Adet cinsinden limit verilen türlerde kg cinsinden limitlere bakılmaz. 
+(4) Kg cinsinden limit verilen türlerde, avlanılan tür tek veya karışık olsun 5 kg’ı ge-
+çemez. Kg cinsinden sınırlama getirilen türlerde, tek bireyin 5 kg’ı geçmesi halinde, bu birey
+yasal limitler dâhilinde kabul edilir. Avlanan balıklardan en büyüğünün hariç tutulduğu du-
+rumda, geri kalan balıkların toplam ağırlığının 4 kg’ı geçmemesi halinde, avlanan balıklar alı-
+konulabilir miktar dâhiline kabul edilir.
+(5) Alıkonulabilir miktar, her türün ayrı ayrı alıkonulacağı miktar olmayıp, av günü sa-
+yısına bakılmaksızın bir amatör balıkçının beraberinde götürebileceği toplam balık miktarıdır.
+Adet sınırlamasına tabi birden fazla türün avlandığı durumda, avlanılan balıklar tek tür gibi
+kabul edilir. Bu durumda alıkonulacak toplam balık sayısı, avlanan türlerden hiçbirinin izin
+verilen sayıdan fazla olmaması şartıyla 3’ü geçemez. 
+(6) Sayı ve ağırlık sınırlamasına tabi türlerin karışık olarak avlandığı durumda, sayı sı-
+nırlamasına tabi türün alıkonulabilecek adetten fazla olmaması şartıyla, avlanan en büyük balık
+hariç tutularak geri kalan balıkların toplam ağırlığı 4 kg’ı geçemez.
+Denizlerde amatör avcılık
+MADDE 16- (1) Çizelge 7’de zaman yasağı belirtilen türler hariç, denizlerde amatör
+avcılık, zaman yasağına tabi değildir. Gün içinde av saati sınırlaması yoktur.
+(2) Denizlerde amatör avcılıkta kullanılabilecek avlanma araçları ve yasaklı maddelerle
+ilgili hususlar aşağıda belirtilmiştir:
+a) Denizlerde amatör avcılık çırpma/çarpma, bırakma olta, parakete, pinter ve sepet
+gibi tuzaklar hariç olmak üzere; her türlü olta takımı, serpme, yemlik uzatma ağı ve sualtı tüfeği
+ile yapılabilir.
+b) Bu Tebliğde özellikleri belirtilerek izin verilenler dışındaki her türlü ağ, tuzak ve
+patlayıcı, öldürücü, bayıltıcı, uyuşturucu, uyutucu, uyarıcı maddeler, karpit, sönmemiş kireç,
+balık otu ve benzerleri ile su ürünleri avcılığı yapılması, bu maddelerin gemilerde ve av ma-
+hallerinde bulundurulması yasaktır.
+c) Kullanılacak serpme ağının, kapalı iken yerden yüksekliği 3 metreyi geçemez, göz
+açıklığı 28 mm’den küçük olamaz.
+(3) Bir amatör avcı;
+a)  Her bir olta takımındaki iğne sayısı 6 adedi geçmemek şartıyla en fazla 4 olta takımı,
+b) İğne sayısı 15 adedi geçmemek kaydıyla bir adet çapari,
+kullanabilir.
+Sayfa : 100                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+(4) Su altı tüfeği ile yapılacak avcılıkla ilgili hususlar aşağıda belirtilmiştir:
+a) Denizlerde gün batımından gün doğumuna kadar olan sürede sualtı tüfeği ile avcılık
+yapılamaz.
+b) Sualtı tüfeği ile yapılacak avcılıkta ışık kaynağı, şnorkel hariç yapay hava kaynağı,
+tüp, nargile, her türlü soluma cihazı ve yedek hava kaynağı kullanılamaz. 
+c) Sualtı tüfeği veya zıpkın ile dalarak avcılık yapacakların bulundukları yeri gösterir
+şamandıra kullanması zorunludur.
+(5) 1 Nisan - 15 Kasım tarihleri arasındaki dönemde, sahilden itibaren uzaklığı 200
+metreyi geçmeyen, şamandıralarla çevrilmiş yüzme alanları içinde su ürünleri avcılığı yasaktır.
+(6) Avlanması tamamen yasak olan türler dışındaki su ürünlerinin avcılığında her türlü
+doğal yem, mamul doğal yem ve yapay yemlerin denizlerde yapılan amatör avcılıkta kullanıl-
+ması serbesttir.
+Denizlerdeki yer yasakları ve sınırlamalar
+MADDE 17- (1) Denizlerdeki yer yasakları ve sınırlamalar aşağıda belirtilmiştir:
+a) Mersin İli, Anamur İlçesinde; Kızılliman mevkii Arap Burnu (36° 5' 12.00" K - 33°
+5' 27.96" D) ile Gökçevlik (36° 6' 30.00" K - 33° 6' 37.98" D) mevkii arasında kıyıdan itibaren
+200 metre mesafe içerisinde (Harita-2),
+b) Mersin İli, Erdemli İlçesinde; ODTÜ Deniz Bilimleri Enstitüsü sınırları içerisinde
+(36° 33' 35.94" K - 34° 14' 57.54" D), (36° 33' 29.82" K - 34° 15' 16.56" D), (36° 34' 4.14" K
+- 34° 15' 52.50" D), (36° 34' 12.96" K - 34° 15' 32.70" D)  koordinat noktalarını birleştiren
+alanda (Harita-3),
+c) Antalya İli, Kumluca İlçesinde; Üç Adaları içine alan (36° 12' 14.51'' K - 30° 24'
+20.53'' D), (36° 12' 7.94'' K - 30° 23' 41.17'' D), (36° 9' 57.82'' K - 30° 24' 17.18'' D), (36° 9'
+59.44'' K - 30° 24' 45.42'' D) koordinat noktalarını birleştiren alanda olta ile yapılan avcılık
+hariç  (Harita-4),
+ç) Antalya İli, Kaş İlçesinde (Harita-5),
+1) Bohça İskelesi mevkiinde; (36° 09' 33''  K - 29° 46' 40'' D) ve (36° 09' 19'' K - 29°
+46' 36'' D) koordinat noktalarını birleştiren hattın doğusunda kalan alanda (Harita-5-1),
+2) Ufakdere mevkiinde; (36° 8' 47.28" K - 29° 39' 53.76" D) ile (36° 9' 7.74" K- 29°
+40' 45.96" D)  koordinat noktalarını birleştiren hattın kuzeyinde kalan alanda (Harita-5-2),
+3) Beşadalar mevkiinde; (36° 10' 03'' K - 29° 37' 31'' D), (36° 09' 10'' K - 29° 36' 50''
+D), (36° 08' 52'' K - 29° 36' 59'' D), (36° 09' 05'' K - 29° 38' 08'' D), (36° 09' 25'' K - 29° 38'
+29'' D) koordinat noktalarını birleştiren alanda (Harita-5-3),
+4) İnceburun mevkiinde; (36° 11' 33.72" K - 29° 38' 57.24" D) ile (36° 10' 59.46" K -
+29° 38' 31.62" D) koordinat noktalarını birleştiren hattın güneyinde kalan alanda (Harita-5-4),
+5) Çondur Burnu mevkiinde; (36° 11' 15'' K - 29° 36' 17'' D), (36° 11' 12'' K - 29° 36'
+40'' D), (36° 11' 49'' K - 29° 37' 01'' D) koordinat noktalarını birleştiren hattın batısında kalan
+alanda (Harita-5-5),
+6) Bucak Denizinde; (36° 12' 20.27'' K - 29° 36' 6.66'' D) ve (36° 11' 49.06'' K - 29° 36'
+12.85'' D) koordinat noktalarını birleştiren hattın doğusunda kalan alanda kıyıdan olta takımları
+ile yapılanlar hariç (Harita-5-6),
+d) Su ürünleri ile ilgili araştırmalar yapmak amacıyla Akdeniz Su Ürünleri Araştırma,
+Üretme ve Eğitim Enstitüsü Müdürlüğüne tahsis edilmiş olan Antalya İli, Demre İlçesi, Bey-
+melek Lagünü ile Lagüne ait her iki mendireği birleştiren hattın deniz tarafındaki 1 millik alan
+içerisinde ve Acıgölde (Harita-6),
+e) Kıyıdan olta takımları ile yapılanlar hariç olmak üzere, Fethiye Limanında, Fethiye
+Adası Feneri (36° 38' 49.44" K - 29° 5' 53.76" D) ile Paçarız Burnunu (36° 38' 31.02" K - 29°
+6' 4.50" D) birleştiren hattın doğusunda kalan alanda (Harita-7),
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                             Sayfa : 101
+f) Muğla İli, Köyceğiz Dalyanını Akdeniz’e bağlayan kanalın başladığı İztuzu Sahilin-
+de, Akiye Burnu (36° 47' 56.70" K - 28° 35' 40.26" D) ile Kamışlı Yalı Zeytin Horozu Kayalığı
+(36° 46' 19.20" K - 28° 37' 4.20" D) koordinatlarını birleştiren hattın doğusunda kalan alanda
+1 Kasım - 30 Nisan tarihleri arasında (Harita-8),
+g) Muğla İli, Hisarönü Körfezinde (Harita-9),
+1) (36° 46' 21.66" K - 28° 2' 13.38" D) ile (36° 46' 21.96" K - 28° 2' 22.44" D) koordinat
+noktaları arasında çekilen hattın kuzeyinde kalan alanda (Harita-9-1),
+2) Kurucabük ve Çiftlik koylarında, (36° 44' 40.56" K - 27° 52' 14.16" D) ile (36° 44'
+31.38" K - 27° 55' 18.30" D) koordinat noktaları arasında çekilen hattın kuzeyinde kalan alanda
+(Harita-9-2),
+3) Kargı Koyunda, (36° 42' 6.84" K - 27° 41' 9.30" D) ile (36° 41' 49.44" K - 27° 40'
+47.22" D) koordinat noktaları arasında çekilen hattın batısında kalan alanda (Harita-9-3),
+4) Selimiye Koyunda, (36° 43' 6.71'' K - 28° 6' 46.66'' D) ile (36° 43' 5.45'' K - 28° 5'
+7.15'' D) koordinat noktaları arasında çekilen hattın güneyinde kalan alanda kıyıdan olta ta-
+kımları ile yapılanlar hariç (Harita-9-4),
+5) Hisarönü Körfezinde, (36° 47' 41.14'' K - 28° 5' 30.88'' D) ile (36° 46' 29.5'' K - 28°
+6' 47.74'' D) koordinat noktalarını birleştiren hattın kuzey doğusunda kalan alanda kıyıdan olta
+takımları ile yapılanlar hariç (Harita-9-5),
+6) Bozburun ve Söğüt koylarını birleştiren (36° 40' 29.45'' K - 28° 2' 25.76'' D), (36°
+37' 58.3'' K - 28° 5' 6.43'' D) koordinat noktaları arasında çekilen hattın kuzey doğusunda kalan
+alanda kıyıdan olta takımları ile yapılanlar hariç (Harita-9-6),
+ğ) Muğla İli, Gökova Körfezinde (Harita-10),
+1) Bördübet Limanında; (36° 49' 48.60" K - 28° 2' 17.58" D) ile (36° 48' 2.70" K - 28°
+2' 33.12" D) koordinat noktalarını birleştiren hattın doğusunda kalan alanda (Harita-10-1),
+2) Kıyıdan olta takımları ile yapılanlar hariç olmak üzere, Boncuk Koyu Karaca Lima-
+nında; Domuz Burnu (36° 58' 55.98" K - 28° 11' 48.90" D) ile Andızlı Burnunu (36° 56' 54.72
+"K - 28° 10' 48.30" D) birleştiren hattın doğusunda kalan alanda (Harita-10-2),
+3) Çamlı Limanında; Çapa Burnu (36° 59' 56.58" K - 28° 13' 14.52" D) ile (37° 0' 9.18"
+K - 28° 14' 45.66" D) koordinat noktasını birleştiren hattın güneydoğusunda kalan alanda kı-
+yıdan olta takımları ile yapılanlar hariç olmak üzere (Harita-10-3),
+4) Akyakada;  (37° 3' 2.46" K - 28° 18' 36.00" D) ile (37° 1' 27.66" K - 28° 18' 35.88"
+D) koordinat noktalarını birleştiren hattın doğusunda kalan alanda kıyıdan olta takımları ile
+yapılanlar hariç olmak üzere (Harita-10-4),
+5) Akbük Limanında; (37° 1' 25.86" K - 28° 6' 51.78" D) ile (37° 2' 6.48" K - 28° 6'
+54.90" D) koordinat noktalarını birleştiren hattın batısında kalan alanda kıyıdan olta takımları
+ile yapılanlar hariç olmak üzere (Harita-10-5),
+h) İzmir İli, Aliağa İlçesi Karaağaç mevkiinde; Ege Gaz A.Ş. LNG Terminaline ait  (38°
+49' 2.82" K - 26° 54' 42.18" D), (38° 49' 8.22" K - 26° 54' 26.70" D), (38° 49' 42.30" K -  26°
+54' 46.02" D), (38° 49' 31.08" K - 26° 55' 18.42" D) koordinatları arasında kalan özel güvenlik
+bölgesinin yer aldığı alanda (Harita-11),
+ı) İzmir Körfezinde; balıkçı gemilerinin bölgede bulunan balıkçı barınaklarına giriş ve
+çıkışları serbest olmak üzere, İnciraltı Kent Ormanı (38° 24' 54" K - 27° 3' 36" D) ile Şemikler
+(Mavişehir) Balıkçı Barınağı (38° 27' 59" K- 27° 4' 45" D) arasında çekilen hattın doğusunda
+kalan alanda (Harita-12),
+i) Balıkesir İli, Edremit İlçesinde yapay resif bloklarının bulunduğu (39° 33' 17.64" K
+- 26° 40' 22.26" D), (39° 33' 13.44" K - 26° 41' 31.98" D), (39° 33' 29.28" K - 26° 42' 18.60"
+D), (39° 33' 21.48" K - 26° 42' 21.54" D), (39° 33' 1.44" K - 26° 41' 34.86" D), (39° 33' 6.18"
+K - 26° 40' 18.72" D) koordinat noktaları arasında kalan alanda (Harita-13),
+Sayfa : 102                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+j) Çanakkale İli, Gökçeada İlçesinde; Gökçeada Deniz Parkının bulunduğu Yıldız Koyu
+(40° 14' 11.16" K - 25° 54' 43.80" D) ile Çiftlik Koyu (40° 14' 25.92" K - 25° 56' 6.72" D) ara-
+sında kıyıdan itibaren 1 mil mesafedeki alanda (Harita-14),
+k) Çanakkale İli, Gelibolu İlçesi ile Lapseki İlçesi arasında bulunan 1915 Çanakkale
+Köprüsünün yer aldığı (40° 19' 35" K - 26° 39' 2" D), (40° 20' 42" K - 26° 36' 52" D), (40° 21'
+8" K - 26° 37' 21" D), (40° 19' 58" K - 26° 39' 40" D) koordinat noktaları arasında kalan deniz
+alanında,  (Harita-15),
+l) Yalova İli, İDO İskelesinin Önü, (40° 39' 42.41'' K - 29° 16' 43.24'' D), (40° 39' 46.16''
+K - 29° 16' 43.93'' D), (40° 39' 45.69'' K - 29° 16' 49.46'' D), (40° 39' 36.87'' K - 29° 16' 47.06''
+D) koordinatları arasında kalan alanda (Harita-16),
+m) Yalova İli, Altınova İlçesi ile Kocaeli İli, Gebze İlçesi arasında bulunan Osmangazi
+Köprüsü’nün 500 m. sağında ve solunda kalan (40° 44' 12.7'' K - 29° 30' 59.22'' D), (40° 46'
+8.11'' K - 29° 31' 22.69'' D), (40° 46' 11.03'' K- 29° 30' 46.15'' D), (40° 43' 55.02'' K - 29° 30'
+30.06'' D) koordinat noktaları arasında kalan alanda (Harita-17),
+n) Samsun İli, Bilgin Samsun Doğalgaz Kombine Çevrim Santralinin bulunduğu (41°
+9' 24.81" K - 37° 9' 5.85" D), (41° 9' 24.53" K - 37° 9' 41.43" D), (41° 8' 52.42" K - 37° 9'
+41.05" D), (41° 8' 53.97" K - 37° 9' 5.23" D) koordinat noktalarını birleştiren alanda (Harita-
+18),
+o) Samsun İli, Tekkeköy İlçesi (41° 14' 44.43'' K - 36° 25' 36.49'' D), (41° 15' 24.85'' K
+- 36° 25' 38.03'' D), (41° 15' 25.78'' K - 36° 27' 40.08'' D), (41° 14' 44.32'' K - 36° 27' 43.33''
+D) koordinatları arasında kalan alanda (Harita-19),
+ö) Ordu-Giresun Havalimanının bulunduğu (40° 58' 6.24" K - 38° 3' 19.92" D), (40°
+58' 33.54" K - 38° 3' 20.64" D), (40° 58' 33.96" K - 38° 4' 26.16" D), (40° 58' 6.18" K - 38° 7'
+8.34"D), (40° 57' 26.10" K - 38° 7' 8.16" D) koordinat noktaları arasında kalan alanda (Hari-
+ta-20),
+p) Rize - Artvin Havalimanının bulunduğu (41° 10' 03.13" K - 40° 49' 28.60" D), (41°
+10' 43.13" K - 40° 49' 09.60" D), (41° 10' 58.26" K - 40° 52' 38.83" D), (41° 11' 34.19" K - 40°
+52' 26.16" D) koordinat noktalarını birleştiren alan içinde (Harita-21),
+r) Muğla İli, Güllük Dalyanı dalyan kuzuluklarından itibaren deniz yönünde 500 met-
+relik mesafe içerisinde,
+su ürünleri avcılığı yapmak yasaktır.
+(2) Akdeniz fokunun yaşadığı sualtı veya su üstü girişli kıyı mağaralarında ışık kullan-
+mak, her türlü vasıta ile dalış yapmak, yüzerek veya herhangi bir deniz vasıtasıyla girmek, ma-
+ğara girişlerinde beklemek, demirlemek ve avlanmak yasaktır.
+(3) Kültür ve tabiat varlıklarını korumak amacıyla belirlenen ve 5/4/2016 tarihli ve
+2016/8743 sayılı Bakanlar Kurulu Kararı ile yürürlüğe konulan ve aynı Bakanlar Kurulu Ka-
+rarının eki Karadeniz’de yer alan dalışa yasak alanlar 9/12/2018 tarihli ve 435 sayılı Cumhur-
+başkanı Kararı ile güncellenen, Ege’de yer alan dalışa yasak alanlar ise 1/4/2020 tarihli ve
+2339 sayılı Cumhurbaşkanı Kararı, 27/7/2020 tarihli ve 2802 sayılı Cumhurbaşkanı Kararı,
+5/1/2022 tarihli ve 5068 sayılı Cumhurbaşkanı Kararı ile dalışa yasak alanlara ilişkin koordi-
+natları güncellenen ve ilan edilen bölgelerde dalış yapılarak su ürünleri avcılığı yapmak ya-
+saktır.
+(4) Limanlarda, balıkçı barınak, barınma ve çekek yerlerinde dalış yapılarak su ürünleri
+avcılığı yasaktır.
+(5) Deniz Askeri Yasak Bölgelerinde su ürünleri avcılığı yapmak yasaktır.
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                             Sayfa : 103
+ALTINCI BÖLÜM
+Yasal İşlemler ve Yasak Kararları
+Koruma ve kontrolle görevli olanlar
+MADDE 18- (1) Tarım ve Orman Bakanlığı  teşkilatında ve Bakanlığa bağlı su ürünleri
+ile ilgili teşekküllerde su ürünlerinin, deniz ve iç suların koruma ve kontrolü ile görevlendirilen
+personel ile emniyet, jandarma, sahil güvenlik, gümrük ve orman muhafaza teşkilatları men-
+supları, belediye zabıtası amir ve mensupları, kamu tüzel kişilerine bağlı muhafız, bekçi ve
+korucular ile emniyet ve jandarma teşkilatının bulunmadığı yerlerde köy muhtar ve ihtiyar he-
+yeti üyeleri koruma ve kontrolle görevlidir.
+(2) Koruma ve kontrolle görevli olanlar, 1380 sayılı Kanun kapsamına giren kabahatler
+hakkında tutanak tutmak, kabahatte kullanılan istihsal vasıtalarına ve elde edilen su ürünlerine
+el koymak, anılan Kanunun ek 3 üncü maddesinde yer alan hükümler çerçevesinde idari para
+cezalarını kesmekle vazifeli ve yetkilidirler.
+İdari yaptırımlar
+MADDE 19- (1) Koruma ve kontrolle görevli olanlar tarafından aykırılığın niteliğinin
+ticari veya amatör olup olmadığının belirlenmesinde; 
+a) Amatör amaçlı su ürünleri avcılığında alıkonulabilir miktara izin verilen ürün mik-
+tarından 3 kat veya daha fazla ürün,
+b) Avlanması tamamen yasaklanmış türlerden, tür veya sayı bazında birden fazla ürün,
+c) Zaman yasağında olan türlerden, amatör amaçlı su ürünleri avcılığında izin verilen
+miktardan 2 kat veya daha fazla ürün,
+ç) Amatör amaçlı su ürünleri avcılığında kullanılmasına izin verilen av aracı sayısından
+(iğne sayısı hariç) 2 kat veya daha fazla av aracı,
+d) Yemlik uzatma ağı hariç her türlü germe, uzatma, sürütme, çevirme ve benzeri ağlar
+ve ticari amaçlı su ürünleri avcılığında kullanımına izin verilen diğer av araçları,
+e) Amatör avcılıkta kullanımı yasaklanmış birden fazla av aracı,
+f) Her türlü patlayıcı, öldürücü, bayıltıcı, uyuşturucu, uyutucu, uyarıcı maddeler, karpit,
+sönmemiş kireç, balık otu, elektroşok ve benzerlerinin kullanıldığı, tespit edilen kabahatler, ti-
+cari amaçla yapılan avcılık faaliyetine aykırılık kapsamında değerlendirilir ve 1380 sayılı Ka-
+nunda söz konusu kabahatlere ilişkin öngörülen yaptırımlar uygulanır.
+(2) Aykırılığın niteliğinin ticari olarak değerlendirilmesinde, bu maddenin birinci fık-
+rasında belirtilen hususlardan bir tanesinin gerçekleşmesi yeterlidir.
+(3) Bu maddenin birinci fıkrasında yer alan hususlarda belirtilen limitlere kadar olan
+aykırılıklar; söz konusu fıkranın (d) ve (f) bentleri hariç olmak üzere, amatör amaçla yapılan
+avcılık faaliyetine aykırılık kapsamında değerlendirilir ve 1380 sayılı Kanunun 36 ncı madde-
+sinin birinci fıkrasının  (k) bendinde amatör amaçla yapılacak avcılık faaliyetlerine yönelik
+olarak getirilen hükümlere aykırı hareket edenler için öngörülen yaptırımlar uygulanır.
+Yasak kararları
+MADDE 20- (1) Bu Tebliğde belirtilen yasak, sınırlama ve yükümlülükleri belirlemeye
+ve ilân etmeye Bakanlık yetkilidir. Mülki idareler, diğer bakanlıklar ve ilgili kamu kuruluşları,
+özel ve tüzel kişiler; bu yasaklara aykırı veya yeni yasaklama kararı alamaz, ilan edemez.
+YEDİNCİ BÖLÜM
+Çeşitli ve Son Hükümler
+Yürürlükten kaldırılan tebliğ
+MADDE 21- (1) 22/8/2020 tarihli ve 31221 sayılı Resmî Gazete’de yayımlanan 5/2
+Numaralı Amatör Amaçlı Su Ürünleri Avcılığının Düzenlenmesi Hakkında Tebliğ (Tebliğ No:
+2020/21) yürürlükten kaldırılmıştır.
+Yürürlük
+MADDE 22- (1) Bu Tebliğ 1/9/2024 tarihinde yürürlüğe girer.
+Yürütme
+MADDE 23- (1) Bu Tebliğ hükümlerini Tarım ve Orman Bakanı yürütür.
+Sayfa : 104                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                             Sayfa : 105
+Sayfa : 106                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                             Sayfa : 107
+Sayfa : 108                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                             Sayfa : 109
+Sayfa : 110                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                             Sayfa : 111
+Sayfa : 112                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                             Sayfa : 113
+Sayfa : 114                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                             Sayfa : 115
+Sayfa : 116                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                             Sayfa : 117
+Sayfa : 118                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                             Sayfa : 119
+Sayfa : 120                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
+11 Ağustos 2024 – Sayı : 32629                             RESMÎ GAZETE                             Sayfa : 121
+Sayfa : 122                             RESMÎ GAZETE                             11 Ağustos 2024 – Sayı : 32629
