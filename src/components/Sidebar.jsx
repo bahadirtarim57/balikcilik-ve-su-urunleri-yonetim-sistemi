@@ -42,7 +42,7 @@ const defaultSections = [
   },
   {
     id: 'section-ipc',
-    title: 'BALIKÇILIK VE SU ÜRÜNLERİ YÖNETİMİ°',
+    title: '1380 SAYILI YASA İHLALLERİ',
     items: [
       { id: '/kanun-maddeleri', label: 'Kanun Rehberi', iconName: 'BookOpen', link: '/kanun-maddeleri' },
       { id: '/hesaplama', label: 'İhlal Karşılığı İPC Hazırlama', iconName: 'Calculator', link: '/hesaplama' },
