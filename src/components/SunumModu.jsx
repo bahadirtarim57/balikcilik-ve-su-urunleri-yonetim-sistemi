@@ -181,7 +181,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
     // Slide 1: Başlık
     let slide1 = pres.addSlide();
     slide1.background = { color: '0f172a' };
-    slide1.addText("SİNOP İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİÄİ", { x: 1, y: 2.5, w: 8, fontSize: 36, bold: true, color: 'ffffff', align: 'center' });
+    slide1.addText("SİNOP İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİĞİ", { x: 1, y: 2.5, w: 8, fontSize: 36, bold: true, color: 'ffffff', align: 'center' });
     slide1.addText("SİSTEM ANALİZ RAPORU (DİNAMİK VERİ MOTORU)", { x: 1, y: 3.5, w: 8, fontSize: 24, color: '38bdf8', align: 'center' });
 
     // Slide 2: Genel Durum (Yönetim Özeti)
@@ -200,7 +200,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
     // Slide 3: Çizelge 51
     let slide3 = pres.addSlide();
     slide3.background = { color: 'f0f4f8' };
-    slide3.addText("SU ÜRÜNLERİ ÜRETİM VE YETİŞTİRİCİLİK FAALİYETLERİ", { x: 0.5, y: 0.3, fontSize: 24, bold: true, color: '1e3a8a' });
+    slide3.addText("SU ÜRÜNLERİ ÜRETİM VE YETİŞTİRİCİLİĞİYETLERİ", { x: 0.5, y: 0.3, fontSize: 24, bold: true, color: '1e3a8a' });
     
     let rows3 = [
       [{ text: "TESİS TÜRÜ / STATÜ", options: { bold: true, fill: '1e293b', color: 'ffffff' } }, { text: "SAYISI", options: { bold: true, fill: '1e293b', color: 'ffffff' } }, { text: "PROJE KAPASİTESİ (Ton)", options: { bold: true, fill: '1e293b', color: 'ffffff' } }]
@@ -291,7 +291,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                     <>
                        <h2 style={{ fontSize: '32px', borderBottom: '2px solid #3b82f6', paddingBottom: '15px', marginBottom: '30px', color: '#fff', display: 'flex', alignItems: 'center' }}>
                            <Layers size={36} color="#3b82f6" style={{ marginRight: '15px' }}/>
-                           SU ÜRÜNLERİ ÜRETİM VE YETİŞTİRİCİLİK FAALİYETLERİ
+                           SU ÜRÜNLERİ ÜRETİM VE YETİŞTİRİCİLİĞİYETLERİ
                        </h2>
                        
                        <div style={{ maxHeight: '600px', overflowY: 'auto', paddingRight: '10px' }}>
@@ -362,7 +362,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                 leftContent={
                     <>
                        <h2 style={{ fontSize: '42px', color: '#fff', borderBottom: '2px solid #10b981', paddingBottom: '20px', marginBottom: '40px', display:'flex', alignItems:'center' }}>
-                           <PieChart size={42} style={{marginRight: '20px', color: '#10b981'}}/> TESİS TÜRÜ DAÄILIMI
+                           <PieChart size={42} style={{marginRight: '20px', color: '#10b981'}}/> TESİS TÜRÜ DAĞILIMI
                        </h2>
                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh' }}>
                            <ResponsiveContainer width="100%" height="100%">
@@ -386,7 +386,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                 leftContent={
                     <>
                        <h2 style={{ fontSize: '42px', color: '#fff', borderBottom: '2px solid #8b5cf6', paddingBottom: '20px', marginBottom: '40px', display:'flex', alignItems:'center' }}>
-                           <BarChart3 size={42} style={{marginRight: '20px', color: '#8b5cf6'}}/> İLÇELER BAZLI TESİS DAÄILIMI
+                           <BarChart3 size={42} style={{marginRight: '20px', color: '#8b5cf6'}}/> İLÇELER BAZLI TESİS DAĞILIMI
                        </h2>
                        <div style={{ height: '60vh' }}>
                            <ResponsiveContainer width="100%" height="100%">
@@ -589,7 +589,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
          <div style={{ display: 'flex', alignItems: 'center' }}>
             <Presentation size={48} style={{ marginRight: '20px' }} />
             <div>
-              <h1 style={{ margin: 0, fontSize: '32px', fontWeight: 'bold', letterSpacing: '-0.5px' }}>SİNOP İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİÄİ</h1>
+              <h1 style={{ margin: 0, fontSize: '32px', fontWeight: 'bold', letterSpacing: '-0.5px' }}>SİNOP İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİĞİ</h1>
               <p style={{ margin: '8px 0 0 0', fontSize: '18px', opacity: 0.9 }}>SİSTEM ANALİZ RAPORU (Dashboard)</p>
             </div>
          </div>

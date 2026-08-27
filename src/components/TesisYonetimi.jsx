@@ -33,7 +33,7 @@ const getTesisTuru = (sekme, tesisAdi, ilce) => {
     if (t.includes('MİDYE') || s.includes('MİDYE')) return 'Çift Kabuklu Yetiştiriciliği';
     if (t.includes('BARAJ') || t.includes('GÖL') || s.includes('BARAJ') || s.includes('GÖL')) return 'Baraj / Göl Üretimi';
     if (s.includes('SAHA')) return 'Deniz Yetiştiriciliği';
-    if (['SARAYDÜZÜ', 'BOYABAT', 'DURAÄAN', 'ERFELEK'].includes(i)) return 'Karasal Üretim';
+    if (['SARAYDÜZÜ', 'BOYABAT', 'DURAĞAN', 'ERFELEK'].includes(i)) return 'Karasal Üretim';
     return 'Deniz Yetiştiriciliği';
 };
 
