@@ -181,8 +181,8 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
     // Slide 1: Başlık
     let slide1 = pres.addSlide();
     slide1.background = { color: '0f172a' };
-    slide1.addText("SİNOP İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİĞİ", { x: 1, y: 2.5, w: 8, fontSize: 36, bold: true, color: 'ffffff', align: 'center' });
-    slide1.addText("SİSTEM ANALİZ RAPORU (DİNAMİK VERİ MOTORU)", { x: 1, y: 3.5, w: 8, fontSize: 24, color: '38bdf8', align: 'center' });
+    const cityName = (localStorage.getItem('app-selectedCity') || 'SİNOP').toUpperCase();
+    slide1.addText(`${cityName} İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİĞİ`, { x: 1, y: 3.0, w: 8, fontSize: 36, bold: true, color: 'ffffff', align: 'center' });
 
     // Slide 2: Genel Durum (Yönetim Özeti)
     let slide2 = pres.addSlide();
@@ -589,8 +589,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
          <div style={{ display: 'flex', alignItems: 'center' }}>
             <Presentation size={48} style={{ marginRight: '20px' }} />
             <div>
-              <h1 style={{ margin: 0, fontSize: '32px', fontWeight: 'bold', letterSpacing: '-0.5px' }}>SİNOP İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİĞİ</h1>
-              <p style={{ margin: '8px 0 0 0', fontSize: '18px', opacity: 0.9 }}>SİSTEM ANALİZ RAPORU (Dashboard)</p>
+              <h1 style={{ margin: 0, fontSize: '32px', fontWeight: 'bold', letterSpacing: '-0.5px' }}>{(localStorage.getItem('app-selectedCity') || 'SİNOP').toUpperCase()} İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİĞİ</h1>
             </div>
          </div>
          <div style={{ display: 'flex', gap: '15px' }}>
@@ -602,14 +601,8 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
             </button>
          </div>
       </div>
-      <div style={{ background: 'white', padding: '40px', borderRadius: '16px', textAlign: 'center', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
-          <BarChart3 size={80} color="#3b82f6" style={{ marginBottom: '20px' }}/>
-          <h2 style={{ color: '#1e293b', fontSize: '28px', marginBottom: '15px' }}>Dinamik Veri Motoru Aktif</h2>
-          <p style={{ color: '#64748b', fontSize: '18px', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
-             Sistemdeki tüm Kafes Hacimleri, Halat Sayıları, Proje Adetleri ve Koordinatlar tamamen otonom olarak taranmakta ve bu resmi sunum ekranlarına canlı olarak aktarılmaktadır.
-             <br/><br/>
-             Verileri görüntülemek için sağ üstteki <b>"Sunumu Başlat"</b> butonuna tıklayın.
-          </p>
+      <div style={{ background: 'white', padding: '120px 40px', borderRadius: '16px', textAlign: 'center', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
+          <BarChart3 size={120} color="#f1f5f9" />
       </div>
     </div>
   );

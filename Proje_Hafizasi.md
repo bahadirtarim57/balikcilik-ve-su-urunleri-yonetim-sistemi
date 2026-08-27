@@ -343,3 +343,9 @@ px vercel --prod) sağlandı.
 - **CRUD Operasyonları Yenilendi:** TesisYonetimi.jsx, HaritaRadar.jsx ve SunumModu.jsx bileşenlerindeki veri okuma ve yazma işlemleri tamamen Supabase JS İstemcisi üzerinden asenkron (wait supabase.from('tesisler').select('*')) olarak çalışacak şekilde yeniden kodlandı.
 - **Git Geçmişi Sıfırlaması (Büyük Temizlik):** Eski '.zip' yedekleri nedeniyle 1GB boyutuna ulaşan ve Push işlemlerini kitleyen '.git' geçmişi tamamen imha edildi. Proje sıfırdan küçük, hafif ve tertemiz bir commit ile GitHub'a yüklendi.
 - **Vercel Canlı Yayını & Çevresel Değişkenler:** Proje resmi olarak Vercel üzerinden dünyaya açıldı. Vite ile Supabase arasındaki güvenlik köprüsünü kuran .env.local ve .env şifreleme dosyaları oluşturuldu ve Vercel CLI (Komut Satırı) üzerinden başarılı bir şekilde canlı ortama enjekte edilerek (Redeploy) sistemin bulut üzerinde pürüzsüz çalışması sağlandı.
+
+### 27 Ağustos 2026 Güncellemeleri
+- SunumModu.jsx içerisindeki PieChart simge çakışması ve currentSlide isimlendirme hatası (setSlide hatası) giderilerek uygulama çökmeleri onarıldı.
+- Sidebar ve TesisYonetimi bileşenlerindeki gereksiz/kalabalık metinler temizlendi, başlıklar ortalandı ve sadeleştirildi.
+- Tesis Yönetimi sayfasına, üstten seçilen ile göre dinamik çalışan plaka ve ilçe bazlı izole veri filtreleme (CITY_PLATES) entegre edildi. Artık bir ilin verisi (örn. 57 Sinop) diğer illere sızmıyor.
+
