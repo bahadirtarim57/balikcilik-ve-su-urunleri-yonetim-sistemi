@@ -165,7 +165,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
   const handlePublish = async () => {
     if (!window.confirm("Sitenin yeni sürümünü Vercel'da yayınlamak istediğinize emin misiniz? Bu işlem 20-30 saniye sürebilir.")) return;
     setIsPublishing(true);
-    const publishToast = toast.loading("Sistem derleniyor ve yayınlanıyor... Lütfen bekleyin ğŸš€");
+      const publishToast = toast.loading("Sistem derleniyor ve yayınlanıyor... Lütfen bekleyin.");
     try {
       const res = await fetch('/api/publish', { method: 'POST' });
       const data = await res.json();
