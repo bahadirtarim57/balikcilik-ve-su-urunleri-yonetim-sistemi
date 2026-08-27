@@ -1,6 +1,6 @@
 ﻿import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Presentation, Home, Fish, Archive, BookOpen, Calculator, Settings, Users, Scale, PieChart, Shield, LogOut, UserCog, Database, FileText, Rocket, TrendingUp, Ship, CheckCircle, AlertTriangle, MapPin, Building2, FileBadge , ChevronDown, ChevronUp} from 'lucide-react';
+import { Presentation, Home, Fish, Archive, BookOpen, Calculator, Settings, Users, Scale, PieChart, Shield, LogOut, UserCog, Database, FileText, Rocket, TrendingUp, Ship, CheckCircle, AlertTriangle, MapPin, Building2, FileBadge , ChevronDown, ChevronUp} , Globe } from 'lucide-react';
 import { getMinistryName, PERSONELLER } from '../utils/excelData';
 import { toast } from 'react-hot-toast';
 import { useAuth } from '../context/AuthContext';
@@ -448,6 +448,10 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
           </button>
           
           {window.location.hostname === 'localhost' && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <button onClick={() => window.open('https://balikcilik-ve-su-urunleri-yonetim-sistemi.vercel.app', '_blank')} style={{ width: '100%', background: '#3b82f6', border: 'none', padding: '8px 0', borderRadius: '6px', fontSize: '12px', fontWeight: 600, color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', transition: 'all 0.2s' }}>
+                  <Globe size={14} /> CANLI SİTEYE GİT
+                </button>
             <button onClick={handlePublish} disabled={isPublishing} style={{ width: '100%', background: isPublishing ? '#94a3b8' : '#10b981', border: 'none', padding: '8px 0', borderRadius: '6px', fontSize: '12px', fontWeight: 600, color: 'white', cursor: isPublishing ? 'wait' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', transition: 'all 0.2s' }}>
               <Rocket size={14} className={isPublishing ? "animate-pulse" : ""} />
               {isPublishing ? 'YAYINLANIYOR...' : 'SÄ°TEYÄ° YAYINLA'}
