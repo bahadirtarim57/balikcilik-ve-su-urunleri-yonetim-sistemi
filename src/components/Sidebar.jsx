@@ -307,17 +307,14 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
         <div style={{ fontSize: '11px', fontWeight: '800', color: '#059669', letterSpacing: '0.5px', marginBottom: '4px', textTransform: 'uppercase' }}>
           {ministryName}
         </div>
-        <div style={{ fontSize: '12px', color: '#475569', fontWeight: '600', marginBottom: '2px' }}>
+        <div style={{ fontSize: '12px', color: '#475569', fontWeight: '600', marginBottom: '16px' }}>
           {selectedCity ? `${selectedCity} İl Tarım ve Orman Müdürlüğü` : 'İl Seçilmedi'}
-        </div>
-        <div style={{ fontSize: '12px', color: '#64748b', marginBottom: '16px' }}>
-          {selectedUnit || 'Birim Seçilmedi'}
         </div>
         
         <div style={{ width: '40px', height: '2px', background: '#10b981', marginBottom: '12px' }}></div>
 
-        <div style={{ fontSize: '16px', fontWeight: '800', color: '#0f172a', lineHeight: '1.2', letterSpacing: '0.5px' }}>
-          ŞUBE YÖNETİM SİSTEMİ
+        <div style={{ fontSize: '16px', fontWeight: '800', color: '#0f172a', lineHeight: '1.3', letterSpacing: '0.5px', textAlign: 'center' }}>
+          BALIKÇILIK VE SU ÜRÜNLERİ ŞUBESİ<br/>YÖNETİM SİSTEMİ
         </div>
       </div>
       
