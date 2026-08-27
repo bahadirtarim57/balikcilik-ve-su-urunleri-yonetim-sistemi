@@ -200,7 +200,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
     // Slide 3: Çizelge 51
     let slide3 = pres.addSlide();
     slide3.background = { color: 'f0f4f8' };
-    slide3.addText("SU ÜRÜNLERİ ÜRETİM VE YETİŞTİRİCİLİĞİYETLERİ", { x: 0.5, y: 0.3, fontSize: 24, bold: true, color: '1e3a8a' });
+    slide3.addText("SU ÜRÜNLERİ ÜRETİM VE YETİŞTİRİCİLİK FAALİYETLERİ", { x: 0.5, y: 0.3, fontSize: 24, bold: true, color: '1e3a8a' });
     
     let rows3 = [
       [{ text: "TESİS TÜRÜ / STATÜ", options: { bold: true, fill: '1e293b', color: 'ffffff' } }, { text: "SAYISI", options: { bold: true, fill: '1e293b', color: 'ffffff' } }, { text: "PROJE KAPASİTESİ (Ton)", options: { bold: true, fill: '1e293b', color: 'ffffff' } }]
@@ -291,7 +291,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                     <>
                        <h2 style={{ fontSize: '32px', borderBottom: '2px solid #3b82f6', paddingBottom: '15px', marginBottom: '30px', color: '#fff', display: 'flex', alignItems: 'center' }}>
                            <Layers size={36} color="#3b82f6" style={{ marginRight: '15px' }}/>
-                           SU ÜRÜNLERİ ÜRETİM VE YETİŞTİRİCİLİĞİYETLERİ
+                           SU ÜRÜNLERİ ÜRETİM VE YETİŞTİRİCİLİK FAALİYETLERİ
                        </h2>
                        
                        <div style={{ maxHeight: '600px', overflowY: 'auto', paddingRight: '10px' }}>
