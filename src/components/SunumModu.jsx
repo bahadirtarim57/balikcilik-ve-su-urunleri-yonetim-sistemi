@@ -79,20 +79,20 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
 
     dataList.forEach(t => {
         let status = t.finalStatus || 'Aktif';
-        if (status === 'Aktif' || status === 'Kiralama AÅŸamasÄ±nda' || status.includes('Kiralama')) summary.aktif++;
+        if (status === 'Aktif' || status === 'Kiralama Aşamasında' || status.includes('Kiralama')) summary.aktif++;
         else if (status === 'Pasif') summary.pasif++;
-        else if (status === 'Ä°ptal' || status.includes('iptal') || status === 'ptal') summary.iptal++;
+        else if (status === 'İptal' || status.includes('iptal') || status === 'ptal') summary.iptal++;
         else if (status === 'Devredildi' || status.includes('Devir')) summary.devir++;
 
-          let t_tur = t.tur === 'Ã‡ift Kabuklu YetiÅŸtiriciliÄŸi' ? 'midye' : 
-                      t.tur === 'Deniz YetiÅŸtiriciliÄŸi' ? 'deniz' :
-                      t.tur === 'Karasal Ãœretim' ? 'karasal' : 
-                      t.tur === 'Baraj / GÃ¶l Ãœretimi' ? 'baraj' : 'deniz';
+          let t_tur = t.tur === 'Çift Kabuklu Yetiştiriciliği' ? 'midye' : 
+                      t.tur === 'Deniz Yetiştiriciliği' ? 'deniz' :
+                      t.tur === 'Karasal Üretim' ? 'karasal' : 
+                      t.tur === 'Baraj / Göl Üretimi' ? 'baraj' : 'deniz';
           
           let t_stat = 'faal';
           if (status === 'Pasif') t_stat = 'araVeren';
-          else if (status.includes('Ã–n Ä°zin') || status.includes('Belirsiz') || status.includes('MÃ¼racaat')) t_stat = 'onIzin';
-          else if (status.includes('Ä°ptal') || status.includes('iptal') || status.includes('Devir') || status.includes('ptal')) t_stat = 'iptal';
+          else if (status.includes('Ön İzin') || status.includes('Belirsiz') || status.includes('Müracaat')) t_stat = 'onIzin';
+          else if (status.includes('İptal') || status.includes('iptal') || status.includes('Devir') || status.includes('ptal')) t_stat = 'iptal';
 
           let kap_c = parseNumber(t.kapasite);
           let fiili_c = parseNumber(t.fiiliKapasite);
@@ -106,16 +106,16 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
           }
 
 
-        if (status === 'Aktif' || status === 'Kiralama AÅŸamasÄ±nda' || status.includes('Kiralama')) {
+        if (status === 'Aktif' || status === 'Kiralama Aşamasında' || status.includes('Kiralama')) {
             let kap = parseNumber(t.kapasite);
             let mevcut = parseNumber(t.fiiliKapasite);
             summary.toplamKapasite += kap;
             summary.toplamMevcutBalik += mevcut;
             
-            let isKarasal = t.tur === 'Karasal Ãœretim';
-            let isMidye = t.tur === 'Ã‡ift Kabuklu YetiÅŸtiriciliÄŸi';
+            let isKarasal = t.tur === 'Karasal Üretim';
+            let isMidye = t.tur === 'Çift Kabuklu Yetiştiriciliği';
             let isDeniz = t.tur && (t.tur.includes('Deniz') || t.tur === 'Deniz Kafesleri');
-            let isBaraj = t.tur && (t.tur.includes('Baraj') || t.tur.includes('GÃ¶l'));
+            let isBaraj = t.tur && (t.tur.includes('Baraj') || t.tur.includes('Göl'));
 
             if (!isKarasal && !isMidye && !isDeniz && !isBaraj) isDeniz = true; 
             
@@ -142,15 +142,15 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                 midye.mevcutSistem += sumAdet(t.mevcutKafesList) || Number(t.mevcutKafes) || 0;
             }
             
-            if (t.ilce && t.ilce !== 'Belirsiz / DiÄŸer' && t.ilce !== 'Belirsiz') {
+            if (t.ilce && t.ilce !== 'Belirsiz / Diğer' && t.ilce !== 'Belirsiz') {
                 ilceMap[t.ilce] = (ilceMap[t.ilce] || 0) + 1;
             }
             if (t.tur) {
                 let rTur = t.tur;
-                if (rTur.includes("Karasal")) rTur = "Karasal Ãœretim";
+                if (rTur.includes("Karasal")) rTur = "Karasal Üretim";
                 else if (rTur.includes("Deniz") || rTur.includes("Kafes") && isDeniz) rTur = "Deniz Kafesleri";
-                else if (rTur.includes("Baraj") || rTur.includes("GÃ¶l")) rTur = "Baraj/GÃ¶l Ãœretimi";
-                else if (rTur.includes("Kabuklu") || rTur.includes("Midye")) rTur = "Ã‡ift Kabuklu (Midye)";
+                else if (rTur.includes("Baraj") || rTur.includes("Göl")) rTur = "Baraj/Göl Üretimi";
+                else if (rTur.includes("Kabuklu") || rTur.includes("Midye")) rTur = "Çift Kabuklu (Midye)";
                 turMap[rTur] = (turMap[rTur] || 0) + 1;
             }
             
@@ -178,51 +178,51 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
     let pres = new pptxgen();
     pres.layout = 'LAYOUT_16x9';
 
-    // Slide 1: BaÅŸlÄ±k
+    // Slide 1: Başlık
     let slide1 = pres.addSlide();
     slide1.background = { color: '0f172a' };
-    slide1.addText("SÄ°NOP Ä°LÄ° SU ÃœRÃœNLERÄ° YETÄ°ÅTÄ°RÄ°CÄ°LÄ°ÄÄ°", { x: 1, y: 2.5, w: 8, fontSize: 36, bold: true, color: 'ffffff', align: 'center' });
-    slide1.addText("SÄ°STEM ANALÄ°Z RAPORU (DÄ°NAMÄ°K VERÄ° MOTORU)", { x: 1, y: 3.5, w: 8, fontSize: 24, color: '38bdf8', align: 'center' });
+    slide1.addText("SİNOP İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİÄİ", { x: 1, y: 2.5, w: 8, fontSize: 36, bold: true, color: 'ffffff', align: 'center' });
+    slide1.addText("SİSTEM ANALİZ RAPORU (DİNAMİK VERİ MOTORU)", { x: 1, y: 3.5, w: 8, fontSize: 24, color: '38bdf8', align: 'center' });
 
-    // Slide 2: Genel Durum (YÃ¶netim Ã–zeti)
+    // Slide 2: Genel Durum (Yönetim Özeti)
     let slide2 = pres.addSlide();
     slide2.background = { color: 'f0f4f8' };
-    slide2.addText("GENEL DURUM (YÃ–NETÄ°M Ã–ZETÄ°)", { x: 0.5, y: 0.5, fontSize: 28, bold: true, color: '1e3a8a' });
+    slide2.addText("GENEL DURUM (YÖNETİM ÖZETİ)", { x: 0.5, y: 0.5, fontSize: 28, bold: true, color: '1e3a8a' });
     
     let rows2 = [
-      [{ text: "AKTÄ°F TESÄ°S", options: { bold: true, fill: '10b981', color: 'ffffff' } }, { text: "TOPLAM KAPASÄ°TE", options: { bold: true, fill: '3b82f6', color: 'ffffff' } }],
-      [stats.summary.aktif.toString(), stats.summary.toplamKapasite.toLocaleString('tr-TR') + " Ton/YÄ±l"],
-      [{ text: "FÄ°Ä°LÄ° ÃœRETÄ°M", options: { bold: true, fill: 'f59e0b', color: 'ffffff' } }, { text: "DOLULUK ORANI", options: { bold: true, fill: 'ec4899', color: 'ffffff' } }],
-      [stats.summary.toplamMevcutBalik.toLocaleString('tr-TR') + " Ton/YÄ±l", "%" + ((stats.summary.toplamMevcutBalik / (stats.summary.toplamKapasite || 1)) * 100).toFixed(1)]
+      [{ text: "AKTİF TESİS", options: { bold: true, fill: '10b981', color: 'ffffff' } }, { text: "TOPLAM KAPASİTE", options: { bold: true, fill: '3b82f6', color: 'ffffff' } }],
+      [stats.summary.aktif.toString(), stats.summary.toplamKapasite.toLocaleString('tr-TR') + " Ton/Yıl"],
+      [{ text: "FİİLİ ÜRETİM", options: { bold: true, fill: 'f59e0b', color: 'ffffff' } }, { text: "DOLULUK ORANI", options: { bold: true, fill: 'ec4899', color: 'ffffff' } }],
+      [stats.summary.toplamMevcutBalik.toLocaleString('tr-TR') + " Ton/Yıl", "%" + ((stats.summary.toplamMevcutBalik / (stats.summary.toplamKapasite || 1)) * 100).toFixed(1)]
     ];
     slide2.addTable(rows2, { x: 0.5, y: 1.5, w: 9, rowH: 0.8, fontSize: 20, align: 'center', border: { type: 'solid', pt: 1, color: 'cccccc' } });
 
-    // Slide 3: Ã‡izelge 51
+    // Slide 3: Çizelge 51
     let slide3 = pres.addSlide();
     slide3.background = { color: 'f0f4f8' };
-    slide3.addText("SU ÃœRÃœNLERÄ° ÃœRETÄ°M VE YETÄ°ÅTÄ°RÄ°CÄ°LÄ°K FAALÄ°YETLERÄ°", { x: 0.5, y: 0.3, fontSize: 24, bold: true, color: '1e3a8a' });
+    slide3.addText("SU ÜRÜNLERİ ÜRETİM VE YETİŞTİRİCİLİK FAALİYETLERİ", { x: 0.5, y: 0.3, fontSize: 24, bold: true, color: '1e3a8a' });
     
     let rows3 = [
-      [{ text: "TESÄ°S TÃœRÃœ / STATÃœ", options: { bold: true, fill: '1e293b', color: 'ffffff' } }, { text: "SAYISI", options: { bold: true, fill: '1e293b', color: 'ffffff' } }, { text: "PROJE KAPASÄ°TESÄ° (Ton)", options: { bold: true, fill: '1e293b', color: 'ffffff' } }]
+      [{ text: "TESİS TÜRÜ / STATÜ", options: { bold: true, fill: '1e293b', color: 'ffffff' } }, { text: "SAYISI", options: { bold: true, fill: '1e293b', color: 'ffffff' } }, { text: "PROJE KAPASİTESİ (Ton)", options: { bold: true, fill: '1e293b', color: 'ffffff' } }]
     ];
     // Deniz
-    rows3.push([{ text: "DENÄ°Z VE BARAJ - FAAL", options: { bold: true, fill: 'e2e8f0' } }, String(stats.cizelge51.deniz.faal.sayi + stats.cizelge51.baraj.faal.sayi), (stats.cizelge51.deniz.faal.kap + stats.cizelge51.baraj.faal.kap).toLocaleString('tr-TR')]);
-    rows3.push([{ text: "DENÄ°Z VE BARAJ - ARA VEREN", options: { bold: true, fill: 'e2e8f0' } }, String(stats.cizelge51.deniz.araVeren.sayi + stats.cizelge51.baraj.araVeren.sayi), (stats.cizelge51.deniz.araVeren.kap + stats.cizelge51.baraj.araVeren.kap).toLocaleString('tr-TR')]);
+    rows3.push([{ text: "DENİZ VE BARAJ - FAAL", options: { bold: true, fill: 'e2e8f0' } }, String(stats.cizelge51.deniz.faal.sayi + stats.cizelge51.baraj.faal.sayi), (stats.cizelge51.deniz.faal.kap + stats.cizelge51.baraj.faal.kap).toLocaleString('tr-TR')]);
+    rows3.push([{ text: "DENİZ VE BARAJ - ARA VEREN", options: { bold: true, fill: 'e2e8f0' } }, String(stats.cizelge51.deniz.araVeren.sayi + stats.cizelge51.baraj.araVeren.sayi), (stats.cizelge51.deniz.araVeren.kap + stats.cizelge51.baraj.araVeren.kap).toLocaleString('tr-TR')]);
     // Karasal
     rows3.push([{ text: "KARASAL - FAAL", options: { bold: true, fill: 'f1f5f9' } }, String(stats.cizelge51.karasal.faal.sayi), stats.cizelge51.karasal.faal.kap.toLocaleString('tr-TR')]);
     rows3.push([{ text: "KARASAL - ASKIDA", options: { bold: true, fill: 'f1f5f9' } }, String(stats.cizelge51.karasal.araVeren.sayi), stats.cizelge51.karasal.araVeren.kap.toLocaleString('tr-TR')]);
     // Midye
-    rows3.push([{ text: "Ã‡Ä°FT KABUKLU - FAAL", options: { bold: true, fill: 'f8fafc' } }, String(stats.cizelge51.midye.faal.sayi), stats.cizelge51.midye.faal.kap.toLocaleString('tr-TR')]);
+    rows3.push([{ text: "ÇİFT KABUKLU - FAAL", options: { bold: true, fill: 'f8fafc' } }, String(stats.cizelge51.midye.faal.sayi), stats.cizelge51.midye.faal.kap.toLocaleString('tr-TR')]);
     
     slide3.addTable(rows3, { x: 0.5, y: 1.0, w: 9, rowH: 0.5, fontSize: 16, align: 'center', border: { type: 'solid', pt: 1, color: 'cbd5e1' } });
 
-    // Slide 4: En BÃ¼yÃ¼k 10 Ä°ÅŸletme
+    // Slide 4: En Büyük 10 İşletme
     let slide4 = pres.addSlide();
     slide4.background = { color: 'f0f4f8' };
-    slide4.addText("EN BÃœYÃœK 10 Ä°ÅLETME", { x: 0.5, y: 0.5, fontSize: 28, bold: true, color: '1e3a8a' });
+    slide4.addText("EN BÜYÜK 10 İŞLETME", { x: 0.5, y: 0.5, fontSize: 28, bold: true, color: '1e3a8a' });
     
     let rows4 = [
-      [{ text: "FÄ°RMA ADI", options: { bold: true, fill: '3b82f6', color: 'ffffff' } }, { text: "TÃœR", options: { bold: true, fill: '3b82f6', color: 'ffffff' } }, { text: "KAPASÄ°TE (Ton)", options: { bold: true, fill: '3b82f6', color: 'ffffff' } }]
+      [{ text: "FİRMA ADI", options: { bold: true, fill: '3b82f6', color: 'ffffff' } }, { text: "TÜR", options: { bold: true, fill: '3b82f6', color: 'ffffff' } }, { text: "KAPASİTE (Ton)", options: { bold: true, fill: '3b82f6', color: 'ffffff' } }]
     ];
     stats.topFirmalar.forEach(f => {
        rows4.push([f.firmaAdi, f.tur, f.parsedKapasite.toLocaleString('tr-TR')]);
@@ -291,43 +291,43 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                     <>
                        <h2 style={{ fontSize: '32px', borderBottom: '2px solid #3b82f6', paddingBottom: '15px', marginBottom: '30px', color: '#fff', display: 'flex', alignItems: 'center' }}>
                            <Layers size={36} color="#3b82f6" style={{ marginRight: '15px' }}/>
-                           SU ÃœRÃœNLERÄ° ÃœRETÄ°M VE YETÄ°ÅTÄ°RÄ°CÄ°LÄ°K FAALÄ°YETLERÄ°
+                           SU ÜRÜNLERİ ÜRETİM VE YETİŞTİRİCİLİK FAALİYETLERİ
                        </h2>
                        
                        <div style={{ maxHeight: '600px', overflowY: 'auto', paddingRight: '10px' }}>
-                           {/* DENÄ°Z TESÄ°SLERÄ° */}
+                           {/* DENİZ TESİSLERİ */}
                            <div style={{ background: 'rgba(56, 189, 248, 0.1)', border: '1px solid #38bdf8', borderRadius: '12px', padding: '20px', marginBottom: '20px' }}>
-                               <h3 style={{ color: '#38bdf8', marginTop: 0, marginBottom: '15px', borderBottom: '1px solid rgba(56, 189, 248, 0.3)', paddingBottom: '10px' }}>DENÄ°Z & BARAJ TESÄ°SLERÄ°</h3>
+                               <h3 style={{ color: '#38bdf8', marginTop: 0, marginBottom: '15px', borderBottom: '1px solid rgba(56, 189, 248, 0.3)', paddingBottom: '10px' }}>DENİZ & BARAJ TESİSLERİ</h3>
                                <table style={{ width: '100%', borderCollapse: 'collapse', color: '#cbd5e1', fontSize: '15px' }}>
                                    <tbody>
-                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>FAAL TESÄ°S</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>SayÄ±sÄ±: {stats.cizelge51.deniz.faal.sayi + stats.cizelge51.baraj.faal.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {(stats.cizelge51.deniz.faal.kap + stats.cizelge51.baraj.faal.kap).toLocaleString('tr-TR')} Ton</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Fiili: {(stats.cizelge51.deniz.faal.fiili + stats.cizelge51.baraj.faal.fiili).toLocaleString('tr-TR')} Ton</td></tr>
-                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>ÃœRETÄ°ME ARA VEREN</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>SayÄ±sÄ±: {stats.cizelge51.deniz.araVeren.sayi + stats.cizelge51.baraj.araVeren.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {(stats.cizelge51.deniz.araVeren.kap + stats.cizelge51.baraj.araVeren.kap).toLocaleString('tr-TR')} Ton</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Fiili: {(stats.cizelge51.deniz.araVeren.fiili + stats.cizelge51.baraj.araVeren.fiili).toLocaleString('tr-TR')} Ton</td></tr>
-                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>MÃœRACAAT / Ã–N Ä°ZÄ°N</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>SayÄ±sÄ±: {stats.cizelge51.deniz.onIzin.sayi + stats.cizelge51.baraj.onIzin.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {(stats.cizelge51.deniz.onIzin.kap + stats.cizelge51.baraj.onIzin.kap).toLocaleString('tr-TR')} Ton</td><td></td></tr>
-                                       <tr><td style={{padding: '8px'}}><b>Ä°PTAL / DEVÄ°R</b></td><td style={{padding: '8px'}}>SayÄ±sÄ±: {stats.cizelge51.deniz.iptal.sayi + stats.cizelge51.baraj.iptal.sayi}</td><td style={{padding: '8px'}}>Proje: {(stats.cizelge51.deniz.iptal.kap + stats.cizelge51.baraj.iptal.kap).toLocaleString('tr-TR')} Ton</td><td></td></tr>
+                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>FAAL TESİS</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Sayısı: {stats.cizelge51.deniz.faal.sayi + stats.cizelge51.baraj.faal.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {(stats.cizelge51.deniz.faal.kap + stats.cizelge51.baraj.faal.kap).toLocaleString('tr-TR')} Ton</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Fiili: {(stats.cizelge51.deniz.faal.fiili + stats.cizelge51.baraj.faal.fiili).toLocaleString('tr-TR')} Ton</td></tr>
+                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>ÜRETİME ARA VEREN</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Sayısı: {stats.cizelge51.deniz.araVeren.sayi + stats.cizelge51.baraj.araVeren.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {(stats.cizelge51.deniz.araVeren.kap + stats.cizelge51.baraj.araVeren.kap).toLocaleString('tr-TR')} Ton</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Fiili: {(stats.cizelge51.deniz.araVeren.fiili + stats.cizelge51.baraj.araVeren.fiili).toLocaleString('tr-TR')} Ton</td></tr>
+                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>MÜRACAAT / ÖN İZİN</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Sayısı: {stats.cizelge51.deniz.onIzin.sayi + stats.cizelge51.baraj.onIzin.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {(stats.cizelge51.deniz.onIzin.kap + stats.cizelge51.baraj.onIzin.kap).toLocaleString('tr-TR')} Ton</td><td></td></tr>
+                                       <tr><td style={{padding: '8px'}}><b>İPTAL / DEVİR</b></td><td style={{padding: '8px'}}>Sayısı: {stats.cizelge51.deniz.iptal.sayi + stats.cizelge51.baraj.iptal.sayi}</td><td style={{padding: '8px'}}>Proje: {(stats.cizelge51.deniz.iptal.kap + stats.cizelge51.baraj.iptal.kap).toLocaleString('tr-TR')} Ton</td><td></td></tr>
                                    </tbody>
                                </table>
                            </div>
 
-                           {/* Ã‡Ä°FT KABUKLU */}
+                           {/* ÇİFT KABUKLU */}
                            <div style={{ background: 'rgba(192, 132, 252, 0.1)', border: '1px solid #c084fc', borderRadius: '12px', padding: '20px', marginBottom: '20px' }}>
-                               <h3 style={{ color: '#c084fc', marginTop: 0, marginBottom: '15px', borderBottom: '1px solid rgba(192, 132, 252, 0.3)', paddingBottom: '10px' }}>Ã‡Ä°FT KABUKLU (MÄ°DYE) TESÄ°SLERÄ°</h3>
+                               <h3 style={{ color: '#c084fc', marginTop: 0, marginBottom: '15px', borderBottom: '1px solid rgba(192, 132, 252, 0.3)', paddingBottom: '10px' }}>ÇİFT KABUKLU (MİDYE) TESİSLERİ</h3>
                                <table style={{ width: '100%', borderCollapse: 'collapse', color: '#cbd5e1', fontSize: '15px' }}>
                                    <tbody>
-                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>FAAL TESÄ°S</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>SayÄ±sÄ±: {stats.cizelge51.midye.faal.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {stats.cizelge51.midye.faal.kap.toLocaleString('tr-TR')} Ton</td></tr>
-                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>ÃœRETÄ°ME ARA VEREN</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>SayÄ±sÄ±: {stats.cizelge51.midye.araVeren.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {stats.cizelge51.midye.araVeren.kap.toLocaleString('tr-TR')} Ton</td></tr>
-                                       <tr><td style={{padding: '8px'}}><b>MÃœRACAAT / Ã–N Ä°ZÄ°N</b></td><td style={{padding: '8px'}}>SayÄ±sÄ±: {stats.cizelge51.midye.onIzin.sayi}</td><td style={{padding: '8px'}}>Proje: {stats.cizelge51.midye.onIzin.kap.toLocaleString('tr-TR')} Ton</td></tr>
+                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>FAAL TESİS</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Sayısı: {stats.cizelge51.midye.faal.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {stats.cizelge51.midye.faal.kap.toLocaleString('tr-TR')} Ton</td></tr>
+                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>ÜRETİME ARA VEREN</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Sayısı: {stats.cizelge51.midye.araVeren.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {stats.cizelge51.midye.araVeren.kap.toLocaleString('tr-TR')} Ton</td></tr>
+                                       <tr><td style={{padding: '8px'}}><b>MÜRACAAT / ÖN İZİN</b></td><td style={{padding: '8px'}}>Sayısı: {stats.cizelge51.midye.onIzin.sayi}</td><td style={{padding: '8px'}}>Proje: {stats.cizelge51.midye.onIzin.kap.toLocaleString('tr-TR')} Ton</td></tr>
                                    </tbody>
                                </table>
                            </div>
 
                            {/* KARASAL */}
                            <div style={{ background: 'rgba(16, 185, 129, 0.1)', border: '1px solid #10b981', borderRadius: '12px', padding: '20px' }}>
-                               <h3 style={{ color: '#10b981', marginTop: 0, marginBottom: '15px', borderBottom: '1px solid rgba(16, 185, 129, 0.3)', paddingBottom: '10px' }}>KARASAL TESÄ°SLER</h3>
+                               <h3 style={{ color: '#10b981', marginTop: 0, marginBottom: '15px', borderBottom: '1px solid rgba(16, 185, 129, 0.3)', paddingBottom: '10px' }}>KARASAL TESİSLER</h3>
                                <table style={{ width: '100%', borderCollapse: 'collapse', color: '#cbd5e1', fontSize: '15px' }}>
                                    <tbody>
-                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>AÃ‡IK TESÄ°S</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>SayÄ±sÄ±: {stats.cizelge51.karasal.faal.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {stats.cizelge51.karasal.faal.kap.toLocaleString('tr-TR')} Ton</td></tr>
-                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>BELGESÄ° ASKIDA</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>SayÄ±sÄ±: {stats.cizelge51.karasal.araVeren.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {stats.cizelge51.karasal.araVeren.kap.toLocaleString('tr-TR')} Ton</td></tr>
-                                       <tr><td style={{padding: '8px'}}><b>MÃœRACAAT</b></td><td style={{padding: '8px'}}>SayÄ±sÄ±: {stats.cizelge51.karasal.onIzin.sayi}</td><td style={{padding: '8px'}}>Proje: {stats.cizelge51.karasal.onIzin.kap.toLocaleString('tr-TR')} Ton</td></tr>
+                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>AÇIK TESİS</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Sayısı: {stats.cizelge51.karasal.faal.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {stats.cizelge51.karasal.faal.kap.toLocaleString('tr-TR')} Ton</td></tr>
+                                       <tr><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}><b>BELGESİ ASKIDA</b></td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Sayısı: {stats.cizelge51.karasal.araVeren.sayi}</td><td style={{padding: '8px', borderBottom:'1px solid rgba(255,255,255,0.1)'}}>Proje: {stats.cizelge51.karasal.araVeren.kap.toLocaleString('tr-TR')} Ton</td></tr>
+                                       <tr><td style={{padding: '8px'}}><b>MÜRACAAT</b></td><td style={{padding: '8px'}}>Sayısı: {stats.cizelge51.karasal.onIzin.sayi}</td><td style={{padding: '8px'}}>Proje: {stats.cizelge51.karasal.onIzin.kap.toLocaleString('tr-TR')} Ton</td></tr>
                                    </tbody>
                                </table>
                            </div>
@@ -341,17 +341,17 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                 leftContent={
                     <>
                        <h2 style={{ fontSize: '42px', color: '#fff', borderBottom: '2px solid #3b82f6', paddingBottom: '20px', marginBottom: '40px', display:'flex', alignItems:'center' }}>
-                           <Activity size={42} style={{marginRight: '20px', color: '#3b82f6'}}/> SU ÃœRÃœNLERÄ° ÃœRETÄ°M VE KAPASÄ°TE Ä°STATÄ°STÄ°KLERÄ°
+                           <Activity size={42} style={{marginRight: '20px', color: '#3b82f6'}}/> SU ÜRÜNLERİ ÜRETİM VE KAPASİTE İSTATİSTİKLERİ
                        </h2>
                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '25px', marginBottom: '40px' }}>
-                           <StatBox title="AKTÄ°F TESÄ°S" value={stats.summary.aktif} color="#10b981" icon={<Target size={24}/>} />
-                           <StatBox title="TOPLAM KAPASÄ°TE" value={stats.summary.toplamKapasite.toLocaleString('tr-TR')} subtitle="Ton / YÄ±l" color="#3b82f6" icon={<BarChart3 size={24}/>} />
-                           <StatBox title="FÄ°Ä°LÄ° ÃœRETÄ°M" value={stats.summary.toplamMevcutBalik.toLocaleString('tr-TR')} subtitle="Ton / YÄ±l" color="#f59e0b" icon={<Fish size={24}/>} />
+                           <StatBox title="AKTİF TESİS" value={stats.summary.aktif} color="#10b981" icon={<Target size={24}/>} />
+                           <StatBox title="TOPLAM KAPASİTE" value={stats.summary.toplamKapasite.toLocaleString('tr-TR')} subtitle="Ton / Yıl" color="#3b82f6" icon={<BarChart3 size={24}/>} />
+                           <StatBox title="FİİLİ ÜRETİM" value={stats.summary.toplamMevcutBalik.toLocaleString('tr-TR')} subtitle="Ton / Yıl" color="#f59e0b" icon={<Fish size={24}/>} />
                            <StatBox title="DOLULUK ORANI" value={`%${((stats.summary.toplamMevcutBalik / (stats.summary.toplamKapasite || 1)) * 100).toFixed(1)}`} color="#ec4899" icon={<Layers size={24}/>} />
                        </div>
                        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '30px', borderRadius: '16px', borderLeft: '4px solid #38bdf8', fontSize: '20px', lineHeight: '1.6', color: '#cbd5e1' }}>
                           <strong style={{color: '#fff', fontSize: '24px'}}>Sistem Analiz Raporu:</strong> <br/><br/>
-                          Sinop il sÄ±nÄ±rlarÄ± iÃ§erisinde ÅŸu anda tam <strong style={{color:'#fff'}}>{stats.summary.aktif} aktif tesis</strong> faaliyet gÃ¶stermektedir. Ä°limizin toplam su Ã¼rÃ¼nleri projelendirilmiÅŸ Ã¼retim kapasitesi <strong style={{color:'#fff'}}>{stats.summary.toplamKapasite.toLocaleString('tr-TR')} ton/yÄ±l</strong> iken, sahadaki gÃ¼ncel denetimlere gÃ¶re fiili Ã¼retim kapasitesi <strong style={{color:'#fff'}}>{stats.summary.toplamMevcutBalik.toLocaleString('tr-TR')} ton/yÄ±l</strong> olarak hesaplanmÄ±ÅŸtÄ±r.
+                          Sinop il sınırları içerisinde şu anda tam <strong style={{color:'#fff'}}>{stats.summary.aktif} aktif tesis</strong> faaliyet göstermektedir. İlimizin toplam su ürünleri projelendirilmiş üretim kapasitesi <strong style={{color:'#fff'}}>{stats.summary.toplamKapasite.toLocaleString('tr-TR')} ton/yıl</strong> iken, sahadaki güncel denetimlere göre fiili üretim kapasitesi <strong style={{color:'#fff'}}>{stats.summary.toplamMevcutBalik.toLocaleString('tr-TR')} ton/yıl</strong> olarak hesaplanmıştır.
                        </div>
                     </>
                 }
@@ -362,7 +362,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                 leftContent={
                     <>
                        <h2 style={{ fontSize: '42px', color: '#fff', borderBottom: '2px solid #10b981', paddingBottom: '20px', marginBottom: '40px', display:'flex', alignItems:'center' }}>
-                           <PieChart size={42} style={{marginRight: '20px', color: '#10b981'}}/> TESÄ°S TÃœRÃœ DAÄILIMI
+                           <PieChart size={42} style={{marginRight: '20px', color: '#10b981'}}/> TESİS TÜRÜ DAÄILIMI
                        </h2>
                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh' }}>
                            <ResponsiveContainer width="100%" height="100%">
@@ -386,7 +386,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                 leftContent={
                     <>
                        <h2 style={{ fontSize: '42px', color: '#fff', borderBottom: '2px solid #8b5cf6', paddingBottom: '20px', marginBottom: '40px', display:'flex', alignItems:'center' }}>
-                           <BarChart3 size={42} style={{marginRight: '20px', color: '#8b5cf6'}}/> Ä°LÃ‡ELER BAZLI TESÄ°S DAÄILIMI
+                           <BarChart3 size={42} style={{marginRight: '20px', color: '#8b5cf6'}}/> İLÇELER BAZLI TESİS DAÄILIMI
                        </h2>
                        <div style={{ height: '60vh' }}>
                            <ResponsiveContainer width="100%" height="100%">
@@ -408,21 +408,21 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
         } else if (slide === 4) {
             return <SplitSlide 
                 rightImgUrl={bgImages.kafes_deniz}
-                fishes={[{name: 'Deniz LevreÄŸi', img: bgImages.fish_levrek}, {name: 'TÃ¼rk Somonu', img: bgImages.fish_somon}]}
+                fishes={[{name: 'Deniz Levreği', img: bgImages.fish_levrek}, {name: 'Türk Somonu', img: bgImages.fish_somon}]}
                 leftContent={
                     <>
                        <h2 style={{ fontSize: '42px', color: '#fff', borderBottom: '2px solid #38bdf8', paddingBottom: '20px', marginBottom: '40px', display:'flex', alignItems:'center' }}>
-                           <Anchor size={42} style={{marginRight: '20px', color: '#38bdf8'}}/> DENÄ°Z KAFESLERÄ°
+                           <Anchor size={42} style={{marginRight: '20px', color: '#38bdf8'}}/> DENİZ KAFESLERİ
                        </h2>
                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '25px', marginBottom: '40px' }}>
-                           <StatBox title="KAFES TESÄ°SÄ°" value={stats.deniz.tesis} color="#38bdf8" icon={<Building size={24}/>} />
-                           <StatBox title="PROJE KAFES" value={stats.deniz.projeKafes} subtitle="Adet (RuhsatlÄ±)" color="#8b5cf6" icon={<Target size={24}/>} />
-                           <StatBox title="FÄ°Ä°LÄ° KAFES" value={stats.deniz.mevcutKafes} subtitle="Adet (Sahada Bulunan)" color="#ef4444" icon={<AlertTriangle size={24}/>} />
-                           <StatBox title="TOPLAM HACÄ°M" value={stats.deniz.projeHacim.toLocaleString('tr-TR')} subtitle="MetrekÃ¼p (mÂ³)" color="#14b8a6" icon={<Droplets size={24}/>} />
+                           <StatBox title="KAFES TESİSİ" value={stats.deniz.tesis} color="#38bdf8" icon={<Building size={24}/>} />
+                           <StatBox title="PROJE KAFES" value={stats.deniz.projeKafes} subtitle="Adet (Ruhsatlı)" color="#8b5cf6" icon={<Target size={24}/>} />
+                           <StatBox title="FİİLİ KAFES" value={stats.deniz.mevcutKafes} subtitle="Adet (Sahada Bulunan)" color="#ef4444" icon={<AlertTriangle size={24}/>} />
+                           <StatBox title="TOPLAM HACİM" value={stats.deniz.projeHacim.toLocaleString('tr-TR')} subtitle="Metreküp (mÂ³)" color="#14b8a6" icon={<Droplets size={24}/>} />
                        </div>
                        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '30px', borderRadius: '16px', borderLeft: '4px solid #38bdf8', fontSize: '20px', lineHeight: '1.6', color: '#cbd5e1' }}>
-                          <strong style={{color: '#fff', fontSize: '24px'}}>Saha GÃ¶zlem Ã–zeti:</strong> <br/><br/>
-                          Deniz yÃ¼zeylerinde faaliyet gÃ¶steren toplam <strong style={{color:'#fff'}}>{stats.deniz.tesis} tesis</strong> bulunmaktadÄ±r. Ruhsat projelerinde toplam <strong style={{color:'#fff'}}>{stats.deniz.projeKafes} adet</strong> aÄŸ kafes onaylanmÄ±ÅŸ olup, su Ã¼zerindeki fiili denetimlerde toplam <strong style={{color:'#fff'}}>{stats.deniz.mevcutKafes} adet</strong> kafes tespit edilmiÅŸtir. Deniz kafeslerinin toplam kapasitesi <strong style={{color:'#fff'}}>{stats.deniz.kapasite.toLocaleString('tr-TR')} ton</strong> olarak tescillenmiÅŸtir.
+                          <strong style={{color: '#fff', fontSize: '24px'}}>Saha Gözlem Özeti:</strong> <br/><br/>
+                          Deniz yüzeylerinde faaliyet gösteren toplam <strong style={{color:'#fff'}}>{stats.deniz.tesis} tesis</strong> bulunmaktadır. Ruhsat projelerinde toplam <strong style={{color:'#fff'}}>{stats.deniz.projeKafes} adet</strong> ağ kafes onaylanmış olup, su üzerindeki fiili denetimlerde toplam <strong style={{color:'#fff'}}>{stats.deniz.mevcutKafes} adet</strong> kafes tespit edilmiştir. Deniz kafeslerinin toplam kapasitesi <strong style={{color:'#fff'}}>{stats.deniz.kapasite.toLocaleString('tr-TR')} ton</strong> olarak tescillenmiştir.
                        </div>
                     </>
                 }
@@ -430,21 +430,21 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
         } else if (slide === 5) {
             return <SplitSlide 
                 rightImgUrl={bgImages.baraj}
-                fishes={[{name: 'GÃ¶kkuÅŸaÄŸÄ± AlabalÄ±ÄŸÄ±', img: bgImages.fish_alabalik}]}
+                fishes={[{name: 'Gökkuşağı Alabalığı', img: bgImages.fish_alabalik}]}
                 leftContent={
                     <>
                        <h2 style={{ fontSize: '42px', color: '#fff', borderBottom: '2px solid #2dd4bf', paddingBottom: '20px', marginBottom: '40px', display:'flex', alignItems:'center' }}>
-                           <Droplets size={42} style={{marginRight: '20px', color: '#2dd4bf'}}/> BARAJ / Ä°Ã‡SU KAFESLERÄ°
+                           <Droplets size={42} style={{marginRight: '20px', color: '#2dd4bf'}}/> BARAJ / İÇSU KAFESLERİ
                        </h2>
                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '25px', marginBottom: '40px' }}>
-                           <StatBox title="BARAJ TESÄ°SÄ°" value={stats.baraj.tesis} color="#2dd4bf" icon={<Building size={24}/>} />
-                           <StatBox title="PROJE KAFES" value={stats.baraj.projeKafes} subtitle="Adet (RuhsatlÄ±)" color="#8b5cf6" icon={<Target size={24}/>} />
-                           <StatBox title="FÄ°Ä°LÄ° KAFES" value={stats.baraj.mevcutKafes} subtitle="Adet (Sahada Bulunan)" color="#ef4444" icon={<AlertTriangle size={24}/>} />
-                           <StatBox title="TOPLAM HACÄ°M" value={stats.baraj.projeHacim.toLocaleString('tr-TR')} subtitle="MetrekÃ¼p (mÂ³)" color="#0ea5e9" icon={<Droplets size={24}/>} />
+                           <StatBox title="BARAJ TESİSİ" value={stats.baraj.tesis} color="#2dd4bf" icon={<Building size={24}/>} />
+                           <StatBox title="PROJE KAFES" value={stats.baraj.projeKafes} subtitle="Adet (Ruhsatlı)" color="#8b5cf6" icon={<Target size={24}/>} />
+                           <StatBox title="FİİLİ KAFES" value={stats.baraj.mevcutKafes} subtitle="Adet (Sahada Bulunan)" color="#ef4444" icon={<AlertTriangle size={24}/>} />
+                           <StatBox title="TOPLAM HACİM" value={stats.baraj.projeHacim.toLocaleString('tr-TR')} subtitle="Metreküp (mÂ³)" color="#0ea5e9" icon={<Droplets size={24}/>} />
                        </div>
                        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '30px', borderRadius: '16px', borderLeft: '4px solid #2dd4bf', fontSize: '20px', lineHeight: '1.6', color: '#cbd5e1' }}>
-                          <strong style={{color: '#fff', fontSize: '24px'}}>Saha GÃ¶zlem Ã–zeti:</strong> <br/><br/>
-                          Ä°Ã§sular ve baraj gÃ¶llerinde yetiÅŸtiricilik yapan toplam <strong style={{color:'#fff'}}>{stats.baraj.tesis} tesis</strong> konuÅŸlandÄ±rÄ±lmÄ±ÅŸtÄ±r. Baraj kafeslerinin toplam mÃ¼hendislik hacmi muazzam bir ÅŸekilde <strong style={{color:'#fff'}}>{stats.baraj.projeHacim.toLocaleString('tr-TR')} mÂ³</strong>'e ulaÅŸmÄ±ÅŸ ve kapasite <strong style={{color:'#fff'}}>{stats.baraj.kapasite.toLocaleString('tr-TR')} ton</strong> olarak kaydedilmiÅŸtir.
+                          <strong style={{color: '#fff', fontSize: '24px'}}>Saha Gözlem Özeti:</strong> <br/><br/>
+                          İçsular ve baraj göllerinde yetiştiricilik yapan toplam <strong style={{color:'#fff'}}>{stats.baraj.tesis} tesis</strong> konuşlandırılmıştır. Baraj kafeslerinin toplam mühendislik hacmi muazzam bir şekilde <strong style={{color:'#fff'}}>{stats.baraj.projeHacim.toLocaleString('tr-TR')} mÂ³</strong>'e ulaşmış ve kapasite <strong style={{color:'#fff'}}>{stats.baraj.kapasite.toLocaleString('tr-TR')} ton</strong> olarak kaydedilmiştir.
                        </div>
                     </>
                 }
@@ -452,20 +452,20 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
         } else if (slide === 6) {
             return <SplitSlide 
                 rightImgUrl={bgImages.karasal}
-                fishes={[{name: 'Porsiyonluk AlabalÄ±k', img: bgImages.fish_alabalik}]}
+                fishes={[{name: 'Porsiyonluk Alabalık', img: bgImages.fish_alabalik}]}
                 leftContent={
                     <>
                        <h2 style={{ fontSize: '42px', color: '#fff', borderBottom: '2px solid #10b981', paddingBottom: '20px', marginBottom: '40px', display:'flex', alignItems:'center' }}>
-                           <MapPin size={42} style={{marginRight: '20px', color: '#10b981'}}/> KARASAL (HAVUZ) TESÄ°SLERÄ°
+                           <MapPin size={42} style={{marginRight: '20px', color: '#10b981'}}/> KARASAL (HAVUZ) TESİSLERİ
                        </h2>
                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '25px', marginBottom: '40px' }}>
-                           <StatBox title="KARASAL TESÄ°S" value={stats.karasal.tesis} color="#10b981" icon={<Building size={24}/>} />
+                           <StatBox title="KARASAL TESİS" value={stats.karasal.tesis} color="#10b981" icon={<Building size={24}/>} />
                            <StatBox title="TOPLAM HAVUZ" value={stats.karasal.projeHavuz} subtitle="Adet" color="#fcd34d" icon={<Layers size={24}/>} />
-                           <StatBox title="FÄ°Ä°LÄ° KAPASÄ°TE" value={stats.karasal.fiili.toLocaleString('tr-TR')} subtitle="Ton / YÄ±l" color="#3b82f6" icon={<Fish size={24}/>} />
+                           <StatBox title="FİİLİ KAPASİTE" value={stats.karasal.fiili.toLocaleString('tr-TR')} subtitle="Ton / Yıl" color="#3b82f6" icon={<Fish size={24}/>} />
                        </div>
                        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '30px', borderRadius: '16px', borderLeft: '4px solid #10b981', fontSize: '20px', lineHeight: '1.6', color: '#cbd5e1' }}>
-                          <strong style={{color: '#fff', fontSize: '24px'}}>Saha GÃ¶zlem Ã–zeti:</strong> <br/><br/>
-                          Karada faaliyet gÃ¶steren ve beton/toprak havuz sistemleriyle Ã¼retim yapan <strong style={{color:'#fff'}}>{stats.karasal.tesis} tesisimiz</strong> mevcuttur. Sistemlerimizde toplam <strong style={{color:'#fff'}}>{stats.karasal.projeHavuz} adet havuz</strong> altyapÄ±sÄ± bulunmakta ve bu tesisler yÄ±llÄ±k <strong style={{color:'#fff'}}>{stats.karasal.kapasite.toLocaleString('tr-TR')} ton</strong> yÃ¼ksek kalite su Ã¼rÃ¼nleri Ã¼retim potansiyeline sahiptir.
+                          <strong style={{color: '#fff', fontSize: '24px'}}>Saha Gözlem Özeti:</strong> <br/><br/>
+                          Karada faaliyet gösteren ve beton/toprak havuz sistemleriyle üretim yapan <strong style={{color:'#fff'}}>{stats.karasal.tesis} tesisimiz</strong> mevcuttur. Sistemlerimizde toplam <strong style={{color:'#fff'}}>{stats.karasal.projeHavuz} adet havuz</strong> altyapısı bulunmakta ve bu tesisler yıllık <strong style={{color:'#fff'}}>{stats.karasal.kapasite.toLocaleString('tr-TR')} ton</strong> yüksek kalite su ürünleri üretim potansiyeline sahiptir.
                        </div>
                     </>
                 }
@@ -477,16 +477,16 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                 leftContent={
                     <>
                        <h2 style={{ fontSize: '42px', color: '#fff', borderBottom: '2px solid #c084fc', paddingBottom: '20px', marginBottom: '40px', display:'flex', alignItems:'center' }}>
-                           <Fish size={42} style={{marginRight: '20px', color: '#c084fc'}}/> Ã‡Ä°FT KABUKLU (MÄ°DYE)
+                           <Fish size={42} style={{marginRight: '20px', color: '#c084fc'}}/> ÇİFT KABUKLU (MİDYE)
                        </h2>
                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '25px', marginBottom: '40px' }}>
-                           <StatBox title="MÄ°DYE TESÄ°SÄ°" value={stats.midye.tesis} color="#c084fc" icon={<Anchor size={24}/>} />
-                           <StatBox title="LONGLINE/HALAT" value={stats.midye.projeSistem || 'KayÄ±t Yok'} subtitle="Sistem Adedi" color="#f472b6" icon={<Layers size={24}/>} />
-                           <StatBox title="PROJE KAPASÄ°TESÄ°" value={stats.midye.kapasite.toLocaleString('tr-TR')} subtitle="Ton / YÄ±l" color="#38bdf8" icon={<Target size={24}/>} />
+                           <StatBox title="MİDYE TESİSİ" value={stats.midye.tesis} color="#c084fc" icon={<Anchor size={24}/>} />
+                           <StatBox title="LONGLINE/HALAT" value={stats.midye.projeSistem || 'Kayıt Yok'} subtitle="Sistem Adedi" color="#f472b6" icon={<Layers size={24}/>} />
+                           <StatBox title="PROJE KAPASİTESİ" value={stats.midye.kapasite.toLocaleString('tr-TR')} subtitle="Ton / Yıl" color="#38bdf8" icon={<Target size={24}/>} />
                        </div>
                        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '30px', borderRadius: '16px', borderLeft: '4px solid #c084fc', fontSize: '20px', lineHeight: '1.6', color: '#cbd5e1' }}>
-                          <strong style={{color: '#fff', fontSize: '24px'}}>Saha GÃ¶zlem Ã–zeti:</strong> <br/><br/>
-                          BÃ¶lgede <strong style={{color:'#fff'}}>{stats.midye.tesis} adet Ã§ift kabuklu (midye) tesisi</strong> longline ve halat sistemleriyle sularÄ± filtreleyerek biyo-Ã¼retime katkÄ± saÄŸlamaktadÄ±r. Toplam <strong style={{color:'#fff'}}>{stats.midye.projeSistem || 'belirtilmemiÅŸ sayÄ±da'} halat/sistem</strong> aÄŸÄ± projelendirilmiÅŸ ve <strong style={{color:'#fff'}}>{stats.midye.kapasite.toLocaleString('tr-TR')} ton</strong> Ã¼retim hedeflenmektedir.
+                          <strong style={{color: '#fff', fontSize: '24px'}}>Saha Gözlem Özeti:</strong> <br/><br/>
+                          Bölgede <strong style={{color:'#fff'}}>{stats.midye.tesis} adet çift kabuklu (midye) tesisi</strong> longline ve halat sistemleriyle suları filtreleyerek biyo-üretime katkı sağlamaktadır. Toplam <strong style={{color:'#fff'}}>{stats.midye.projeSistem || 'belirtilmemiş sayıda'} halat/sistem</strong> ağı projelendirilmiş ve <strong style={{color:'#fff'}}>{stats.midye.kapasite.toLocaleString('tr-TR')} ton</strong> üretim hedeflenmektedir.
                        </div>
                     </>
                 }
@@ -497,16 +497,16 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                 leftContent={
                     <>
                        <h2 style={{ fontSize: '42px', color: '#fff', borderBottom: '2px solid #f59e0b', paddingBottom: '20px', marginBottom: '40px', display:'flex', alignItems:'center' }}>
-                           <Target size={42} style={{marginRight: '20px', color: '#f59e0b'}}/> EN YÃœKSEK KAPASÄ°TELÄ° YATIRIMCILAR
+                           <Target size={42} style={{marginRight: '20px', color: '#f59e0b'}}/> EN YÜKSEK KAPASİTELİ YATIRIMCILAR
                        </h2>
                        <div style={{ height: '65vh', overflowY: 'auto' }}>
                            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '18px' }}>
                               <thead>
                                  <tr style={{ borderBottom: '2px solid rgba(255,255,255,0.2)', color: '#94a3b8', textAlign: 'left' }}>
                                     <th style={{ padding: '15px' }}>#</th>
-                                    <th style={{ padding: '15px' }}>Firma AdÄ±</th>
-                                    <th style={{ padding: '15px' }}>Ä°lÃ§e</th>
-                                    <th style={{ padding: '15px', textAlign: 'right' }}>YÄ±llÄ±k Kapasite</th>
+                                    <th style={{ padding: '15px' }}>Firma Adı</th>
+                                    <th style={{ padding: '15px' }}>İlçe</th>
+                                    <th style={{ padding: '15px', textAlign: 'right' }}>Yıllık Kapasite</th>
                                  </tr>
                               </thead>
                               <tbody>
@@ -528,7 +528,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
             return (
                 <div className="anim-fade-in" style={{ display: 'flex', height: '100vh', width: '100vw', backgroundColor: '#020617' }}>
                     <div className="anim-slide-left" style={{ width: '55%', padding: '60px', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto' }}>
-                        <h1 style={{ fontSize: '72px', fontWeight: '900', color: '#fff', margin: 0, textShadow: '0 0 30px rgba(16,185,129,0.8)', textAlign: 'left', lineHeight: '1.2' }}>Ä°zlediÄŸiniz Ä°Ã§in<br/>TeÅŸekkÃ¼rler.</h1>
+                        <h1 style={{ fontSize: '72px', fontWeight: '900', color: '#fff', margin: 0, textShadow: '0 0 30px rgba(16,185,129,0.8)', textAlign: 'left', lineHeight: '1.2' }}>İzlediğiniz İçin<br/>Teşekkürler.</h1>
                         
                         <div style={{ display: 'flex', gap: '30px', marginTop: '60px' }}>
                             <div className="anim-slide-up" style={{ animationDelay: '0.3s', flex: 1, height: '250px', backgroundImage: `url('/images/satellite_sea.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '16px', border: '2px solid rgba(255,255,255,0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}>
@@ -538,7 +538,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                             </div>
                             <div className="anim-slide-up" style={{ animationDelay: '0.5s', flex: 1, height: '250px', backgroundImage: `url('/images/fish_somon.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '16px', border: '2px solid rgba(255,255,255,0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}>
                                 <div style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)', height: '100%', width: '100%', borderRadius: '16px', display: 'flex', alignItems: 'flex-end', padding: '20px' }}>
-                                    <span style={{ color: '#fff', fontSize: '20px', fontWeight: 'bold' }}>TÃ¼rk Somonu</span>
+                                    <span style={{ color: '#fff', fontSize: '20px', fontWeight: 'bold' }}>Türk Somonu</span>
                                 </div>
                             </div>
                         </div>
@@ -589,16 +589,16 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
          <div style={{ display: 'flex', alignItems: 'center' }}>
             <Presentation size={48} style={{ marginRight: '20px' }} />
             <div>
-              <h1 style={{ margin: 0, fontSize: '32px', fontWeight: 'bold', letterSpacing: '-0.5px' }}>SÄ°NOP Ä°LÄ° SU ÃœRÃœNLERÄ° YETÄ°ÅTÄ°RÄ°CÄ°LÄ°ÄÄ°</h1>
-              <p style={{ margin: '8px 0 0 0', fontSize: '18px', opacity: 0.9 }}>SÄ°STEM ANALÄ°Z RAPORU (Dashboard)</p>
+              <h1 style={{ margin: 0, fontSize: '32px', fontWeight: 'bold', letterSpacing: '-0.5px' }}>SİNOP İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİÄİ</h1>
+              <p style={{ margin: '8px 0 0 0', fontSize: '18px', opacity: 0.9 }}>SİSTEM ANALİZ RAPORU (Dashboard)</p>
             </div>
          </div>
          <div style={{ display: 'flex', gap: '15px' }}>
             <button onClick={() => { setSlide(0); setIsFullscreen(true); }} style={{ background: '#0f172a', color: '#38bdf8', border: '1px solid #38bdf8', padding: '12px 20px', borderRadius: '8px', cursor: 'pointer', display: 'flex', alignItems: 'center', fontSize: '15px', fontWeight: 'bold', boxShadow: '0 0 15px rgba(56, 189, 248, 0.4)' }}>
-              <Play size={18} style={{ marginRight: '8px' }} /> Sunumu BaÅŸlat
+              <Play size={18} style={{ marginRight: '8px' }} /> Sunumu Başlat
             </button>
             <button onClick={exportToPPT} style={{ background: 'white', color: '#1e3a8a', border: 'none', padding: '12px 20px', borderRadius: '8px', cursor: 'pointer', display: 'flex', alignItems: 'center', fontSize: '15px', fontWeight: 'bold' }}>
-              <Download size={18} style={{ marginRight: '8px' }} /> PowerPoint Ä°ndir
+              <Download size={18} style={{ marginRight: '8px' }} /> PowerPoint İndir
             </button>
          </div>
       </div>
@@ -606,9 +606,9 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
           <BarChart3 size={80} color="#3b82f6" style={{ marginBottom: '20px' }}/>
           <h2 style={{ color: '#1e293b', fontSize: '28px', marginBottom: '15px' }}>Dinamik Veri Motoru Aktif</h2>
           <p style={{ color: '#64748b', fontSize: '18px', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
-             Sistemdeki tÃ¼m Kafes Hacimleri, Halat SayÄ±larÄ±, Proje Adetleri ve Koordinatlar tamamen otonom olarak taranmakta ve bu resmi sunum ekranlarÄ±na canlÄ± olarak aktarÄ±lmaktadÄ±r.
+             Sistemdeki tüm Kafes Hacimleri, Halat Sayıları, Proje Adetleri ve Koordinatlar tamamen otonom olarak taranmakta ve bu resmi sunum ekranlarına canlı olarak aktarılmaktadır.
              <br/><br/>
-             Verileri gÃ¶rÃ¼ntÃ¼lemek iÃ§in saÄŸ Ã¼stteki <b>"Sunumu BaÅŸlat"</b> butonuna tÄ±klayÄ±n.
+             Verileri görüntülemek için sağ üstteki <b>"Sunumu Başlat"</b> butonuna tıklayın.
           </p>
       </div>
     </div>

@@ -41,10 +41,10 @@ const HaritaRadar = () => {
             {/* Header Overlay */}
             <div style={{ position: 'absolute', top: 20, left: 60, zIndex: 1000, background: '#ffffff', color: '#1e293b', padding: '16px 24px', borderRadius: '8px', border: '1px solid #cbd5e1', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' }}>
                 <h2 style={{ margin: 0, display: 'flex', alignItems: 'center', gap: '10px', fontSize: '18px', fontWeight: '600' }}>
-                    <Map size={22} color="#0369a1" /> YetiÅŸtiricilik Tesisleri HaritasÄ±
+                    <Map size={22} color="#0369a1" /> Yetiştiricilik Tesisleri Haritası
                 </h2>
                 <p style={{ margin: '8px 0 0 0', color: '#475569', fontSize: '14px', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '500' }}>
-                    <Building2 size={16} color="#059669" /> KayÄ±tlÄ± Tesis SayÄ±sÄ±: <strong>{tesisler.length}</strong>
+                    <Building2 size={16} color="#059669" /> Kayıtlı Tesis Sayısı: <strong>{tesisler.length}</strong>
                 </p>
             </div>
 
@@ -71,7 +71,7 @@ const HaritaRadar = () => {
                             <Marker position={mainCoord} icon={farmIcon}>
                                 <Popup>
                                     <div style={{ padding: '4px', minWidth: '200px' }}>
-                                        <h3 style={{ margin: '0 0 8px 0', borderBottom: '1px solid #e2e8f0', paddingBottom: '8px', color: '#0f172a' }}>{t.tesisAdi || 'Ä°simsiz Tesis'}</h3>
+                                        <h3 style={{ margin: '0 0 8px 0', borderBottom: '1px solid #e2e8f0', paddingBottom: '8px', color: '#0f172a' }}>{t.tesisAdi || 'İsimsiz Tesis'}</h3>
                                         <div style={{ fontSize: '13px', color: '#475569', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                                 <strong>Firma:</strong> <span>{t.firmaAdi || '-'}</span>
@@ -81,11 +81,11 @@ const HaritaRadar = () => {
                                                 <span style={{ color: t.durum === 'Aktif' ? '#059669' : '#ef4444', fontWeight: 'bold' }}>{t.durum || '-'}</span>
                                             </div>
                                             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                                <strong>ÅamandÄ±ra:</strong> 
-                                                <span style={{ color: t.samandiraDurum === 'Aktif / Sorunsuz' ? '#059669' : t.samandiraDurum === 'SÃ¶ndÃ¼ / ArÄ±zalÄ±' ? '#ef4444' : '#ea580c', fontWeight: 'bold' }}>{t.samandiraDurum || 'Yok'}</span>
+                                                <strong>Şamandıra:</strong> 
+                                                <span style={{ color: t.samandiraDurum === 'Aktif / Sorunsuz' ? '#059669' : t.samandiraDurum === 'Söndü / Arızalı' ? '#ef4444' : '#ea580c', fontWeight: 'bold' }}>{t.samandiraDurum || 'Yok'}</span>
                                             </div>
                                             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                                <strong>Vize BitiÅŸ:</strong> 
+                                                <strong>Vize Bitiş:</strong> 
                                                 <span style={{ color: '#0f172a' }}>{t.vizeTarihi ? new Date(t.vizeTarihi).toLocaleDateString('tr-TR') : '-'}</span>
                                             </div>
                                         </div>
