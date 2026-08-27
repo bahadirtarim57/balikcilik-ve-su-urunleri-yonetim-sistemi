@@ -1,4 +1,4 @@
-﻿import proj4 from 'proj4';
+import proj4 from 'proj4';
 import React, { useState, useMemo, useEffect } from 'react';
 import toast from 'react-hot-toast';
 import { supabase } from '../supabaseClient';
@@ -998,9 +998,8 @@ ${match.lakeName} için kiralama verileri otomatik çekildi.`);
         <div>
            <h1 style={{ fontSize: "24px", color: "#0f172a", margin: "0 0 6px 0", display: "flex", alignItems: "center", fontWeight: "bold" }}>
               <Globe size={28} style={{ marginRight: "12px", color: "#2563eb" }} />
-              Balıkçılık ve Su Ürünleri Yönetim Sistemleri
+              {(localStorage.getItem('app-selectedCity') || 'SİNOP').toUpperCase()} İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİĞİ
            </h1>
-           <p style={{ margin: 0, color: "#64748b", fontSize: "14px" }}>FAO & ASC Standartlarında Akıllı Entegrasyon</p>
         </div>
         <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
            <button onClick={() => { setActiveTab("aktif_tesisler"); setEditingId(null); setFormData({}); }} style={{ display: "flex", alignItems: "center", padding: "10px 16px", borderRadius: "10px", cursor: "pointer", fontWeight: "600", border: "none", background: activeTab === "aktif_tesisler" ? "#10b981" : "#f1f5f9", color: activeTab === "aktif_tesisler" ? "white" : "#475569", fontSize: '13px' }}><LayoutGrid size={16} style={{ marginRight: "6px" }} /> Aktif Tesisler</button>
@@ -1033,7 +1032,7 @@ ${match.lakeName} için kiralama verileri otomatik çekildi.`);
       {(activeTab !== 'yeni') && (
         <div style={{ display: 'flex', gap: '24px' }}>
           <div style={{ width: '280px', background: 'white', borderRadius: '16px', padding: '24px', border: '1px solid #e2e8f0', height: 'fit-content', position: 'sticky', top: '24px' }}>
-            <h3 style={{ margin: '0 0 16px 0', fontSize: '14px', color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Bölgeler / İlçeler</h3>
+            <h3 style={{ margin: '0 0 16px 0', fontSize: '14px', color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Merkez ve İlçeler</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {Object.entries(ilceCounts).map(([ilce, count]) => (
                 <button key={ilce} onClick={() => setSelectedIlce(ilce)} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 16px', borderRadius: '12px', border: 'none', cursor: 'pointer', transition: 'all 0.2s', background: selectedIlce === ilce ? '#1e293b' : 'transparent', color: selectedIlce === ilce ? 'white' : '#475569' }}>
