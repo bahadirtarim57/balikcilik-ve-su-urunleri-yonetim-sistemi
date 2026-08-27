@@ -98,7 +98,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
   };
   
   const [sections, setSections] = useState(() => {
-    const saved = localStorage.getItem('sidebar_config_v3');
+    const saved = localStorage.getItem('sidebar_config_v4');
     if (saved) {
       try { 
         let parsed = JSON.parse(saved); 
@@ -154,7 +154,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
         });
         
         // Save cleaned version back so duplicates are gone from localStorage too
-        localStorage.setItem('sidebar_config_v3', JSON.stringify(parsed));
+        localStorage.setItem('sidebar_config_v4', JSON.stringify(parsed));
         
         return parsed;
       } catch (e) { return defaultSections; }
@@ -276,7 +276,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
       const [removed] = newSections.splice(source.index, 1);
       newSections.splice(destination.index, 0, removed);
       setSections(newSections);
-      localStorage.setItem('sidebar_config_v3', JSON.stringify(newSections));
+      localStorage.setItem('sidebar_config_v4', JSON.stringify(newSections));
       return;
     }
     
@@ -293,7 +293,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
       destItems.splice(destination.index, 0, removed);
       
       setSections(newSections);
-      localStorage.setItem('sidebar_config_v3', JSON.stringify(newSections));
+      localStorage.setItem('sidebar_config_v4', JSON.stringify(newSections));
     }
   };
 
