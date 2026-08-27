@@ -319,9 +319,6 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
       </div>
       
       <div className="sidebar-scrollable" style={{ flex: 1, overflowY: 'auto' }}>
-        <div style={{ padding: '10px 12px 5px 12px', fontSize: '11px', fontWeight: '800', color: '#64748b', letterSpacing: '0.5px' }}>
-          BALIKÇILIK VE SU ÜRÜNLERİ YÖNETİMİ
-        </div>
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable droppableId="board" type="section">
             {(provided) => (
