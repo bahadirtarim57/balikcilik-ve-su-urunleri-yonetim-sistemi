@@ -229,13 +229,8 @@ const Login = ({ onLogin, activeUnitName, selectedCity }) => {
             Tarım ve Orman Bakanlığı
           </h1>
           <p style={{ fontSize: '15px', color: '#e2e8f0', maxWidth: '600px', lineHeight: '1.6', textShadow: '0 2px 10px rgba(0,0,0,0.5)', marginBottom: '10px' }}>
-            1380 Sayılı Yasa İhlalleri Sistemi ile su ürünleri denetimlerini ve idari yaptırımlarını tek bir merkezden güvenle yönetin.
+            Balıkçılık ve Su Ürünleri Yönetimi
           </p>
-          {activeUnitName && activeUnitName !== 'Birim Seçilmedi' && (
-            <div style={{ display: 'inline-block', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', padding: '6px 12px', borderRadius: '20px', color: '#6ee7b7', fontSize: '13px', fontWeight: '600', border: '1px solid rgba(255,255,255,0.2)' }}>
-              {activeUnitName}
-            </div>
-          )}
         </div>
 
         <div style={{ position: 'relative', zIndex: 10 }}>
