@@ -472,7 +472,7 @@ function App() {
                 <Route path="/rol-atamalari" element={<ProtectedRoute path="/rol-atamalari"><RoleAssignments selectedCity={selectedCity} selectedUnit={selectedUnit} selectedUnitType={selectedUnitType} selectedDistrict={selectedDistrict} currentRole={currentRole} /></ProtectedRoute>} />
                 <Route path="/yetki-matrisi" element={<ProtectedRoute path="/yetki-matrisi"><PermissionMatrix /></ProtectedRoute>} />
                 <Route path="/stok-tespiti" element={<ProtectedRoute path="/stok-tespiti"><StokTespit /></ProtectedRoute>} />
-                <Route path="/tesis-yonetimi" element={<ProtectedRoute path="/tesis-yonetimi"><TesisYonetimi /></ProtectedRoute>} />
+                <Route path="/tesis-yonetimi" element={<ProtectedRoute path="/tesis-yonetimi"><TesisYonetimi selectedCity={selectedCity} /></ProtectedRoute>} />
                 <Route path="/sunum-modu" element={<ProtectedRoute path="/sunum-modu"><SunumModu /></ProtectedRoute>} />
                 <Route path="/harita-radar" element={<ProtectedRoute path="/harita-radar"><HaritaRadar /></ProtectedRoute>} />
                 <Route path="/ruhsat" element={<ProtectedRoute path="/ruhsat"><RuhsatAnaSayfa /></ProtectedRoute>} />

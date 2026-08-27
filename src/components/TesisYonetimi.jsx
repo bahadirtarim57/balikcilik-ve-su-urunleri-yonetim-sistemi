@@ -2,10 +2,9 @@ import proj4 from 'proj4';
 import React, { useState, useMemo, useEffect } from 'react';
 import toast from 'react-hot-toast';
 import { supabase } from '../supabaseClient';
+import { DISTRICTS } from '../utils/turkeyData';
 import { Users, Download, LayoutGrid, MapPin, Search, Edit, Trash2, Plus, ArrowLeft, Save, Fish, Building, Info, FileText, ChevronDown, ChevronUp, Archive, BarChart3, Droplets, Ruler, Clock, AlertTriangle, ShieldCheck, Anchor, Activity, Globe, RefreshCw, Zap, X, Database } from 'lucide-react';
 
-
-const VALID_DISTRICTS = ['Merkez', 'Gerze', 'Ayancık', 'Boyabat', 'Dikmen', 'Erfelek', 'Durağan', 'Türkeli', 'Saraydüzü'];
 const STATUS_OPTIONS = ['Aktif', 'Pasif', 'İptal', 'Devredildi', 'Kiralama Aşamasında'];
 const TUR_OPTIONS = ['Deniz Yetiştiriciliği', 'Karasal Üretim', 'Çift Kabuklu Yetiştiriciliği', 'Baraj / Göl Üretimi', 'Diğer'];
 
@@ -606,7 +605,10 @@ const KafesListManager = ({ type, items, onChange, tesisTuru }) => {
     );
 };
 
-const TesisYonetimi = () => {
+const TesisYonetimi = ({ selectedCity }) => {
+  const currentCity = selectedCity || localStorage.getItem('app-selectedCity') || 'Sinop';
+  const VALID_DISTRICTS = useMemo(() => [...new Set(DISTRICTS[currentCity] || DISTRICTS['Sinop'] || [])], [currentCity]);
+
   const [dataList, setDataList] = useState([]);
 
   useEffect(() => {
@@ -616,11 +618,12 @@ const TesisYonetimi = () => {
         console.error('Veri çekme hatası:', error);
         toast.error('Veriler çekilemedi!');
       } else {
-        setDataList(data);
+        const filteredData = data.filter(t => VALID_DISTRICTS.includes(t.ilce) || t.ilce === 'Merkez');
+        setDataList(filteredData);
       }
     };
     fetchTesisler();
-  }, []);
+  }, [VALID_DISTRICTS]);
 
   const saveToDatabase = async (updatedData) => {
     try {
