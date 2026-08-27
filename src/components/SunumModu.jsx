@@ -1,7 +1,7 @@
-﻿import { supabase } from '../supabaseClient';
+import { supabase } from '../supabaseClient';
 import React, { useState, useMemo, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
-import { Presentation, AlertTriangle, Play, X, Target, Activity, Anchor, Download, Droplets, MapPin, BarChart3, Users, Fish, Layers, Building } from 'lucide-react';
+import { Presentation, AlertTriangle, Play, X, Target, Activity, Anchor, Download, Droplets, MapPin, BarChart3, Users, Fish, Layers, Building, PieChart as PieChartIcon } from 'lucide-react';
 import pptxgen from "pptxgenjs";
 
 const bgImages = {
@@ -362,7 +362,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                 leftContent={
                     <>
                        <h2 style={{ fontSize: '42px', color: '#fff', borderBottom: '2px solid #10b981', paddingBottom: '20px', marginBottom: '40px', display:'flex', alignItems:'center' }}>
-                           <PieChart size={42} style={{marginRight: '20px', color: '#10b981'}}/> TESİS TÜRÜ DAĞILIMI
+                           <PieChartIcon size={42} style={{marginRight: '20px', color: '#10b981'}}/> TESİS TÜRÜ DAĞILIMI
                        </h2>
                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh' }}>
                            <ResponsiveContainer width="100%" height="100%">
