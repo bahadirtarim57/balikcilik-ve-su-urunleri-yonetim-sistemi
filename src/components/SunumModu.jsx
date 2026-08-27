@@ -40,7 +40,7 @@ const parseNumber = (val) => {
 
 const SunumModu = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [slide, setSlide] = useState(0);
   const [apiData, setApiData] = useState([]);
   const totalSlides = 9;
 
