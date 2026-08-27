@@ -2,7 +2,7 @@ import proj4 from 'proj4';
 import React, { useState, useMemo, useEffect } from 'react';
 import toast from 'react-hot-toast';
 import { supabase } from '../supabaseClient';
-import { DISTRICTS } from '../utils/turkeyData';
+import { DISTRICTS, CITY_PLATES } from '../utils/turkeyData';
 import { Users, Download, LayoutGrid, MapPin, Search, Edit, Trash2, Plus, ArrowLeft, Save, Fish, Building, Info, FileText, ChevronDown, ChevronUp, Archive, BarChart3, Droplets, Ruler, Clock, AlertTriangle, ShieldCheck, Anchor, Activity, Globe, RefreshCw, Zap, X, Database } from 'lucide-react';
 
 const STATUS_OPTIONS = ['Aktif', 'Pasif', 'İptal', 'Devredildi', 'Kiralama Aşamasında'];
@@ -618,7 +618,12 @@ const TesisYonetimi = ({ selectedCity }) => {
         console.error('Veri çekme hatası:', error);
         toast.error('Veriler çekilemedi!');
       } else {
-        const filteredData = data.filter(t => VALID_DISTRICTS.includes(t.ilce) || t.ilce === 'Merkez');
+        const plateStr = CITY_PLATES[currentCity] || '';
+        const filteredData = data.filter(t => {
+          const isDistrictValid = VALID_DISTRICTS.includes(t.ilce);
+          const hasValidPlate = t.resmiNo && (t.resmiNo.startsWith(plateStr + '-') || t.resmiNo.startsWith(plateStr + '/'));
+          return isDistrictValid && hasValidPlate;
+        });
         setDataList(filteredData);
       }
     };
