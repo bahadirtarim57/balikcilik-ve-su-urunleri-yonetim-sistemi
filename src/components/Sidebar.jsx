@@ -1,6 +1,6 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Presentation, Home, Fish, Archive, BookOpen, Calculator, Settings, Users, Scale, PieChart, Shield, LogOut, UserCog, Database, FileText, Rocket, TrendingUp, Ship, CheckCircle, AlertTriangle, MapPin, Building2, FileBadge , ChevronDown, ChevronUp} , Globe } from 'lucide-react';
+import { Presentation, Home, Fish, Archive, BookOpen, Calculator, Settings, Users, Scale, PieChart, Shield, LogOut, UserCog, Database, FileText, Rocket, TrendingUp, Ship, CheckCircle, AlertTriangle, MapPin, Building2, FileBadge, ChevronDown, ChevronUp, Globe } from 'lucide-react';
 import { getMinistryName, PERSONELLER } from '../utils/excelData';
 import { toast } from 'react-hot-toast';
 import { useAuth } from '../context/AuthContext';
@@ -456,6 +456,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
               <Rocket size={14} className={isPublishing ? "animate-pulse" : ""} />
               {isPublishing ? 'YAYINLANIYOR...' : 'SÄ°TEYÄ° YAYINLA'}
             </button>
+            </div>
           )}
         </div>
       </div>
