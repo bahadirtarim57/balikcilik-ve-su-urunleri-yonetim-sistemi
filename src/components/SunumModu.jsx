@@ -244,12 +244,12 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
   }, [isFullscreen, totalSlides]);
 
   const StatBox = ({ title, value, subtitle, color, icon }) => (
-      <div style={{ background: `linear-gradient(145deg, rgba(255,255,255,0.02), rgba(0,0,0,0.4))`, padding: '25px', borderRadius: '16px', border: `1px solid ${color}40`, borderLeft: `4px solid ${color}`, boxShadow: `0 10px 30px rgba(0,0,0,0.2)` }}>
-          <div style={{ color: color, fontSize: '18px', fontWeight: '600', marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
+      <div className="stat-box" style={{ background: `linear-gradient(145deg, rgba(255,255,255,0.02), rgba(0,0,0,0.4))`, padding: '25px', borderRadius: '16px', border: `1px solid ${color}40`, borderLeft: `4px solid ${color}`, boxShadow: `0 10px 30px rgba(0,0,0,0.2)` }}>
+          <div className="stat-box-title" style={{ color: color, fontSize: '18px', fontWeight: '600', marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
              {icon} <span style={{marginLeft: '10px'}}>{title}</span>
           </div>
-          <div style={{ color: '#fff', fontSize: '48px', fontWeight: '900', lineHeight: '1.1' }}>{value}</div>
-          {subtitle && <div style={{ color: '#94a3b8', fontSize: '14px', marginTop: '10px' }}>{subtitle}</div>}
+          <div className="stat-box-value" style={{ color: '#fff', fontSize: '48px', fontWeight: '900', lineHeight: '1.1' }}>{value}</div>
+          {subtitle && <div className="stat-box-subtitle" style={{ color: '#94a3b8', fontSize: '14px', marginTop: '10px' }}>{subtitle}</div>}
       </div>
   );
 
@@ -558,9 +558,19 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
     };
 
     return (
-      <div onClick={() => setSlide(s => Math.min(s + 1, totalSlides))} style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: '#020617', zIndex: 9999, fontFamily: "'Inter', sans-serif", color: '#e2e8f0', userSelect: 'none', cursor: 'pointer', overflow: 'hidden' }}>
-        
-        {/* Progress Bar & Indicators */}
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: '#020617', zIndex: 9999, fontFamily: "'Inter', sans-serif", color: '#e2e8f0', userSelect: 'none', overflow: 'hidden' }}>
+          
+          {/* Navigation touch zones */}
+          <div onClick={() => setSlide(s => Math.max(s - 1, 0))} style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: '30%', zIndex: 101, cursor: 'pointer' }} />
+          <div onClick={() => setSlide(s => Math.min(s + 1, totalSlides))} style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: '70%', zIndex: 101, cursor: 'pointer' }} />
+          
+          {/* Mobile Nav Buttons */}
+          <div className="mobile-nav-buttons" style={{ position: 'absolute', bottom: '20px', left: 0, right: 0, display: 'flex', justifyContent: 'center', gap: '20px', zIndex: 102 }}>
+             <button onClick={(e) => { e.stopPropagation(); setSlide(s => Math.max(s - 1, 0)); }} style={{ background: 'rgba(255,255,255,0.2)', color: 'white', padding: '12px 30px', borderRadius: '30px', border: '1px solid rgba(255,255,255,0.5)', fontSize: '16px', fontWeight: 'bold' }}>Önceki Slayt</button>
+             <button onClick={(e) => { e.stopPropagation(); setSlide(s => Math.min(s + 1, totalSlides)); }} style={{ background: 'rgba(56,189,248,0.8)', color: 'white', padding: '12px 30px', borderRadius: '30px', border: 'none', fontSize: '16px', fontWeight: 'bold' }}>Sonraki Slayt</button>
+          </div>
+          
+          {/* Progress Bar & Indicators */}
         <div style={{ position: 'absolute', top: '30px', left: '40px', zIndex: 100, display: 'flex', alignItems: 'center', gap: '20px' }}>
             <div style={{ color: '#94a3b8', fontSize: '16px', fontWeight: 'bold', letterSpacing: '2px' }}>
                SLAYT {slide + 1} / {totalSlides + 1}

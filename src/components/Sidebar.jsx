@@ -254,7 +254,6 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
 
   const handleAdminReset = () => {
     logout();
-    toast.success('Güvenli çıkış yapıldı.');
   };
 
   const toggleViewMode = () => {

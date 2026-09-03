@@ -76,6 +76,29 @@ function App() {
   const [showThemeColors, setShowThemeColors] = useState(false);
   const [showGhostModal, setShowGhostModal] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [showInstallBanner, setShowInstallBanner] = useState(false);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      setShowInstallBanner(true);
+    };
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+  }, []);
+
+  const handleInstallApp = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        setShowInstallBanner(false);
+      }
+      setDeferredPrompt(null);
+    }
+  };
 
   const { user: currentUser, login, setUser: setCurrentUser, originalAdminUser, stopImpersonating } = useAuth();
 
@@ -289,6 +312,21 @@ function App() {
           >
             Kendi Hesabıma Dön
           </button>
+        </div>
+      )}
+      {showInstallBanner && (
+        <div style={{ position: 'fixed', bottom: '20px', left: '20px', right: '20px', background: '#0ea5e9', color: 'white', padding: '16px', borderRadius: '12px', zIndex: 10000, display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <img src="/pwa-192x192.png" style={{ width: '40px', height: '40px', borderRadius: '8px' }} alt="Icon" />
+            <div>
+              <div style={{ fontWeight: 'bold' }}>BSÜSY</div>
+              <div style={{ fontSize: '12px', opacity: 0.9 }}>Uygulamayı telefonuna kur</div>
+            </div>
+          </div>
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <button onClick={() => setShowInstallBanner(false)} style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.5)', color: 'white', padding: '8px 12px', borderRadius: '8px', fontWeight: 'bold' }}>İptal</button>
+            <button onClick={handleInstallApp} style={{ background: 'white', color: '#0ea5e9', border: 'none', padding: '8px 16px', borderRadius: '8px', fontWeight: 'bold' }}>Yükle</button>
+          </div>
         </div>
       )}
       <div className="app-container" style={{ height: originalAdminUser ? 'calc(100dvh - 36px)' : '100dvh' }}>

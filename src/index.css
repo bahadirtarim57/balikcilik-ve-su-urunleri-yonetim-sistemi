@@ -1334,3 +1334,19 @@ html, body, #root {
   .split-slide-left h1 { font-size: 32px !important; }
   .split-slide-left p { font-size: 16px !important; }
 }
+
+.mobile-nav-buttons { display: none !important; }
+@media (max-width: 900px) {
+  .mobile-nav-buttons { display: flex !important; }
+}
+
+@media (max-width: 900px) {
+  .split-slide-left h2 { font-size: 24px !important; }
+  .split-slide-left h3 { font-size: 18px !important; }
+  .split-slide-left table { font-size: 12px !important; }
+  .split-slide-left td { padding: 4px !important; }
+  .split-slide-left .stat-box { padding: 15px !important; }
+  .split-slide-left .stat-box-value { font-size: 32px !important; }
+  .split-slide-left .stat-box-title { font-size: 14px !important; }
+  .split-slide-left > div { max-height: none !important; padding-right: 0 !important; }
+}
