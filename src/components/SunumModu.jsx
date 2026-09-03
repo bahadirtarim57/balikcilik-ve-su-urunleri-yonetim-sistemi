@@ -177,18 +177,6 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
 
     const selectedCity = localStorage.getItem('app-selectedCity');
 
-  if (!selectedCity) {
-      return (
-          <div style={{ padding: '24px', backgroundColor: '#f0f4f8', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{ background: 'white', padding: '40px', borderRadius: '16px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', textAlign: 'center', maxWidth: '400px' }}>
-                  <Presentation size={64} color="#94a3b8" style={{ margin: '0 auto 20px' }} />
-                  <h2 style={{ margin: '0 0 10px 0', color: '#1e293b' }}>İl Seçilmedi</h2>
-                  <p style={{ color: '#64748b', margin: 0 }}>Sunum verilerini görüntüleyebilmek için lütfen üst menüden bir il seçiniz.</p>
-              </div>
-          </div>
-      );
-  }
-
   const exportToPPT = () => {
     let pres = new pptxgen();
     pres.layout = 'LAYOUT_16x9';
@@ -606,6 +594,18 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
       </div>
     );
   };
+
+  if (!selectedCity) {
+      return (
+          <div style={{ padding: '24px', backgroundColor: '#f0f4f8', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ background: 'white', padding: '40px', borderRadius: '16px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', textAlign: 'center', maxWidth: '400px' }}>
+                  <Presentation size={64} color="#94a3b8" style={{ margin: '0 auto 20px' }} />
+                  <h2 style={{ margin: '0 0 10px 0', color: '#1e293b' }}>İl Seçilmedi</h2>
+                  <p style={{ color: '#64748b', margin: 0 }}>Sunum verilerini görüntüleyebilmek için lütfen üst menüden bir il seçiniz.</p>
+              </div>
+          </div>
+      );
+  }
 
   return (
     <div style={{ padding: '24px', backgroundColor: '#f0f4f8', minHeight: '100vh', fontFamily: "'Inter', sans-serif" }}>

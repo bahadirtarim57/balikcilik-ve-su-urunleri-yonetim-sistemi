@@ -369,3 +369,6 @@ px vercel --prod) saÄŸlandÄ±.
 
 - Sunum sayfasýna girildiðinde (henüz sunumu baþlatmadan önceki giriþ ekranýnda) mobilde ekran dýþýna taþan butonlar ve baþlýklar ('SÝNOP ÝLÝ SU ÜRÜNLERÝ...') mobil uyumlu hale getirildi, dikey düzene geçirildi.
 - Tesis yönetimi sayfasýndaki gibi, Sunum sayfasýna da 'Ýl Seçilmedi' kontrolü eklendi; artýk üstten il seçilmediðinde varsayýlan Sinop verileri yerine uyarý ekraný çýkýyor.
+
+- Sunum modunda telefonda listelerin aþaðý kaydýrýlamamasýna sebep olan görünmez dokunmatik ekran geçiþ alanlarý mobil görünümde iptal edildi (geçiþler sadece butonlarla yapýlýyor), böylece sayfa dikeyde sorunsuzca kaydýrýlabilir hale geldi.
+- Mobil sunumdaki alt baþlýklar ('EN YÜKSEK KAPASÝTELÝ YATIRIMCILAR' vb.) ve ikon boyutlarý okunabilir olacak þekilde bir kademe daha küçültüldü.
