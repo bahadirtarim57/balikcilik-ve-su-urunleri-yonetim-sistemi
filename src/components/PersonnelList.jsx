@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Plus, Edit2, Trash2, Search, ArrowRightLeft, X, Save, PlusCircle, Filter, Download, Upload, Mail, Send, Key, CheckCircle2 } from 'lucide-react'
 import { supabase } from '../supabaseClient'
 import { uploadLocalToSupabase } from '../lib/storage'
@@ -24,18 +25,20 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     }
     return phone;
   };
-  const { user } = useAuth()
-  
-  // Yöneticilik yetkisi (App.jsx'ten gelen role göre)
+  const { user, sendImpersonationEmail, hasRole } = useAuth()
+  const location = useLocation()
+
   const isManagerRole = currentRole && currentRole !== 'Personel';
   const canDelete = isManagerRole && currentRole !== 'Birim Sorumlusu';
   const [showFilters, setShowFilters] = useState(false)
   const [dynamicBranches, setDynamicBranches] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
   const [filterUnit, setFilterUnit] = useState('')
+  const [quickUnit, setQuickUnit] = useState('')
   const [historyData, setHistoryData] = useState({})
   const [editedData, setEditedData] = useState({})
   const [branchData, setBranchData] = useState({})
+  const [modulePermissions, setModulePermissions] = useState({})
   
   const currentYear = new Date().getFullYear();
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth() + 1);
@@ -49,7 +52,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
 
   const [editModal, setEditModal] = useState({ 
     isOpen: false, originalName: '', historyIndex: -1, 
-    name: '', title: '', profession: '', contact: '', kontrolGorevNo: '', phone: '', email: '',
+    name: '', title: '', profession: '', brans: '', contact: '', kontrolGorevNo: '', phone: '', email: '',
     baslangic: '', ayrilis: '',
     reportsTo: '', yillikIzin: '', yillikIzinGecmis: '', gorevMahalli: '', gorevKonulari: '',
     h_tazminat: false, h_kontrol: false, h_arazi: false, h_diger1: false, h_diger2: false, h_soforluk: false
@@ -77,6 +80,10 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     const bData = localStorage.getItem('branchPersonnelData')
     if (bData) {
       try { setBranchData(JSON.parse(bData)) } catch (e) {}
+    }
+    const mData = localStorage.getItem('modulePermissionsData')
+    if (mData) {
+      try { setModulePermissions(JSON.parse(mData)) } catch (e) {}
     }
     const pChanges = localStorage.getItem('pendingPersonnelChanges')
     if (pChanges) {
@@ -121,7 +128,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     localStorage.setItem('personnelHistoryData', JSON.stringify(newData))
   }
 
-  const addPendingChange = (type, payload, alertMsg) => {
+  const addPendingChange = async (type, payload, alertMsg) => {
     if (user?.role === 'Birim Sorumlusu') {
       const newChange = {
         id: Date.now().toString(),
@@ -133,7 +140,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
       const updated = [...pendingChanges, newChange];
       setPendingChanges(updated);
       localStorage.setItem('pendingPersonnelChanges', JSON.stringify(updated));
-      alert(alertMsg || "İşleminiz kaydedildi ve onaylanması için Genel Koordinatör'e iletildi.");
+      await uploadLocalToSupabase();
       return true;
     }
     return false;
@@ -156,7 +163,22 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     });
   }
 
-  const handleDateChange = (personOriginalName, historyIndex, defaultUnit, field, value) => {
+  const handleInlineBransChange = async (personOriginalName, value) => {
+    if (await addPendingChange('INLINE_EDIT', { originalName: personOriginalName, field: 'brans', value }, "Branş değişikliği onay için Genel Koordinatör'e iletildi.")) return;
+
+    const newData = { ...editedData };
+    if (!newData[personOriginalName]) {
+      const base = PERSONELLER.find(x => x.name === personOriginalName) || {};
+      newData[personOriginalName] = { ...base };
+    }
+    newData[personOriginalName].brans = value;
+    
+    setEditedData(newData);
+    localStorage.setItem('editedPersonnelData', JSON.stringify(newData));
+    await uploadLocalToSupabase();
+  };
+
+  const handleDateChange = async (personOriginalName, historyIndex, defaultUnit, field, value) => {
     const data = { ...historyData }
     if (!data[personOriginalName] || data[personOriginalName].length === 0) {
       data[personOriginalName] = [{ unit: defaultUnit, baslangic: '', ayrilis: '' }]
@@ -164,7 +186,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     const history = data[personOriginalName]
     const activeIndex = historyIndex === -1 ? 0 : historyIndex;
     
-    if (addPendingChange('DATE_CHANGE', { personOriginalName, historyIndex: activeIndex, defaultUnit, field, value }, "Tarih değişikliği onay için Genel Koordinatör'e iletildi.")) return;
+    if (await addPendingChange('DATE_CHANGE', { personOriginalName, historyIndex: activeIndex, defaultUnit, field, value }, "Tarih değişikliği onay için Genel Koordinatör'e iletildi.")) return;
 
     const oldVal = history[activeIndex][field];
     history[activeIndex][field] = value;
@@ -416,11 +438,25 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     alert('Geçen ayın çarpıları başarıyla kopyalandı!');
   };
 
-  const handleInlineSave = () => {
+  const handleInlineSave = async () => {
     localStorage.setItem('monthlyCheckboxesData', JSON.stringify(monthlyCheckboxes));
     localStorage.setItem('branchPersonnelData', JSON.stringify(branchData));
-    uploadLocalToSupabase();
-    alert('Tüm değişiklikler başarıyla veritabanına kaydedildi!');
+    await uploadLocalToSupabase();
+  };
+
+  const toggleModulePermission = (originalName, moduleKey) => {
+    const updated = { ...modulePermissions };
+    if (!updated[originalName]) updated[originalName] = {};
+    updated[originalName][moduleKey] = !updated[originalName][moduleKey];
+    setModulePermissions(updated);
+    localStorage.setItem('modulePermissionsData', JSON.stringify(updated));
+  };
+
+  const renderCheckbox = (isChecked) => {
+    if (isChecked) {
+      return <div style={{ width: '18px', height: '18px', border: '1px solid #333', background: '#fff', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#111', fontWeight: '900', fontSize: '14px', userSelect: 'none', lineHeight: '1', boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.1)' }}>X</div>;
+    }
+    return <div style={{ width: '18px', height: '18px', border: '1px solid #cbd5e1', background: '#f8fafc', margin: '0 auto', userSelect: 'none', boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.05)' }}></div>;
   };
 
   const handleExportExcelBranch = () => {
@@ -431,6 +467,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
         'Adı Soyadı': p.name,
         'Görevi': p.title || '',
         'Ünvanı': p.profession || '',
+        'Bölümü / Branşı': p.brans || '',
         'Sicil No': p.contact || '',
         'Kontrol Görev No': p.kontrolGorevNo || '',
         'Telefon': formatPhone(p.phone) || '',
@@ -455,6 +492,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
       name: p.name,
       title: p.title || '',
       profession: p.profession || '',
+      brans: p.brans || '',
       unit: p.activeUnit || '',
       contact: p.contact || '',
       kontrolGorevNo: p.kontrolGorevNo || '',
@@ -475,7 +513,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     })
   }
 
-  const handleEditSubmit = () => {
+  const handleEditSubmit = async () => {
     const { originalName, historyIndex, name, title, profession, contact, kontrolGorevNo, phone, baslangic, ayrilis, isNew, unit } = editModal;
     if (!name.trim()) {
       alert('Personel adı boş bırakılamaz.');
@@ -511,7 +549,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
       }
     }
 
-    if (addPendingChange('EDIT', { originalName: actualOriginalName, historyIndex: activeIdx, name, title, profession, contact, kontrolGorevNo, phone, unit, province: isNew ? selectedProvince : (editedData[originalName]?.province || EXCEL_PROVINCE), baslangic, ayrilis, branchFields: { yillikIzin: editModal.yillikIzin, yillikIzinGecmis: editModal.yillikIzinGecmis, gorevMahalli: editModal.gorevMahalli, gorevKonulari: editModal.gorevKonulari, h_tazminat: editModal.h_tazminat ? 'X' : '', h_kontrol: editModal.h_kontrol ? 'X' : '', h_arazi: editModal.h_arazi ? 'X' : '', h_diger1: editModal.h_diger1 ? 'X' : '', h_diger2: editModal.h_diger2 ? 'X' : '', h_soforluk: editModal.h_soforluk ? 'X' : '' } }, "Personel bilgileri değişikliği onay için Genel Koordinatör'e iletildi.")) {
+    if (addPendingChange('EDIT', { originalName: actualOriginalName, historyIndex: activeIdx, name, title, profession, brans: editModal.brans, contact, kontrolGorevNo, phone, unit, province: isNew ? selectedProvince : (editedData[originalName]?.province || EXCEL_PROVINCE), baslangic, ayrilis, branchFields: { yillikIzin: editModal.yillikIzin, yillikIzinGecmis: editModal.yillikIzinGecmis, gorevMahalli: editModal.gorevMahalli, gorevKonulari: editModal.gorevKonulari, h_tazminat: editModal.h_tazminat ? 'X' : '', h_kontrol: editModal.h_kontrol ? 'X' : '', h_arazi: editModal.h_arazi ? 'X' : '', h_diger1: editModal.h_diger1 ? 'X' : '', h_diger2: editModal.h_diger2 ? 'X' : '', h_soforluk: editModal.h_soforluk ? 'X' : '' } }, "Personel bilgileri değişikliği onay için Genel Koordinatör'e iletildi.")) {
       setEditModal({ ...editModal, isOpen: false });
       return;
     }
@@ -523,7 +561,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     // 2. Save Edited Base Details
     const newData = {
       ...editedData,
-      [actualOriginalName]: { name, title, profession, contact, kontrolGorevNo, phone, unit, province: isNew ? selectedProvince : (editedData[originalName]?.province || EXCEL_PROVINCE) }
+      [actualOriginalName]: { name, title, profession, brans: editModal.brans, contact, kontrolGorevNo, phone, unit, province: isNew ? selectedProvince : (editedData[originalName]?.province || EXCEL_PROVINCE) }
     };
 
     // 3. Save Branch Fields
@@ -562,8 +600,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     }
 
     setEditModal({ ...editModal, isOpen: false });
-    uploadLocalToSupabase();
-    toast.success('Personel verileri başarıyla kaydedildi.');
+    await uploadLocalToSupabase();
   }
   const handleSendPassword = async (personnelName) => {
     const emailInfo = personnelEmailData[personnelName];
@@ -599,10 +636,10 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     }
   };
 
-  const handleDelete = (p) => {
+  const handleDelete = async (p) => {
     if (!window.confirm(`${p.name} isimli personelin bu görev kaydını silmek istediğinize emin misiniz?`)) return;
 
-    if (addPendingChange('DELETE', { p }, "Silme işlemi onay için Genel Koordinatör'e iletildi.")) return;
+    if (await addPendingChange('DELETE', { p }, "Silme işlemi onay için Genel Koordinatör'e iletildi.")) return;
 
     if (p.historyIndex >= 0) {
       const hData = { ...historyData };
@@ -630,17 +667,17 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
       setEditedData(newData);
       localStorage.setItem('editedPersonnelData', JSON.stringify(newData));
     }
-    uploadLocalToSupabase();
+    await uploadLocalToSupabase();
   }
 
-  const handleTransferSubmit = () => {
+  const handleTransferSubmit = async () => {
     const { personnel, newUnit, ayrilisTarihi, baslangicTarihi } = transferModal
     if (!newUnit || !ayrilisTarihi || !baslangicTarihi) {
       alert('Lütfen tüm alanları doldurunuz.')
       return
     }
 
-    if (addPendingChange('TRANSFER', { personnel, newUnit, ayrilisTarihi, baslangicTarihi }, "Transfer işlemi onay için Genel Koordinatör'e iletildi.")) {
+    if (await addPendingChange('TRANSFER', { personnel, newUnit, ayrilisTarihi, baslangicTarihi }, "Transfer işlemi onay için Genel Koordinatör'e iletildi.")) {
       setTransferModal({ ...transferModal, isOpen: false });
       return;
     }
@@ -676,8 +713,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
 
     saveHistoryData(data)
     setTransferModal({ ...transferModal, isOpen: false })
-    uploadLocalToSupabase();
-    alert('Transfer işlemi başarıyla kaydedildi.')
+    await uploadLocalToSupabase();
   }
 
   const uniqueDistricts = [...new Set(DISTRICTS[EXCEL_PROVINCE] || [])]
@@ -833,7 +869,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     return baseP && (baseP.unit === 'İl Dışı' || baseP.unit === 'Emekli');
   };
 
-  const handleApprove = (change) => {
+  const handleApprove = async (change) => {
     if (change.type === 'DELETE') {
       const p = change.payload.p;
       if (p.historyIndex >= 0) {
@@ -878,8 +914,15 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
       const history = data[personOriginalName];
       history[historyIndex][field] = value;
       saveHistoryData(data);
+    } else if (change.type === 'INLINE_EDIT') {
+      const { originalName, field, value } = change.payload;
+      const newData = { ...editedData };
+      if (!newData[originalName]) newData[originalName] = {};
+      newData[originalName][field] = value;
+      setEditedData(newData);
+      localStorage.setItem('editedPersonnelData', JSON.stringify(newData));
     } else if (change.type === 'EDIT') {
-      const { originalName, historyIndex, name, title, profession, contact, kontrolGorevNo, phone, unit, province, baslangic, ayrilis, branchFields } = change.payload;
+      const { originalName, historyIndex, name, title, profession, brans, contact, kontrolGorevNo, phone, unit, province, baslangic, ayrilis, branchFields } = change.payload;
       const hData = { ...historyData };
       if (!hData[originalName] || hData[originalName].length === 0) {
         hData[originalName] = [{ unit: '', baslangic: '', ayrilis: '' }];
@@ -890,7 +933,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
       setHistoryData(hData);
       localStorage.setItem('personnelHistoryData', JSON.stringify(hData));
 
-      const newData = { ...editedData, [originalName]: { name, title, profession, contact, kontrolGorevNo, phone, unit, province } };
+      const newData = { ...editedData, [originalName]: { name, title, profession, brans, contact, kontrolGorevNo, phone, unit, province } };
       setEditedData(newData);
       localStorage.setItem('editedPersonnelData', JSON.stringify(newData));
 
@@ -904,14 +947,15 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     const updated = pendingChanges.filter(c => c.id !== change.id);
     setPendingChanges(updated);
     localStorage.setItem('pendingPersonnelChanges', JSON.stringify(updated));
-    alert('İşlem başarıyla onaylandı ve sisteme işlendi.');
+    await uploadLocalToSupabase();
   };
 
-  const handleReject = (id) => {
+  const handleReject = async (id) => {
     if (!window.confirm("Bu değişikliği reddetmek istediğinize emin misiniz? İşlem iptal edilecek.")) return;
     const updated = pendingChanges.filter(c => c.id !== id);
     setPendingChanges(updated);
     localStorage.setItem('pendingPersonnelChanges', JSON.stringify(updated));
+    await uploadLocalToSupabase();
   };
 
   const handleExportExcel = () => {
@@ -920,6 +964,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
       'Güncel Birimi': p.unit,
       'Görevi': p.title || '',
       'Ünvanı': p.profession || '',
+      'Bölümü / Branşı': p.brans || '',
       'Sicil No': p.contact || '',
       'Telefon': formatPhone(p.phone) || '',
       'Görev Başlangıç': p.baslangic || '-',
@@ -1137,6 +1182,17 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     return a.localeCompare(b, 'tr-TR');
   });
 
+  useEffect(() => {
+    if (location.state?.openProfileOriginalName && finalPersonnel.length > 0) {
+      const pName = location.state.openProfileOriginalName;
+      const person = finalPersonnel.find(x => x.originalName === pName);
+      if (person) {
+        openProfileModal(person);
+      }
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state, finalPersonnel]);
+
   return (
     <div className="module-container" style={{ position: 'relative' }}>
       <div className="module-header glass-panel">
@@ -1277,20 +1333,48 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
           </div>
         </div>
 
+        <div style={{ padding: '15px 20px', background: '#f8fafc', borderBottom: '1px solid #e5e7eb', display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <label style={{ fontWeight: 600, color: '#334155', fontSize: '14px' }}>Personel Seçiniz (Sadece Görüntüleme):</label>
+          <select 
+            style={{ padding: '6px 12px', border: '1px solid #cbd5e1', borderRadius: '4px', minWidth: '350px', fontSize: '14px', outline: 'none', backgroundColor: '#fff' }}
+            onChange={e => {
+              if (e.target.value) {
+                const selectedP = finalPersonnel.find(p => p.originalName === e.target.value);
+                if (selectedP) openProfileModal(selectedP);
+                e.target.value = '';
+              }
+            }}
+          >
+            <option value="">-- Personel incelemek için Seçin --</option>
+            {finalPersonnel.map((p, idx) => {
+              let u = p.unit || p.activeUnit || 'Birim Yok';
+              u = u.replace(/İlçe Tarım ve Orman Müdürlüğü/g, 'İlçe Müdürlüğü').replace(/İlçe Tarım Müdürlüğü/g, 'İlçe Müdürlüğü');
+              return (
+                <option key={idx} value={p.originalName}>{p.name} ({u})</option>
+              );
+            })}
+          </select>
+        </div>
+
           <div style={{ maxHeight: 'calc(100vh - 380px)', overflowX: 'auto', overflowY: 'auto', borderBottom: '1px solid #e5e7eb' }}>
             {isUnitView ? (
-              <table className="data-table" style={{ minWidth: '1400px', fontSize: '13px' }}>
+              <table className="data-table" style={{ minWidth: '1600px', fontSize: '13px' }}>
               <thead>
                 <tr>
                   <th style={{ width: '200px', borderRight: '1px solid #e5e7eb' }}>ADI SOYADI</th>
-                  <th style={{ width: '150px', borderRight: '1px solid #e5e7eb' }}>GÖREVİ</th>
-                  <th style={{ width: '150px', borderRight: '1px solid #e5e7eb' }}>ÜNVANI</th>
-                  <th style={{ width: '100px', borderRight: '1px solid #e5e7eb' }}>SİCİL NO</th>
-                  <th style={{ width: '150px', borderRight: '1px solid #e5e7eb' }}>KONTROL GÖREV NO</th>
-                  <th style={{ width: '120px', borderRight: '1px solid #e5e7eb' }}>TELEFON</th>
-                  <th style={{ width: '220px', borderRight: '1px solid #e5e7eb' }}>E-POSTA</th>
-                  <th style={{ width: '110px', textAlign: 'center', borderRight: '1px solid #e5e7eb' }}>GÖREV BAŞL.</th>
-                  <th style={{ width: '110px', textAlign: 'center', borderRight: '1px solid #e5e7eb' }}>GÖREVDEN AYR.</th>
+                  <th style={{ width: '130px', borderRight: '1px solid #e5e7eb' }}>GÖREVİ</th>
+                  <th style={{ width: '130px', borderRight: '1px solid #e5e7eb' }}>ÜNVANI</th>
+                  <th style={{ width: '90px', borderRight: '1px solid #e5e7eb' }}>SİCİL NO</th>
+                  <th style={{ width: '130px', borderRight: '1px solid #e5e7eb' }}>KONTROL GÖREV NO</th>
+                  <th style={{ width: '110px', borderRight: '1px solid #e5e7eb' }}>TELEFON</th>
+                  <th style={{ width: '200px', borderRight: '1px solid #e5e7eb' }}>E-POSTA</th>
+                  <th style={{ width: '130px', borderRight: '1px solid #e5e7eb' }}>BÖLÜMÜ/BRANŞI</th>
+                  <th style={{ width: '60px', textAlign: 'center', borderRight: '1px solid #e5e7eb', fontSize: '11px', padding: '4px' }}>RUHSAT</th>
+                  <th style={{ width: '60px', textAlign: 'center', borderRight: '1px solid #e5e7eb', fontSize: '11px', padding: '4px' }}>STOK</th>
+                  <th style={{ width: '60px', textAlign: 'center', borderRight: '1px solid #e5e7eb', fontSize: '11px', padding: '4px' }}>YETİŞT.</th>
+                  <th style={{ width: '60px', textAlign: 'center', borderRight: '1px solid #e5e7eb', fontSize: '11px', padding: '4px' }}>İHLAL</th>
+                  <th style={{ width: '100px', textAlign: 'center', borderRight: '1px solid #e5e7eb' }}>GÖREV BAŞL.</th>
+                  <th style={{ width: '100px', textAlign: 'center', borderRight: '1px solid #e5e7eb' }}>GÖREVDEN AYR.</th>
                   {isManagerRole && (
                     <th style={{ textAlign: 'right' }}>İŞLEMLER</th>
                   )}
@@ -1334,6 +1418,33 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
                           )}
                         </div>
                       </td>
+                      <td style={{ borderRight: '1px solid #e5e7eb', padding: '4px' }}>
+                        <select 
+                          style={{ width: '100%', padding: '4px', border: '1px solid #e5e7eb', borderRadius: '4px', backgroundColor: '#f9fafb', fontSize: '11px', outline: 'none' }}
+                          value={p.brans || ''}
+                          onChange={e => handleInlineBransChange(p.originalName, e.target.value)}
+                          disabled={!isManagerRole}
+                        >
+                          <option value="">- Seçiniz -</option>
+                          <option value="Su Ürünleri Mühendisi">Su Ürünleri Müh.</option>
+                          <option value="Balıkçılık Teknolojisi Mühendisi">Balıkçılık Tekn. Müh.</option>
+                          <option value="Ziraat Mühendisi">Ziraat Müh.</option>
+                          <option value="Veteriner Hekim">Veteriner Hekim</option>
+                          <option value="Biyolog">Biyolog</option>
+                        </select>
+                      </td>
+                      <td style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'ruhsat')}>
+                        {renderCheckbox(modulePermissions[p.originalName]?.ruhsat)}
+                      </td>
+                      <td style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'stok')}>
+                        {renderCheckbox(modulePermissions[p.originalName]?.stok)}
+                      </td>
+                      <td style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'yetistiricilik')}>
+                        {renderCheckbox(modulePermissions[p.originalName]?.yetistiricilik)}
+                      </td>
+                      <td style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'ihlaller')}>
+                        {renderCheckbox(modulePermissions[p.originalName]?.ihlaller)}
+                      </td>
                       <td style={{ padding: '4px', borderRight: '1px solid #e5e7eb' }}>
                         <input type="date" style={{ width: '100%', padding: '4px', border: '1px solid #e5e7eb', borderRadius: '4px', textAlign: 'center', backgroundColor: '#f9fafb' }} value={p.baslangic} disabled />
                       </td>
@@ -1354,7 +1465,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
               </tbody>
             </table>
             ) : (
-            <table className="data-table" style={{ fontSize: '13px' }}>
+            <table className="data-table" style={{ minWidth: '1600px', fontSize: '13px' }}>
               <thead>
                 <tr>
                   <th>ADI SOYADI</th>
@@ -1364,6 +1475,11 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
                   <th>KONTROL GÖREV NO</th>
                   <th>TELEFON</th>
                   <th>E-POSTA</th>
+                  <th>BÖLÜMÜ / BRANŞI</th>
+                  <th style={{ textAlign: 'center', fontSize: '11px', padding: '4px' }}>RUHSAT</th>
+                  <th style={{ textAlign: 'center', fontSize: '11px', padding: '4px' }}>STOK</th>
+                  <th style={{ textAlign: 'center', fontSize: '11px', padding: '4px' }}>YETİŞT.</th>
+                  <th style={{ textAlign: 'center', fontSize: '11px', padding: '4px' }}>İHLAL</th>
                   <th style={{ width: '130px', textAlign: 'center' }}>GÖREV BAŞL.</th>
                   <th style={{ width: '130px', textAlign: 'center' }}>GÖREVDEN AYR.</th>
                   {isManagerRole && (
@@ -1409,6 +1525,33 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
                           </button>
                         )}
                       </div>
+                    </td>
+                    <td data-label="BÖLÜMÜ / BRANŞI" style={{ borderRight: '1px solid #e5e7eb', padding: '4px' }}>
+                      <select 
+                        style={{ width: '100%', padding: '4px', border: '1px solid #e5e7eb', borderRadius: '4px', backgroundColor: '#f9fafb', fontSize: '11px', outline: 'none' }}
+                        value={p.brans || ''}
+                        onChange={e => handleInlineBransChange(p.originalName, e.target.value)}
+                        disabled={!isManagerRole}
+                      >
+                        <option value="">- Seçiniz -</option>
+                        <option value="Su Ürünleri Mühendisi">Su Ürünleri Müh.</option>
+                        <option value="Balıkçılık Teknolojisi Mühendisi">Balıkçılık Tekn. Müh.</option>
+                        <option value="Ziraat Mühendisi">Ziraat Müh.</option>
+                        <option value="Veteriner Hekim">Veteriner Hekim</option>
+                        <option value="Biyolog">Biyolog</option>
+                      </select>
+                    </td>
+                    <td data-label="RUHSAT" style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'ruhsat')}>
+                      {renderCheckbox(modulePermissions[p.originalName]?.ruhsat)}
+                    </td>
+                    <td data-label="STOK" style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'stok')}>
+                      {renderCheckbox(modulePermissions[p.originalName]?.stok)}
+                    </td>
+                    <td data-label="YETİŞTİRİCİLİK" style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'yetistiricilik')}>
+                      {renderCheckbox(modulePermissions[p.originalName]?.yetistiricilik)}
+                    </td>
+                    <td data-label="İHLALLER" style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'ihlaller')}>
+                      {renderCheckbox(modulePermissions[p.originalName]?.ihlaller)}
                     </td>
                     <td data-label="BAŞLANGIÇ TARİHİ" style={{ padding: '4px' }}>
                       <input type="date" className="hakedis-input" style={{ width: '100%', padding: '6px' }} value={p.baslangic} onChange={e => handleDateChange(p.originalName, p.historyIndex, p.unit, 'baslangic', e.target.value)} disabled={p.activeUnit === 'İl Dışı' || p.activeUnit === 'Emekli' || !isManagerRole} />
@@ -1535,6 +1678,17 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
               <div>
                 <label style={{ display: 'block', fontSize: '12px', marginBottom: '4px', color: '#6b7280' }}>Ünvanı</label>
                 <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #d1d5db', borderRadius: '6px' }} value={editModal.profession} onChange={e => setEditModal({ ...editModal, profession: e.target.value })} />
+              </div>
+              <div>
+                <label style={{ display: 'block', fontSize: '12px', marginBottom: '4px', color: '#6b7280' }}>Bölümü / Branşı (Örn: Su Ürünleri)</label>
+                <input list="brans-list" type="text" style={{ width: '100%', padding: '8px', border: '1px solid #d1d5db', borderRadius: '6px' }} value={editModal.brans} onChange={e => setEditModal({ ...editModal, brans: e.target.value })} placeholder="Mezuniyet / Branş..." />
+                <datalist id="brans-list">
+                  <option value="Su Ürünleri Mühendisi" />
+                  <option value="Balıkçılık Teknolojisi Mühendisi" />
+                  <option value="Ziraat Mühendisi" />
+                  <option value="Veteriner Hekim" />
+                  <option value="Biyolog" />
+                </datalist>
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '12px', marginBottom: '4px', color: '#6b7280' }}>Sicil No</label>

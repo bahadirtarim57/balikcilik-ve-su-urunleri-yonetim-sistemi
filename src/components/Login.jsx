@@ -218,18 +218,18 @@ const Login = ({ onLogin, activeUnitName, selectedCity }) => {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', fontFamily: "'Inter', sans-serif" }}>
+    <div className="login-wrapper" style={{ display: 'flex', minHeight: '100vh', fontFamily: "'Inter', sans-serif" }}>
       {/* SOL TARAF: GÖRSEL VE BİLGİ */}
-      <div style={{ flex: '1', backgroundColor: '#0f172a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '40px' }}>
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: 'url("/login-bg.png")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.9 }}></div>
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to right, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.9))' }}></div>
+      <div className="login-image-side" style={{ flex: '1', backgroundColor: '#0f172a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '40px' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: 'url("/login-bg.png")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', opacity: 0.9 }}></div>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(160deg, rgba(10, 15, 35, 0.72) 0%, rgba(10, 15, 35, 0.25) 45%, rgba(10, 15, 35, 0.15) 70%, rgba(10, 15, 35, 0.75) 100%)' }}></div>
         
         <div style={{ position: 'relative', zIndex: 10 }}>
-          <h1 style={{ fontSize: '42px', fontWeight: '800', color: 'white', marginBottom: '8px', letterSpacing: '-1px', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
+          <h1 style={{ fontSize: '28px', fontWeight: '800', color: 'white', marginBottom: '8px', letterSpacing: '-1px', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
             Tarım ve Orman Bakanlığı
           </h1>
           <p style={{ fontSize: '15px', color: '#e2e8f0', maxWidth: '600px', lineHeight: '1.6', textShadow: '0 2px 10px rgba(0,0,0,0.5)', marginBottom: '10px' }}>
-            Balıkçılık ve Su Ürünleri Yönetimi
+            Balıkçılık ve Su Ürünleri Şubesi Yönetimi
           </p>
         </div>
 
@@ -242,7 +242,7 @@ const Login = ({ onLogin, activeUnitName, selectedCity }) => {
       </div>
 
       {/* SAĞ TARAF: GİRİŞ PANELİ */}
-      <div style={{ flex: '0 0 450px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '40px', background: 'white', boxShadow: '-10px 0 30px rgba(0,0,0,0.1)', zIndex: 20 }}>
+      <div className="login-form-side" style={{ flex: '0 0 450px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '40px', background: 'white', boxShadow: '-10px 0 30px rgba(0,0,0,0.1)', zIndex: 20 }}>
         <div style={{ width: '100%', maxWidth: '340px' }}>
           
           <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', marginBottom: '32px' }}>

@@ -1294,3 +1294,10 @@ html, body, #root {
 .anim-slide-up { animation: slideInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
 .anim-zoom { animation: zoomIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
 .anim-ken-burns { animation: kenBurns 20s linear infinite alternate; }
+
+ @ m e d i a   ( m a x - w i d t h :   7 6 8 p x )   { 
+     . l o g i n - w r a p p e r   {   f l e x - d i r e c t i o n :   c o l u m n   ! i m p o r t a n t ;   } 
+     . l o g i n - i m a g e - s i d e   {   f l e x :   0   0   2 5 0 p x   ! i m p o r t a n t ;   } 
+     . l o g i n - f o r m - s i d e   {   f l e x :   1   ! i m p o r t a n t ;   w i d t h :   1 0 0 %   ! i m p o r t a n t ;   m a x - w i d t h :   1 0 0 %   ! i m p o r t a n t ;   p a d d i n g :   2 0 p x   ! i m p o r t a n t ;   } 
+ }  
+ 

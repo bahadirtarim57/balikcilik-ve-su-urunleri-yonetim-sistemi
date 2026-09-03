@@ -62,6 +62,7 @@ export async function loadFromSupabase() {
     }
 
     console.log(`✅  Supabase'den ${totalLoaded} kayıt yüklendi.`);
+    window.dispatchEvent(new Event('settingsSynced'));
     return totalLoaded;
   } catch (err) {
     console.warn('Supabase bağlantı hatası:', err.message);

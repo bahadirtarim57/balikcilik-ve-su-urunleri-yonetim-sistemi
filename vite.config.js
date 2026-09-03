@@ -41,7 +41,7 @@ const apiPlugin = () => ({
       } else if (req.url === '/api/sync-folder' && req.method === 'POST') {
         try {
           const os = require('os');
-          const desktopPath = path.join(os.homedir(), 'Desktop', '1380 Sayılı Yasa İşlemleri');
+          const desktopPath = path.join(os.homedir(), 'Desktop', 'Balikcilik_Ve_Su_Urunleri_Sube_Yonetimi');
           if (!fs.existsSync(desktopPath)) {
             fs.mkdirSync(desktopPath, { recursive: true });
             res.statusCode = 200;
@@ -104,7 +104,7 @@ const apiPlugin = () => ({
         const { exec } = require('child_process');
         res.setHeader('Content-Type', 'application/json');
         
-        exec('npx vercel --prod', { maxBuffer: 1024 * 1024 * 10 }, (error, stdout, stderr) => {
+        exec('git add . && git commit --allow-empty -m "Arayuz uzerinden otomatik guncelleme" && git pull origin main --rebase && git push origin main', { maxBuffer: 1024 * 1024 * 10 }, (error, stdout, stderr) => {
           if (error) {
             console.error('Publish error:', error);
             res.statusCode = 500;
@@ -115,7 +115,7 @@ const apiPlugin = () => ({
         });
       } else if (req.url === '/api/download-zip' && req.method === 'GET') {
         const { exec } = require('child_process');
-        const downloadName = '1380_Sayili_Yasa_Ihlali_Yedek.zip';
+        const downloadName = 'Balikcilik_Su_Urunleri_Yedek.zip';
         const tempZipName = `temp_yedek_${Date.now()}.zip`;
         const zipPath = path.resolve(tempZipName);
         
@@ -156,23 +156,28 @@ export default defineConfig({
       workbox: { maximumFileSizeToCacheInBytes: 6000000 },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'Su Ürünleri Yönetim Sistemi',
-        short_name: 'Su Ürünleri',
-        description: 'Sinop İl Tarım ve Orman Müdürlüğü - Su Ürünleri Yönetim ve Denetim Sistemi',
-        theme_color: '#ffffff',
-        icons: [
-          {
-            src: 'pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
+          name: 'Balıkçılık ve Su Ürünleri Sistemi',
+          short_name: 'BSÜS',
+          description: 'Sinop İl Tarım ve Orman Müdürlüğü - Balıkçılık ve Su Ürünleri Yönetim ve Denetim Sistemi',
+          theme_color: '#0ea5e9',
+          background_color: '#ffffff',
+          display: 'standalone',
+          start_url: '/',
+          icons: [
+            {
+              src: 'pwa-192x192.png',
+              sizes: '192x192',
+              type: 'image/png',
+              purpose: 'any maskable'
+            },
+            {
+              src: 'pwa-512x512.png',
+              sizes: '512x512',
+              type: 'image/png',
+              purpose: 'any maskable'
+            }
+          ]
+        }
     })
   ],
   server: {

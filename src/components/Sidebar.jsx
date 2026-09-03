@@ -78,6 +78,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
   const [userRoles, setUserRoles] = useState({});
   const [rolePermissions, setRolePermissions] = useState({});
   const [isPublishing, setIsPublishing] = useState(false);
+  const [modulePermissions, setModulePermissions] = useState({});
   
   const [expandedSections, setExpandedSections] = useState({});
 
@@ -86,7 +87,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
     let coreCount = 0;
     sections.forEach(sec => {
       if (sec.id !== 'section-genel' && sec.id !== 'section-ayarlar') {
-        const visibleItems = sec.items.filter(item => hasAccess(item.id));
+        const visibleItems = sec.items ? sec.items.filter(item => hasAccess(item.id, sec.id)) : [];
         if (visibleItems.length > 0 || currentRole === 'Genel Koordinatör') coreCount++;
       }
     });
@@ -197,6 +198,11 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
     const savedRoles = JSON.parse(localStorage.getItem('user_roles') || '{}');
     setUserRoles(savedRoles);
 
+    const mData = localStorage.getItem('modulePermissionsData');
+    if (mData) {
+      try { setModulePermissions(JSON.parse(mData)); } catch(e) {}
+    }
+
     const savedPermissions = JSON.parse(localStorage.getItem('role_permissions') || 'null');
     if (savedPermissions) {
       setRolePermissions(savedPermissions);
@@ -220,8 +226,20 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
   const isViewingAsPersonel = !!originalAdminUser;
   const isManager = realRole !== 'Personel';
 
-  const hasAccess = (menuId) => {
+  const hasAccess = (menuId, sectionId) => {
     if (currentRole === 'Genel Koordinatör') return true;
+
+    // Modül Bazlı Yetkilendirme Kontrolü (RBAC)
+    if (sectionId && sectionId !== 'section-genel' && sectionId !== 'section-ayarlar') {
+      const pName = currentUser?.originalName || currentUser?.name || currentUser?.adSoyad;
+      const perms = modulePermissions[pName] || {};
+      
+      if (sectionId === 'section-ruhsat') return !!perms.ruhsat;
+      if (sectionId === 'section-stok') return !!perms.stok;
+      if (sectionId === 'section-tesis') return !!perms.yetistiricilik;
+      if (sectionId === 'section-ipc') return !!perms.ihlaller;
+    }
+
     if (menuId.startsWith('/formlar/')) return true;
     let checkPath = menuId;
     if (menuId.startsWith('/ruhsat/')) checkPath = '/ruhsat';
@@ -249,7 +267,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
     
     sections.forEach(sec => {
       if (sec.id !== 'section-genel' && sec.id !== 'section-ayarlar') {
-        const visibleItems = sec.items.filter(item => hasAccess(item.id));
+        const visibleItems = sec.items ? sec.items.filter(item => hasAccess(item.id, sec.id)) : [];
         if (visibleItems.length > 0 || currentRole === 'Genel Koordinatör') {
           coreCount++;
           singleCoreId = sec.id;
@@ -324,7 +342,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
             {(provided) => (
               <div ref={provided.innerRef} {...provided.droppableProps}>
                 {sections.map((section, index) => {
-                  const visibleItems = section.items.filter(item => hasAccess(item.id));
+                  const visibleItems = section.items ? section.items.filter(item => hasAccess(item.id, section.id)) : [];
                   if (visibleItems.length === 0 && currentRole !== 'Genel Koordinatör') return null;
 
                   return (

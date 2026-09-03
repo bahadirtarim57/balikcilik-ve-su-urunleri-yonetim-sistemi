@@ -54,7 +54,7 @@ export default function GhostLoginModal({ isOpen, onClose }) {
     const role = uRoles[personKey];
     
     if (window.confirm(`${person.name || person.adSoyad} adlı personelin hesabına giriş yapmak üzeresiniz. Onaylıyor musunuz?`)) {
-      impersonate({ email: person.email || 'personel@demo.com', role, name: person.name || person.adSoyad, unit: activeUnit, il: person.il, sicil: person.sicil });
+      impersonate({ email: person.email || 'personel@demo.com', role, name: person.name || person.adSoyad, originalName: person.originalName, unit: activeUnit, il: person.il, sicil: person.sicil, impersonated: true });
       onClose();
       window.location.reload();
     }

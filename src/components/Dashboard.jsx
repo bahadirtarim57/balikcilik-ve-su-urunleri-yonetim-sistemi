@@ -1,9 +1,32 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { ShieldAlert, Fish, Clock, AlertOctagon, Anchor, AlertCircle, AlertTriangle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { PERSONELLER } from '../utils/excelData';
 
 const Dashboard = ({ data }) => {
   const navigate = useNavigate();
+  const [ghostPersonnelList, setGhostPersonnelList] = useState([]);
+
+  useEffect(() => {
+    const localPersonnel = JSON.parse(localStorage.getItem('personnel_data') || '[]');
+    const excelPersonnel = PERSONELLER || [];
+    const merged = [...localPersonnel];
+    excelPersonnel.forEach(ep => {
+      const pName = ep.adSoyad || ep.name;
+      const exists = merged.find(mp => (mp.sicil === ep.sicil && ep.sicil) || (mp.adSoyad || mp.name) === pName);
+      if (!exists) {
+        merged.push({
+          ...ep,
+          name: pName,
+          originalName: pName,
+          unit: ep.birim || ep.unit,
+          title: ep.unvan || ep.title,
+          il: ep.il
+        });
+      }
+    });
+    setGhostPersonnelList(merged);
+  }, []);
   
   const stats = useMemo(() => {
     let total = 0;

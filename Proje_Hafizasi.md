@@ -349,3 +349,10 @@ px vercel --prod) sağlandı.
 - Sidebar ve TesisYonetimi bileşenlerindeki gereksiz/kalabalık metinler temizlendi, başlıklar ortalandı ve sadeleştirildi.
 - Tesis Yönetimi sayfasına, üstten seçilen ile göre dinamik çalışan plaka ve ilçe bazlı izole veri filtreleme (CITY_PLATES) entegre edildi. Artık bir ilin verisi (örn. 57 Sinop) diğer illere sızmıyor.
 
+
+
+## 30.08.2026 - Tam Senkronizasyon (Async/Await Zırhı)
+- Araç Görev Programı'ndaki kusursuz senkronizasyon mimarisi bu projeye de başarıyla uyarlandı.
+- PersonnelList.jsx içerisindeki tüm veritabanı yazma işlemleri (Ekleme, Düzenleme, Silme, Transfer, Onaylama, Reddetme) wait uploadLocalToSupabase() ile %100 asenkron hale getirildi.
+- Sistemi kilitleyen veya kullanıcıyı bekleten gereksiz 'Başarıyla Kaydedildi' (Alert) mesajları temizlendi.
+- İşlemlerin arka planda veritabanına ulaştığından tam emin olmadan arayüzün yenilenmesi engellendi.
