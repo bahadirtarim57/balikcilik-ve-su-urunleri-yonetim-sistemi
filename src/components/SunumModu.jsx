@@ -576,8 +576,8 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: '#020617', zIndex: 9999, fontFamily: "'Inter', sans-serif", color: '#e2e8f0', userSelect: 'none', overflow: 'hidden' }}>
           
           {/* Navigation touch zones */}
-          <div onClick={() => setSlide(s => Math.max(s - 1, 0))} style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: '30%', zIndex: 101, cursor: 'pointer' }} />
-          <div onClick={() => setSlide(s => Math.min(s + 1, totalSlides))} style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: '70%', zIndex: 101, cursor: 'pointer' }} />
+          <div className="desktop-touch-zone" onClick={() => setSlide(s => Math.max(s - 1, 0))} style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: '30%', zIndex: 101, cursor: 'pointer' }} />
+          <div className="desktop-touch-zone" onClick={() => setSlide(s => Math.min(s + 1, totalSlides))} style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: '70%', zIndex: 101, cursor: 'pointer' }} />
           
           {/* Mobile Nav Buttons */}
           <div className="mobile-nav-buttons" style={{ position: 'absolute', bottom: '30px', left: 0, right: 0, display: 'flex', justifyContent: 'space-between', padding: '0 40px', zIndex: 102, pointerEvents: 'none' }}>
