@@ -1,7 +1,7 @@
 import { supabase } from '../supabaseClient';
 import React, { useState, useMemo, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
-import { Presentation, AlertTriangle, Play, X, Target, Activity, Anchor, Download, Droplets, MapPin, BarChart3, Users, Fish, Layers, Building, PieChart as PieChartIcon } from 'lucide-react';
+import { Presentation, AlertTriangle, Play, X, Target, Activity, Anchor, Download, Droplets, MapPin, BarChart3, Users, Fish, Layers, Building, PieChart as PieChartIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 import pptxgen from "pptxgenjs";
 
 const bgImages = {
@@ -565,9 +565,9 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
           <div onClick={() => setSlide(s => Math.min(s + 1, totalSlides))} style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: '70%', zIndex: 101, cursor: 'pointer' }} />
           
           {/* Mobile Nav Buttons */}
-          <div className="mobile-nav-buttons" style={{ position: 'absolute', bottom: '20px', left: 0, right: 0, display: 'flex', justifyContent: 'center', gap: '20px', zIndex: 102 }}>
-             <button onClick={(e) => { e.stopPropagation(); setSlide(s => Math.max(s - 1, 0)); }} style={{ background: 'rgba(255,255,255,0.2)', color: 'white', padding: '12px 30px', borderRadius: '30px', border: '1px solid rgba(255,255,255,0.5)', fontSize: '16px', fontWeight: 'bold' }}>Önceki Slayt</button>
-             <button onClick={(e) => { e.stopPropagation(); setSlide(s => Math.min(s + 1, totalSlides)); }} style={{ background: 'rgba(56,189,248,0.8)', color: 'white', padding: '12px 30px', borderRadius: '30px', border: 'none', fontSize: '16px', fontWeight: 'bold' }}>Sonraki Slayt</button>
+          <div className="mobile-nav-buttons" style={{ position: 'absolute', bottom: '30px', left: 0, right: 0, display: 'flex', justifyContent: 'space-between', padding: '0 40px', zIndex: 102, pointerEvents: 'none' }}>
+             <button onClick={(e) => { e.stopPropagation(); setSlide(s => Math.max(s - 1, 0)); }} style={{ pointerEvents: 'auto', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)', color: 'white', padding: '16px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.3)' }}><ChevronLeft size={32} strokeWidth={2.5} /></button>
+             <button onClick={(e) => { e.stopPropagation(); setSlide(s => Math.min(s + 1, totalSlides)); }} style={{ pointerEvents: 'auto', background: 'rgba(56,189,248,0.8)', color: 'white', padding: '16px', borderRadius: '50%', border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 15px rgba(0,150,255,0.5)' }}><ChevronRight size={32} strokeWidth={2.5} /></button>
           </div>
           
           {/* Progress Bar & Indicators */}

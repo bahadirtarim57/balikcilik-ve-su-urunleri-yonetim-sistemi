@@ -356,3 +356,11 @@ px vercel --prod) saÄŸlandÄ±.
 - PersonnelList.jsx iÃ§erisindeki tÃ¼m veritabanÄ± yazma iÅŸlemleri (Ekleme, DÃ¼zenleme, Silme, Transfer, Onaylama, Reddetme) wait uploadLocalToSupabase() ile %100 asenkron hale getirildi.
 - Sistemi kilitleyen veya kullanÄ±cÄ±yÄ± bekleten gereksiz 'BaÅŸarÄ±yla Kaydedildi' (Alert) mesajlarÄ± temizlendi.
 - Ä°ÅŸlemlerin arka planda veritabanÄ±na ulaÅŸtÄ±ÄŸÄ±ndan tam emin olmadan arayÃ¼zÃ¼n yenilenmesi engellendi.
+
+## Son Gelişmeler ve Mobil Uyumluluk Güncellemeleri
+- Tesis Yönetimi il seçilmediğinde varsayılan olarak Sinop verilerinin görünmesi sorunu giderildi; il seçilmediğinde boş/uyarı ekranı gösteriliyor.
+- Mobil cihazlarda menünün ekranı kaydırması sorunu 'Drawer' (Çekmece) mantığı ve Hamburger butonu eklenerek giderildi.
+- Sunum Modu (Slayt) tamamen mobil uyumlu hale getirildi. Yan-yana tasarım telefonda alt-alta olacak şekilde revize edildi, metin ve grafik boyutları mobil ekrana sığacak şekilde dinamik küçültüldü.
+- Sunum Modunda sayfalar arası geçiş için telefona özel sağ/sol dokunmatik yüzeyler ve 'Önceki/Sonraki Slayt' görünür butonları eklendi.
+- PWA (Progressive Web App) altyapısı güçlendirildi. Özel tasarım BSÜSY (Çapa, Tekne, Kafes, Balık, Terazi) logosu eklendi. Sisteme girildiğinde 'Uygulamayı telefonuna kur' (Install) uyarı/onay bandı (Banner) sisteme entegre edildi.
+- 'Güvenli Çıkış Yapıldı' bildirim (toast) mesajı sistemden tamamen kaldırılarak temiz bir çıkış sağlandı.
