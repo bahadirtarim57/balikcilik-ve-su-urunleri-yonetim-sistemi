@@ -79,8 +79,13 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
   const [rolePermissions, setRolePermissions] = useState({});
   const [isPublishing, setIsPublishing] = useState(false);
   const [modulePermissions, setModulePermissions] = useState({});
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   
   const [expandedSections, setExpandedSections] = useState({});
+
+  useEffect(() => {
+    setIsTouchDevice(window.matchMedia("(pointer: coarse)").matches || 'ontouchstart' in window);
+  }, []);
 
   const toggleSection = (id) => {
     // If it's the ONLY core section, don't let them close it
@@ -346,7 +351,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
                   if (visibleItems.length === 0 && currentRole !== 'Genel Koordinatör') return null;
 
                   return (
-                    <Draggable key={section.id} draggableId={section.id} index={index}>
+                    <Draggable key={section.id} draggableId={section.id} index={index} isDragDisabled={isTouchDevice}>
                       {(providedSection, snapshotSection) => (
                         <div 
                           ref={providedSection.innerRef} 
@@ -385,7 +390,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
                                 {expandedSections[section.id] && visibleItems.map((item, i) => {
                                   const IconComponent = IconMap[item.iconName] || FileText;
                                   return (
-                                    <Draggable key={item.id} draggableId={item.id} index={i}>
+                                    <Draggable key={item.id} draggableId={item.id} index={i} isDragDisabled={isTouchDevice}>
                                       {(providedItem, snapshotItem) => (
                                         <div
                                           ref={providedItem.innerRef}
