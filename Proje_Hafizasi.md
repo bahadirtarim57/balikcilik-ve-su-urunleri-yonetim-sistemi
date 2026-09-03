@@ -372,3 +372,7 @@ px vercel --prod) saÄŸlandÄ±.
 
 - Sunum modunda telefonda listelerin aşağı kaydırılamamasına sebep olan görünmez dokunmatik ekran geçiş alanları mobil görünümde iptal edildi (geçişler sadece butonlarla yapılıyor), böylece sayfa dikeyde sorunsuzca kaydırılabilir hale geldi.
 - Mobil sunumdaki alt başlıklar ('EN YÜKSEK KAPASİTELİ YATIRIMCILAR' vb.) ve ikon boyutları okunabilir olacak şekilde bir kademe daha küçültüldü.
+
+- Sunum sayfasına girildiğinde sistemin kilitlenmesine neden olan React 'Rules of Hooks' hatası kalıcı olarak çözüldü.
+
+- PWA masaÃ¼stÃ¼ ve mobil kurulumlarÄ±ndaki varsayÄ±lan React logolarÄ± kaldÄ±rÄ±larak orijinal proje logosu (favicon/pwa) sisteme entegre edildi. AyrÄ±ca uygulamanÄ±n kurulum adÄ± karmaÅŸÄ±k halinden kurtarÄ±larak temiz bir ÅŸekilde 'BSÃœSY - BalÄ±kÃ§Ä±lÄ±k YÃ¶netim Sistemi' olarak revize edildi, gerÃ§ek bir masaÃ¼stÃ¼/mobil uygulama deneyimine (PGTS benzeri) kavuÅŸturuldu.
