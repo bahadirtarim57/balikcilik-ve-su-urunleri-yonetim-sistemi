@@ -364,3 +364,5 @@ px vercel --prod) saÄŸlandÄ±.
 - Sunum Modunda sayfalar arasý geçiþ için telefona özel sað/sol dokunmatik yüzeyler ve 'Önceki/Sonraki Slayt' görünür butonlarý eklendi.
 - PWA (Progressive Web App) altyapýsý güçlendirildi. Özel tasarým BSÜSY (Çapa, Tekne, Kafes, Balýk, Terazi) logosu eklendi. Sisteme girildiðinde 'Uygulamayý telefonuna kur' (Install) uyarý/onay bandý (Banner) sisteme entegre edildi.
 - 'Güvenli Çýkýþ Yapýldý' bildirim (toast) mesajý sistemden tamamen kaldýrýlarak temiz bir çýkýþ saðlandý.
+
+- Mobil sunum modundaki baþlýklar (h1, h2, vb.) daha ince ve estetik hale getirildi. Navigasyon için metin butonlarý kaldýrýlarak modern yuvarlak Chevron (ok) ikonlarý eklendi.

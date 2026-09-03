@@ -181,7 +181,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
     // Slide 1: Başlık
     let slide1 = pres.addSlide();
     slide1.background = { color: '0f172a' };
-    const cityName = (localStorage.getItem('app-selectedCity') || 'SİNOP').toUpperCase();
+    const cityName = (selectedCity).toUpperCase();
     slide1.addText(`${cityName} İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİĞİ`, { x: 1, y: 3.0, w: 8, fontSize: 36, bold: true, color: 'ffffff', align: 'center' });
 
     // Slide 2: Genel Durum (Yönetim Özeti)
@@ -595,14 +595,14 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
   return (
     <div style={{ padding: '24px', backgroundColor: '#f0f4f8', minHeight: '100vh', fontFamily: "'Inter', sans-serif" }}>
       {isFullscreen && <FullscreenMode />}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '32px', background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', color: 'white', padding: '30px', borderRadius: '16px', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
-         <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div className="sunum-header-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '32px', background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', color: 'white', padding: '30px', borderRadius: '16px', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
+         <div className="sunum-header-left" style={{ display: 'flex', alignItems: 'center' }}>
             <Presentation size={48} style={{ marginRight: '20px' }} />
             <div>
-              <h1 style={{ margin: 0, fontSize: '32px', fontWeight: 'bold', letterSpacing: '-0.5px' }}>{(localStorage.getItem('app-selectedCity') || 'SİNOP').toUpperCase()} İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİĞİ</h1>
+              <h1 className="sunum-main-title" style={{ margin: 0, fontSize: '32px', fontWeight: 'bold', letterSpacing: '-0.5px' }}>{(selectedCity).toUpperCase()} İLİ SU ÜRÜNLERİ YETİŞTİRİCİLİĞİ</h1>
             </div>
          </div>
-         <div style={{ display: 'flex', gap: '15px' }}>
+         <div className="sunum-buttons-container" style={{ display: 'flex', gap: '15px' }}>
             <button onClick={() => { setSlide(0); setIsFullscreen(true); }} style={{ background: '#0f172a', color: '#38bdf8', border: '1px solid #38bdf8', padding: '12px 20px', borderRadius: '8px', cursor: 'pointer', display: 'flex', alignItems: 'center', fontSize: '15px', fontWeight: 'bold', boxShadow: '0 0 15px rgba(56, 189, 248, 0.4)' }}>
               <Play size={18} style={{ marginRight: '8px' }} /> Sunumu Başlat
             </button>

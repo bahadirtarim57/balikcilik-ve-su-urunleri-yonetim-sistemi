@@ -1350,3 +1350,12 @@ html, body, #root {
   .split-slide-left .stat-box-title { font-size: 14px !important; }
   .split-slide-left > div { max-height: none !important; padding-right: 0 !important; }
 }
+
+@media (max-width: 900px) {
+  .sunum-header-container { flex-direction: column !important; align-items: flex-start !important; gap: 20px !important; padding: 20px !important; }
+  .sunum-header-left { align-items: flex-start !important; }
+  .sunum-main-title { font-size: 20px !important; line-height: 1.3 !important; }
+  .sunum-header-left svg { width: 32px !important; height: 32px !important; margin-right: 12px !important; }
+  .sunum-buttons-container { flex-direction: column !important; width: 100% !important; gap: 10px !important; }
+  .sunum-buttons-container button { width: 100% !important; justify-content: center !important; }
+}
