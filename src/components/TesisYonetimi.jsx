@@ -606,8 +606,20 @@ const KafesListManager = ({ type, items, onChange, tesisTuru }) => {
 };
 
 const TesisYonetimi = ({ selectedCity }) => {
-  const currentCity = selectedCity || localStorage.getItem('app-selectedCity') || 'Sinop';
-  const VALID_DISTRICTS = useMemo(() => [...new Set(DISTRICTS[currentCity] || DISTRICTS['Sinop'] || [])], [currentCity]);
+  if (!selectedCity) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', color: '#64748b', padding: '40px' }}>
+        <MapPin size={48} style={{ opacity: 0.5, marginBottom: '16px' }} />
+        <h2 style={{ fontSize: '20px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>Lütfen Bir İl Seçiniz</h2>
+        <p style={{ fontSize: '14px', textAlign: 'center', maxWidth: '400px' }}>
+          Tesis yönetimi verilerini görüntülemek için lütfen üst menüden çalışmak istediğiniz ili seçiniz.
+        </p>
+      </div>
+    );
+  }
+
+  const currentCity = selectedCity;
+  const VALID_DISTRICTS = useMemo(() => [...new Set(DISTRICTS[currentCity] || [])], [currentCity]);
 
   const [dataList, setDataList] = useState([]);
 
