@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --primary-color: #1a73e8;
   --primary-hover: #1557b0;
   --bg-color: #f0f4f8;
@@ -1240,12 +1240,36 @@ html, body, #root {
 }
 
 @media (max-width: 680px) {
+  .mobile-menu-btn {
+    display: flex !important;
+  }
   .sidebar {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    z-index: 9999;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+  }
+  .sidebar.mobile-open {
+    left: 0;
   }
   .app-container {
     flex-direction: column;
   }
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #1e293b;
+  align-items: center;
+  justify-content: center;
 }
 
 

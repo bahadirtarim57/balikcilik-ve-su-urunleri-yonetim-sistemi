@@ -70,7 +70,7 @@ const defaultSections = [
   }
 ];
 
-const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) => {
+const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const { originalAdminUser, stopImpersonating, logout } = useAuth();
   const [isGhostLoginModalOpen, setIsGhostLoginModalOpen] = useState(false);
   const ministryName = getMinistryName();
@@ -321,7 +321,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
   };
 
   return (
-    <aside className="sidebar" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <aside className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
       <div className="sidebar-header" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '24px 16px', borderBottom: '1px solid #e5e7eb', marginBottom: '10px' }}>
         <div style={{ background: '#dcfce7', padding: '12px 20px', borderRadius: '16px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px', boxShadow: '0 4px 6px -1px rgba(16, 185, 129, 0.1)', gap: '8px' }}>
           <Fish size={28} color="#059669" />
@@ -405,6 +405,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser }) =>
                                             to={item.link} 
                                             className={({isActive}) => isActive ? "nav-item active" : "nav-item"} 
                                             end={item.link === '/'}
+                                            onClick={() => { if(isMobileMenuOpen) setIsMobileMenuOpen(false); }}
                                             style={{
                                               
                                               boxShadow: snapshotItem.isDragging ? '0 5px 10px rgba(0,0,0,0.1)' : 'none',

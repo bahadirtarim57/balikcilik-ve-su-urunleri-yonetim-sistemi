@@ -41,7 +41,7 @@ import excelCezalarJson from './data/excel_cezalar.json';
 import { PROVINCES, DISTRICTS } from './utils/turkeyData';
 import { getBranches } from './utils/excelData';
 import { Toaster, toast } from 'react-hot-toast';
-import { UserCircle, Shield, Palette, RefreshCcw, Ghost } from 'lucide-react';
+import { UserCircle, Shield, Palette, RefreshCcw, Ghost, Menu, X } from 'lucide-react';
 import { loadFromSupabase, uploadLocalToSupabase } from './lib/storage';
 import { useAuth } from './context/AuthContext';
 
@@ -75,6 +75,7 @@ function App() {
   const [theme, setTheme] = useState(localStorage.getItem('app-theme') || 'theme-blue');
   const [showThemeColors, setShowThemeColors] = useState(false);
   const [showGhostModal, setShowGhostModal] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const { user: currentUser, login, setUser: setCurrentUser, originalAdminUser, stopImpersonating } = useAuth();
 
@@ -296,10 +297,15 @@ function App() {
           selectedUnit={activeUnitName !== 'Birim Seçilmedi' ? activeUnitName : ''}
           currentUser={currentUser}
           setCurrentUser={setCurrentUser}
+          isMobileMenuOpen={isMobileMenuOpen}
+          setIsMobileMenuOpen={setIsMobileMenuOpen}
         />
         <main className="main-content">
           <header className="top-header" style={{ padding: '12px 24px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <div className="header-controls" style={{ width: '100%', justifyContent: 'space-between', padding: 0, paddingBottom: '12px', borderBottom: '1px solid #e5e7eb' }}>
+              <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
               
               <div className="unit-selector" style={{ flex: 1, display: 'flex', gap: '20px', background: 'transparent', border: 'none', padding: 0 }}>
                 
