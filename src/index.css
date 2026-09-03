@@ -1323,3 +1323,14 @@ html, body, #root {
   .login-image-side { flex: 0 0 250px !important; }
   .login-form-side { flex: 1 !important; width: 100% !important; max-width: 100% !important; padding: 20px !important; }
 }
+
+@media (max-width: 900px) {
+  .split-slide-container { flex-direction: column-reverse !important; height: 100dvh !important; }
+  .split-slide-left { width: 100% !important; height: 60% !important; padding: 24px !important; justify-content: flex-start !important; }
+  .split-slide-right { width: 100% !important; height: 40% !important; }
+}
+
+@media (max-width: 900px) {
+  .split-slide-left h1 { font-size: 32px !important; }
+  .split-slide-left p { font-size: 16px !important; }
+}

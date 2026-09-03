@@ -156,8 +156,8 @@ export default defineConfig({
       workbox: { maximumFileSizeToCacheInBytes: 6000000 },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-          name: 'Balıkçılık ve Su Ürünleri Sistemi',
-          short_name: 'BSÜS',
+          name: 'Balıkçılık ve Su Ürünleri Yönetim Sistemi',
+          short_name: 'BSÜSY',
           description: 'Sinop İl Tarım ve Orman Müdürlüğü - Balıkçılık ve Su Ürünleri Yönetim ve Denetim Sistemi',
           theme_color: '#0ea5e9',
           background_color: '#ffffff',

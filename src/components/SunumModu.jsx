@@ -254,11 +254,11 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
   );
 
   const SplitSlide = ({ leftContent, rightImgUrl, fishes }) => (
-      <div className="anim-fade-in" style={{ display: 'flex', height: '100vh', width: '100vw', backgroundColor: '#020617' }}>
-          <div className="anim-slide-left" style={{ width: '55%', padding: '60px', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto' }}>
+      <div className="anim-fade-in split-slide-container" style={{ display: 'flex', height: '100vh', width: '100vw', backgroundColor: '#020617' }}>
+          <div className="anim-slide-left split-slide-left" style={{ width: '55%', padding: '60px', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto' }}>
               {leftContent}
           </div>
-          <div style={{ width: '45%', position: 'relative', overflow: 'hidden' }}>
+          <div className="split-slide-right" style={{ width: '45%', position: 'relative', overflow: 'hidden' }}>
               {Array.isArray(rightImgUrl) ? (
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'grid', gridTemplateRows: '1fr 1fr', gridTemplateColumns: '1fr 1fr', gap: '4px', backgroundColor: '#0f172a', boxShadow: 'inset 20px 0 50px #020617' }}>
                       <div style={{ gridColumn: '1 / -1', backgroundImage: `url(${rightImgUrl[0]})`, backgroundSize: 'cover', backgroundPosition: 'center', animation: 'zoomIn 1.5s ease-out both' }} />
@@ -526,8 +526,8 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
             />;
         } else {
             return (
-                <div className="anim-fade-in" style={{ display: 'flex', height: '100vh', width: '100vw', backgroundColor: '#020617' }}>
-                    <div className="anim-slide-left" style={{ width: '55%', padding: '60px', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto' }}>
+                <div className="anim-fade-in split-slide-container" style={{ display: 'flex', height: '100vh', width: '100vw', backgroundColor: '#020617' }}>
+                    <div className="anim-slide-left split-slide-left" style={{ width: '55%', padding: '60px', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto' }}>
                         <h1 style={{ fontSize: '72px', fontWeight: '900', color: '#fff', margin: 0, textShadow: '0 0 30px rgba(16,185,129,0.8)', textAlign: 'left', lineHeight: '1.2' }}>İzlediğiniz İçin<br/>Teşekkürler.</h1>
                         
                         <div style={{ display: 'flex', gap: '30px', marginTop: '60px' }}>
@@ -544,7 +544,7 @@ const sumAdet = (list) => Array.isArray(list) ? list.reduce((s, i) => s + (Numbe
                         </div>
 
                     </div>
-                    <div style={{ width: '45%', position: 'relative', display: 'flex', flexDirection: 'column', gap: '4px', backgroundColor: '#0f172a', overflow: 'hidden' }}>
+                    <div className="split-slide-right" style={{ width: '45%', position: 'relative', display: 'flex', flexDirection: 'column', gap: '4px', backgroundColor: '#0f172a', overflow: 'hidden' }}>
                         <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
                              <div className="anim-ken-burns" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url('/images/sinop_gunbatimi.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: 'inset 20px 0 50px #020617' }} />
                         </div>
