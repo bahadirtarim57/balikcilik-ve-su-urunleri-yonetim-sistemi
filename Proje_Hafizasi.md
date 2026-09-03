@@ -366,3 +366,6 @@ px vercel --prod) saÄŸlandÄ±.
 - 'Güvenli Çýkýþ Yapýldý' bildirim (toast) mesajý sistemden tamamen kaldýrýlarak temiz bir çýkýþ saðlandý.
 
 - Mobil sunum modundaki baþlýklar (h1, h2, vb.) daha ince ve estetik hale getirildi. Navigasyon için metin butonlarý kaldýrýlarak modern yuvarlak Chevron (ok) ikonlarý eklendi.
+
+- Sunum sayfasýna girildiðinde (henüz sunumu baþlatmadan önceki giriþ ekranýnda) mobilde ekran dýþýna taþan butonlar ve baþlýklar ('SÝNOP ÝLÝ SU ÜRÜNLERÝ...') mobil uyumlu hale getirildi, dikey düzene geçirildi.
+- Tesis yönetimi sayfasýndaki gibi, Sunum sayfasýna da 'Ýl Seçilmedi' kontrolü eklendi; artýk üstten il seçilmediðinde varsayýlan Sinop verileri yerine uyarý ekraný çýkýyor.
