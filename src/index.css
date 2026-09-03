@@ -61,7 +61,7 @@ body {
   background-color: var(--bg-color);
   background-image: radial-gradient(circle at top right, var(--bg-gradient-1), var(--bg-gradient-2));
   color: var(--text-primary);
-  height: 100vh;
+  height: 100dvh;
   overflow: auto;
   margin: 0;
 }
@@ -78,7 +78,7 @@ body {
 /* --- LOGIN PAGE --- */
 .login-container {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,7 +195,7 @@ body {
 /* --- NEW DASHBOARD LAYOUT --- */
 .app-container {
   display: flex;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   background-color: transparent;
   width: 100%;
@@ -1035,7 +1035,7 @@ button {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;

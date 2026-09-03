@@ -290,7 +290,7 @@ function App() {
           </button>
         </div>
       )}
-      <div className="app-container" style={{ height: originalAdminUser ? 'calc(100vh - 36px)' : '100vh' }}>
+      <div className="app-container" style={{ height: originalAdminUser ? 'calc(100dvh - 36px)' : '100dvh' }}>
         <Sidebar 
           selectedCity={selectedCity}
           selectedUnit={activeUnitName !== 'Birim Seçilmedi' ? activeUnitName : ''}
