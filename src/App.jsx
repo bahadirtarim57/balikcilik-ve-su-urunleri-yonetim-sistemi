@@ -270,6 +270,13 @@ function App() {
 
     if (path.startsWith('/ruhsat') || path.startsWith('/stok-tespiti') || path.startsWith('/tesis-yonetimi') || path.startsWith('/sunum-modu') || path.startsWith('/harita-radar')) return true;
 
+    if (path === '/personel' || path === '/yeniden-degerlendirme') {
+      const modulePermissions = JSON.parse(localStorage.getItem('modulePermissionsData') || '{}');
+      const pName = currentUser?.originalName || currentUser?.name || currentUser?.adSoyad;
+      const perms = modulePermissions[pName] || {};
+      if (perms.ayarlar) return true;
+    }
+
     if (path === '/ayarlar' || path === '/veri-yonetimi' || path === '/rol-atamalari' || path === '/yetki-matrisi') {
       const modulePermissions = JSON.parse(localStorage.getItem('modulePermissionsData') || '{}');
       const pName = currentUser?.originalName || currentUser?.name || currentUser?.adSoyad;
