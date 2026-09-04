@@ -50,7 +50,23 @@ export default function GhostLoginModal({ isOpen, onClose }) {
     const personKeyName = person.name || person.adSoyad || person["ADI SOYADI"];
     const personKeyOriginal = person.originalName;
 
-    let role = uRoles[personKeySicil] || uRoles[personKeyName] || uRoles[personKeyOriginal];
+          let role = uRoles[personKeySicil] || uRoles[personKeyName] || uRoles[personKeyOriginal];
+      
+      // BULUNAMADIYSA FUZZY (ESNEK) ARAMA YAP (Boşluk, büyük/küçük harf sorunlarını çözer)
+      if (!role) {
+        const normalize = (s) => (s || '').toLocaleLowerCase('tr-TR').trim().replace(/\s+/g, ' ');
+        const sName = normalize(personKeyName);
+        const sSicil = normalize(personKeySicil);
+        const sOrig = normalize(personKeyOriginal);
+        
+        for (const [k, v] of Object.entries(uRoles)) {
+          const nk = normalize(k);
+          if ((sName && nk === sName) || (sSicil && nk === sSicil) || (sOrig && nk === sOrig)) {
+            role = v;
+            break;
+          }
+        }
+      }
     
     if (!role || role === 'Tanımsız' || role === 'Tanmsz' || role === 'Tan\u0131ms\u0131z') {
       const modulePermissions = JSON.parse(localStorage.getItem('modulePermissionsData') || '{}');
