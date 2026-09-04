@@ -240,27 +240,42 @@ function App() {
   
   const displayRole = (() => {
     if (!currentUser?.impersonated) return currentRole;
-    const assignedRoles = JSON.parse(localStorage.getItem('assignedRolesData') || '{}');
-    const uRoles = JSON.parse(localStorage.getItem('user_roles') || '{}');
-    
-    const kName = currentUser?.name || currentUser?.adSoyad || '';
-    const kSicil = currentUser?.sicil || '';
-    
-    const normalize = (s) => (s || '').toLocaleLowerCase('tr-TR').trim().replace(/\s+/g, ' ');
-    const sName = normalize(kName);
-    const sSicil = normalize(kSicil);
-    
-    let found = assignedRoles[kSicil] || assignedRoles[kName] || uRoles[kSicil] || uRoles[kName];
-    if (!found) {
-      for (const [k, v] of Object.entries({ ...uRoles, ...assignedRoles })) {
-        const nk = normalize(k);
-        if ((sName && nk === sName) || (sSicil && nk === sSicil)) {
-          found = v;
-          break;
+    try {
+      const assignedRoles = JSON.parse(localStorage.getItem('assignedRolesData') || '{}');
+      const uRoles = JSON.parse(localStorage.getItem('user_roles') || '{}');
+      const perms = JSON.parse(localStorage.getItem('modulePermissionsData') || '{}');
+      
+      const kName = currentUser?.name || currentUser?.adSoyad || '';
+      const kSicil = currentUser?.sicil || '';
+      
+      const normalize = (s) => (s || '').toLocaleLowerCase('tr-TR').trim().replace(/\s+/g, ' ');
+      const sName = normalize(kName);
+      const sSicil = normalize(kSicil);
+      
+      let found = null;
+      
+      if (kSicil && assignedRoles[kSicil]) found = assignedRoles[kSicil];
+      else if (kName && assignedRoles[kName]) found = assignedRoles[kName];
+      else if (kSicil && uRoles[kSicil]) found = uRoles[kSicil];
+      else if (kName && uRoles[kName]) found = uRoles[kName];
+      
+      if (!found) {
+        for (const [k, v] of Object.entries({ ...uRoles, ...assignedRoles })) {
+          const nk = normalize(k);
+          if (nk && ((sName && nk === sName) || (sSicil && nk === sSicil))) {
+            found = v;
+            break;
+          }
         }
       }
+      
+      if (found) return found;
+      
+      // If absolutely nothing is found, read directly from GhostLoginModal's logic
+      return currentUser.role || 'Personel';
+    } catch (e) {
+      return currentUser?.role || 'Personel';
     }
-    return found || 'Personel';
   })();
   
   const isCityLocked = currentRole !== 'Genel Koordinatör';
