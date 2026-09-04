@@ -67,18 +67,7 @@ export default function GhostLoginModal({ isOpen, onClose }) {
     }
     
     if (!role || role === 'Tanımsız' || role === 'Tanmsz' || role === 'Tan\u0131ms\u0131z') {
-      const modulePermissions = JSON.parse(localStorage.getItem('modulePermissionsData') || '{}');
-      const perms = modulePermissions[personKeyName] || modulePermissions[personKeyOriginal] || {};
-      const hasAnyTask = Object.values(perms).some(v => v === true);
-      
-      if (hasAnyTask) {
-        role = 'Personel'; 
-      }
-    }
-
-    if (!role || role === 'Tanımsız' || role === 'Tanmsz' || role === 'Tan\u0131ms\u0131z') {
-      alert("Bu personelin henüz bir sistem yetkisi veya Personel Listesi'nde işaretlenmiş bir görevi bulunmamaktadır.");
-      return;
+      role = 'Personel';
     }
     
     
