@@ -42,15 +42,7 @@ export default function RevaluationRate() {
     }
   };
 
-  if (!isAuthorized) {
-    return (
-      <div className="module-container">
-        <div className="module-content glass-panel" style={{ textAlign: 'center', padding: '40px' }}>
-          <p style={{ color: '#ef4444', fontWeight: 'bold', fontSize: '1.2rem' }}>Bu sayfayı görüntüleme yetkiniz bulunmamaktadır.</p>
-        </div>
-      </div>
-    );
-  }
+  
 
   return (
     <div className="module-container">

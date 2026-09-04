@@ -15,7 +15,7 @@ export default function DataManagement() {
   const uRoles = JSON.parse(localStorage.getItem('user_roles') || '{}');
   const userIdentifier = currentUser?.sicil || currentUser?.adSoyad || currentUser?.name;
   const role = currentUser?.sicil === 'admin' ? 'Genel Koordinatör' : (uRoles[userIdentifier] || 'Personel');
-  const isAuthorizedForDataSync = ['Genel Koordinatör', 'Yetkili Yönetici', 'Birim Sorumlusu', 'Sistem Yöneticisi'].includes(role);
+  
 
   const handleSyncFolder = async () => {
     try {
@@ -118,15 +118,7 @@ export default function DataManagement() {
     e.target.value = '';
   };
 
-  if (!isAuthorizedForDataSync) {
-    return (
-      <div className="module-container">
-        <div className="module-content glass-panel" style={{ textAlign: 'center', padding: '40px' }}>
-          <p style={{ color: '#ef4444', fontWeight: 'bold', fontSize: '1.2rem' }}>Bu sayfayı görüntüleme yetkiniz bulunmamaktadır.</p>
-        </div>
-      </div>
-    );
-  }
+  
 
   return (
     <div className="module-container">
