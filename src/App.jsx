@@ -332,7 +332,7 @@ function App() {
       <Toaster position="top-right" toastOptions={{ style: { borderRadius: '10px', background: '#333', color: '#fff', fontSize: '14px' } }} />
       {originalAdminUser && (
         <div style={{ background: '#ef4444', color: 'white', padding: '8px 24px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '16px', fontWeight: '500', fontSize: '14px', zIndex: 9999 }}>
-          Dikkat: Şu an {currentUser?.adSoyad || currentUser?.name} ({currentUser?.role || currentRole}) hesabı üzerinden işlem yapıyorsunuz.
+          Dikkat: Şu an {currentUser?.adSoyad || currentUser?.name} hesabı üzerinden işlem yapıyorsunuz.
           <button 
             onClick={() => {
               if (window.confirm('Kendi kimliğinize dönmek istediğinize emin misiniz?')) {
