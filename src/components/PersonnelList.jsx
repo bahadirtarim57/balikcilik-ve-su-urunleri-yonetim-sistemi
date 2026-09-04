@@ -1,3 +1,4 @@
+import { sortPersonnelByHierarchy } from '../utils/hierarchy';
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Plus, Edit2, Trash2, Search, ArrowRightLeft, X, Save, PlusCircle, Filter, Download, Upload, Mail, Send, Key, CheckCircle2 } from 'lucide-react'
@@ -260,73 +261,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
     return list;
   }
 
-  const filteredPersonnel = getFilteredPersonnel().sort((a, b) => {
-    const getUnitGroupIndex = (p) => {
-      const u = (p.title || '').toLowerCase();
-      const brm = (p.activeUnit || '').toLowerCase();
-      if (u.includes('il müdürü') || u.includes('müdür yardımcısı') || brm === 'müdürler') return 0;
-      if (brm.includes('hukuk')) return 1;
-      if (brm.includes('şube')) return 2;
-      if (brm.includes('ilçe')) return 3;
-      return 4;
-    };
-    
-    const groupA = getUnitGroupIndex(a);
-    const groupB = getUnitGroupIndex(b);
-    
-    if (groupA !== groupB) return groupA - groupB;
-    
-    if (groupA === 2 || groupA === 3) {
-       const brmA = (a.activeUnit || '');
-       const brmB = (b.activeUnit || '');
-       if (brmA !== brmB) return brmA.localeCompare(brmB);
-    }
-    
-    const getRank = (p) => {
-      const title = (p.title || p.profession || '').toLocaleUpperCase('tr-TR');
-      if (title === 'İL MÜDÜRÜ') return 1;
-      if (title === 'İL MÜDÜRÜ V.' || title === 'İL MÜDÜR V.') return 2;
-      if (title === 'İL MÜDÜR YARDIMCISI') return 3;
-      if (title === 'İL MÜDÜR YARDIMCISI V.' || title === 'İL MÜDÜR YARD. V.') return 4;
-      if (title.includes('ŞUBE MÜDÜRÜ') || title.includes('İLÇE MÜDÜRÜ') || title.includes('BİRİM MÜDÜRÜ') || title.includes(' MÜDÜRÜ')) {
-        if (title.includes(' V.')) return 6;
-        return 5;
-      }
-      if (title.includes('ŞUBE MÜDÜR V.') || title.includes('İLÇE MÜDÜR V.')) return 6;
-      if (title.includes('BİRİM SORUMLUSU')) return 7;
-
-      if (title.includes('AVUKAT')) return 8;
-      if (title.includes('SAYMAN')) return 9;
-      if (title.includes('MÜHENDİS')) return 10;
-      if (title.includes('VETERİNER')) return 11;
-      if (title.includes('BİYOLOG')) return 12;
-      if (title.includes('SU ÜRÜNLERİ')) return 13;
-      if (title.includes('TEKNİKER') && !title.includes('TEKNİSYEN')) return 14;
-      if (title.includes('TEKNİSYEN')) return 15;
-      return 99;
-    };
-    
-    const rankA = getRank(a);
-    const rankB = getRank(b);
-    if (rankA !== rankB) return rankA - rankB;
-    
-    const getSicilStr = (p) => p.sicilNo || p.sicil || '';
-    const sicilA_str = getSicilStr(a);
-    const sicilB_str = getSicilStr(b);
-    
-    const sA = sicilA_str ? parseInt(sicilA_str, 10) : NaN;
-    const sB = sicilB_str ? parseInt(sicilB_str, 10) : NaN;
-
-    if (!isNaN(sA) && !isNaN(sB)) {
-      if (sA !== sB) return sA - sB;
-    } else if (!isNaN(sA) && isNaN(sB)) {
-      return -1;
-    } else if (isNaN(sA) && !isNaN(sB)) {
-      return 1;
-    }
-    
-    return (a.name || '').localeCompare(b.name || '', 'tr-TR');
-  });
+  const filteredPersonnel = sortPersonnelByHierarchy(getFilteredPersonnel());
   const uniquePersonnelCount = [...new Set(filteredPersonnel.map(p => p.originalName))].length;
 
   const openTransferModal = (p) => {
@@ -765,99 +700,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
        // Wait, the old PersonnelList rendered ALL history rows for a person? Yes! "Birim görev yerleri ve transfer işlemleri".
        return true;
     }
-  })].sort((a, b) => {
-    const norm = (s) => {
-      if (!s) return '';
-      return s.toLocaleLowerCase('tr-TR').replace(/i̇/g, 'i').replace(/\s+/g, ' ').trim();
-    };
-
-    const getRank = (p) => {
-      const title = norm(p.title);
-      const prof = norm(p.profession);
-
-      if (title.includes('il müdür') && !title.includes('yardımcı')) {
-         if (title.includes('v.') || title.includes('vekili') || title.endsWith(' v')) return 2;
-         return 1;
-      }
-      if (title.includes('il müdür') && title.includes('yardımcı')) {
-         if (title.includes('v.') || title.includes('vekili') || title.endsWith(' v')) return 4;
-         return 3;
-      }
-      if (title.includes('şube müdür')) {
-         if (title.includes('v.') || title.includes('vekili') || title.endsWith(' v')) return 6;
-         return 5;
-      }
-      if (title.includes('ilçe müdür')) {
-         if (title.includes('v.') || title.includes('vekili') || title.endsWith(' v')) return 8;
-         return 7;
-      }
-      if (title.includes('müdür') || title.includes('sorumlu') || title.includes('başkan')) {
-         return 9;
-      }
-
-      if (prof.includes('şef')) return 10;
-      if (prof.includes('mühendis')) return 11;
-      if (prof.includes('inspektör')) return 12;
-      if (prof.includes('veteriner')) return 13;
-      if (prof.includes('avukat')) return 14;
-      if (prof.includes('sayman')) return 15;
-      if (prof.includes('tekniker')) return 16;
-      if (prof.includes('teknisyen')) return 17;
-      if (prof.includes('sivil savunma')) return 18;
-      if (prof.includes('memur')) return 19;
-      if (prof.includes('vhki') || prof.includes('v.h.k.i')) return 20;
-      if (prof.includes('şoför') || prof.includes('sofor')) return 21;
-      if (prof.includes('kaptan')) return 22;
-      if (prof.includes('destek personeli')) return 23;
-      if (prof.includes('kor') || prof.includes('güv') || prof.includes('guv')) return 24;
-      if (prof.includes('bekçi')) return 25;
-      if (prof.includes('hizmetli')) return 26;
-      if (prof.includes('işçi')) return 27;
-
-      return 99;
-    };
-
-    if (!isUnitView) {
-      const unitA = a.activeUnit || '';
-      const unitB = b.activeUnit || '';
-      if (unitA !== unitB) {
-         const getUnitGroup = (u) => {
-           const ul = u.toLocaleLowerCase('tr-TR');
-           if (ul === 'müdürler') return 1;
-           if (ul.includes('hukuk')) return 2;
-           if (ul.includes('şube')) return 3;
-           if (ul.includes('ilçe')) return 4;
-           return 5;
-         };
-         const gA = getUnitGroup(unitA);
-         const gB = getUnitGroup(unitB);
-         if (gA !== gB) return gA - gB;
-         const cmp = unitA.localeCompare(unitB, 'tr');
-         if (cmp !== 0) return cmp;
-      }
-    }
-
-    const rankA = getRank(a);
-    const rankB = getRank(b);
-    if (rankA !== rankB) return rankA - rankB;
-
-    const sicilA_str = (a.contact || '').replace(/\D/g, '');
-    const sicilB_str = (b.contact || '').replace(/\D/g, '');
-    
-    // Telefon numaralarını sicil gibi sıralamamak için sadece 8 haneden kısa sayıları sicil kabul et
-    const sicilA = (sicilA_str && sicilA_str.length < 8) ? parseInt(sicilA_str, 10) : NaN;
-    const sicilB = (sicilB_str && sicilB_str.length < 8) ? parseInt(sicilB_str, 10) : NaN;
-
-    if (!isNaN(sicilA) && !isNaN(sicilB)) {
-      if (sicilA !== sicilB) return sicilA - sicilB;
-    } else if (!isNaN(sicilA) && isNaN(sicilB)) {
-      return -1;
-    } else if (isNaN(sicilA) && !isNaN(sicilB)) {
-      return 1;
-    }
-
-    return (a.name || '').localeCompare(b.name || '', 'tr-TR');
-  });
+  })] /* sorted */;
   
   const isCurrentlyOut = (originalName) => {
     const history = historyData[originalName];

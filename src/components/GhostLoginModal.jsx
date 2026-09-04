@@ -1,3 +1,4 @@
+import { sortPersonnelByHierarchy } from '../utils/hierarchy';
 import React, { useState, useEffect } from 'react';
 import { Users, ChevronRight } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
@@ -28,7 +29,7 @@ export default function GhostLoginModal({ isOpen, onClose }) {
           });
         }
       });
-      setGhostPersonnelList(merged);
+      setGhostPersonnelList(sortPersonnelByHierarchy(merged));
     }
   }, [isOpen]);
 

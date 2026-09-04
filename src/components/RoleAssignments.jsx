@@ -1,3 +1,4 @@
+import { sortPersonnelByHierarchy } from '../utils/hierarchy';
 import React, { useState, useEffect } from 'react';
 import { Save, UserCog } from 'lucide-react';
 import { toast } from 'react-hot-toast';
@@ -100,55 +101,7 @@ const RoleAssignments = ({ selectedCity, selectedUnit, selectedUnitType, selecte
 
     const savedRoles = JSON.parse(localStorage.getItem('assignedRolesData') || '{}');
     
-    merged.sort((a, b) => {
-      const roleA = savedRoles[a.adSoyad] || savedRoles[a.sicil] || 'Personel';
-      const roleB = savedRoles[b.adSoyad] || savedRoles[b.sicil] || 'Personel';
-      
-      const indexA = ROLES.indexOf(roleA) !== -1 ? ROLES.indexOf(roleA) : 99;
-      const indexB = ROLES.indexOf(roleB) !== -1 ? ROLES.indexOf(roleB) : 99;
-      
-      if (indexA !== indexB) {
-        return indexA - indexB;
-      }
-      
-      const getRank = (p) => {
-        const title = (p.unvan || p.title || '').toLocaleUpperCase('tr-TR');
-        if (title === 'İL MÜDÜRÜ') return 1;
-        if (title === 'İL MÜDÜRÜ V.' || title === 'İL MÜDÜR V.') return 2;
-        if (title === 'İL MÜDÜR YARDIMCISI') return 3;
-        if (title === 'İL MÜDÜR YARDIMCISI V.' || title === 'İL MÜDÜR YARD. V.') return 4;
-        if (title.includes('ŞUBE MÜDÜRÜ') || title.includes('İLÇE MÜDÜRÜ') || title.includes('BİRİM MÜDÜRÜ') || title.includes(' MÜDÜRÜ')) {
-          if (title.includes(' V.')) return 6;
-          return 5;
-        }
-        if (title.includes('ŞUBE MÜDÜR V.') || title.includes('İLÇE MÜDÜR V.')) return 6;
-        if (title.includes('BİRİM SORUMLUSU')) return 7;
-  
-        if (title.includes('AVUKAT')) return 8;
-        if (title.includes('SAYMAN')) return 9;
-        if (title.includes('MÜHENDİS')) return 10;
-        if (title.includes('VETERİNER')) return 11;
-        if (title.includes('BİYOLOG')) return 12;
-        if (title.includes('SU ÜRÜNLERİ')) return 13;
-        if (title.includes('TEKNİKER') && !title.includes('TEKNİSYEN')) return 14;
-        if (title.includes('TEKNİSYEN')) return 15;
-        return 99;
-      };
-
-      const rankA = getRank(a);
-      const rankB = getRank(b);
-      
-      if (rankA !== rankB) return rankA - rankB;
-      
-      if (a.sicil && b.sicil) {
-        const sA = parseInt(a.sicil, 10);
-        const sB = parseInt(b.sicil, 10);
-        if (!isNaN(sA) && !isNaN(sB)) return sA - sB;
-        return String(a.sicil).localeCompare(String(b.sicil));
-      }
-      
-      return (a.adSoyad || '').localeCompare(b.adSoyad || '', 'tr-TR');
-    });
+    sortPersonnelByHierarchy(merged);
 
     setPersonnelList(merged);
     setUserRoles(savedRoles);
