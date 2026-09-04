@@ -254,13 +254,23 @@ function App() {
   };
 
   const hasAccess = (path) => {
-    if (path.startsWith('/ruhsat') || path.startsWith('/stok-tespiti')) return true;
     if (currentRole === 'Genel Koordinatör') return true;
     if (path.startsWith('/formlar/')) return true;
-    
-    // Alt rotalara (ruhsat/deniz vs.) erişimi ana yetkiye bağla
+
+    if (currentRole === 'Personel' && currentUser) {
+      const modulePermissions = JSON.parse(localStorage.getItem('modulePermissionsData') || '{}');
+      const pName = currentUser.originalName || currentUser.name || currentUser.adSoyad;
+      const perms = modulePermissions[pName] || {};
+
+      if (path.startsWith('/ruhsat')) return !!perms.ruhsat;
+      if (path.startsWith('/stok-tespiti')) return !!perms.stok;
+      if (path.startsWith('/tesis-yonetimi') || path.startsWith('/sunum-modu') || path.startsWith('/harita-radar')) return !!perms.yetistiricilik;
+      if (path.startsWith('/ihlaller-ozet') || path === '/cezalar' || path === '/hesaplama' || path === '/kanun-maddeleri' || path === '/arsiv') return !!perms.ihlaller;
+    }
+
+    if (path.startsWith('/ruhsat') || path.startsWith('/stok-tespiti') || path.startsWith('/tesis-yonetimi') || path.startsWith('/sunum-modu') || path.startsWith('/harita-radar')) return true;
+
     let checkPath = path;
-    
     const allowed = savedPermissions[currentRole] || [];
     
     if (checkPath === '/form') {
