@@ -235,7 +235,7 @@ function App() {
 
   const uRoles = JSON.parse(localStorage.getItem('user_roles') || '{}');
   const isOwner = currentUser?.adSoyad === 'Bahadır ŞENOĞLU' || currentUser?.name === 'Bahadır ŞENOĞLU';
-  const realRole = (currentUser?.sicil === 'admin' || isOwner) ? 'Genel Koordinatör' : (uRoles[currentUser?.sicil || currentUser?.adSoyad] || 'Personel');
+  const realRole = currentUser?.impersonated ? currentUser.role : ((currentUser?.sicil === 'admin' || isOwner) ? 'Genel Koordinatör' : (uRoles[currentUser?.sicil || currentUser?.adSoyad || currentUser?.name] || currentUser?.role || 'Personel'));
   const isViewingAsPersonel = localStorage.getItem('view_as_personel') === 'true';
   const currentRole = isViewingAsPersonel ? 'Personel' : realRole;
   
