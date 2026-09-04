@@ -631,12 +631,7 @@ const TesisYonetimi = ({ selectedCity }) => {
         toast.error('Veriler çekilemedi!');
       } else {
         const plateStr = CITY_PLATES[currentCity] || '';
-        const filteredData = data.filter(t => {
-            // Şimdilik sadece plakadan kontrol ediyoruz ki diğer ilçeler de yutulmasın.
-            // isDistrictValid kontrolünü gevşetip Belirsiz/Diğer sekmeye atacağız.
-            const hasValidPlate = t.resmiNo && (t.resmiNo.startsWith(plateStr + '-') || t.resmiNo.startsWith(plateStr + '/'));
-            return hasValidPlate; // District kontrolünü siliyoruz ki dışarıdaki tesisler de Belirsiz olarak listelensin
-          });
+        const filteredData = data; // Hiçbir kısıtlama yapmadan tüm tesisleri ekrana alıyoruz.
           // Eğer ilçe geçersizse Belirsiz yapalım (opsiyonel) veya aşağıda filtrelerken Belirsiz kategorisine atalım.
         setDataList(filteredData);
       }
@@ -671,7 +666,7 @@ const TesisYonetimi = ({ selectedCity }) => {
   
   
   const aktifData = useMemo(() => dataList.filter(t => t.finalStatus === 'Aktif'), [dataList]);
-  const kiralamaData = useMemo(() => dataList.filter(t => t.finalStatus && t.finalStatus.includes('Kiralama')), [dataList]);
+  const kiralamaData = useMemo(() => dataList.filter(t => t.finalStatus && (t.finalStatus.toUpperCase().includes('KIRALAMA') || t.finalStatus.toUpperCase().includes('KİRALAMA') || t.finalStatus.toUpperCase().includes('BELIRSIZ') || t.finalStatus.toUpperCase().includes('BELİRSİZ'))), [dataList]);
   const devirData = useMemo(() => dataList.filter(t => t.finalStatus === 'Devredildi' || t.finalStatus === 'Devredilmiş'), [dataList]);
   const pasifData = useMemo(() => dataList.filter(t => t.finalStatus === 'Pasif'), [dataList]);
   const iptalData = useMemo(() => dataList.filter(t => t.finalStatus === 'İptal'), [dataList]);
