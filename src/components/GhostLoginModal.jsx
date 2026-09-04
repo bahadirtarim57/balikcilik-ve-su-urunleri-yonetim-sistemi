@@ -46,8 +46,8 @@ export default function GhostLoginModal({ isOpen, onClose }) {
 
     const uRoles = JSON.parse(localStorage.getItem('user_roles') || '{}');
 
-    const personKeySicil = person.sicil;
-    const personKeyName = person.name || person.adSoyad;
+    const personKeySicil = person.sicil || person["SİCİL NO"];
+    const personKeyName = person.name || person.adSoyad || person["ADI SOYADI"];
     const personKeyOriginal = person.originalName;
 
     let role = uRoles[personKeySicil] || uRoles[personKeyName] || uRoles[personKeyOriginal];

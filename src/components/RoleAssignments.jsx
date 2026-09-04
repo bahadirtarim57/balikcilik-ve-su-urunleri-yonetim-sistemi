@@ -233,7 +233,7 @@ const RoleAssignments = ({ selectedCity, selectedUnit, selectedUnitType, selecte
           </thead>
           <tbody>
             {filteredPersonnel.map((p, i) => {
-              const pId = p.sicil || p.adSoyad;
+              const pId = p.sicil || p.adSoyad || p.name;
               
               // Yetki kısıtlama mantığı: Birim Sorumlusu, müdürleri veya üst yöneticileri düzenleyemez
               const title = (p.unvan || p.title || '').toLocaleUpperCase('tr-TR');
