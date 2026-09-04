@@ -269,103 +269,145 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
       </div>
       
       <div className="sidebar-scrollable" style={{ flex: 1, overflowY: 'auto' }}>
-        <DragDropContext onDragEnd={onDragEnd}>
-          <Droppable droppableId="board" type="section">
-            {(provided) => (
-              <div ref={provided.innerRef} {...provided.droppableProps}>
-                {sections.map((section, index) => {
-                  const visibleItems = section.items ? section.items.filter(item => hasAccess(item.id, section.id)) : [];
-                  if (visibleItems.length === 0 && currentRole !== 'Genel Koordinatör') return null;
-
-                  return (
-                    <Draggable key={section.id} draggableId={section.id} index={index} isDragDisabled={isTouchDevice || currentRole !== 'Genel Koordinatör'}>
-                      {(providedSection, snapshotSection) => (
-                        <div 
-                          ref={providedSection.innerRef} 
-                          {...providedSection.draggableProps} 
-                          className="nav-section" 
-                          style={{ 
-                            marginTop: index === 0 ? '0' : '4px',
-                            ...providedSection.draggableProps.style,
-                            opacity: snapshotSection.isDragging ? 0.8 : 1
-                          }}
-                        >
+        {currentRole === 'Genel Koordinatör' ? (
+          <DragDropContext onDragEnd={onDragEnd}>
+            <Droppable droppableId="board" type="section">
+              {(provided) => (
+                <div ref={provided.innerRef} {...provided.droppableProps}>
+                  {sections.map((section, index) => {
+                    const visibleItems = section.items ? section.items.filter(item => hasAccess(item.id, section.id)) : [];
+                    if (visibleItems.length === 0 && currentRole !== 'Genel Koordinatör') return null;
+  
+                    return (
+                      <Draggable key={section.id} draggableId={section.id} index={index} isDragDisabled={isTouchDevice || currentRole !== 'Genel Koordinatör'}>
+                        {(providedSection, snapshotSection) => (
                           <div 
-                              className="nav-section-title" 
-                              style={{ marginBottom: expandedSections[section.id] ? '4px' : '0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: expandedSections[section.id] ? '#f8fafc' : 'transparent', borderRadius: '8px', transition: 'all 0.2s', border: expandedSections[section.id] ? '1px solid #e2e8f0' : '1px solid transparent', overflow: 'hidden' }}
-                            >
-                              <div style={{ flex: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', padding: '10px 12px' }} onClick={() => toggleSection(section.id)}>
-                                <span>{section.title}</span>
-                                {expandedSections[section.id] ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                              </div>
-                              {currentRole === 'Genel Koordinatör' && (
-                                <div {...providedSection.dragHandleProps} style={{ padding: '10px', cursor: 'grab', color: '#cbd5e1' }}>
-                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
-                                </div>
-                              )}
-                            </div>
-                          
-                          <Droppable droppableId={section.id} type="item">
-                            {(providedList, snapshotList) => (
-                              <div 
-                                ref={providedList.innerRef} 
-                                {...providedList.droppableProps}
-                                style={{
-                                  minHeight: expandedSections[section.id] ? '20px' : '0px',
-                                  height: expandedSections[section.id] ? 'auto' : '0px',
-                                  overflow: 'hidden',
-                                  background: snapshotList.isDraggingOver ? 'rgba(0,0,0,0.02)' : 'transparent',
-                                  borderRadius: '8px',
-                                  transition: 'height 0.2s ease-in-out'
-                                }}
+                            ref={providedSection.innerRef} 
+                            {...providedSection.draggableProps} 
+                            className="nav-section" 
+                            style={{ 
+                              marginTop: index === 0 ? '0' : '4px',
+                              ...providedSection.draggableProps.style,
+                              opacity: snapshotSection.isDragging ? 0.8 : 1
+                            }}
+                          >
+                            <div 
+                                className="nav-section-title" 
+                                style={{ marginBottom: expandedSections[section.id] ? '4px' : '0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: expandedSections[section.id] ? '#f8fafc' : 'transparent', borderRadius: '8px', transition: 'all 0.2s', border: expandedSections[section.id] ? '1px solid #e2e8f0' : '1px solid transparent', overflow: 'hidden' }}
                               >
-                                {expandedSections[section.id] && visibleItems.map((item, i) => {
-                                  const IconComponent = IconMap[item.iconName] || FileText;
-                                  return (
-                                    <Draggable key={item.id} draggableId={item.id} index={i} isDragDisabled={isTouchDevice || currentRole !== 'Genel Koordinatör'}>
-                                      {(providedItem, snapshotItem) => (
-                                        <div
-                                          ref={providedItem.innerRef}
-                                          {...providedItem.draggableProps}
-                                          {...providedItem.dragHandleProps}
-                                          style={{
-                                            ...providedItem.draggableProps.style,
-                                            marginBottom: '2px'
-                                          }}
-                                        >
-                                          <NavLink 
-                                            to={item.link} 
-                                            className={({isActive}) => isActive ? "nav-item active" : "nav-item"} 
-                                            end={item.link === '/'}
-                                            onClick={() => { if(isMobileMenuOpen) setIsMobileMenuOpen(false); }}
+                                <div style={{ flex: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', padding: '10px 12px' }} onClick={() => toggleSection(section.id)}>
+                                  <span>{section.title}</span>
+                                  {expandedSections[section.id] ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                                </div>
+                                {currentRole === 'Genel Koordinatör' && (
+                                  <div {...providedSection.dragHandleProps} style={{ padding: '10px', cursor: 'grab', color: '#cbd5e1' }}>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                  </div>
+                                )}
+                              </div>
+                            
+                            <Droppable droppableId={section.id} type="item">
+                              {(providedList, snapshotList) => (
+                                <div 
+                                  ref={providedList.innerRef} 
+                                  {...providedList.droppableProps}
+                                  style={{
+                                    minHeight: expandedSections[section.id] ? '20px' : '0px',
+                                    height: expandedSections[section.id] ? 'auto' : '0px',
+                                    overflow: 'hidden',
+                                    background: snapshotList.isDraggingOver ? 'rgba(0,0,0,0.02)' : 'transparent',
+                                    borderRadius: '8px',
+                                    transition: 'height 0.2s ease-in-out'
+                                  }}
+                                >
+                                  {expandedSections[section.id] && visibleItems.map((item, i) => {
+                                    const IconComponent = IconMap[item.iconName] || FileText;
+                                    return (
+                                      <Draggable key={item.id} draggableId={item.id} index={i} isDragDisabled={isTouchDevice || currentRole !== 'Genel Koordinatör'}>
+                                        {(providedItem, snapshotItem) => (
+                                          <div
+                                            ref={providedItem.innerRef}
+                                            {...providedItem.draggableProps}
+                                            {...providedItem.dragHandleProps}
                                             style={{
-                                              
-                                              boxShadow: snapshotItem.isDragging ? '0 5px 10px rgba(0,0,0,0.1)' : 'none',
-                                              cursor: 'grab'
+                                              ...providedItem.draggableProps.style,
+                                              marginBottom: '2px'
                                             }}
                                           >
-                                            <IconComponent size={18} />
-                                            <span>{item.label}</span>
-                                          </NavLink>
-                                        </div>
-                                      )}
-                                    </Draggable>
-                                  );
-                                })}
-                                {providedList.placeholder}
-                              </div>
-                            )}
-                          </Droppable>
+                                            <NavLink 
+                                              to={item.link} 
+                                              className={({isActive}) => isActive ? "nav-item active" : "nav-item"} 
+                                              end={item.link === '/'}
+                                              onClick={() => { if(isMobileMenuOpen) setIsMobileMenuOpen(false); }}
+                                              style={{
+                                                
+                                                boxShadow: snapshotItem.isDragging ? '0 5px 10px rgba(0,0,0,0.1)' : 'none',
+                                                cursor: 'grab'
+                                              }}
+                                            >
+                                              <IconComponent size={18} />
+                                              <span>{item.label}</span>
+                                            </NavLink>
+                                          </div>
+                                        )}
+                                      </Draggable>
+                                    );
+                                  })}
+                                  {providedList.placeholder}
+                                </div>
+                              )}
+                            </Droppable>
+                          </div>
+                        )}
+                      </Draggable>
+                    );
+                  })}
+                  {provided.placeholder}
+                </div>
+              )}
+            </Droppable>
+          </DragDropContext>
+        ) : (
+          <div>
+            {sections.map((section, index) => {
+              const visibleItems = section.items ? section.items.filter(item => hasAccess(item.id, section.id)) : [];
+              if (visibleItems.length === 0) return null;
+              
+              return (
+                <div key={section.id} className="nav-section" style={{ marginTop: index === 0 ? '0' : '4px' }}>
+                  <div 
+                    className="nav-section-title" 
+                    style={{ marginBottom: expandedSections[section.id] ? '4px' : '0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: expandedSections[section.id] ? '#f8fafc' : 'transparent', borderRadius: '8px', transition: 'all 0.2s', border: expandedSections[section.id] ? '1px solid #e2e8f0' : '1px solid transparent', overflow: 'hidden' }}
+                  >
+                    <div style={{ flex: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', padding: '10px 12px' }} onClick={() => toggleSection(section.id)}>
+                      <span>{section.title}</span>
+                      {expandedSections[section.id] ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                    </div>
+                  </div>
+                  
+                  <div style={{ minHeight: expandedSections[section.id] ? '20px' : '0px', height: expandedSections[section.id] ? 'auto' : '0px', overflow: 'hidden', background: 'transparent', borderRadius: '8px', transition: 'height 0.2s ease-in-out' }}>
+                    {expandedSections[section.id] && visibleItems.map((item, i) => {
+                      const IconComponent = IconMap[item.iconName] || FileText;
+                      return (
+                        <div key={item.id} style={{ marginBottom: '2px' }}>
+                          <NavLink 
+                            to={item.link} 
+                            className={({isActive}) => isActive ? "nav-item active" : "nav-item"} 
+                            end={item.link === '/'}
+                            onClick={() => { if(isMobileMenuOpen) setIsMobileMenuOpen(false); }}
+                          >
+                            <IconComponent size={18} />
+                            <span>{item.label}</span>
+                          </NavLink>
                         </div>
-                      )}
-                    </Draggable>
-                  );
-                })}
-                {provided.placeholder}
-              </div>
-            )}
-          </Droppable>
-        </DragDropContext>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
       
       <div className="sidebar-footer" style={{ borderTop: '1px solid #e5e7eb', padding: '16px' }}>
