@@ -169,6 +169,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
       
       if (currentRole === 'Genel Koordinatör' || perms.ayarlar) {
         if (currentRole !== 'Genel Koordinatör') {
+          if (!menuId) return true;
           if (menuId === 'personel-listesi' || menuId === 'yeniden-degerlendirme') return true;
           return false;
         }
