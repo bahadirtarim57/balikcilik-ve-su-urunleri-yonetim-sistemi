@@ -291,14 +291,19 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
                           }}
                         >
                           <div 
-                            className="nav-section-title" 
-                            {...providedSection.dragHandleProps} 
-                            style={{ cursor: 'pointer', marginBottom: expandedSections[section.id] ? '4px' : '0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 12px', background: expandedSections[section.id] ? '#f8fafc' : 'transparent', borderRadius: '8px', transition: 'all 0.2s', border: expandedSections[section.id] ? '1px solid #e2e8f0' : '1px solid transparent' }}
-                            onClick={() => toggleSection(section.id)}
-                          >
-                            <span>{section.title}</span>
-                            {expandedSections[section.id] ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                          </div>
+                              className="nav-section-title" 
+                              style={{ marginBottom: expandedSections[section.id] ? '4px' : '0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: expandedSections[section.id] ? '#f8fafc' : 'transparent', borderRadius: '8px', transition: 'all 0.2s', border: expandedSections[section.id] ? '1px solid #e2e8f0' : '1px solid transparent', overflow: 'hidden' }}
+                            >
+                              <div style={{ flex: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', padding: '10px 12px' }} onClick={() => toggleSection(section.id)}>
+                                <span>{section.title}</span>
+                                {expandedSections[section.id] ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                              </div>
+                              {currentRole === 'Genel Koordinatör' && (
+                                <div {...providedSection.dragHandleProps} style={{ padding: '10px', cursor: 'grab', color: '#cbd5e1' }}>
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                </div>
+                              )}
+                            </div>
                           
                           <Droppable droppableId={section.id} type="item">
                             {(providedList, snapshotList) => (
