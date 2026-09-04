@@ -270,11 +270,9 @@ function App() {
 
     if (path.startsWith('/ruhsat') || path.startsWith('/stok-tespiti') || path.startsWith('/tesis-yonetimi') || path.startsWith('/sunum-modu') || path.startsWith('/harita-radar')) return true;
 
-    // YENİ GÜVENLİK: Sadece Genel Koordinatör kritik ayarları görebilir
     if (path === '/ayarlar' || path === '/veri-yonetimi' || path === '/rol-atamalari' || path === '/yetki-matrisi') {
       if (currentRole !== 'Genel Koordinatör') return false;
     }
-
 
     let checkPath = path;
     const allowed = savedPermissions[currentRole] || [];

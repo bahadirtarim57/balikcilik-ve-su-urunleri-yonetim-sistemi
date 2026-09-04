@@ -42,7 +42,7 @@ export default function RevaluationRate() {
     }
   };
 
-  
+
 
   return (
     <div className="module-container">

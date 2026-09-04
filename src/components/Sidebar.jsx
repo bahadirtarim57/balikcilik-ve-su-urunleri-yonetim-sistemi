@@ -164,14 +164,13 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
 
     // Modül Bazlı Yetkilendirme Kontrolü (RBAC)
     if (sectionId === 'section-ayarlar') {
-        if (currentRole !== 'Genel Koordinatör') {
-          // Sadece personel listesi ve yeniden değerlendirme görünsün
-          if (menuId === 'personel-listesi' || menuId === 'yeniden-degerlendirme') return true;
-          return false;
-        }
+      if (currentRole !== 'Genel Koordinatör') {
+        if (menuId === 'personel-listesi' || menuId === 'yeniden-degerlendirme') return true;
+        return false;
       }
+    }
 
-      if (sectionId && sectionId !== 'section-genel' && sectionId !== 'section-ayarlar') {
+    if (sectionId && sectionId !== 'section-genel' && sectionId !== 'section-ayarlar') {
       const pName = currentUser?.originalName || currentUser?.name || currentUser?.adSoyad;
       const perms = modulePermissions[pName] || {};
       

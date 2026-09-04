@@ -15,7 +15,7 @@ export default function DataManagement() {
   const uRoles = JSON.parse(localStorage.getItem('user_roles') || '{}');
   const userIdentifier = currentUser?.sicil || currentUser?.adSoyad || currentUser?.name;
   const role = currentUser?.sicil === 'admin' ? 'Genel Koordinatör' : (uRoles[userIdentifier] || 'Personel');
-  
+  const isAuthorizedForDataSync = ['Genel Koordinatör', 'Yetkili Yönetici', 'Birim Sorumlusu', 'Sistem Yöneticisi'].includes(role);
 
   const handleSyncFolder = async () => {
     try {
@@ -118,7 +118,7 @@ export default function DataManagement() {
     e.target.value = '';
   };
 
-  
+
 
   return (
     <div className="module-container">
