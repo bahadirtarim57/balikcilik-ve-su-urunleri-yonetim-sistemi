@@ -16,6 +16,7 @@ import PersonnelList from './components/PersonnelList';
 import RoleAssignments from './components/RoleAssignments';
 import PermissionMatrix from './components/PermissionMatrix';
 import RevaluationRate from './components/RevaluationRate';
+import Briefing from './components/Briefing';
 import Login from './components/Login';
 
 import StokTespit from './components/StokTespit';
@@ -543,6 +544,7 @@ function App() {
                 <Route path="/arsiv" element={<ProtectedRoute path="/arsiv"><Archive /></ProtectedRoute>} />
                 <Route path="/raporlar" element={<ProtectedRoute path="/raporlar"><Reports /></ProtectedRoute>} />
                 <Route path="/kanun-maddeleri" element={<ProtectedRoute path="/kanun-maddeleri"><LawArticles data={cezalarData} /></ProtectedRoute>} />
+                <Route path="/brifing" element={<Briefing />} />
                 <Route path="/personel" element={<ProtectedRoute path="/personel"><PersonnelList selectedProvince={selectedCity} selectedUnit={selectedUnit} selectedUnitType={selectedUnitType} selectedDistrict={selectedDistrict} currentRole={currentRole} /></ProtectedRoute>} />
                 <Route path="/ayarlar" element={<ProtectedRoute path="/ayarlar"><InstitutionSettings /></ProtectedRoute>} />
                 <Route path="/veri-yonetimi" element={<ProtectedRoute path="/veri-yonetimi"><DataManagement /></ProtectedRoute>} />

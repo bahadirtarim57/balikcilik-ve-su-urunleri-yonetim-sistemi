@@ -160,6 +160,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
   const isManager = realRole !== 'Personel';
 
   const hasAccess = (menuId, sectionId) => {
+    if (menuId === '/brifing') return true;
     if (currentRole === 'Genel Koordinatör') return true;
 
     // Modül Bazlı Yetkilendirme Kontrolü (RBAC)
