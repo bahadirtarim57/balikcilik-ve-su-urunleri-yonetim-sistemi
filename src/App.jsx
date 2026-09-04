@@ -238,45 +238,7 @@ function App() {
   const realRole = currentUser?.impersonated ? currentUser.role : ((currentUser?.sicil === 'admin' || isOwner) ? 'Genel Koordinatör' : (uRoles[currentUser?.sicil || currentUser?.adSoyad || currentUser?.name] || currentUser?.role || 'Personel'));
   const currentRole = realRole;
   
-  const displayRole = (() => {
-    if (!currentUser?.impersonated) return currentRole;
-    try {
-      const assignedRoles = JSON.parse(localStorage.getItem('assignedRolesData') || '{}');
-      const uRoles = JSON.parse(localStorage.getItem('user_roles') || '{}');
-      const perms = JSON.parse(localStorage.getItem('modulePermissionsData') || '{}');
-      
-      const kName = currentUser?.name || currentUser?.adSoyad || '';
-      const kSicil = currentUser?.sicil || '';
-      
-      const normalize = (s) => (s || '').toLocaleLowerCase('tr-TR').trim().replace(/\s+/g, ' ');
-      const sName = normalize(kName);
-      const sSicil = normalize(kSicil);
-      
-      let found = null;
-      
-      if (kSicil && assignedRoles[kSicil]) found = assignedRoles[kSicil];
-      else if (kName && assignedRoles[kName]) found = assignedRoles[kName];
-      else if (kSicil && uRoles[kSicil]) found = uRoles[kSicil];
-      else if (kName && uRoles[kName]) found = uRoles[kName];
-      
-      if (!found) {
-        for (const [k, v] of Object.entries({ ...uRoles, ...assignedRoles })) {
-          const nk = normalize(k);
-          if (nk && ((sName && nk === sName) || (sSicil && nk === sSicil))) {
-            found = v;
-            break;
-          }
-        }
-      }
-      
-      if (found) return found;
-      
-      // If absolutely nothing is found, read directly from GhostLoginModal's logic
-      return currentUser.role || 'Personel';
-    } catch (e) {
-      return currentUser?.role || 'Personel';
-    }
-  })();
+  
   
   const isCityLocked = currentRole !== 'Genel Koordinatör';
   const isUnitLocked = !['Genel Koordinatör', 'Yetkili Yönetici', 'İl Müdürü', 'İl Müdür Yardımcısı'].includes(currentRole);
@@ -372,7 +334,7 @@ function App() {
       <Toaster position="top-right" toastOptions={{ style: { borderRadius: '10px', background: '#333', color: '#fff', fontSize: '14px' } }} />
       {originalAdminUser && (
         <div style={{ background: '#ef4444', color: 'white', padding: '8px 24px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '16px', fontWeight: '500', fontSize: '14px', zIndex: 9999 }}>
-          Dikkat: Şu an {currentUser?.adSoyad || currentUser?.name} ({displayRole}) hesabı üzerinden işlem yapıyorsunuz.
+          Dikkat: Şu an {currentUser?.adSoyad || currentUser?.name} hesabı üzerinden işlem yapıyorsunuz.
           <button 
             onClick={() => {
               if (window.confirm('Kendi kimliğinize dönmek istediğinize emin misiniz?')) {

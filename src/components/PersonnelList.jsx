@@ -11,6 +11,16 @@ import { useAuth } from '../context/AuthContext'
 import { generatePassword, hashPassword, isEmailTaken, savePersonnelEmail, savePersonnelPassword, sendPasswordEmail, isEmailJSConfigured } from '../utils/emailService'
 
 export default function PersonnelList({ selectedProvince, selectedUnit, selectedUnitType, selectedDistrict, currentRole }) {
+
+  const getDisplayTitle = (title) => {
+    if (!title) return 'Personel';
+    const t = title.toLowerCase();
+    if (t.includes('müdür') || t.includes('koordinatör') || t.includes('yönetici') || t.includes('sorumlu') || t.includes('başkan')) {
+      return title;
+    }
+    return 'Personel';
+  };
+
   // Telefon numarasını "0 XXX XXX XX XX" formatına çevirir
   const formatPhone = (phone) => {
     if (!phone) return '';
@@ -1229,7 +1239,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
                   return (
                     <tr key={`${p.originalName}-${idx}`} style={{ opacity: p.activeUnit === 'İl Dışı' || p.activeUnit === 'Emekli' ? 0.6 : 1 }}>
                       <td style={{ fontWeight: 500, color: '#1a73e8', borderRight: '1px solid #e5e7eb', cursor: 'pointer' }} onClick={() => openProfileModal(p)}>{p.name}</td>
-                      <td style={{ borderRight: '1px solid #e5e7eb' }}>{p.title || '-'}</td>
+                      <td style={{ borderRight: '1px solid #e5e7eb' }}>{getDisplayTitle(p.title)}</td>
                       <td style={{ borderRight: '1px solid #e5e7eb' }}>{p.profession || '-'}</td>
                       <td style={{ borderRight: '1px solid #e5e7eb' }}>{p.contact || '-'}</td>
                       <td style={{ borderRight: '1px solid #e5e7eb' }}>{p.kontrolGorevNo || '-'}</td>
