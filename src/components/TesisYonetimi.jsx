@@ -677,26 +677,66 @@ const TesisYonetimi = ({ selectedCity }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedType, setSelectedType] = useState('All');
 
-  const filteredData = useMemo(() => {
-    let base = []; if(activeTab === 'aktif_tesisler') base = aktifData; else if (activeTab === 'kiralama_tesisler') base = kiralamaData; else if (activeTab === 'devir_tesisler') base = devirData; else if (activeTab === 'pasif_tesisler') base = pasifData; else if (activeTab === 'iptal_tesisler') base = iptalData;
-    if (activeTab === 'yeni') return [];
-    if (selectedIlce !== 'Tümü') {
-        if (selectedIlce === 'Belirsiz / Diğer') {
+  const hasCage = (t) => {
+    return (Number(t.projeKafes) > 0 || Number(t.mevcutKafes) > 0 || (t.projeKafesList && t.projeKafesList.length > 0));
+  };
+
+  const typeCounts = useMemo(() => {
+      let base = []; if(activeTab === 'aktif_tesisler') base = aktifData; else if (activeTab === 'kiralama_tesisler') base = kiralamaData; else if (activeTab === 'devir_tesisler') base = devirData; else if (activeTab === 'pasif_tesisler') base = pasifData; else if (activeTab === 'iptal_tesisler') base = iptalData;
+      if (activeTab === 'yeni') return {};
+      if (selectedIlce !== 'TǬmǬ' && selectedIlce !== 'Tümü') {
+        if (selectedIlce === 'Belirsiz / DiYer' || selectedIlce === 'Belirsiz / Diğer' || selectedIlce === 'Belirsiz / DiYer') {
            base = base.filter(t => !VALID_DISTRICTS.includes(t.ilce));
         } else {
            base = base.filter(t => t.ilce === selectedIlce);
         }
       }
-    if (searchTerm) {
-      const term = searchTerm.toLowerCase();
-      base = base.filter(t => (t.firmaAdi && t.firmaAdi.toLowerCase().includes(term)) || (t.resmiNo && t.resmiNo.toLowerCase().includes(term)));
-    }
-    return base.sort((a, b) => {
-        const numCompare = String(a.resmiNo).localeCompare(String(b.resmiNo), undefined, { numeric: true, sensitivity: 'base' });
-        if (numCompare !== 0) return numCompare;
-        return (b._sortDate || 0) - (a._sortDate || 0);
-    });
-  }, [aktifData, kiralamaData, devirData, pasifData, iptalData, selectedIlce, searchTerm, activeTab]);
+      const counts = { All: base.length, Deniz: 0, Midye: 0, BarajYet: 0, BarajAvc: 0, Karasal: 0 };
+      base.forEach(t => {
+          const tur = t.tesisTuru || t.tur || '';
+          if (tur === 'Deniz Yetiştiriciliği') counts.Deniz++;
+          else if (tur === 'Çift Kabuklu Yetiştiriciliği') counts.Midye++;
+          else if (tur === 'Baraj / Göl Üretimi') {
+              if (hasCage(t)) counts.BarajYet++; else counts.BarajAvc++;
+          }
+          else if (tur === 'Karasal Üretim') counts.Karasal++;
+      });
+      return counts;
+  }, [aktifData, kiralamaData, devirData, pasifData, iptalData, selectedIlce, activeTab, VALID_DISTRICTS]);
+
+  const filteredData = useMemo(() => {
+      let base = []; if(activeTab === 'aktif_tesisler') base = aktifData; else if (activeTab === 'kiralama_tesisler') base = kiralamaData; else if (activeTab === 'devir_tesisler') base = devirData; else if (activeTab === 'pasif_tesisler') base = pasifData; else if (activeTab === 'iptal_tesisler') base = iptalData;
+      if (activeTab === 'yeni') return [];
+      if (selectedIlce !== 'TǬmǬ' && selectedIlce !== 'Tümü') {
+          if (selectedIlce === 'Belirsiz / DiYer' || selectedIlce === 'Belirsiz / Diğer' || selectedIlce === 'Belirsiz / DiYer') {
+             base = base.filter(t => !VALID_DISTRICTS.includes(t.ilce));
+          } else {
+             base = base.filter(t => t.ilce === selectedIlce);
+          }
+      }
+      
+      if (selectedType !== 'All') {
+         base = base.filter(t => {
+            const tur = t.tesisTuru || t.tur || '';
+            if (selectedType === 'Deniz') return tur === 'Deniz Yetiştiriciliği';
+            if (selectedType === 'Midye') return tur === 'Çift Kabuklu Yetiştiriciliği';
+            if (selectedType === 'BarajYet') return tur === 'Baraj / Göl Üretimi' && hasCage(t);
+            if (selectedType === 'BarajAvc') return tur === 'Baraj / Göl Üretimi' && !hasCage(t);
+            if (selectedType === 'Karasal') return tur === 'Karasal Üretim';
+            return true;
+         });
+      }
+
+      if (searchTerm) {
+        const term = searchTerm.toLowerCase();
+        base = base.filter(t => (t.firmaAdi && t.firmaAdi.toLowerCase().includes(term)) || (t.resmiNo && t.resmiNo.toLowerCase().includes(term)));
+      }
+      return base.sort((a, b) => {
+          const numCompare = String(a.resmiNo).localeCompare(String(b.resmiNo), undefined, { numeric: true, sensitivity: 'base' });
+          if (numCompare !== 0) return numCompare;
+          return (b._sortDate || 0) - (a._sortDate || 0);
+      });
+  }, [aktifData, kiralamaData, devirData, pasifData, iptalData, selectedIlce, searchTerm, activeTab, selectedType, VALID_DISTRICTS]);
 
   const ilceCounts = useMemo(() => {
     let currData = []; if(activeTab === 'aktif_tesisler') currData = aktifData; else if (activeTab === 'kiralama_tesisler') currData = kiralamaData; else if (activeTab === 'devir_tesisler') currData = devirData; else if (activeTab === 'pasif_tesisler') currData = pasifData; else if (activeTab === 'iptal_tesisler') currData = iptalData; const counts = { 'Tümü': currData.length };
@@ -1093,8 +1133,11 @@ ${match.lakeName} için kiralama verileri otomatik çekildi.`);
                     <button onClick={() => setSelectedType('Midye')} style={{ padding: '6px 12px', borderRadius: '20px', border: selectedType === 'Midye' ? 'none' : '1px solid #e2e8f0', background: selectedType === 'Midye' ? '#0d9488' : 'white', color: selectedType === 'Midye' ? 'white' : '#64748b', fontSize: '13px', fontWeight: '500', cursor: 'pointer' }}>
                       Midye / Çift Kabuklu ({typeCounts.Midye || 0})
                     </button>
-                    <button onClick={() => setSelectedType('Baraj')} style={{ padding: '6px 12px', borderRadius: '20px', border: selectedType === 'Baraj' ? 'none' : '1px solid #e2e8f0', background: selectedType === 'Baraj' ? '#2563eb' : 'white', color: selectedType === 'Baraj' ? 'white' : '#64748b', fontSize: '13px', fontWeight: '500', cursor: 'pointer' }}>
-                      Baraj / Göl ({typeCounts.Baraj || 0})
+                    <button onClick={() => setSelectedType('BarajYet')} style={{ padding: '6px 12px', borderRadius: '20px', border: selectedType === 'BarajYet' ? 'none' : '1px solid #e2e8f0', background: selectedType === 'BarajYet' ? '#2563eb' : 'white', color: selectedType === 'BarajYet' ? 'white' : '#64748b', fontSize: '13px', fontWeight: '500', cursor: 'pointer' }}>
+                      Baraj / Göl (Yetiştiricilik) ({typeCounts.BarajYet || 0})
+                    </button>
+                    <button onClick={() => setSelectedType('BarajAvc')} style={{ padding: '6px 12px', borderRadius: '20px', border: selectedType === 'BarajAvc' ? 'none' : '1px solid #e2e8f0', background: selectedType === 'BarajAvc' ? '#f59e0b' : 'white', color: selectedType === 'BarajAvc' ? 'white' : '#64748b', fontSize: '13px', fontWeight: '500', cursor: 'pointer' }}>
+                      Baraj / Göl (Avcılık) ({typeCounts.BarajAvc || 0})
                     </button>
                     <button onClick={() => setSelectedType('Karasal')} style={{ padding: '6px 12px', borderRadius: '20px', border: selectedType === 'Karasal' ? 'none' : '1px solid #e2e8f0', background: selectedType === 'Karasal' ? '#16a34a' : 'white', color: selectedType === 'Karasal' ? 'white' : '#64748b', fontSize: '13px', fontWeight: '500', cursor: 'pointer' }}>
                       Karasal / Havuz ({typeCounts.Karasal || 0})
