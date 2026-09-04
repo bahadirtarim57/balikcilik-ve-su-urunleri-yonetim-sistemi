@@ -236,8 +236,7 @@ function App() {
   const uRoles = JSON.parse(localStorage.getItem('user_roles') || '{}');
   const isOwner = currentUser?.adSoyad === 'Bahadır ŞENOĞLU' || currentUser?.name === 'Bahadır ŞENOĞLU';
   const realRole = currentUser?.impersonated ? currentUser.role : ((currentUser?.sicil === 'admin' || isOwner) ? 'Genel Koordinatör' : (uRoles[currentUser?.sicil || currentUser?.adSoyad || currentUser?.name] || currentUser?.role || 'Personel'));
-  const isViewingAsPersonel = localStorage.getItem('view_as_personel') === 'true';
-  const currentRole = isViewingAsPersonel ? 'Personel' : realRole;
+  const currentRole = realRole;
   
   const isCityLocked = currentRole !== 'Genel Koordinatör';
   const isUnitLocked = !['Genel Koordinatör', 'Yetkili Yönetici', 'İl Müdürü', 'İl Müdür Yardımcısı'].includes(currentRole);
@@ -333,7 +332,7 @@ function App() {
       <Toaster position="top-right" toastOptions={{ style: { borderRadius: '10px', background: '#333', color: '#fff', fontSize: '14px' } }} />
       {originalAdminUser && (
         <div style={{ background: '#ef4444', color: 'white', padding: '8px 24px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '16px', fontWeight: '500', fontSize: '14px', zIndex: 9999 }}>
-          Dikkat: Şu an {currentUser?.adSoyad || currentUser?.name} ({currentRole}) hesabı üzerinden işlem yapıyorsunuz.
+          Dikkat: Şu an {currentUser?.adSoyad || currentUser?.name} ({currentUser?.role || currentRole}) hesabı üzerinden işlem yapıyorsunuz.
           <button 
             onClick={() => {
               if (window.confirm('Kendi kimliğinize dönmek istediğinize emin misiniz?')) {
