@@ -44,14 +44,28 @@ export default function GhostLoginModal({ isOpen, onClose }) {
     }
 
     const uRoles = JSON.parse(localStorage.getItem('user_roles') || '{}');
-    const personKey = person.sicil || person.name || person.adSoyad;
+
+    const personKeySicil = person.sicil;
+    const personKeyName = person.name || person.adSoyad;
+    const personKeyOriginal = person.originalName;
+
+    let role = uRoles[personKeySicil] || uRoles[personKeyName] || uRoles[personKeyOriginal];
     
-    if (!uRoles[personKey] || uRoles[personKey] === 'Tanımsız') {
-      alert("Bu personelin henüz bir sistem yetkisi bulunmamaktadır. Lütfen Sistem Yetki Yönetimi'nden yetkilendirme yapınız.");
-      return;
+    if (!role || role === 'Tanımsız' || role === 'Tanmsz' || role === 'Tan\u0131ms\u0131z') {
+      const modulePermissions = JSON.parse(localStorage.getItem('modulePermissionsData') || '{}');
+      const perms = modulePermissions[personKeyName] || modulePermissions[personKeyOriginal] || {};
+      const hasAnyTask = Object.values(perms).some(v => v === true);
+      
+      if (hasAnyTask) {
+        role = 'Personel'; 
+      }
     }
 
-    const role = uRoles[personKey];
+    if (!role || role === 'Tanımsız' || role === 'Tanmsz' || role === 'Tan\u0131ms\u0131z') {
+      alert("Bu personelin henüz bir sistem yetkisi veya Personel Listesi'nde işaretlenmiş bir görevi bulunmamaktadır.");
+      return;
+    }
+    
     
     if (window.confirm(`${person.name || person.adSoyad} adlı personelin hesabına giriş yapmak üzeresiniz. Onaylıyor musunuz?`)) {
       impersonate({ email: person.email || 'personel@demo.com', role, name: person.name || person.adSoyad, originalName: person.originalName, unit: activeUnit, il: person.il, sicil: person.sicil, impersonated: true });
