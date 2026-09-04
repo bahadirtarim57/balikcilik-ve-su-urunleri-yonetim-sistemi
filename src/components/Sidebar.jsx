@@ -28,18 +28,6 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
   }, []);
 
   const toggleSection = (id) => {
-    // If it's the ONLY core section, don't let them close it
-    let coreCount = 0;
-    sections.forEach(sec => {
-      if (sec.id !== 'section-genel' && sec.id !== 'section-ayarlar') {
-        const visibleItems = sec.items ? sec.items.filter(item => hasAccess(item.id, sec.id)) : [];
-        if (visibleItems.length > 0 || currentRole === 'Genel Koordinatör') coreCount++;
-      }
-    });
-    if (coreCount === 1 && id !== 'section-genel' && id !== 'section-ayarlar' && expandedSections[id]) {
-      return; // Do nothing, keep it open
-    }
-    
     setExpandedSections(prev => ({ ...prev, [id]: !prev[id] }));
   };
   
@@ -290,7 +278,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
                   if (visibleItems.length === 0 && currentRole !== 'Genel Koordinatör') return null;
 
                   return (
-                    <Draggable key={section.id} draggableId={section.id} index={index} isDragDisabled={isTouchDevice}>
+                    <Draggable key={section.id} draggableId={section.id} index={index} isDragDisabled={isTouchDevice || currentRole !== 'Genel Koordinatör'}>
                       {(providedSection, snapshotSection) => (
                         <div 
                           ref={providedSection.innerRef} 
@@ -329,7 +317,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
                                 {expandedSections[section.id] && visibleItems.map((item, i) => {
                                   const IconComponent = IconMap[item.iconName] || FileText;
                                   return (
-                                    <Draggable key={item.id} draggableId={item.id} index={i} isDragDisabled={isTouchDevice}>
+                                    <Draggable key={item.id} draggableId={item.id} index={i} isDragDisabled={isTouchDevice || currentRole !== 'Genel Koordinatör'}>
                                       {(providedItem, snapshotItem) => (
                                         <div
                                           ref={providedItem.innerRef}
