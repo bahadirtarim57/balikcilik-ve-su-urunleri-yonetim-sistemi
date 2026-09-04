@@ -8,35 +8,48 @@ import { PERSONELLER } from '../utils/excelData';
 const GenelDashboard = ({ data: cezalarData }) => {
   const navigate = useNavigate();
 
-  // Hesaplamalar
   const stats = useMemo(() => {
-    // Ruhsat İstatistiği
     const ruhsatCount = masterArsiv.length || 0;
     
     // Yetiştiricilik İstatistiği
-    const aktifTesisler = tesisData?.filter(t => t.finalStatus?.toUpperCase().includes('AKTIF') || t.finalStatus?.toUpperCase().includes('AKTİF')) || [];
-    const aktifTesisCount = aktifTesisler.length;
-    
-    const kapasite = aktifTesisler.reduce((acc, t) => {
-      const val = typeof t.kapasite === 'string' ? Number(t.kapasite.replace(/[^0-9.-]+/g,'')) : Number(t.kapasite);
-      return acc + (isNaN(val) ? 0 : val);
-    }, 0) || 0;
+    let aktifCount = 0, aktifCap = 0;
+    let kiraCount = 0, kiraCap = 0;
+    let pasifCount = 0, pasifCap = 0;
+    let devirCount = 0, devirCap = 0;
+    let iptalCount = 0, iptalCap = 0;
 
-    let kiralamaCount = 0, pasifCount = 0;
     (tesisData || []).forEach(t => {
       const st = t.finalStatus?.toUpperCase() || '';
-      if (st.includes('KIRALAMA') || st.includes('KİRALAMA') || st.includes('BELIRSIZ') || st.includes('BELİRSİZ')) kiralamaCount++;
-      if (st.includes('PASIF') || st.includes('PASİF') || st.includes('İPTAL') || st.includes('IPTAL')) pasifCount++;
+      const capVal = typeof t.kapasite === 'string' ? Number(t.kapasite.replace(/[^0-9.-]+/g,'')) : Number(t.kapasite);
+      const cap = isNaN(capVal) ? 0 : capVal;
+
+      if (st.includes('AKTIF') || st.includes('AKTİF')) {
+        aktifCount++; aktifCap += cap;
+      } else if (st.includes('KIRALAMA') || st.includes('KİRALAMA') || st.includes('BELIRSIZ') || st.includes('BELİRSİZ')) {
+        kiraCount++; kiraCap += cap;
+      } else if (st.includes('PASIF') || st.includes('PASİF')) {
+        pasifCount++; pasifCap += cap;
+      } else if (st.includes('DEVRE') || st.includes('DEVİR')) {
+        devirCount++; devirCap += cap;
+      } else if (st.includes('İPTAL') || st.includes('IPTAL')) {
+        iptalCount++; iptalCap += cap;
+      }
     });
+
+    const tesisList = [
+      { name: 'Aktif Tesis', count: aktifCount, cap: aktifCap },
+      { name: 'Kiralama Aşamasında Tesis', count: kiraCount, cap: kiraCap },
+      { name: 'Pasif Tesis', count: pasifCount, cap: pasifCap },
+      { name: 'Devredilen Tesis', count: devirCount, cap: devirCap },
+      { name: 'İptal Edilen Tesis', count: iptalCount, cap: iptalCap }
+    ];
     
-    // Stok İstatistiği
     let stokCount = 0;
     try {
       const storedStudies = JSON.parse(localStorage.getItem('stok_studies') || '[]');
       stokCount = storedStudies.length > 0 ? storedStudies.length : 1; 
     } catch(e) {}
     
-    // İhlal İstatistiği
     const ihlalCount = cezalarData?.length || 0;
     let kesilenCezaAdet = 0;
     let toplamTL = 0;
@@ -48,7 +61,6 @@ const GenelDashboard = ({ data: cezalarData }) => {
 
     const selectedUnit = localStorage.getItem('app-selectedUnit') || '';
     
-    // Personel İstatistiği
     let allPersonnel = [...(PERSONELLER || [])];
     try {
         const lp = JSON.parse(localStorage.getItem('personnel_data') || '[]');
@@ -72,11 +84,9 @@ const GenelDashboard = ({ data: cezalarData }) => {
     return {
       'section-ruhsat': { label: 'Kayıtlı Gemi/Ruhsat', value: ruhsatCount, subValue: 'adet' },
       'section-tesis': { 
-        label: 'Aktif Tesis', 
-        value: aktifTesisCount, 
-        subValue: 'adet',
-        topExtra: `Kapasite: ${kapasite.toLocaleString('tr-TR')} Ton/Yıl`,
-        extra: { label: 'Kiralama / Başvuru:', value: `${kiralamaCount} Adet`, subLabel: 'Pasif / İptal:', subValue2: `${pasifCount} Adet` }
+        label: 'Tesis Yönetimi', 
+        isTesisList: true,
+        tesisList: tesisList
       },
       'section-stok': { label: 'Kayıtlı Çalışma', value: stokCount, subValue: 'adet' },
       'section-ipc': { 
@@ -162,11 +172,22 @@ const GenelDashboard = ({ data: cezalarData }) => {
               </div>
               
               <div style={{ marginTop: '24px', paddingTop: '16px', borderTop: '1px solid #f3f4f6' }}>
-                <div style={{ fontSize: '14px', color: '#6b7280', marginBottom: '4px' }}>
+                <div style={{ fontSize: '14px', color: '#6b7280', marginBottom: '8px' }}>
                   {stat.label}
                 </div>
                 
-                {stat.isBranch ? (
+                {stat.isTesisList ? (
+                  <div style={{ marginTop: '-4px' }}>
+                    {stat.tesisList.map((tl, i) => (
+                      <div key={i} style={{ paddingBottom: '6px', marginBottom: '6px', borderBottom: i < stat.tesisList.length - 1 ? '1px dashed #cbd5e1' : 'none' }}>
+                        <div style={{ fontSize: '13px', fontWeight: 'bold', color: '#1e293b' }}>{tl.name}</div>
+                        <div style={{ fontSize: '13px', color: '#64748b', marginTop: '2px' }}>
+                          <span style={{ fontWeight: 'bold', color: '#3b82f6' }}>{tl.count} Adet</span> tesis - Toplam Kapasite: <span style={{ fontWeight: 'bold', color: '#10b981' }}>{tl.cap.toLocaleString('tr-TR')} Ton/Yıl</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : stat.isBranch ? (
                     <div style={{ fontSize: '16px', fontWeight: '600', color: color.text, lineHeight: '1.3' }}>
                       {stat.subValue}
                     </div>
@@ -183,13 +204,13 @@ const GenelDashboard = ({ data: cezalarData }) => {
                     </div>
                 )}
                 
-                {stat.topExtra && (
+                {!stat.isTesisList && stat.topExtra && (
                   <div style={{ marginTop: '4px', fontSize: '15px', fontWeight: '600', color: color.text }}>
                     {stat.topExtra}
                   </div>
                 )}
 
-                {stat.extra && (
+                {!stat.isTesisList && stat.extra && (
                   <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px dashed #e5e7eb', fontSize: '13px', color: '#6b7280', display: 'flex', justifyContent: 'space-between' }}>
                     <div>{stat.extra.label} <span style={{fontWeight: 'bold', color: '#1f2937'}}>{stat.extra.value}</span></div>
                     <div>{stat.extra.subLabel} <span style={{fontWeight: 'bold', color: color.text}}>{stat.extra.subValue2}</span></div>
