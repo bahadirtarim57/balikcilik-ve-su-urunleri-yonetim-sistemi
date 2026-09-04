@@ -9,7 +9,8 @@ export const defaultSections = [
     id: 'section-genel',
     title: 'GENEL',
     items: [
-      { id: '/', label: 'Dashboard', iconName: 'Home', link: '/' }
+      { id: '/', label: 'Dashboard', iconName: 'Home', link: '/' },
+      { id: '/brifing', label: 'Kurumsal Brifing', iconName: 'Presentation', link: '/brifing' }
     ]
   },
   {
