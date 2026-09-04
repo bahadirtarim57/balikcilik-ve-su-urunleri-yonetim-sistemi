@@ -1216,6 +1216,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
                   <th style={{ width: '60px', textAlign: 'center', borderRight: '1px solid #e5e7eb', fontSize: '11px', padding: '4px' }}>STOK</th>
                   <th style={{ width: '60px', textAlign: 'center', borderRight: '1px solid #e5e7eb', fontSize: '11px', padding: '4px' }}>YETİŞT.</th>
                   <th style={{ width: '60px', textAlign: 'center', borderRight: '1px solid #e5e7eb', fontSize: '11px', padding: '4px' }}>İHLAL</th>
+                  <th style={{ width: '60px', textAlign: 'center', borderRight: '1px solid #e5e7eb', fontSize: '11px', padding: '4px' }}>AYARLAR</th>
                   <th style={{ width: '100px', textAlign: 'center', borderRight: '1px solid #e5e7eb' }}>GÖREV BAŞL.</th>
                   <th style={{ width: '100px', textAlign: 'center', borderRight: '1px solid #e5e7eb' }}>GÖREVDEN AYR.</th>
                   {isManagerRole && (
@@ -1288,6 +1289,9 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
                       <td style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'ihlaller')}>
                         {renderCheckbox(modulePermissions[p.originalName]?.ihlaller)}
                       </td>
+                      <td style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'ayarlar')}>
+                        {renderCheckbox(modulePermissions[p.originalName]?.ayarlar)}
+                      </td>
                       <td style={{ padding: '4px', borderRight: '1px solid #e5e7eb' }}>
                         <input type="date" style={{ width: '100%', padding: '4px', border: '1px solid #e5e7eb', borderRadius: '4px', textAlign: 'center', backgroundColor: '#f9fafb' }} value={p.baslangic} disabled />
                       </td>
@@ -1323,6 +1327,7 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
                   <th style={{ textAlign: 'center', fontSize: '11px', padding: '4px' }}>STOK</th>
                   <th style={{ textAlign: 'center', fontSize: '11px', padding: '4px' }}>YETİŞT.</th>
                   <th style={{ textAlign: 'center', fontSize: '11px', padding: '4px' }}>İHLAL</th>
+                  <th style={{ textAlign: 'center', fontSize: '11px', padding: '4px' }}>AYARLAR</th>
                   <th style={{ width: '130px', textAlign: 'center' }}>GÖREV BAŞL.</th>
                   <th style={{ width: '130px', textAlign: 'center' }}>GÖREVDEN AYR.</th>
                   {isManagerRole && (
@@ -1395,6 +1400,9 @@ export default function PersonnelList({ selectedProvince, selectedUnit, selected
                     </td>
                     <td data-label="İHLALLER" style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'ihlaller')}>
                       {renderCheckbox(modulePermissions[p.originalName]?.ihlaller)}
+                    </td>
+                    <td data-label="AYARLAR" style={{ textAlign: 'center', borderRight: '1px solid #e5e7eb', cursor: isManagerRole ? 'pointer' : 'default' }} onClick={() => isManagerRole && toggleModulePermission(p.originalName, 'ayarlar')}>
+                      {renderCheckbox(modulePermissions[p.originalName]?.ayarlar)}
                     </td>
                     <td data-label="BAŞLANGIÇ TARİHİ" style={{ padding: '4px' }}>
                       <input type="date" className="hakedis-input" style={{ width: '100%', padding: '6px' }} value={p.baslangic} onChange={e => handleDateChange(p.originalName, p.historyIndex, p.unit, 'baslangic', e.target.value)} disabled={p.activeUnit === 'İl Dışı' || p.activeUnit === 'Emekli' || !isManagerRole} />

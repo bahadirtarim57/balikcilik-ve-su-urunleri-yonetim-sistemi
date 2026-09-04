@@ -164,10 +164,17 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
 
     // Modül Bazlı Yetkilendirme Kontrolü (RBAC)
     if (sectionId === 'section-ayarlar') {
-      if (currentRole !== 'Genel Koordinatör') {
-        if (menuId === 'personel-listesi' || menuId === 'yeniden-degerlendirme') return true;
-        return false;
+      const pName = currentUser?.originalName || currentUser?.name || currentUser?.adSoyad;
+      const perms = modulePermissions[pName] || {};
+      
+      if (currentRole === 'Genel Koordinatör' || perms.ayarlar) {
+        if (currentRole !== 'Genel Koordinatör') {
+          if (menuId === 'personel-listesi' || menuId === 'yeniden-degerlendirme') return true;
+          return false;
+        }
+        return true;
       }
+      return false;
     }
 
     if (sectionId && sectionId !== 'section-genel' && sectionId !== 'section-ayarlar') {

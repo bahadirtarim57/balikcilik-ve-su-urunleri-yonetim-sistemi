@@ -271,7 +271,17 @@ function App() {
     if (path.startsWith('/ruhsat') || path.startsWith('/stok-tespiti') || path.startsWith('/tesis-yonetimi') || path.startsWith('/sunum-modu') || path.startsWith('/harita-radar')) return true;
 
     if (path === '/ayarlar' || path === '/veri-yonetimi' || path === '/rol-atamalari' || path === '/yetki-matrisi') {
-      if (currentRole !== 'Genel Koordinatör') return false;
+      const modulePermissions = JSON.parse(localStorage.getItem('modulePermissionsData') || '{}');
+      const pName = currentUser?.originalName || currentUser?.name || currentUser?.adSoyad;
+      const perms = modulePermissions[pName] || {};
+
+      if (currentRole === 'Genel Koordinatör' || perms.ayarlar) {
+        if (path === '/veri-yonetimi' || path === '/rol-atamalari' || path === '/yetki-matrisi') {
+          if (currentRole !== 'Genel Koordinatör') return false;
+        }
+        return true;
+      }
+      return false;
     }
 
     let checkPath = path;

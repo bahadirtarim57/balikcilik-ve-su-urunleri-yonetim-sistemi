@@ -135,8 +135,9 @@ const GenelDashboard = ({ data: cezalarData }) => {
     if (sec.id === 'section-tesis') return !!perms.yetistiricilik;
     if (sec.id === 'section-ipc') return !!perms.ihlaller;
     
-    // section-ayarlar is based on role
+    // section-ayarlar is based on role and perms
     if (sec.id === 'section-ayarlar') {
+       if (perms.ayarlar) return true;
        if (currentRole === 'Personel') return false;
        return true; 
     }
