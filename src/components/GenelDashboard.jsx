@@ -14,11 +14,20 @@ const GenelDashboard = ({ data: cezalarData }) => {
     const ruhsatCount = masterArsiv.length || 0;
     
     // Yetiştiricilik İstatistiği
-    const tesisCount = tesisData?.length || 0;
-    const kapasite = tesisData?.reduce((acc, t) => {
+    const aktifTesisler = tesisData?.filter(t => t.finalStatus?.toUpperCase().includes('AKTIF') || t.finalStatus?.toUpperCase().includes('AKTİF')) || [];
+    const aktifTesisCount = aktifTesisler.length;
+    
+    const kapasite = aktifTesisler.reduce((acc, t) => {
       const val = typeof t.kapasite === 'string' ? Number(t.kapasite.replace(/[^0-9.-]+/g,'')) : Number(t.kapasite);
       return acc + (isNaN(val) ? 0 : val);
     }, 0) || 0;
+
+    let kiralamaCount = 0, pasifCount = 0;
+    (tesisData || []).forEach(t => {
+      const st = t.finalStatus?.toUpperCase() || '';
+      if (st.includes('KIRALAMA') || st.includes('KİRALAMA') || st.includes('BELIRSIZ') || st.includes('BELİRSİZ')) kiralamaCount++;
+      if (st.includes('PASIF') || st.includes('PASİF') || st.includes('İPTAL') || st.includes('IPTAL')) pasifCount++;
+    });
     
     // Stok İstatistiği
     let stokCount = 0;
@@ -37,7 +46,6 @@ const GenelDashboard = ({ data: cezalarData }) => {
       toplamTL = arsiv.reduce((acc, curr) => acc + (Number(curr?.penaltyData?.calculatedAmount) || 0), 0);
     } catch(e) {}
 
-    
     const selectedUnit = localStorage.getItem('app-selectedUnit') || '';
     
     // Personel İstatistiği
@@ -47,7 +55,6 @@ const GenelDashboard = ({ data: cezalarData }) => {
         allPersonnel = [...allPersonnel, ...lp];
     } catch(e) {}
     
-    // Remove duplicates by sicil or name to get accurate count (just in case)
     const uniquePersonnelMap = new Map();
     allPersonnel.forEach(p => {
        const key = p.sicil || p.adSoyad || p.name;
@@ -61,9 +68,16 @@ const GenelDashboard = ({ data: cezalarData }) => {
     } else {
        personelCount = uniquePersonnel.length;
     }
-return {
+
+    return {
       'section-ruhsat': { label: 'Kayıtlı Gemi/Ruhsat', value: ruhsatCount, subValue: 'adet' },
-      'section-tesis': { label: 'Aktif Tesis', value: tesisCount, subValue: `${kapasite.toLocaleString('tr-TR')} Ton/Yıl` },
+      'section-tesis': { 
+        label: 'Aktif Tesis', 
+        value: aktifTesisCount, 
+        subValue: 'adet',
+        topExtra: `Kapasite: ${kapasite.toLocaleString('tr-TR')} Ton/Yıl`,
+        extra: { label: 'Kiralama / Başvuru:', value: `${kiralamaCount} Adet`, subLabel: 'Pasif / İptal:', subValue2: `${pasifCount} Adet` }
+      },
       'section-stok': { label: 'Kayıtlı Çalışma', value: stokCount, subValue: 'adet' },
       'section-ipc': { 
         label: 'Kayıtlı İhlal Maddesi', 
@@ -80,7 +94,6 @@ return {
     };
   }, [cezalarData]);
 
-  // Sadece Genel menüsü hariç diğerlerini filtrele
   const moduleSections = defaultSections.filter(sec => sec.id !== 'section-genel');
 
   return (
@@ -168,6 +181,12 @@ return {
                         </span>
                       )}
                     </div>
+                )}
+                
+                {stat.topExtra && (
+                  <div style={{ marginTop: '4px', fontSize: '15px', fontWeight: '600', color: color.text }}>
+                    {stat.topExtra}
+                  </div>
                 )}
 
                 {stat.extra && (
