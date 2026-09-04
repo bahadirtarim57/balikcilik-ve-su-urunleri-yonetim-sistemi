@@ -104,7 +104,46 @@ const GenelDashboard = ({ data: cezalarData }) => {
     };
   }, [cezalarData]);
 
-  const moduleSections = defaultSections.filter(sec => sec.id !== 'section-genel');
+  
+  const currentRole = (() => {
+    let appUser = null;
+    try { appUser = JSON.parse(localStorage.getItem('appUser')); } catch(e) {}
+    if (!appUser) return 'Personel';
+    
+    let userRoles = {};
+    try { userRoles = JSON.parse(localStorage.getItem('user_roles') || '{}'); } catch(e) {}
+
+    const realRole = appUser?.sicil === 'admin' ? 'Genel Koordinatör' : (userRoles[appUser?.sicil || appUser?.adSoyad || appUser?.name] || 'Personel');
+    return appUser?.impersonated ? appUser.role : realRole;
+  })();
+
+  const moduleSections = defaultSections.filter(sec => {
+    if (sec.id === 'section-genel') return false;
+    
+    if (currentRole === 'Genel Koordinatör') return true;
+
+    // Check specific modulePermissions for Everyone except Genel Koordinatör
+    let appUser = null;
+    try { appUser = JSON.parse(localStorage.getItem('appUser')); } catch(e) {}
+    
+    const modulePermissions = JSON.parse(localStorage.getItem('modulePermissionsData') || '{}');
+    const pName = appUser?.originalName || appUser?.name || appUser?.adSoyad;
+    const perms = modulePermissions[pName] || {};
+
+    if (sec.id === 'section-ruhsat') return !!perms.ruhsat;
+    if (sec.id === 'section-stok') return !!perms.stok;
+    if (sec.id === 'section-tesis') return !!perms.yetistiricilik;
+    if (sec.id === 'section-ipc') return !!perms.ihlaller;
+    
+    // section-ayarlar is based on role
+    if (sec.id === 'section-ayarlar') {
+       if (currentRole === 'Personel') return false;
+       return true; 
+    }
+    
+    return true; 
+  });
+
 
   return (
     <div style={{ padding: '24px', maxWidth: '1200px', margin: '0 auto' }}>
