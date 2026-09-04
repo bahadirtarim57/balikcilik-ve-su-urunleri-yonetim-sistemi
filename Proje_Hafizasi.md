@@ -378,3 +378,5 @@ px vercel --prod) sağlandı.
 - PWA masaüstü ve mobil kurulumlarındaki varsayılan React logoları kaldırılarak orijinal proje logosu (favicon/pwa) sisteme entegre edildi. Ayrıca uygulamanın kurulum adı karmaşık halinden kurtarılarak temiz bir şekilde 'BSÜSY - Balıkçılık Yönetim Sistemi' olarak revize edildi, gerçek bir masaüstü/mobil uygulama deneyimine (PGTS benzeri) kavuşturuldu.
 
 - Dinamik 'Genel Dashboard' mimarisi eklendi. Sol menü (Sidebar) konfigürasyonu merkezi bir dosyaya (menuConfig.js) taşındı. Sistem açılışında artık sadece cezalar değil, Ruhsat, Tesis, Stok ve İhlaller gibi tüm modülleri menüden otomatik okuyarak özet istatistikleriyle birlikte büyük modül kartları halinde sunan dev bir kontrol paneli (Genel Dashboard) yer alıyor.
+
+- Genel Dashboard üzerindeki Yetiştiricilik üretim kapasitesi hesaplama hatası (string birleştirme) düzeltildi, kapasiteler sayıya çevrilerek toplanıyor. Sistem Ayarları kartındaki personel sayısının tüm ili değil, sadece 'Aktif Seçilen Birim'i (örneğin seçili şubeyi) yansıtması sağlandı.
