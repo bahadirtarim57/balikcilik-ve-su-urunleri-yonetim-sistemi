@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
+import GenelDashboard from './components/GenelDashboard';
+import IhlallerDashboard from './components/IhlallerDashboard';
 import FinesTable from './components/FinesTable';
 import Calculator from './components/Calculator';
 import FormGenerator from './components/FormGenerator';
@@ -497,8 +498,9 @@ function App() {
           <div className="content-container">
             <ErrorBoundary>
                             <Routes>
-                <Route path="/" element={<ProtectedRoute path="/"><Dashboard data={cezalarData} /></ProtectedRoute>} />
-                <Route path="/cezalar" element={<ProtectedRoute path="/cezalar"><FinesTable data={cezalarData} searchTerm={searchTerm} onSave={handleSaveItem} onDelete={handleDeleteItem} /></ProtectedRoute>} />
+                <Route path="/" element={<ProtectedRoute path="/"><GenelDashboard data={cezalarData} /></ProtectedRoute>} />
+                <Route path="/ihlaller-ozet" element={<ProtectedRoute path="/ihlaller-ozet"><IhlallerDashboard data={cezalarData} /></ProtectedRoute>} />
+                  <Route path="/cezalar" element={<ProtectedRoute path="/cezalar"><FinesTable data={cezalarData} searchTerm={searchTerm} onSave={handleSaveItem} onDelete={handleDeleteItem} /></ProtectedRoute>} />
                 <Route path="/hesaplama" element={<ProtectedRoute path="/hesaplama"><Calculator data={cezalarData} /></ProtectedRoute>} />
                 <Route path="/form" element={<ProtectedRoute path="/form"><FormGenerator selectedCity={selectedCity} selectedUnit={selectedUnit} /></ProtectedRoute>} />
                 <Route path="/formlar/idari-para-cezasi" element={<ProtectedRoute path="/formlar/idari-para-cezasi"><IdariParaCezasiKarari selectedCity={selectedCity} selectedUnit={selectedUnit} /></ProtectedRoute>} />

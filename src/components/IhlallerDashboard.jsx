@@ -3,7 +3,7 @@ import { ShieldAlert, Fish, Clock, AlertOctagon, Anchor, AlertCircle, AlertTrian
 import { useNavigate } from 'react-router-dom';
 import { PERSONELLER } from '../utils/excelData';
 
-const Dashboard = ({ data }) => {
+const IhlallerDashboard = ({ data }) => {
   const navigate = useNavigate();
   const [ghostPersonnelList, setGhostPersonnelList] = useState([]);
 
@@ -121,4 +121,4 @@ const AnchorIcon = ({size, color}) => {
   );
 };
 
-export default Dashboard;
+export default IhlallerDashboard;
