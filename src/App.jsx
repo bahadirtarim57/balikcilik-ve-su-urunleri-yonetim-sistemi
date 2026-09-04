@@ -479,7 +479,7 @@ function App() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(59, 130, 246, 0.1)', padding: '6px 14px', borderRadius: '20px', border: '1px solid rgba(59, 130, 246, 0.2)' }}>
                   <UserCircle size={16} color="#3b82f6" />
-                  <span style={{ fontSize: '13px', fontWeight: '600', color: '#1e2937' }}>Hoşgeldiniz, {currentUser?.adSoyad || 'Sistem Yöneticisi'}</span>
+                  <span style={{ fontSize: '13px', fontWeight: '600', color: '#1e2937' }}>Hoşgeldiniz, {currentUser?.adSoyad || currentUser?.name || 'Sistem Yöneticisi'}</span>
                 </div>
                 
                 {!originalAdminUser && ['Genel Koordinatör', 'Yetkili Yönetici'].includes(currentRole) && (

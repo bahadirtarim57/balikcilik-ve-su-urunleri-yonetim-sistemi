@@ -433,7 +433,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
             </div>
             <div style={{ flex: 1, overflow: 'hidden' }}>
               <div style={{ fontSize: '13px', fontWeight: 700, color: '#1e293b', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                {currentUser?.adSoyad || 'Sistem Yöneticisi'}
+                {currentUser?.adSoyad || currentUser?.name || 'Sistem Yöneticisi'}
               </div>
               <div style={{ fontSize: '11px', color: '#64748b', fontWeight: 600 }}>
                 {currentRole}

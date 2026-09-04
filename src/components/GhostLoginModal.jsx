@@ -66,9 +66,23 @@ export default function GhostLoginModal({ isOpen, onClose }) {
       }
     }
     
-    if (!role || role === 'Tanımsız' || role === 'Tanmsz' || role === 'Tan\u0131ms\u0131z') {
+    
+    if (!role || role === 'Tanımsız' || role === 'Tanmsz' || role === 'Tan\u0131ms\u0131z' || role === 'Personel') {
       role = 'Personel';
+      try {
+        const excelPerson = PERSONELLER.find(p => (p.name || p.adSoyad) === personKeyName || (p.name || p.adSoyad) === personKeyOriginal);
+        if (excelPerson && excelPerson.title) {
+          const t = excelPerson.title.toLowerCase();
+          if (t.includes('şube müdür')) role = 'Şube Müdürü';
+          else if (t.includes('ilçe müdür')) role = 'İlçe Müdürü';
+          else if (t.includes('il müdür yardımcısı')) role = 'İl Müdür Yardımcısı';
+          else if (t.includes('il müdürü')) role = 'İl Müdürü';
+          else if (t.includes('koordinatör')) role = 'Genel Koordinatör';
+          else if (t.includes('sorumlu')) role = 'Birim Sorumlusu';
+        }
+      } catch(e) {}
     }
+
     
     
     if (window.confirm(`${person.name || person.adSoyad} adlı personelin hesabına giriş yapmak üzeresiniz. Onaylıyor musunuz?`)) {
