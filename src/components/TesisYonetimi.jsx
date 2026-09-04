@@ -1065,7 +1065,12 @@ ${match.lakeName} için kiralama verileri otomatik çekildi.`);
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'white', padding: '20px 24px', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
               <div>
                 <h2 style={{ margin: '0 0 4px 0', color: '#0f172a', fontSize: '18px' }}>{activeTab === 'aktif_tesisler' ? 'Aktif Üretim Tesisleri' : activeTab === 'kiralama_tesisler' ? 'Kiralama Aşamasında Olan Tesisler' : activeTab === 'devir_tesisler' ? 'Devredilen Tesisler' : activeTab === 'pasif_tesisler' ? 'Pasif Tesisler' : 'İptal Edilen Tesisler'}</h2>
-                <p style={{ margin: 0, color: '#64748b', fontSize: '14px' }}>Müracaat Numarasına göre {filteredData.length} tesis listeleniyor.</p>
+                <p style={{ margin: 0, color: '#64748b', fontSize: '14px' }}>
+                  <span style={{ fontWeight: 600, color: '#3b82f6' }}>{filteredData.length} Adet</span> tesis - Toplam Kapasite: <span style={{ fontWeight: 600, color: '#10b981' }}>{filteredData.reduce((acc, t) => {
+                    const val = typeof t.kapasite === 'string' ? Number(t.kapasite.replace(/[^0-9.-]+/g,'')) : Number(t.kapasite);
+                    return acc + (isNaN(val) ? 0 : val);
+                  }, 0).toLocaleString('tr-TR')} Ton/Yıl</span>
+                </p>
               </div>
               <div style={{ position: 'relative', width: '300px' }}><Search size={18} style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }} /><input type="text" placeholder="Firma veya Müracaat No Ara..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)} style={{ width: '100%', padding: '12px 16px 12px 44px', borderRadius: '12px', border: '1px solid #e2e8f0', outline: 'none', fontSize: '14px', background: '#f8fafc' }} /></div>
             </div>
