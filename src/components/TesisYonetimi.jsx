@@ -632,10 +632,12 @@ const TesisYonetimi = ({ selectedCity }) => {
       } else {
         const plateStr = CITY_PLATES[currentCity] || '';
         const filteredData = data.filter(t => {
-          const isDistrictValid = VALID_DISTRICTS.includes(t.ilce);
-          const hasValidPlate = t.resmiNo && (t.resmiNo.startsWith(plateStr + '-') || t.resmiNo.startsWith(plateStr + '/'));
-          return isDistrictValid && hasValidPlate;
-        });
+            // Şimdilik sadece plakadan kontrol ediyoruz ki diğer ilçeler de yutulmasın.
+            // isDistrictValid kontrolünü gevşetip Belirsiz/Diğer sekmeye atacağız.
+            const hasValidPlate = t.resmiNo && (t.resmiNo.startsWith(plateStr + '-') || t.resmiNo.startsWith(plateStr + '/'));
+            return hasValidPlate; // District kontrolünü siliyoruz ki dışarıdaki tesisler de Belirsiz olarak listelensin
+          });
+          // Eğer ilçe geçersizse Belirsiz yapalım (opsiyonel) veya aşağıda filtrelerken Belirsiz kategorisine atalım.
         setDataList(filteredData);
       }
     };
@@ -682,7 +684,13 @@ const TesisYonetimi = ({ selectedCity }) => {
   const filteredData = useMemo(() => {
     let base = []; if(activeTab === 'aktif_tesisler') base = aktifData; else if (activeTab === 'kiralama_tesisler') base = kiralamaData; else if (activeTab === 'devir_tesisler') base = devirData; else if (activeTab === 'pasif_tesisler') base = pasifData; else if (activeTab === 'iptal_tesisler') base = iptalData;
     if (activeTab === 'yeni') return [];
-    if (selectedIlce !== 'Tümü') base = base.filter(t => t.ilce === selectedIlce);
+    if (selectedIlce !== 'Tümü') {
+        if (selectedIlce === 'Belirsiz / Diğer') {
+           base = base.filter(t => !VALID_DISTRICTS.includes(t.ilce));
+        } else {
+           base = base.filter(t => t.ilce === selectedIlce);
+        }
+      }
     if (searchTerm) {
       const term = searchTerm.toLowerCase();
       base = base.filter(t => (t.firmaAdi && t.firmaAdi.toLowerCase().includes(term)) || (t.resmiNo && t.resmiNo.toLowerCase().includes(term)));
@@ -698,7 +706,13 @@ const TesisYonetimi = ({ selectedCity }) => {
     let currData = []; if(activeTab === 'aktif_tesisler') currData = aktifData; else if (activeTab === 'kiralama_tesisler') currData = kiralamaData; else if (activeTab === 'devir_tesisler') currData = devirData; else if (activeTab === 'pasif_tesisler') currData = pasifData; else if (activeTab === 'iptal_tesisler') currData = iptalData; const counts = { 'Tümü': currData.length };
     VALID_DISTRICTS.forEach(d => counts[d] = 0);
     counts['Belirsiz / Diğer'] = 0;
-    currData.forEach(t => { if (counts[t.ilce] !== undefined) counts[t.ilce]++; });
+    currData.forEach(t => { 
+        if (VALID_DISTRICTS.includes(t.ilce)) {
+          counts[t.ilce]++;
+        } else {
+          counts['Belirsiz / Diğer']++;
+        }
+      });
     return counts;
   }, [aktifData, kiralamaData, devirData, pasifData, iptalData, activeTab]);
 
