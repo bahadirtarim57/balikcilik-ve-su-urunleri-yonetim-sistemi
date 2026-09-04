@@ -15,7 +15,10 @@ const GenelDashboard = ({ data: cezalarData }) => {
     
     // Yetiştiricilik İstatistiği
     const tesisCount = tesisData?.length || 0;
-    const kapasite = tesisData?.reduce((acc, t) => acc + (t.kapasite || 0), 0) || 0;
+    const kapasite = tesisData?.reduce((acc, t) => {
+      const val = typeof t.kapasite === 'string' ? Number(t.kapasite.replace(/[^0-9.-]+/g,'')) : Number(t.kapasite);
+      return acc + (isNaN(val) ? 0 : val);
+    }, 0) || 0;
     
     // Stok İstatistiği
     let stokCount = 0;
@@ -34,16 +37,31 @@ const GenelDashboard = ({ data: cezalarData }) => {
       toplamTL = arsiv.reduce((acc, curr) => acc + (Number(curr?.penaltyData?.calculatedAmount) || 0), 0);
     } catch(e) {}
 
+    
+    const selectedUnit = localStorage.getItem('app-selectedUnit') || '';
+    
     // Personel İstatistiği
-    let personelCount = PERSONELLER?.length || 0;
+    let allPersonnel = [...(PERSONELLER || [])];
     try {
         const lp = JSON.parse(localStorage.getItem('personnel_data') || '[]');
-        personelCount += lp.length;
+        allPersonnel = [...allPersonnel, ...lp];
     } catch(e) {}
+    
+    // Remove duplicates by sicil or name to get accurate count (just in case)
+    const uniquePersonnelMap = new Map();
+    allPersonnel.forEach(p => {
+       const key = p.sicil || p.adSoyad || p.name;
+       if(key) uniquePersonnelMap.set(key, p);
+    });
+    const uniquePersonnel = Array.from(uniquePersonnelMap.values());
 
-    const selectedUnit = localStorage.getItem('app-selectedUnit') || 'Tüm Birimler';
-
-    return {
+    let personelCount = 0;
+    if (selectedUnit && selectedUnit !== 'Tüm Birimler' && selectedUnit !== 'Tüm İlçeler' && selectedUnit !== 'Birim Seçilmedi') {
+       personelCount = uniquePersonnel.filter(p => (p.birim || p.unit || '') === selectedUnit).length;
+    } else {
+       personelCount = uniquePersonnel.length;
+    }
+return {
       'section-ruhsat': { label: 'Kayıtlı Gemi/Ruhsat', value: ruhsatCount, subValue: 'adet' },
       'section-tesis': { label: 'Aktif Tesis', value: tesisCount, subValue: `${kapasite.toLocaleString('tr-TR')} Ton/Yıl` },
       'section-stok': { label: 'Kayıtlı Çalışma', value: stokCount, subValue: 'adet' },
@@ -54,10 +72,10 @@ const GenelDashboard = ({ data: cezalarData }) => {
         extra: { label: 'Kesilen Ceza:', value: `${kesilenCezaAdet} Adet`, subLabel: 'Toplam Tutar:', subValue2: `${toplamTL.toLocaleString('tr-TR')} ₺` }
       },
       'section-ayarlar': { 
-        label: 'Aktif Seçili Birim', 
-        value: '', 
-        subValue: selectedUnit,
-        isBranch: true
+        label: selectedUnit && selectedUnit !== 'Birim Seçilmedi' ? `${selectedUnit} Personeli` : 'Kayıtlı Personel', 
+        value: personelCount, 
+        subValue: 'kişi',
+        isBranch: false
       }
     };
   }, [cezalarData]);
