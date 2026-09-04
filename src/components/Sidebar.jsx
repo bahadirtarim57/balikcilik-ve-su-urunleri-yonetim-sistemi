@@ -104,7 +104,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
       const res = await fetch('/api/publish', { method: 'POST' });
       const data = await res.json();
       if (data.success) {
-        toast.success("Site başarıyla yayınlandı! Tüm değişiklikler canlıda.", { id: publishToast });
+        toast.success('Site başarıyla yayınlandı! Tüm değişiklikler canlıda.', { id: publishToast });
       } else {
         toast.error("Yayınlama hatası: " + data.error, { id: publishToast });
       }
@@ -170,7 +170,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
       if (currentRole === 'Genel Koordinatör' || perms.ayarlar) {
         if (currentRole !== 'Genel Koordinatör') {
           if (!menuId) return true;
-          if (menuId === 'personel-listesi' || menuId === 'yeniden-degerlendirme') return true;
+          if (menuId === '/personel' || menuId === '/yeniden-degerlendirme') return true;
           return false;
         }
         return true;
@@ -202,7 +202,7 @@ const Sidebar = ({ selectedCity, selectedUnit, currentUser, setCurrentUser, isMo
   const toggleViewMode = () => {
     if (isViewingAsPersonel) {
       stopImpersonating();
-      toast.success('Yönetici görünümüne dönüldü.', { icon: 'ğŸ›¡ï¸' });
+      toast.success('Yönetici görünümüne dönüldü.', { icon: '👍' });
     }
   };
 
