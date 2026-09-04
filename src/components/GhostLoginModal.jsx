@@ -44,7 +44,7 @@ export default function GhostLoginModal({ isOpen, onClose }) {
       return;
     }
 
-    const uRoles = JSON.parse(localStorage.getItem('user_roles') || '{}');
+    const uRoles = { ...JSON.parse(localStorage.getItem('assignedRolesData') || '{}'), ...JSON.parse(localStorage.getItem('user_roles') || '{}') };
 
     const personKeySicil = person.sicil || person['SİCİL NO'];
     const personKeyName = person.name || person.adSoyad || person['ADI SOYADI'];
