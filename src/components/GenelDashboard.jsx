@@ -14,19 +14,26 @@ const GenelDashboard = ({ data: cezalarData }) => {
     const ruhsatCount = masterArsiv.length || 0;
     
     // Yetiştiricilik İstatistiği
-    const tesisCount = tesisData?.tesisler?.length || 0;
-    const kapasite = tesisData?.tesisler?.reduce((acc, t) => acc + (t.kapasite || 0), 0) || 0;
+    const tesisCount = tesisData?.length || 0;
+    const kapasite = tesisData?.reduce((acc, t) => acc + (t.kapasite || 0), 0) || 0;
     
     // Stok İstatistiği
     let stokCount = 0;
     try {
       const storedStudies = JSON.parse(localStorage.getItem('stok_studies') || '[]');
-      stokCount = storedStudies.length > 0 ? storedStudies.length : 1; // Default Boyabat var
+      stokCount = storedStudies.length > 0 ? storedStudies.length : 1; 
     } catch(e) {}
     
     // İhlal İstatistiği
     const ihlalCount = cezalarData?.length || 0;
-    
+    let kesilenCezaAdet = 0;
+    let toplamTL = 0;
+    try {
+      const arsiv = JSON.parse(localStorage.getItem('ceza_arsivi') || '[]');
+      kesilenCezaAdet = arsiv.length;
+      toplamTL = arsiv.reduce((acc, curr) => acc + (Number(curr?.penaltyData?.calculatedAmount) || 0), 0);
+    } catch(e) {}
+
     // Personel İstatistiği
     let personelCount = PERSONELLER?.length || 0;
     try {
@@ -34,12 +41,24 @@ const GenelDashboard = ({ data: cezalarData }) => {
         personelCount += lp.length;
     } catch(e) {}
 
+    const selectedUnit = localStorage.getItem('app-selectedUnit') || 'Tüm Birimler';
+
     return {
       'section-ruhsat': { label: 'Kayıtlı Gemi/Ruhsat', value: ruhsatCount, subValue: 'adet' },
-      'section-tesis': { label: 'Aktif Tesis', value: tesisCount, subValue: `${kapasite} Ton/Yıl` },
+      'section-tesis': { label: 'Aktif Tesis', value: tesisCount, subValue: `${kapasite.toLocaleString('tr-TR')} Ton/Yıl` },
       'section-stok': { label: 'Kayıtlı Çalışma', value: stokCount, subValue: 'adet' },
-      'section-ipc': { label: 'Toplam Ceza/İhlal', value: ihlalCount, subValue: 'kayıt' },
-      'section-ayarlar': { label: 'Kayıtlı Personel', value: personelCount, subValue: 'kişi' }
+      'section-ipc': { 
+        label: 'Kayıtlı İhlal Maddesi', 
+        value: ihlalCount, 
+        subValue: 'adet',
+        extra: { label: 'Kesilen Ceza:', value: `${kesilenCezaAdet} Adet`, subLabel: 'Toplam Tutar:', subValue2: `${toplamTL.toLocaleString('tr-TR')} ₺` }
+      },
+      'section-ayarlar': { 
+        label: 'Aktif Seçili Birim', 
+        value: '', 
+        subValue: selectedUnit,
+        isBranch: true
+      }
     };
   }, [cezalarData]);
 
@@ -57,19 +76,17 @@ const GenelDashboard = ({ data: cezalarData }) => {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
         {moduleSections.map((section, index) => {
-          // Eğer section iconName varsa IconMap'ten al, yoksa varsayılan klasör ikonu
           const sectionIconName = section.items && section.items.length > 0 ? section.items[0].iconName : 'Archive';
           const IconComponent = IconMap[sectionIconName] || IconMap['Archive'];
           const stat = stats[section.id] || { label: 'Erişim', value: '→', subValue: 'Modüle Git' };
           const mainLink = section.items && section.items.length > 0 ? section.items[0].link : '/';
           
-          // Renk paleti
           const colors = [
-            { bg: '#eff6ff', text: '#2563eb', border: '#bfdbfe' }, // blue
-            { bg: '#f0fdf4', text: '#16a34a', border: '#bbf7d0' }, // green
-            { bg: '#fef2f2', text: '#dc2626', border: '#fecaca' }, // red
-            { bg: '#fdf4ff', text: '#c026d3', border: '#fbcfe8' }, // fuchsia
-            { bg: '#fffbeb', text: '#d97706', border: '#fde68a' }  // amber
+            { bg: '#eff6ff', text: '#2563eb', border: '#bfdbfe' }, 
+            { bg: '#f0fdf4', text: '#16a34a', border: '#bbf7d0' }, 
+            { bg: '#fef2f2', text: '#dc2626', border: '#fecaca' }, 
+            { bg: '#fdf4ff', text: '#c026d3', border: '#fbcfe8' }, 
+            { bg: '#fffbeb', text: '#d97706', border: '#fde68a' }  
           ];
           const color = colors[index % colors.length];
 
@@ -117,16 +134,30 @@ const GenelDashboard = ({ data: cezalarData }) => {
                 <div style={{ fontSize: '14px', color: '#6b7280', marginBottom: '4px' }}>
                   {stat.label}
                 </div>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-                  <span style={{ fontSize: '28px', fontWeight: '800', color: color.text }}>
-                    {stat.value}
-                  </span>
-                  {stat.subValue && (
-                    <span style={{ fontSize: '14px', fontWeight: '500', color: '#9ca3af' }}>
+                
+                {stat.isBranch ? (
+                    <div style={{ fontSize: '16px', fontWeight: '600', color: color.text, lineHeight: '1.3' }}>
                       {stat.subValue}
-                    </span>
-                  )}
-                </div>
+                    </div>
+                ) : (
+                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
+                      <span style={{ fontSize: '28px', fontWeight: '800', color: color.text }}>
+                        {stat.value}
+                      </span>
+                      {stat.subValue && (
+                        <span style={{ fontSize: '14px', fontWeight: '500', color: '#9ca3af' }}>
+                          {stat.subValue}
+                        </span>
+                      )}
+                    </div>
+                )}
+
+                {stat.extra && (
+                  <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px dashed #e5e7eb', fontSize: '13px', color: '#6b7280', display: 'flex', justifyContent: 'space-between' }}>
+                    <div>{stat.extra.label} <span style={{fontWeight: 'bold', color: '#1f2937'}}>{stat.extra.value}</span></div>
+                    <div>{stat.extra.subLabel} <span style={{fontWeight: 'bold', color: color.text}}>{stat.extra.subValue2}</span></div>
+                  </div>
+                )}
               </div>
             </div>
           );
