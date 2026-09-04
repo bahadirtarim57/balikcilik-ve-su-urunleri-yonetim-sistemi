@@ -675,6 +675,7 @@ const TesisYonetimi = ({ selectedCity }) => {
   const [activeTab, setActiveTab] = useState('aktif_tesisler'); 
   const [selectedIlce, setSelectedIlce] = useState('Tümü');
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedType, setSelectedType] = useState('All');
 
   const filteredData = useMemo(() => {
     let base = []; if(activeTab === 'aktif_tesisler') base = aktifData; else if (activeTab === 'kiralama_tesisler') base = kiralamaData; else if (activeTab === 'devir_tesisler') base = devirData; else if (activeTab === 'pasif_tesisler') base = pasifData; else if (activeTab === 'iptal_tesisler') base = iptalData;
@@ -1081,6 +1082,25 @@ ${match.lakeName} için kiralama verileri otomatik çekildi.`);
                   }, 0).toLocaleString('tr-TR')} Ton/Yıl</span>
                 </p>
               </div>
+                {activeTab !== 'yeni' && (
+                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '16px', width: '100%' }}>
+                    <button onClick={() => setSelectedType('All')} style={{ padding: '6px 12px', borderRadius: '20px', border: selectedType === 'All' ? 'none' : '1px solid #e2e8f0', background: selectedType === 'All' ? '#3b82f6' : 'white', color: selectedType === 'All' ? 'white' : '#64748b', fontSize: '13px', fontWeight: '500', cursor: 'pointer' }}>
+                      Tümü ({typeCounts.All || 0})
+                    </button>
+                    <button onClick={() => setSelectedType('Deniz')} style={{ padding: '6px 12px', borderRadius: '20px', border: selectedType === 'Deniz' ? 'none' : '1px solid #e2e8f0', background: selectedType === 'Deniz' ? '#0284c7' : 'white', color: selectedType === 'Deniz' ? 'white' : '#64748b', fontSize: '13px', fontWeight: '500', cursor: 'pointer' }}>
+                      Kafes / Deniz ({typeCounts.Deniz || 0})
+                    </button>
+                    <button onClick={() => setSelectedType('Midye')} style={{ padding: '6px 12px', borderRadius: '20px', border: selectedType === 'Midye' ? 'none' : '1px solid #e2e8f0', background: selectedType === 'Midye' ? '#0d9488' : 'white', color: selectedType === 'Midye' ? 'white' : '#64748b', fontSize: '13px', fontWeight: '500', cursor: 'pointer' }}>
+                      Midye / Çift Kabuklu ({typeCounts.Midye || 0})
+                    </button>
+                    <button onClick={() => setSelectedType('Baraj')} style={{ padding: '6px 12px', borderRadius: '20px', border: selectedType === 'Baraj' ? 'none' : '1px solid #e2e8f0', background: selectedType === 'Baraj' ? '#2563eb' : 'white', color: selectedType === 'Baraj' ? 'white' : '#64748b', fontSize: '13px', fontWeight: '500', cursor: 'pointer' }}>
+                      Baraj / Göl ({typeCounts.Baraj || 0})
+                    </button>
+                    <button onClick={() => setSelectedType('Karasal')} style={{ padding: '6px 12px', borderRadius: '20px', border: selectedType === 'Karasal' ? 'none' : '1px solid #e2e8f0', background: selectedType === 'Karasal' ? '#16a34a' : 'white', color: selectedType === 'Karasal' ? 'white' : '#64748b', fontSize: '13px', fontWeight: '500', cursor: 'pointer' }}>
+                      Karasal / Havuz ({typeCounts.Karasal || 0})
+                    </button>
+                  </div>
+                )}
               <div style={{ position: 'relative', width: '300px' }}><Search size={18} style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }} /><input type="text" placeholder="Firma veya Müracaat No Ara..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)} style={{ width: '100%', padding: '12px 16px 12px 44px', borderRadius: '12px', border: '1px solid #e2e8f0', outline: 'none', fontSize: '14px', background: '#f8fafc' }} /></div>
             </div>
             
