@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line, CartesianGrid } from 'recharts';
-import { Anchor, Ship, Users, Camera, TrendingUp, Award, Activity, ChevronLeft, ChevronRight, Play, X, Fish, Building, Shield, BookOpen, Layers, Map, AlertTriangle } from 'lucide-react';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line, CartesianGrid, Legend, PieChart, Pie, Cell } from 'recharts';
+import { Anchor, Ship, Users, Camera, TrendingUp, Award, Activity, ChevronLeft, ChevronRight, Play, X, Fish, Building, Shield, BookOpen, Layers, Map, AlertTriangle, ShieldCheck } from 'lucide-react';
 
 const productionData = [
-  { year: '2022', 'Türk Somonu': 17333, 'Gökkuşağı Alabalığı': 186, 'Midye': 0, 'Toplam': 17519 },
-  { year: '2023', 'Türk Somonu': 26631, 'Gökkuşağı Alabalığı': 126, 'Midye': 64, 'Toplam': 26821 },
-  { year: '2024', 'Türk Somonu': 20541, 'Gökkuşağı Alabalığı': 620, 'Midye': 35, 'Toplam': 21196 },
-  { year: '2025', 'Türk Somonu': 34470, 'Gökkuşağı Alabalığı': 612, 'Midye': 148, 'Toplam': 35230 },
-  { year: '2026', 'Türk Somonu': 42609, 'Gökkuşağı Alabalığı': 276, 'Midye': 122, 'Toplam': 43007 },
+  { year: '2022', 'Türk Somonu': 17333, 'Gökkuşağı Alabalığı': 186, 'Midye': 0, 'Toplam': 17519, turkSomonu: 17333, alabalik: 186, midye: 0 },
+  { year: '2023', 'Türk Somonu': 26631, 'Gökkuşağı Alabalığı': 126, 'Midye': 64, 'Toplam': 26821, turkSomonu: 26631, alabalik: 126, midye: 64 },
+  { year: '2024', 'Türk Somonu': 20541, 'Gökkuşağı Alabalığı': 620, 'Midye': 35, 'Toplam': 21196, turkSomonu: 20541, alabalik: 620, midye: 35 },
+  { year: '2025', 'Türk Somonu': 34470, 'Gökkuşağı Alabalığı': 612, 'Midye': 148, 'Toplam': 35230, turkSomonu: 34470, alabalik: 612, midye: 148 },
+  { year: '2026', 'Türk Somonu': 42609, 'Gökkuşağı Alabalığı': 276, 'Midye': 122, 'Toplam': 43007, turkSomonu: 42609, alabalik: 276, midye: 122 },
+];
+
+const facilityData = [
+  { name: 'Deniz Ağ Kafes', value: 35, color: '#3b82f6' },
+  { name: 'İç Su Ağ Kafes', value: 8, color: '#10b981' },
+  { name: 'Midye', value: 5, color: '#f59e0b' },
+  { name: 'Karasal', value: 3, color: '#8b5cf6' },
 ];
 
 const supportData = [
@@ -17,6 +24,25 @@ const supportData = [
   { year: '2026', miktar: 7.142139, tesis: 20 },
 ];
 
+// --- DASHBOARD BILESENLERI ---
+const CustomCard = ({ title, value, icon: Icon, color, subtitle }) => (
+  <div style={{ background: '#fff', borderRadius: '12px', padding: '20px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03)', borderLeft: '4px solid ' + color, transition: 'transform 0.2s', cursor: 'pointer' }}
+       onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+       onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+      <div>
+        <p style={{ color: '#64748b', fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>{title}</p>
+        <h3 style={{ color: '#1e293b', fontSize: '28px', fontWeight: 800, margin: 0 }}>{value}</h3>
+        {subtitle && <p style={{ color: '#94a3b8', fontSize: '12px', marginTop: '8px', fontWeight: 500 }}>{subtitle}</p>}
+      </div>
+      <div style={{ background: color + '15', padding: '12px', borderRadius: '12px' }}>
+        <Icon size={24} color={color} />
+      </div>
+    </div>
+  </div>
+);
+
+// --- SLAYT BILESENLERI ---
 const StatBox = ({ title, value, subtitle, color }) => (
   <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '14px', border: '1px solid ' + color + '40', borderLeft: '4px solid ' + color, boxShadow: '0 8px 24px rgba(0,0,0,0.3)' }}>
     <div style={{ color: color, fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '10px' }}>{title}</div>
@@ -58,7 +84,7 @@ const FullSlide = ({ children, bgImg }) => (
   </div>
 );
 
-// --- TÜM SLAYT KOMBİNASYONLARI (TOPLAM 35 SAYFA) ---
+// --- 35 SAYFALIK SLAYT DIZISI (ESKILER BURADA KORUNUYOR) ---
 const SLIDES = [
   // 1- YÜKLENEN ÖZEL RESİMLER
   {
@@ -89,7 +115,6 @@ const SLIDES = [
       }} />
     )
   },
-
   // 2- TAM VERSİYON 24 SAYFALIK SERİ (Kapak ve Genel Tanıtım dahil)
   {
     title: 'Kapak (Eski 1)', desc: 'Açılış Slaydı',
@@ -644,7 +669,7 @@ const SLIDES = [
     )
   },
 
-  // 3- ESKİ VERSİYON (9 SAYFALIK ÖZET SUNUM KOMBİNASYONU EKLENİYOR)
+  // 3- ESKİ VERSİYON (9 SAYFALIK ÖZET SUNUM KOMBİNASYONU)
   {
     title: 'ÖZET - Kapak', desc: 'Açılış Slaydı (9 Sayfalık Versiyon)',
     render: () => (
@@ -862,23 +887,23 @@ const SLIDES = [
 // -----------------------------------------------------------------------------
 
 export default function Briefing() {
-  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [mode, setMode] = useState('menu'); // 'menu', 'slides', 'dashboard'
   const [slideIndex, setSlideIndex] = useState(0);
 
   const TOTAL = SLIDES.length;
 
   useEffect(() => {
     const handleKey = (e) => {
-      if (!isFullscreen) return;
+      if (mode !== 'slides') return;
       if (e.key === 'ArrowRight' || e.key === ' ') setSlideIndex(s => Math.min(s + 1, TOTAL - 1));
       if (e.key === 'ArrowLeft') setSlideIndex(s => Math.max(s - 1, 0));
-      if (e.key === 'Escape') setIsFullscreen(false);
+      if (e.key === 'Escape') setMode('menu');
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [isFullscreen, TOTAL]);
+  }, [mode, TOTAL]);
 
-  if (isFullscreen) {
+  if (mode === 'slides') {
     return (
       <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 9999, background: '#020617', userSelect: 'none' }}>
         <style>{`
@@ -906,7 +931,7 @@ export default function Briefing() {
           {slideIndex + 1} / {TOTAL}
         </div>
 
-        <button onClick={() => setIsFullscreen(false)} style={{ position: 'fixed', top: '16px', right: '20px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', color: '#94a3b8', cursor: 'pointer', padding: '8px', display: 'flex', alignItems: 'center', zIndex: 9999, transition: 'all 0.2s' }}
+        <button onClick={() => setMode('menu')} style={{ position: 'fixed', top: '16px', right: '20px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', color: '#94a3b8', cursor: 'pointer', padding: '8px', display: 'flex', alignItems: 'center', zIndex: 9999, transition: 'all 0.2s' }}
           onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; e.currentTarget.style.color = '#fff'; }}
           onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = '#94a3b8'; }}
         >
@@ -916,27 +941,196 @@ export default function Briefing() {
     );
   }
 
+  if (mode === 'dashboard') {
+    return (
+      <div style={{ padding: '24px', maxWidth: '1400px', margin: '0 auto', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+        {/* Header Section */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '32px', background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', padding: '32px', borderRadius: '16px', color: 'white', boxShadow: '0 10px 15px -3px rgba(59, 130, 246, 0.3)', position: 'relative' }}>
+          <button onClick={() => setMode('menu')} style={{ position: 'absolute', top: '16px', right: '16px', background: 'rgba(255,255,255,0.2)', border: 'none', borderRadius: '8px', color: '#fff', cursor: 'pointer', padding: '8px', display: 'flex', alignItems: 'center' }}>
+            <X size={20} />
+          </button>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+              <Anchor size={32} color="#93c5fd" />
+              <h1 style={{ margin: 0, fontSize: '32px', fontWeight: 800, letterSpacing: '-0.02em' }}>Mavi Vatanın Kuzeydeki Kalbi: Sinop</h1>
+            </div>
+            <p style={{ margin: 0, fontSize: '16px', color: '#bfdbfe', maxWidth: '600px', lineHeight: '1.6' }}>
+              Türkiye'nin somon üretimindeki tartışmasız lideri. 175 km sahil şeridi, eşsiz doğal koyları ve son teknoloji denetim filosuyla sürdürülebilir su ürünleri yönetim merkezi.
+            </p>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <div style={{ fontSize: '14px', color: '#93c5fd', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em' }}>2026 Vizyon Raporu</div>
+            <div style={{ fontSize: '42px', fontWeight: 900, color: '#fff', marginTop: '4px' }}>%100</div>
+            <div style={{ fontSize: '14px', color: '#bfdbfe' }}>Kayıtlı & Denetimli Üretim</div>
+          </div>
+        </div>
+
+        {/* Top Stats Cards */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', marginBottom: '32px' }}>
+          <CustomCard title="Toplam Üretim (2026)" value="43.007 Ton" icon={TrendingUp} color="#3b82f6" subtitle="Tüm türler bazında" />
+          <CustomCard title="Türk Somonu" value="42.609 Ton" icon={Fish} color="#10b981" subtitle="Türkiye Lideri!" />
+          <CustomCard title="Yetiştiricilik Tesisi" value="51 Adet" icon={Building} color="#f59e0b" subtitle="Deniz, İç Su, Midye, Karasal" />
+          <CustomCard title="Balıkçı Gemisi" value="428 Adet" icon={Ship} color="#8b5cf6" subtitle="2.555 Aktif Balıkçı" />
+        </div>
+
+        {/* Charts Section */}
+        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '24px', marginBottom: '32px' }}>
+          
+          {/* Line Chart: Production Growth */}
+          <div style={{ background: '#fff', padding: '24px', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#1e293b', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Activity size={20} color="#3b82f6" /> 2022-2026 Üretim İvmesi (Ton)
+            </h3>
+            <div style={{ height: '350px' }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={productionData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
+                  <XAxis dataKey="year" stroke="#64748b" tick={{ fill: '#64748b' }} axisLine={false} tickLine={false} />
+                  <YAxis stroke="#64748b" tick={{ fill: '#64748b' }} axisLine={false} tickLine={false} tickFormatter={(val) => (val / 1000) + 'k'} />
+                  <Tooltip 
+                    contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}
+                    formatter={(value) => new Intl.NumberFormat('tr-TR').format(value) + ' Ton'}
+                  />
+                  <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px' }} />
+                  <Line type="monotone" dataKey="turkSomonu" name="Türk Somonu" stroke="#3b82f6" strokeWidth={4} dot={{ r: 6, strokeWidth: 2 }} activeDot={{ r: 8 }} />
+                  <Line type="monotone" dataKey="alabalik" name="Alabalık" stroke="#10b981" strokeWidth={3} />
+                  <Line type="monotone" dataKey="midye" name="Midye" stroke="#f59e0b" strokeWidth={3} />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+
+          {/* Pie Chart: Facility Types */}
+          <div style={{ background: '#fff', padding: '24px', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}>
+            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#1e293b', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Building size={20} color="#8b5cf6" /> Tesis Dağılımı
+            </h3>
+            <div style={{ height: '250px', flex: 1 }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie data={facilityData} cx="50%" cy="50%" innerRadius={60} outerRadius={90} paddingAngle={5} dataKey="value">
+                    {facilityData.map((entry, index) => (
+                      <Cell key={'cell-' + index} fill={entry.color} />
+                    ))}
+                  </Pie>
+                  <Tooltip formatter={(value) => [value + ' Tesis', 'Sayı']} contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }} />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {facilityData.map((item, idx) => (
+                <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: item.color }}></div>
+                    <span style={{ fontSize: '14px', color: '#475569', fontWeight: 500 }}>{item.name}</span>
+                  </div>
+                  <span style={{ fontSize: '15px', color: '#1e293b', fontWeight: 700 }}>{item.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section: Fleet & Subsidies */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+          
+          {/* Fleet & Team */}
+          <div style={{ background: '#fff', padding: '24px', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#1e293b', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <ShieldCheck size={20} color="#10b981" /> Denetim ve Kontrol Gücümüz
+            </h3>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <div style={{ background: '#3b82f6', padding: '12px', borderRadius: '8px', color: '#fff' }}><Ship size={24} /></div>
+                <div>
+                  <h4 style={{ margin: '0 0 4px 0', fontSize: '16px', color: '#1e293b' }}>KUZEY YILDIZI (Kontrol Gemisi)</h4>
+                  <p style={{ margin: 0, fontSize: '13px', color: '#64748b' }}>10.50 Metre, 250 Hp (2 Adet Motor), Sinop Merkez B.B. Aktif</p>
+                </div>
+              </div>
+              
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <div style={{ background: '#10b981', padding: '12px', borderRadius: '8px', color: '#fff' }}><Camera size={24} /></div>
+                <div>
+                  <h4 style={{ margin: '0 0 4px 0', fontSize: '16px', color: '#1e293b' }}>Hava Filosu ve Görüntüleme</h4>
+                  <p style={{ margin: 0, fontSize: '13px', color: '#64748b' }}>3 Adet Hava Dronu, 83x Zoom Kapasiteli Saha Fotoğraf Makinesi</p>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <div style={{ background: '#f59e0b', padding: '12px', borderRadius: '8px', color: '#fff' }}><Users size={24} /></div>
+                <div>
+                  <h4 style={{ margin: '0 0 4px 0', fontSize: '16px', color: '#1e293b' }}>Uzman Kadro</h4>
+                  <p style={{ margin: 0, fontSize: '13px', color: '#64748b' }}>Merkezde 17, İlçelerde 8 Uzman Personel (Mühendis, Veteriner, Kaptan)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Subsidies Bar Chart */}
+          <div style={{ background: '#fff', padding: '24px', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#1e293b', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Award size={20} color="#f59e0b" /> Yetiştiricilik Desteklemeleri (Milyon TL)
+            </h3>
+            <div style={{ height: '280px' }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={supportData} margin={{ top: 20, right: 20, left: 0, bottom: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
+                  <XAxis dataKey="year" stroke="#64748b" axisLine={false} tickLine={false} />
+                  <YAxis stroke="#64748b" axisLine={false} tickLine={false} tickFormatter={(v) => '₺' + v + 'M'} />
+                  <Tooltip 
+                    cursor={{ fill: '#f1f5f9' }}
+                    contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}
+                    formatter={(value, name) => {
+                      if (name === 'miktar') return [value + ' Milyon TL', 'Destek Tutarı'];
+                      return [value, 'Tesis Sayısı'];
+                    }}
+                  />
+                  <Bar dataKey="miktar" name="Destek Tutarı" fill="#3b82f6" radius={[6, 6, 0, 0]} maxBarSize={50} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    );
+  }
+
+  // mode === 'menu'
   return (
     <div style={{ padding: '40px', maxWidth: '1200px', margin: '0 auto', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
       <div style={{ textAlign: 'center', background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%)', borderRadius: '20px', padding: '60px 40px', color: '#fff', marginBottom: '40px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}>
         <Anchor size={52} color="#93c5fd" style={{ marginBottom: '20px' }} />
         <div style={{ fontSize: '13px', color: '#93c5fd', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '16px' }}>Balıkçılık ve Su Ürünleri Şube Müdürlüğü</div>
-        <h1 style={{ fontSize: '38px', fontWeight: 900, margin: '0 0 16px 0', letterSpacing: '-0.01em' }}>2026 Yetiştiricilik Sunumu</h1>
-        <p style={{ color: '#bfdbfe', fontSize: '16px', marginBottom: '40px', lineHeight: 1.6 }}>Orijinal sunum metinleri ve görselleriyle zenginleştirilmiş tam ekran sunum modülü. (Toplam {TOTAL} Sayfa)</p>
-        <button
-          onClick={() => { setSlideIndex(0); setIsFullscreen(true); }}
-          style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', background: '#3b82f6', color: '#fff', border: 'none', borderRadius: '50px', padding: '16px 36px', fontSize: '17px', fontWeight: 700, cursor: 'pointer', boxShadow: '0 8px 24px rgba(59,130,246,0.4)', transition: 'transform 0.2s' }}
-          onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-          onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-        >
-          <Play size={22} fill="#fff" />
-          Sunumu Başlat
-        </button>
+        <h1 style={{ fontSize: '38px', fontWeight: 900, margin: '0 0 16px 0', letterSpacing: '-0.01em' }}>2026 Yetiştiricilik Sunumu ve Dashboard</h1>
+        <p style={{ color: '#bfdbfe', fontSize: '16px', marginBottom: '40px', lineHeight: 1.6 }}>Orijinal sunum metinleri, görselleri ve interaktif istatistiklerle güçlendirilmiş tam kapsamlı bilgi platformu.</p>
+        
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+            <button
+            onClick={() => { setSlideIndex(0); setMode('slides'); }}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', background: '#3b82f6', color: '#fff', border: 'none', borderRadius: '50px', padding: '16px 36px', fontSize: '17px', fontWeight: 700, cursor: 'pointer', boxShadow: '0 8px 24px rgba(59,130,246,0.4)', transition: 'transform 0.2s' }}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            >
+            <Play size={22} fill="#fff" />
+            Slayt Modunda Başlat (35 Sayfa)
+            </button>
+            <button
+            onClick={() => setMode('dashboard')}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', background: '#10b981', color: '#fff', border: 'none', borderRadius: '50px', padding: '16px 36px', fontSize: '17px', fontWeight: 700, cursor: 'pointer', boxShadow: '0 8px 24px rgba(16,185,129,0.4)', transition: 'transform 0.2s' }}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            >
+            <Activity size={22} />
+            İnteraktif Dashboard (Grafikler)
+            </button>
+        </div>
       </div>
       
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '16px' }}>
         {SLIDES.map((s, i) => (
-          <div key={i} onClick={() => { setSlideIndex(i); setIsFullscreen(true); }} style={{ background: '#fff', borderRadius: '12px', padding: '20px', cursor: 'pointer', border: '2px solid transparent', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', transition: 'all 0.2s', display: 'flex', flexDirection: 'column' }}
+          <div key={i} onClick={() => { setSlideIndex(i); setMode('slides'); }} style={{ background: '#fff', borderRadius: '12px', padding: '20px', cursor: 'pointer', border: '2px solid transparent', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', transition: 'all 0.2s', display: 'flex', flexDirection: 'column' }}
             onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#3b82f6'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(59,130,246,0.15)'; }}
             onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; }}
           >
