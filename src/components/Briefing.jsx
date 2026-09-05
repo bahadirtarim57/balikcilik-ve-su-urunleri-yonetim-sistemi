@@ -63,23 +63,15 @@ const SLIDES = [
   {
     title: 'Kapak', desc: 'Açılış Slaydı',
     render: () => (
-      <FullSlide bgImg="image44.jpg">
-        <div style={{ textAlign: 'center', maxWidth: '900px' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '30px' }}><Anchor size={64} color="#3b82f6" /></div>
-          <div style={{ fontSize: '18px', color: '#60a5fa', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '20px' }}>
-            T.C. TARIM VE ORMAN BAKANLIĞI — SİNOP İL MÜDÜRLÜĞÜ
-          </div>
-          <h1 style={{ fontSize: '64px', fontWeight: 900, color: '#fff', lineHeight: 1.15, margin: '0 0 24px 0', letterSpacing: '-0.02em' }}>
-            Su Ürünleri<br /><span style={{ color: '#38bdf8' }}>Yetiştiricilik Sunumu</span>
-          </h1>
-          <p style={{ fontSize: '24px', color: '#e2e8f0', fontWeight: 400, marginBottom: '50px', lineHeight: 1.6 }}>
-            Balıkçılık ve Su Ürünleri Şubesi — 2026
-          </p>
-          <div style={{ display: 'inline-block', background: 'rgba(30, 41, 59, 0.8)', padding: '14px 32px', borderRadius: '50px', border: '1px solid #3b82f6', color: '#cbd5e1', fontSize: '16px' }}>
-            Türk Somonu Üretiminde Türkiye'nin Lideri
-          </div>
-        </div>
-      </FullSlide>
+      <div style={{
+        height: '100vh', width: '100vw',
+        backgroundColor: '#000',
+        backgroundImage: 'url(/images/brifing/kapak_2026.jpg)',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        animation: 'fadeIn 0.5s ease-out'
+      }} />
     )
   },
   {
