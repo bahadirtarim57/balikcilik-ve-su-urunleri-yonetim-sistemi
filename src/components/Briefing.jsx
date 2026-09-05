@@ -86,6 +86,21 @@ const FullSlide = ({ children, bgImg }) => (
 
 // --- 35 SAYFALIK SLAYT DIZISI (ESKILER BURADA KORUNUYOR) ---
 const SLIDES = [
+  {
+    title: 'Yeni Kapak', desc: 'Ana Giriş',
+    render: () => (
+      <div style={{
+        height: '100vh', width: '100vw',
+        backgroundColor: '#000',
+        backgroundImage: 'url(/images/brifing/kapak_yeni.png)',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        animation: 'fadeIn 0.5s ease-out'
+      }} />
+    )
+  },
+
   // 1- YÜKLENEN ÖZEL RESİMLER
   {
     title: 'Yeni Kapak (Özel)', desc: 'Yüklenen Kapak Resmi',
@@ -129,6 +144,35 @@ const SLIDES = [
       }} />
     )
   },
+  {
+    title: 'Misyon ve Vizyon', desc: 'Kurumsal',
+    render: () => (
+      <div style={{
+        height: '100vh', width: '100vw',
+        backgroundColor: '#000',
+        backgroundImage: 'url(/images/brifing/misyon_vizyon.png)',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        animation: 'fadeIn 0.5s ease-out'
+      }} />
+    )
+  },
+  {
+    title: 'Kurumsal Yapı', desc: 'Personel Dağılımı',
+    render: () => (
+      <div style={{
+        height: '100vh', width: '100vw',
+        backgroundColor: '#000',
+        backgroundImage: 'url(/images/brifing/kurumsal_yapi.png)',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        animation: 'fadeIn 0.5s ease-out'
+      }} />
+    )
+  },
+
   // 2- TAM VERSİYON 24 SAYFALIK SERİ (Kapak ve Genel Tanıtım dahil)
   {
     title: 'Kapak (Eski 1)', desc: 'Açılış Slaydı',
