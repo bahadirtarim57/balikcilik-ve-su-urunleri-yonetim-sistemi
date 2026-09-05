@@ -75,29 +75,17 @@ const SLIDES = [
     )
   },
   {
-    title: 'Genel Tanıtım', desc: 'Sinop İlinin Potansiyeli',
+    title: 'Sunum İçeriği', desc: 'İçerik Başlıkları',
     render: () => (
-      <SplitSlide
-        rightImgUrls={['image13.jpg']}
-        leftContent={
-          <>
-            <div style={{ color: '#38bdf8', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Karadeniz'in Su Ürünleri Başkenti</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Mavi Vatanın Kuzeydeki Kalbi: Sinop</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', marginBottom: '30px' }}>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #38bdf8' }}>
-                <div style={{ color: '#38bdf8', fontSize: '32px', fontWeight: 900 }}>175 km</div>
-                <div style={{ color: '#fff', fontSize: '18px', fontWeight: 600 }}>Sahil Şeridi Uzunluğu</div>
-                <div style={{ color: '#94a3b8', fontSize: '15px' }}>Karadeniz'in en uzun sahil şeridine sahip ilidir.</div>
-              </div>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981' }}>
-                <div style={{ color: '#10b981', fontSize: '32px', fontWeight: 900 }}>Kuzeyin Doğal Koyları</div>
-                <div style={{ color: '#fff', fontSize: '18px', fontWeight: 600 }}>Stratejik Avantaj</div>
-                <div style={{ color: '#94a3b8', fontSize: '15px' }}>Deniz ağ kafes yetiştiriciliği için korunaklı ve temiz sular sunar.</div>
-              </div>
-            </div>
-          </>
-        }
-      />
+      <div style={{
+        height: '100vh', width: '100vw',
+        backgroundColor: '#000',
+        backgroundImage: 'url(/images/brifing/sunum_icerigi.png)',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        animation: 'fadeIn 0.5s ease-out'
+      }} />
     )
   },
   {
