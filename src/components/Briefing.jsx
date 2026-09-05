@@ -115,6 +115,20 @@ const SLIDES = [
       }} />
     )
   },
+  {
+    title: 'Sinop İl Tanıtımı', desc: 'Yüklenen Özel Sayfa',
+    render: () => (
+      <div style={{
+        height: '100vh', width: '100vw',
+        backgroundColor: '#000',
+        backgroundImage: 'url(/images/brifing/sinop_il_tanitimi.png)',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        animation: 'fadeIn 0.5s ease-out'
+      }} />
+    )
+  },
   // 2- TAM VERSİYON 24 SAYFALIK SERİ (Kapak ve Genel Tanıtım dahil)
   {
     title: 'Kapak (Eski 1)', desc: 'Açılış Slaydı',
@@ -897,7 +911,7 @@ export default function Briefing() {
       if (mode !== 'slides') return;
       if (e.key === 'ArrowRight' || e.key === ' ') setSlideIndex(s => Math.min(s + 1, TOTAL - 1));
       if (e.key === 'ArrowLeft') setSlideIndex(s => Math.max(s - 1, 0));
-      if (e.key === 'Escape') setMode('menu');
+      if (e.key === 'Escape') { setMode('menu'); if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().catch(e=>console.log(e)); } }
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
@@ -931,7 +945,7 @@ export default function Briefing() {
           {slideIndex + 1} / {TOTAL}
         </div>
 
-        <button onClick={() => setMode('menu')} style={{ position: 'fixed', top: '16px', right: '20px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', color: '#94a3b8', cursor: 'pointer', padding: '8px', display: 'flex', alignItems: 'center', zIndex: 9999, transition: 'all 0.2s' }}
+        <button onClick={() => { setMode('menu'); if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().catch(e=>console.log(e)); } }} style={{ position: 'fixed', top: '16px', right: '20px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', color: '#94a3b8', cursor: 'pointer', padding: '8px', display: 'flex', alignItems: 'center', zIndex: 9999, transition: 'all 0.2s' }}
           onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; e.currentTarget.style.color = '#fff'; }}
           onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = '#94a3b8'; }}
         >
@@ -1108,7 +1122,7 @@ export default function Briefing() {
         
         <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
             <button
-            onClick={() => { setSlideIndex(0); setMode('slides'); }}
+            onClick={() => { setSlideIndex(0); setMode('slides'); if (document.documentElement.requestFullscreen) { document.documentElement.requestFullscreen().catch(e => console.log(e)); } }}
             style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', background: '#3b82f6', color: '#fff', border: 'none', borderRadius: '50px', padding: '16px 36px', fontSize: '17px', fontWeight: 700, cursor: 'pointer', boxShadow: '0 8px 24px rgba(59,130,246,0.4)', transition: 'transform 0.2s' }}
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
@@ -1130,7 +1144,7 @@ export default function Briefing() {
       
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '16px' }}>
         {SLIDES.map((s, i) => (
-          <div key={i} onClick={() => { setSlideIndex(i); setMode('slides'); }} style={{ background: '#fff', borderRadius: '12px', padding: '20px', cursor: 'pointer', border: '2px solid transparent', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', transition: 'all 0.2s', display: 'flex', flexDirection: 'column' }}
+          <div key={i} onClick={() => { setSlideIndex(i); setMode('slides'); if (document.documentElement.requestFullscreen) { document.documentElement.requestFullscreen().catch(e => console.log(e)); } }} style={{ background: '#fff', borderRadius: '12px', padding: '20px', cursor: 'pointer', border: '2px solid transparent', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', transition: 'all 0.2s', display: 'flex', flexDirection: 'column' }}
             onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#3b82f6'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(59,130,246,0.15)'; }}
             onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; }}
           >
