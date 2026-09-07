@@ -72,6 +72,7 @@ export default function Briefing() {
   const [showControls, setShowControls] = useState(true);
   const [showDashboard, setShowDashboard] = useState(false);
   const [showSlideHUD, setShowSlideHUD] = useState(false);
+  const [showSinopVideoModal, setShowSinopVideoModal] = useState(false);
   const controlsTimeoutRef = useRef(null);
   const videoRef = useRef(null);
   const navigate = useNavigate();
@@ -89,6 +90,11 @@ export default function Briefing() {
   // Klavye / Kumanda dinleyicisi
   useEffect(() => {
     const handleKeyDown = (e) => {
+      if (showSinopVideoModal) {
+        if (e.key === 'Escape') setShowSinopVideoModal(false);
+        return;
+      }
+
       if (showDashboard) {
         if (e.key === 'Escape') setShowDashboard(false);
         return;
@@ -530,6 +536,31 @@ export default function Briefing() {
           </span>
         </div>
 
+        {/* Sinop Tanıtım Filmi Butonu */}
+        <button 
+          onClick={(e) => { e.stopPropagation(); setShowSinopVideoModal(true); }}
+          style={{
+            background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
+            border: '1px solid rgba(56, 189, 248, 0.4)',
+            borderRadius: '30px',
+            color: '#ffffff',
+            cursor: 'pointer',
+            padding: '7px 18px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            fontSize: '13px',
+            fontWeight: 800,
+            backdropFilter: 'blur(12px)',
+            boxShadow: '0 8px 25px rgba(2, 132, 199, 0.5)',
+            transition: 'all 0.2s'
+          }}
+          title="Sinop Tanıtım Filmini İzle"
+        >
+          <Film size={16} color="#38bdf8" />
+          <span>Tanıtım Filmi</span>
+        </button>
+
         {/* Dashboard Butonu */}
         <button 
           onClick={(e) => { e.stopPropagation(); setShowDashboard(true); }}
@@ -761,6 +792,117 @@ export default function Briefing() {
               </div>
             </div>
 
+          </div>
+        </div>
+      )}
+
+      {/* =========================================================================
+         SİNOP İL TANITIM FİLMİ ULTRA HD VİDEO MODALI
+         ========================================================================= */}
+      {showSinopVideoModal && (
+        <div 
+          onClick={(e) => e.stopPropagation()}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(2, 6, 23, 0.95)',
+            backdropFilter: 'blur(25px)',
+            zIndex: 99999999,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '24px',
+            color: '#fff',
+            cursor: 'default',
+            animation: 'fadeIn 0.25s ease-out'
+          }}
+        >
+          {/* Üst Başlık ve Kapat Butonu */}
+          <div style={{ width: '100%', maxWidth: '1200px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+              <div style={{ width: '42px', height: '42px', borderRadius: '12px', background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 15px rgba(2,132,199,0.5)' }}>
+                <Film size={22} color="#fff" />
+              </div>
+              <div>
+                <h2 style={{ margin: 0, fontSize: '20px', fontWeight: 900, color: '#f8fafc', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  Sinop İl Tanıtım Filmi
+                  <span style={{ fontSize: '11px', background: '#0284c7', padding: '2px 8px', borderRadius: '10px', color: '#fff', fontWeight: 700 }}>1080p FULL HD</span>
+                </h2>
+                <p style={{ margin: '2px 0 0 0', fontSize: '13px', color: '#94a3b8' }}>Tarihi Cezaevi • Hamsilos Koyu • İnceburun • Erfelek Şelaleleri • Liman & Su Ürünleri</p>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <a 
+                href="/videos/sinop_tanitim_filmi.mp4" 
+                download="Sinop_Tanitim_Filmi.mp4"
+                style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  color: '#fff',
+                  borderRadius: '10px',
+                  padding: '8px 16px',
+                  fontSize: '13px',
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px'
+                }}
+              >
+                İndir
+              </a>
+              <button 
+                onClick={() => setShowSinopVideoModal(false)}
+                style={{
+                  background: 'rgba(239, 68, 68, 0.2)',
+                  border: '1px solid rgba(239, 68, 68, 0.4)',
+                  borderRadius: '10px',
+                  color: '#fca5a5',
+                  padding: '8px 16px',
+                  fontSize: '13px',
+                  fontWeight: 800,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px'
+                }}
+              >
+                <X size={16} /> Kapat (ESC)
+              </button>
+            </div>
+          </div>
+
+          {/* 16:9 Video Oynatıcı */}
+          <div 
+            style={{
+              width: '100%',
+              maxWidth: '1200px',
+              aspectRatio: '16 / 9',
+              background: '#000',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              boxShadow: '0 25px 60px -15px rgba(0,0,0,0.9), 0 0 40px rgba(2, 132, 199, 0.3)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              position: 'relative'
+            }}
+          >
+            <video 
+              src="/videos/sinop_tanitim_filmi.mp4"
+              controls
+              autoPlay
+              playsInline
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+            />
+          </div>
+
+          {/* Alt Bilgi */}
+          <div style={{ marginTop: '14px', fontSize: '12px', color: '#64748b', textAlign: 'center' }}>
+            T.C. Sinop Valiliği • Balıkçılık ve Su Ürünleri Şube Müdürlüğü Tanıtım Yayını
           </div>
         </div>
       )}
