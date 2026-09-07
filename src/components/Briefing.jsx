@@ -900,9 +900,44 @@ export default function Briefing() {
             />
           </div>
 
+          {/* Lokasyon Rozetleri ve Alt Bilgi */}
+          <div style={{ marginTop: '16px', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px', maxWidth: '1200px' }}>
+            {[
+              { name: 'Hamsilos Doğal Fiyordu', color: '#10b981' },
+              { name: 'Tarihi Sinop Cezaevi', color: '#f59e0b' },
+              { name: 'Karakum Volkanik Kumsalı', color: '#06b6d4' },
+              { name: 'Erfelek 28 Şelaleleri', color: '#22c55e' },
+              { name: 'İnceburun En Kuzey Uç', color: '#ef4444' },
+              { name: 'Gerze (Cittaslow)', color: '#d946ef' },
+              { name: 'Boyabat Kalesi & Bazalt', color: '#f59e0b' },
+              { name: 'Ayancık Akgöl & İnaltı', color: '#14b8a6' },
+              { name: 'Sinop Mantısı & Lezzetler', color: '#f97316' },
+              { name: 'Türk Somonu & Mavi Vatan', color: '#38bdf8' }
+            ].map((loc, idx) => (
+              <span 
+                key={idx}
+                style={{
+                  background: 'rgba(15, 23, 42, 0.8)',
+                  border: `1px solid ${loc.color}55`,
+                  color: '#e2e8f0',
+                  padding: '4px 12px',
+                  borderRadius: '20px',
+                  fontSize: '12px',
+                  fontWeight: 600,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px'
+                }}
+              >
+                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: loc.color }} />
+                {loc.name}
+              </span>
+            ))}
+          </div>
+
           {/* Alt Bilgi */}
-          <div style={{ marginTop: '14px', fontSize: '12px', color: '#64748b', textAlign: 'center' }}>
-            T.C. Sinop Valiliği • Balıkçılık ve Su Ürünleri Şube Müdürlüğü Tanıtım Yayını
+          <div style={{ marginTop: '12px', fontSize: '11px', color: '#64748b', textAlign: 'center' }}>
+            T.C. Sinop Valiliği • Kültür, Turizm ve Balıkçılık Şube Yönetimi Tanıtım Yayını
           </div>
         </div>
       )}
