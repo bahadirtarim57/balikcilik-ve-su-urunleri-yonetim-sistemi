@@ -72,10 +72,7 @@ export default function Briefing() {
   const [showControls, setShowControls] = useState(true);
   const [showDashboard, setShowDashboard] = useState(false);
   const [showSlideHUD, setShowSlideHUD] = useState(false);
-  const [hoveredDot, setHoveredDot] = useState(null);
-  const [isAutoPlay, setIsAutoPlay] = useState(false);
   const controlsTimeoutRef = useRef(null);
-  const autoPlayTimerRef = useRef(null);
   const videoRef = useRef(null);
   const navigate = useNavigate();
 
@@ -129,25 +126,13 @@ export default function Briefing() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [nextSlide, prevSlide, showDashboard, navigate]);
 
-  // Otomatik oynatma
-  useEffect(() => {
-    if (isAutoPlay && !showDashboard) {
-      autoPlayTimerRef.current = setInterval(nextSlide, 8000);
-    } else {
-      if (autoPlayTimerRef.current) clearInterval(autoPlayTimerRef.current);
-    }
-    return () => {
-      if (autoPlayTimerRef.current) clearInterval(autoPlayTimerRef.current);
-    };
-  }, [isAutoPlay, showDashboard, nextSlide]);
-
-  // Fare hareketiyle kontrolleri şıkça göster / gizle
+  // Fare hareketinde kontrolleri göster / gizle
   const handleMouseMove = () => {
     setShowControls(true);
     if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
     controlsTimeoutRef.current = setTimeout(() => {
       setShowControls(false);
-    }, 4000);
+    }, 3500);
   };
 
   const toggleFullscreen = () => {
@@ -173,13 +158,21 @@ export default function Briefing() {
   }, []);
 
   const isVideoSlide = slideIndex === 15; // 16. Slayt Video Slaytı
-
-  // Hangi slaytlarda Canlı HUD Grafik Butonu gösterilsin?
   const hasHudGraph = [6, 7, 10, 14, 16, 17, 19, 25].includes(slideIndex);
+
+  // Ekrana tıklayınca bir sonraki slayta geçiş (PowerPoint usulü)
+  const handleStageClick = (e) => {
+    // Eğer tıklanan öğe buton, video, hud veya link ise doğrudan geçiş yapma
+    if (e.target.closest('button') || e.target.closest('video') || e.target.closest('.hud-container') || e.target.closest('.no-advance')) {
+      return;
+    }
+    nextSlide();
+  };
 
   return (
     <div 
       onMouseMove={handleMouseMove}
+      onClick={handleStageClick}
       style={{
         position: 'fixed',
         top: 0,
@@ -195,17 +188,14 @@ export default function Briefing() {
         justifyContent: 'center',
         overflow: 'hidden',
         userSelect: 'none',
+        cursor: 'pointer',
         fontFamily: 'system-ui, -apple-system, sans-serif'
       }}
     >
       <style>{`
         @keyframes fadeIn {
-          from { opacity: 0; transform: scale(0.985); }
+          from { opacity: 0; transform: scale(0.99); }
           to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes pulseGlow {
-          0%, 100% { box-shadow: 0 0 25px rgba(59,130,246,0.3); }
-          50% { box-shadow: 0 0 45px rgba(59,130,246,0.6); }
         }
         @keyframes slideUpHUD {
           from { opacity: 0; transform: translateY(20px); }
@@ -213,7 +203,7 @@ export default function Briefing() {
         }
       `}</style>
 
-      {/* --- ANA 16:9 SİNEMATİK SAHNE (KRİSTAL NETLİK & AMBİYANS IŞIĞI) --- */}
+      {/* --- ANA 16:9 SİNEMATİK SAHNE --- */}
       <div 
         style={{
           width: '100vw',
@@ -245,7 +235,7 @@ export default function Briefing() {
           }}
         >
           {isVideoSlide ? (
-            /* 16. Slayt: Sinematik Dev Video Tiyatrosu */
+            /* 16. Slayt: Sinematik Dev Video */
             <div style={{ position: 'relative', width: '100%', height: '100%', background: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <video 
                 ref={videoRef}
@@ -261,7 +251,6 @@ export default function Briefing() {
                   borderRadius: '14px'
                 }}
               />
-              {/* Video Üst Başlık Rozeti */}
               <div 
                 style={{
                   position: 'absolute',
@@ -301,16 +290,17 @@ export default function Briefing() {
             />
           )}
 
-          {/* --- CANLI HUD GRAFİK KATMANI (İLGİLİ SAYFALARDA SLAYT ÜSTÜNE AÇILIR) --- */}
+          {/* --- CANLI HUD GRAFİK KATMANI --- */}
           {showSlideHUD && (
             <div 
+              className="hud-container"
               style={{
                 position: 'absolute',
                 top: '12px',
                 right: '12px',
                 bottom: '12px',
                 width: '42%',
-                background: 'rgba(15, 23, 42, 0.92)',
+                background: 'rgba(15, 23, 42, 0.94)',
                 backdropFilter: 'blur(16px)',
                 borderRadius: '14px',
                 border: '1px solid rgba(59, 130, 246, 0.4)',
@@ -321,7 +311,8 @@ export default function Briefing() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                animation: 'slideUpHUD 0.3s ease-out'
+                animation: 'slideUpHUD 0.3s ease-out',
+                cursor: 'default'
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.15)', pb: '12px', marginBottom: '16px' }}>
@@ -330,14 +321,13 @@ export default function Briefing() {
                   <h3 style={{ margin: 0, fontSize: '16px', fontWeight: 900, color: '#38bdf8' }}>CANLI VERİ ANALİZİ</h3>
                 </div>
                 <button 
-                  onClick={() => setShowSlideHUD(false)}
+                  onClick={(e) => { e.stopPropagation(); setShowSlideHUD(false); }}
                   style={{ background: 'rgba(255,255,255,0.1)', border: 'none', borderRadius: '50%', color: '#fff', width: '28px', height: '28px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                 >
                   <X size={16} />
                 </button>
               </div>
 
-              {/* Grafik Gövdesi */}
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 {[14, 17].includes(slideIndex) ? (
                   <>
@@ -403,11 +393,11 @@ export default function Briefing() {
           {/* Slayt Üzerinde Parlayan "Canlı Veri Grafiği" Düğmesi */}
           {hasHudGraph && !showSlideHUD && (
             <button
-              onClick={() => setShowSlideHUD(true)}
+              onClick={(e) => { e.stopPropagation(); setShowSlideHUD(true); }}
               style={{
                 position: 'absolute',
-                bottom: '16px',
-                right: '16px',
+                bottom: '18px',
+                right: '18px',
                 background: 'rgba(15, 23, 42, 0.88)',
                 border: '1px solid rgba(56, 189, 248, 0.5)',
                 borderRadius: '30px',
@@ -431,23 +421,78 @@ export default function Briefing() {
               <span>Canlı Grafik Analizi</span>
             </button>
           )}
-
-          {/* Sol / Sağ Geniş Tıklama Alanları */}
-          <div 
-            onClick={prevSlide}
-            style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '15%', cursor: 'pointer', zIndex: 10 }}
-            title="Önceki Slayt (Sol Ok)"
-          />
-          <div 
-            onClick={nextSlide}
-            style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: '15%', cursor: 'pointer', zIndex: 10 }}
-            title="Sonraki Slayt (Sağ Ok)"
-          />
         </div>
       </div>
 
+      {/* --- SOL KENAR KÜÇÜK OKU (DİKEY ORTALI & ZARİF) --- */}
+      <button
+        className="no-advance"
+        onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+        disabled={slideIndex === 0}
+        style={{
+          position: 'fixed',
+          left: '20px',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: '42px',
+          height: '42px',
+          borderRadius: '50%',
+          background: 'rgba(15, 23, 42, 0.75)',
+          border: '1px solid rgba(255, 255, 255, 0.15)',
+          color: slideIndex === 0 ? '#475569' : '#ffffff',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: slideIndex === 0 ? 'not-allowed' : 'pointer',
+          backdropFilter: 'blur(10px)',
+          boxShadow: '0 8px 25px rgba(0,0,0,0.5)',
+          zIndex: 999999,
+          opacity: showControls && slideIndex > 0 ? 0.9 : (showControls ? 0.3 : 0),
+          transition: 'all 0.3s ease'
+        }}
+        onMouseEnter={(e) => { if (slideIndex > 0) e.currentTarget.style.background = '#1d4ed8'; }}
+        onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(15, 23, 42, 0.75)'; }}
+        title="Önceki Slayt (Sol Ok)"
+      >
+        <ChevronLeft size={24} />
+      </button>
+
+      {/* --- SAĞ KENAR KÜÇÜK OKU (DİKEY ORTALI & ZARİF) --- */}
+      <button
+        className="no-advance"
+        onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+        disabled={slideIndex === TOTAL_SLIDES - 1}
+        style={{
+          position: 'fixed',
+          right: '20px',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: '42px',
+          height: '42px',
+          borderRadius: '50%',
+          background: 'rgba(15, 23, 42, 0.75)',
+          border: '1px solid rgba(255, 255, 255, 0.15)',
+          color: slideIndex === TOTAL_SLIDES - 1 ? '#475569' : '#ffffff',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: slideIndex === TOTAL_SLIDES - 1 ? 'not-allowed' : 'pointer',
+          backdropFilter: 'blur(10px)',
+          boxShadow: '0 8px 25px rgba(0,0,0,0.5)',
+          zIndex: 999999,
+          opacity: showControls && slideIndex < TOTAL_SLIDES - 1 ? 0.9 : (showControls ? 0.3 : 0),
+          transition: 'all 0.3s ease'
+        }}
+        onMouseEnter={(e) => { if (slideIndex < TOTAL_SLIDES - 1) e.currentTarget.style.background = '#1d4ed8'; }}
+        onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(15, 23, 42, 0.75)'; }}
+        title="Sonraki Slayt (Sağ Ok / Tıklama)"
+      >
+        <ChevronRight size={24} />
+      </button>
+
       {/* --- SAĞ ÜST YÖNETİCİ KONTROL KÜMESİ (GLASSMORPHIC) --- */}
       <div 
+        className="no-advance"
         style={{
           position: 'fixed',
           top: '20px',
@@ -461,7 +506,7 @@ export default function Briefing() {
           pointerEvents: showControls ? 'auto' : 'none'
         }}
       >
-        {/* Slayt Başlık ve Sayaç Rozeti */}
+        {/* Slayt Sayaç Rozeti */}
         <div 
           style={{
             color: '#ffffff',
@@ -487,7 +532,7 @@ export default function Briefing() {
 
         {/* Dashboard Butonu */}
         <button 
-          onClick={() => setShowDashboard(true)}
+          onClick={(e) => { e.stopPropagation(); setShowDashboard(true); }}
           style={{
             background: 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%)',
             border: '1px solid rgba(255, 255, 255, 0.25)',
@@ -512,7 +557,7 @@ export default function Briefing() {
 
         {/* Tam Ekran Butonu */}
         <button 
-          onClick={toggleFullscreen}
+          onClick={(e) => { e.stopPropagation(); toggleFullscreen(); }}
           style={{
             background: 'rgba(15, 23, 42, 0.88)',
             border: '1px solid rgba(255, 255, 255, 0.18)',
@@ -535,7 +580,8 @@ export default function Briefing() {
 
         {/* Kapat / Çıkış Butonu */}
         <button 
-          onClick={() => {
+          onClick={(e) => {
+            e.stopPropagation();
             if (document.fullscreenElement && document.exitFullscreen) {
               document.exitFullscreen().catch(() => {});
             }
@@ -562,116 +608,12 @@ export default function Briefing() {
         </button>
       </div>
 
-      {/* --- ALT GEZİNTİ VE İLERLEME ÇUBUĞU (TOOLTIP'Lİ CAM DOKU) --- */}
-      <div 
-        style={{
-          position: 'fixed',
-          bottom: '24px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '6px',
-          background: 'rgba(15, 23, 42, 0.92)',
-          padding: '10px 24px',
-          borderRadius: '50px',
-          border: '1px solid rgba(255, 255, 255, 0.18)',
-          backdropFilter: 'blur(16px)',
-          zIndex: 999999,
-          maxWidth: '92vw',
-          overflowX: 'auto',
-          boxShadow: '0 15px 40px rgba(0,0,0,0.7), 0 0 25px rgba(59,130,246,0.2)',
-          opacity: showControls ? 1 : 0,
-          transition: 'opacity 0.35s ease',
-          pointerEvents: showControls ? 'auto' : 'none'
-        }}
-      >
-        <button 
-          onClick={prevSlide}
-          disabled={slideIndex === 0}
-          style={{
-            background: 'none',
-            border: 'none',
-            cursor: slideIndex === 0 ? 'not-allowed' : 'pointer',
-            color: slideIndex === 0 ? '#475569' : '#ffffff',
-            padding: '4px',
-            display: 'flex',
-            alignItems: 'center'
-          }}
-          title="Önceki Slayt (Sol Ok)"
-        >
-          <ChevronLeft size={22} />
-        </button>
-
-        {Array.from({ length: TOTAL_SLIDES }).map((_, i) => (
-          <div key={i} style={{ position: 'relative' }}>
-            <button 
-              onClick={() => setSlideIndex(i)}
-              onMouseEnter={() => setHoveredDot(i)}
-              onMouseLeave={() => setHoveredDot(null)}
-              style={{
-                width: i === slideIndex ? '22px' : '6px',
-                height: '6px',
-                borderRadius: '3px',
-                background: i === slideIndex ? '#38bdf8' : '#475569',
-                boxShadow: i === slideIndex ? '0 0 10px #38bdf8' : 'none',
-                border: 'none',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                padding: 0,
-                flexShrink: 0
-              }}
-            />
-            {/* Hover Tooltip Balonu */}
-            {hoveredDot === i && (
-              <div 
-                style={{
-                  position: 'absolute',
-                  bottom: '22px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  background: 'rgba(15, 23, 42, 0.96)',
-                  border: '1px solid rgba(56, 189, 248, 0.5)',
-                  borderRadius: '8px',
-                  padding: '5px 12px',
-                  color: '#fff',
-                  fontSize: '11px',
-                  fontWeight: 700,
-                  whiteSpace: 'nowrap',
-                  pointerEvents: 'none',
-                  boxShadow: '0 8px 20px rgba(0,0,0,0.6)',
-                  zIndex: 100
-                }}
-              >
-                {i + 1}. {SLIDE_TITLES[i]}
-              </div>
-            )}
-          </div>
-        ))}
-
-        <button 
-          onClick={nextSlide}
-          disabled={slideIndex === TOTAL_SLIDES - 1}
-          style={{
-            background: 'none',
-            border: 'none',
-            cursor: slideIndex === TOTAL_SLIDES - 1 ? 'not-allowed' : 'pointer',
-            color: slideIndex === TOTAL_SLIDES - 1 ? '#475569' : '#ffffff',
-            padding: '4px',
-            display: 'flex',
-            alignItems: 'center'
-          }}
-          title="Sonraki Slayt (Sağ Ok)"
-        >
-          <ChevronRight size={22} />
-        </button>
-      </div>
-
       {/* =========================================================================
          TAM EKRAN ULTRA PREMİUM YÖNETİCİ DASHBOARD MODALI
          ========================================================================= */}
       {showDashboard && (
         <div 
+          onClick={(e) => e.stopPropagation()}
           style={{
             position: 'fixed',
             top: 0,
@@ -683,7 +625,8 @@ export default function Briefing() {
             zIndex: 9999999,
             overflowY: 'auto',
             padding: '30px',
-            color: '#fff'
+            color: '#fff',
+            cursor: 'default'
           }}
         >
           <div style={{ maxWidth: '1400px', margin: '0 auto', spaceY: '24px' }}>
