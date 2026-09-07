@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { registerSW } from 'virtual:pwa-register'
@@ -17,9 +17,16 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-// Register Service Worker for PWA
+// Clean Service Worker in dev to always load fresh assets
 if ('serviceWorker' in navigator) {
-  registerSW({ immediate: true })
+  navigator.serviceWorker.getRegistrations().then(registrations => {
+    for (let registration of registrations) {
+      registration.unregister();
+    }
+  });
+  if (import.meta.env.PROD) {
+    registerSW({ immediate: true });
+  }
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(

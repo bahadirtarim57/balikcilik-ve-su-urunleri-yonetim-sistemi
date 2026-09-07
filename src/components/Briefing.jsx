@@ -1,1203 +1,827 @@
-import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line, CartesianGrid, Legend, PieChart, Pie, Cell } from 'recharts';
-import { Anchor, Ship, Users, Camera, TrendingUp, Award, Activity, ChevronLeft, ChevronRight, Play, X, Fish, Building, Shield, BookOpen, Layers, Map, AlertTriangle, ShieldCheck } from 'lucide-react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { 
+  ChevronLeft, ChevronRight, Maximize, Minimize, X, Play, Pause, 
+  BarChart3, PieChart as PieIcon, TrendingUp, Layers, Activity, 
+  Film, Sparkles, Shield, Fish, Award, Eye, EyeOff, Volume2, VolumeX
+} from 'lucide-react';
+import { 
+  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, 
+  LineChart, Line, CartesianGrid, Legend, PieChart, Pie, Cell 
+} from 'recharts';
+import { useNavigate } from 'react-router-dom';
 
+const TOTAL_SLIDES = 28;
+
+const SLIDE_TITLES = [
+  'Kapak — Sinop İl Tarım ve Orman Müdürlüğü',
+  'Sunum Planı ve İçerik',
+  'Sinop İl Tanıtımı & 175 km Sahil Şeridi',
+  'Kurumsal Yapı ve Personel Kadrosu',
+  'Kontrol Gemisi Varlığı (Kuzey Yıldızı & Kontrol 57)',
+  'Görüntüleme Ekipmanları & Drone Filosu',
+  'Bölgesel Potansiyel ve Genel Sektör Verileri',
+  'Deniz Yetiştiriciliği Mevcut Durumu (1. & 2. Alan)',
+  '1. Potansiyel Alan Uydu Haritası & Tesisler',
+  '2. Potansiyel Alan Uydu Haritası & Kafesler',
+  'Gümüşdoğa Tesisleri ve Yemleme Dubası (BARCH)',
+  'Uğursun Su Ürünleri Midye Yetiştiriciliği',
+  'İç Sular Yetiştiriciliği (Boyabat & Saraydüzü)',
+  'Boyabat Baraj Gölü Tesis Alanı & Ilgaz Su Ürünleri',
+  'Karasal Tabanlı ve Beton Havuz Tesisleri',
+  'Saha Operasyonu & Türk Somonu Hasat Videosu',
+  'Su Ürünleri Yetiştiriciliği Genel İcmal Tablosu',
+  'Yıllara Göre Su Ürünleri Üretim Miktarları (2022-2026)',
+  'Midye Hasat Görüntüleri ve Üretim Potansiyeli',
+  'Su Ürünleri Üretiminin Desteklenmesi ve Teşvikler',
+  'Eğitim ve Yayım Faaliyetleri (SUBİS & Balıkçılık)',
+  'İç Su ve Deniz Hayalet Ağ Temizleme Projesi',
+  'Saha Denetim ve Kontrol Faaliyetleri (1380 Sayılı Kanun)',
+  'İdari Para Cezaları ve El Koyma İstatistikleri',
+  'Balıkçı Gemileri Filosu ve Barınak Altyapısı',
+  'Su Ürünleri İhracatı ve Ekonomik Katma Değer',
+  'Karşılaşılan Sorunlar ve Çözüm Önerileri',
+  'Teşekkür ve Kapanış'
+];
+
+// --- GRAFİK & İSTATİSTİK VERİLERİ ---
 const productionData = [
-  { year: '2022', 'Türk Somonu': 17333, 'Gökkuşağı Alabalığı': 186, 'Midye': 0, 'Toplam': 17519, turkSomonu: 17333, alabalik: 186, midye: 0 },
-  { year: '2023', 'Türk Somonu': 26631, 'Gökkuşağı Alabalığı': 126, 'Midye': 64, 'Toplam': 26821, turkSomonu: 26631, alabalik: 126, midye: 64 },
-  { year: '2024', 'Türk Somonu': 20541, 'Gökkuşağı Alabalığı': 620, 'Midye': 35, 'Toplam': 21196, turkSomonu: 20541, alabalik: 620, midye: 35 },
-  { year: '2025', 'Türk Somonu': 34470, 'Gökkuşağı Alabalığı': 612, 'Midye': 148, 'Toplam': 35230, turkSomonu: 34470, alabalik: 612, midye: 148 },
-  { year: '2026', 'Türk Somonu': 42609, 'Gökkuşağı Alabalığı': 276, 'Midye': 122, 'Toplam': 43007, turkSomonu: 42609, alabalik: 276, midye: 122 },
+  { year: '2022', turkSomonu: 17333, alabalik: 186, midye: 0, Toplam: 17519 },
+  { year: '2023', turkSomonu: 26631, alabalik: 126, midye: 64, Toplam: 26821 },
+  { year: '2024', turkSomonu: 20541, alabalik: 620, midye: 35, Toplam: 21196 },
+  { year: '2025', turkSomonu: 34470, alabalik: 612, midye: 148, Toplam: 35230 },
+  { year: '2026', turkSomonu: 42609, alabalik: 276, midye: 122, Toplam: 43007 },
 ];
 
 const facilityData = [
-  { name: 'Deniz Ağ Kafes', value: 35, color: '#3b82f6' },
-  { name: 'İç Su Ağ Kafes', value: 8, color: '#10b981' },
-  { name: 'Midye', value: 5, color: '#f59e0b' },
-  { name: 'Karasal', value: 3, color: '#8b5cf6' },
+  { name: 'Deniz Ağ Kafes', value: 35, capacity: '70.620 Ton', color: '#3b82f6' },
+  { name: 'İç Su Ağ Kafes', value: 8, capacity: '3.450 Ton', color: '#10b981' },
+  { name: 'Midye Çiftliği', value: 5, capacity: '4.940 Ton', color: '#f59e0b' },
+  { name: 'Karasal / Kuluçka', value: 3, capacity: '40 Milyon Adet', color: '#8b5cf6' },
 ];
 
 const supportData = [
-  { year: '2023', miktar: 6.211584, tesis: 21 },
-  { year: '2024', miktar: 6.325129, tesis: 18 },
-  { year: '2025', miktar: 5.025634, tesis: 15 },
-  { year: '2026', miktar: 7.142139, tesis: 20 },
+  { year: '2023', miktar: 6.21, tesis: 21 },
+  { year: '2024', miktar: 6.32, tesis: 18 },
+  { year: '2025', miktar: 5.02, tesis: 15 },
+  { year: '2026', miktar: 7.14, tesis: 20 },
 ];
-
-// --- DASHBOARD BILESENLERI ---
-const CustomCard = ({ title, value, icon: Icon, color, subtitle }) => (
-  <div style={{ background: '#fff', borderRadius: '12px', padding: '20px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03)', borderLeft: '4px solid ' + color, transition: 'transform 0.2s', cursor: 'pointer' }}
-       onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
-       onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-      <div>
-        <p style={{ color: '#64748b', fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>{title}</p>
-        <h3 style={{ color: '#1e293b', fontSize: '28px', fontWeight: 800, margin: 0 }}>{value}</h3>
-        {subtitle && <p style={{ color: '#94a3b8', fontSize: '12px', marginTop: '8px', fontWeight: 500 }}>{subtitle}</p>}
-      </div>
-      <div style={{ background: color + '15', padding: '12px', borderRadius: '12px' }}>
-        <Icon size={24} color={color} />
-      </div>
-    </div>
-  </div>
-);
-
-// --- SLAYT BILESENLERI ---
-const StatBox = ({ title, value, subtitle, color }) => (
-  <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '14px', border: '1px solid ' + color + '40', borderLeft: '4px solid ' + color, boxShadow: '0 8px 24px rgba(0,0,0,0.3)' }}>
-    <div style={{ color: color, fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '10px' }}>{title}</div>
-    <div style={{ color: '#fff', fontSize: '32px', fontWeight: 900, lineHeight: 1.1 }}>{value}</div>
-    {subtitle && <div style={{ color: '#94a3b8', fontSize: '13px', marginTop: '8px' }}>{subtitle}</div>}
-  </div>
-);
-
-const SplitSlide = ({ leftContent, rightImgUrls }) => (
-  <div style={{ display: 'flex', height: '100vh', width: '100vw', backgroundColor: '#020617', animation: 'fadeIn 0.5s ease-out' }}>
-    <div style={{ width: '55%', padding: '60px', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto' }}>
-      {leftContent}
-    </div>
-    <div style={{ width: '45%', position: 'relative', overflow: 'hidden', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
-      {rightImgUrls && rightImgUrls.length > 1 ? (
-          <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr', gridTemplateColumns: '1fr 1fr', gap: '4px', height: '100%' }}>
-              <div style={{ gridColumn: '1 / -1', backgroundImage: 'url(/images/brifing/' + rightImgUrls[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', animation: 'zoomIn 1.5s ease-out both' }} />
-              {rightImgUrls.slice(1).map((url, i) => (
-                  <div key={i} style={{ backgroundImage: 'url(/images/brifing/' + url + ')', backgroundSize: 'cover', backgroundPosition: 'center', animation: 'zoomIn 1.5s ease-out ' + (0.2 * (i+1)) + 's both' }} />
-              ))}
-          </div>
-      ) : rightImgUrls && rightImgUrls.length === 1 ? (
-          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: 'url(/images/brifing/' + rightImgUrls[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', animation: 'kenBurns 10s ease-out both' }} />
-      ) : null}
-    </div>
-  </div>
-);
-
-const FullSlide = ({ children, bgImg }) => (
-  <div style={{ 
-    height: '100vh', width: '100vw', 
-    backgroundColor: '#020617', 
-    backgroundImage: bgImg ? 'linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.95)), url(/images/brifing/' + bgImg + ')' : 'none',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '60px', animation: 'fadeIn 0.5s ease-out' 
-  }}>
-    {children}
-  </div>
-);
-
-// --- 35 SAYFALIK SLAYT DIZISI (ESKILER BURADA KORUNUYOR) ---
-const SLIDES = [
-  {
-    title: 'Yeni Kapak', desc: 'Ana Giriş',
-    render: () => (
-      <div style={{
-        height: '100vh', width: '100vw',
-        backgroundColor: '#000',
-        backgroundImage: 'url(/images/brifing/kapak_yeni.png)',
-        backgroundSize: 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        animation: 'fadeIn 0.5s ease-out'
-      }} />
-    )
-  },
-
-  // 1- YÜKLENEN ÖZEL RESİMLER
-  {
-    title: 'Yeni Kapak (Özel)', desc: 'Yüklenen Kapak Resmi',
-    render: () => (
-      <div style={{
-        height: '100vh', width: '100vw',
-        backgroundColor: '#000',
-        backgroundImage: 'url(/images/brifing/kapak_2026.jpg)',
-        backgroundSize: 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        animation: 'fadeIn 0.5s ease-out'
-      }} />
-    )
-  },
-  {
-    title: 'Sunum İçeriği (Özel)', desc: 'Yüklenen İçerik Resmi',
-    render: () => (
-      <div style={{
-        height: '100vh', width: '100vw',
-        backgroundColor: '#000',
-        backgroundImage: 'url(/images/brifing/sunum_icerigi.png)',
-        backgroundSize: 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        animation: 'fadeIn 0.5s ease-out'
-      }} />
-    )
-  },
-  {
-    title: 'Sinop İl Tanıtımı', desc: 'Yüklenen Özel Sayfa',
-    render: () => (
-      <div style={{
-        height: '100vh', width: '100vw',
-        backgroundColor: '#000',
-        backgroundImage: 'url(/images/brifing/sinop_il_tanitimi.png)',
-        backgroundSize: 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        animation: 'fadeIn 0.5s ease-out'
-      }} />
-    )
-  },
-  {
-    title: 'Misyon ve Vizyon', desc: 'Kurumsal',
-    render: () => (
-      <div style={{
-        height: '100vh', width: '100vw',
-        backgroundColor: '#000',
-        backgroundImage: 'url(/images/brifing/misyon_vizyon.png)',
-        backgroundSize: 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        animation: 'fadeIn 0.5s ease-out'
-      }} />
-    )
-  },
-  {
-    title: 'Kurumsal Yapı', desc: 'Personel Dağılımı',
-    render: () => (
-      <div style={{
-        height: '100vh', width: '100vw',
-        backgroundColor: '#000',
-        backgroundImage: 'url(/images/brifing/kurumsal_yapi.png)',
-        backgroundSize: 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        animation: 'fadeIn 0.5s ease-out'
-      }} />
-    )
-  },
-
-  // 2- TAM VERSİYON 24 SAYFALIK SERİ (Kapak ve Genel Tanıtım dahil)
-  {
-    title: 'Kapak (Eski 1)', desc: 'Açılış Slaydı',
-    render: () => (
-      <FullSlide bgImg="image44.jpg">
-        <div style={{ textAlign: 'center', maxWidth: '900px' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '30px' }}><Anchor size={64} color="#3b82f6" /></div>
-          <div style={{ fontSize: '18px', color: '#60a5fa', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '20px' }}>
-            T.C. TARIM VE ORMAN BAKANLIĞI — SİNOP İL MÜDÜRLÜĞÜ
-          </div>
-          <h1 style={{ fontSize: '64px', fontWeight: 900, color: '#fff', lineHeight: 1.15, margin: '0 0 24px 0', letterSpacing: '-0.02em' }}>
-            Su Ürünleri<br /><span style={{ color: '#38bdf8' }}>Yetiştiricilik Sunumu</span>
-          </h1>
-          <p style={{ fontSize: '24px', color: '#e2e8f0', fontWeight: 400, marginBottom: '50px', lineHeight: 1.6 }}>
-            Balıkçılık ve Su Ürünleri Şubesi — 2026
-          </p>
-          <div style={{ display: 'inline-block', background: 'rgba(30, 41, 59, 0.8)', padding: '14px 32px', borderRadius: '50px', border: '1px solid #3b82f6', color: '#cbd5e1', fontSize: '16px' }}>
-            Türk Somonu Üretiminde Türkiye'nin Lideri
-          </div>
-        </div>
-      </FullSlide>
-    )
-  },
-  {
-    title: 'Genel Tanıtım (Eski 2)', desc: 'Sinop İlinin Potansiyeli',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image13.jpg']}
-        leftContent={
-          <>
-            <div style={{ color: '#38bdf8', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Karadeniz'in Su Ürünleri Başkenti</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Mavi Vatanın Kuzeydeki Kalbi: Sinop</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', marginBottom: '30px' }}>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #38bdf8' }}>
-                <div style={{ color: '#38bdf8', fontSize: '32px', fontWeight: 900 }}>175 km</div>
-                <div style={{ color: '#fff', fontSize: '18px', fontWeight: 600 }}>Sahil Şeridi Uzunluğu</div>
-                <div style={{ color: '#94a3b8', fontSize: '15px' }}>Karadeniz'in en uzun sahil şeridine sahip ilidir.</div>
-              </div>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981' }}>
-                <div style={{ color: '#10b981', fontSize: '32px', fontWeight: 900 }}>Kuzeyin Doğal Koyları</div>
-                <div style={{ color: '#fff', fontSize: '18px', fontWeight: 600 }}>Stratejik Avantaj</div>
-                <div style={{ color: '#94a3b8', fontSize: '15px' }}>Deniz ağ kafes yetiştiriciliği için korunaklı ve temiz sular sunar.</div>
-              </div>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Sektör Görünümü', desc: 'Su Ürünleri Altyapısı',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image31.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#3b82f6', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Sektörel Altyapı</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Sinop'un Su Ürünleri Sektörü</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '30px' }}>
-              <StatBox title="Kayıtlı Balıkçı Gemisi" value="428" subtitle="Adet" color="#3b82f6" />
-              <StatBox title="Aktif Balıkçı" value="2.555" subtitle="Kişi" color="#f59e0b" />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {[{l: 'Örgütlenme ve Limanlar', v: '11 Su Ürünleri Koop. | 5 Balıkçı Barınağı', c: '#10b981'},
-                  {l: 'Sanayi Entegrasyonu', v: '5 Balık Unu/Yağı Fabrikası | 9 İşleme Tesisi', c: '#8b5cf6'},
-                  {l: 'Hamsi Karaya Çıkış', v: 'Gerze, Helaldı, Demirciköyü (3 Nokta)', c: '#ec4899'}].map((item, i) => (
-                    <div key={i} style={{ padding: '16px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', borderLeft: '3px solid ' + item.c }}>
-                        <div style={{ color: item.c, fontSize: '15px', fontWeight: 600 }}>{item.l}</div>
-                        <div style={{ color: '#cbd5e1', fontSize: '15px' }}>{item.v}</div>
-                    </div>
-                ))}
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Denetim Gücü 1', desc: 'Kuzey Yıldızı ve Kontrol 57',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image11.jpeg', 'image10.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#ef4444', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Denetim ve Kontrol</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '24px', fontWeight: 800 }}>Kontrol Gemisi Varlığı</h2>
-            <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: 1.7, marginBottom: '20px' }}>
-              İlimiz envanterinde 2 adet su ürünleri kontrol gemisi mevcuttur. Deniz ve iç sularda denetim amacıyla aktif kullanılmaktadır.
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
-                <div style={{ background: 'rgba(59,130,246,0.1)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(59,130,246,0.3)' }}>
-                    <div style={{ color: '#60a5fa', fontWeight: 800, fontSize: '20px', marginBottom: '10px' }}>KUZEY YILDIZI</div>
-                    <ul style={{ color: '#cbd5e1', paddingLeft: '20px', lineHeight: 1.6 }}>
-                        <li><b>Boy:</b> 10.50 metre</li>
-                        <li><b>Motor Gücü:</b> 250 Hp (2 adet)</li>
-                        <li><b>Konum:</b> Sinop Merkez Balıkçı Barınağında görevde</li>
-                        <li><b>Durum:</b> Aktif</li>
-                    </ul>
-                </div>
-                <div style={{ background: 'rgba(99,102,241,0.1)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(99,102,241,0.3)' }}>
-                    <div style={{ color: '#818cf8', fontWeight: 800, fontSize: '20px', marginBottom: '10px' }}>KONTROL 57</div>
-                    <ul style={{ color: '#cbd5e1', paddingLeft: '20px', lineHeight: 1.6 }}>
-                        <li><b>Boy:</b> 6 metre</li>
-                        <li><b>Motor Gücü:</b> 100 Hp (1 adet)</li>
-                        <li><b>Konum:</b> İl Müdürlüğümüz bahçesinde römork üzerinde hazır</li>
-                        <li><b>Durum:</b> Aktif</li>
-                    </ul>
-                </div>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Denetim Gücü 2', desc: 'Dron ve Kamera',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image12.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#10b981', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Görüntüleme Ekipmanları</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Hava ve Saha Gözetimi</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px' }}>
-                <div style={{ display: 'flex', gap: '20px', background: 'rgba(16,185,129,0.05)', padding: '24px', borderRadius: '12px', border: '1px solid rgba(16,185,129,0.2)' }}>
-                    <Camera size={40} color="#10b981" />
-                    <div>
-                        <div style={{ color: '#34d399', fontWeight: 800, fontSize: '22px', marginBottom: '8px' }}>3 Adet Hava Dronu</div>
-                        <div style={{ color: '#e2e8f0', fontSize: '16px', lineHeight: 1.6 }}>Şubemiz denetimlerinde deniz ve kıyı şeridini havadan kontrol etmek için aktif olarak kullanılmaktadır.</div>
-                    </div>
-                </div>
-                <div style={{ display: 'flex', gap: '20px', background: 'rgba(245,158,11,0.05)', padding: '24px', borderRadius: '12px', border: '1px solid rgba(245,158,11,0.2)' }}>
-                    <Camera size={40} color="#f59e0b" />
-                    <div>
-                        <div style={{ color: '#fbbf24', fontWeight: 800, fontSize: '22px', marginBottom: '8px' }}>Saha Fotoğraf Makinesi</div>
-                        <div style={{ color: '#e2e8f0', fontSize: '16px', lineHeight: 1.6 }}>Yüksek yakınlaştırma <b>(83x zoom)</b> kapasitesine sahip 1 adet profesyonel makine ile ihlaller uzaktan tespit edilmektedir.</div>
-                    </div>
-                </div>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Deniz Yetiştiriciliği', desc: 'Genel Durum',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image23.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#3b82f6', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Deniz Yetiştiriciliği</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '24px', fontWeight: 800 }}>Mevcut Durum</h2>
-            <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: 1.7, marginBottom: '24px' }}>
-              İlimiz sınırları içerisinde deniz yetiştiriciliği 1. ve 2. potansiyel alan olmak üzere 2 alanda yürütülmektedir.
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6' }}>
-                  <div style={{ color: '#60a5fa', fontWeight: 700, marginBottom: '8px' }}>İşletme Sayısı</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}>Denizlerde <b>35</b> yetiştiricilik tesisi mevcuttur (28'i faal). Ayrıca 5 adet Çift Kabuklu tesisinden 4'ü faaldir.</div>
-              </div>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981' }}>
-                  <div style={{ color: '#34d399', fontWeight: 700, marginBottom: '8px' }}>Ana Türler</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}><b>Türk Somonu</b>, <b>Levrek</b> ve <b>Kara Midyesi</b>.</div>
-              </div>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
-                  <div style={{ color: '#fbbf24', fontWeight: 700, marginBottom: '8px' }}>Kapasite</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}>
-                      <b>Proje:</b> 67.000 ton Somon, 15.600 ton Levrek, 4.940 ton Midye.<br/>
-                      <b>Fiili:</b> 31.792 ton Somon, 10.600 ton Levrek, 1.835 ton Midye.
-                  </div>
-              </div>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Tesis: Gümüşdoğa', desc: 'Örnek Deniz Tesisi',
-    render: () => (
-      <FullSlide bgImg="image24.jpeg">
-        <div style={{ textAlign: 'center', background: 'rgba(0,0,0,0.6)', padding: '40px', borderRadius: '20px', backdropFilter: 'blur(8px)' }}>
-            <Building size={64} color="#38bdf8" style={{ marginBottom: '20px' }} />
-            <h1 style={{ fontSize: '48px', fontWeight: 900, color: '#fff' }}>Gümüşdoğa Yetiştiricilik Tesisi</h1>
-            <p style={{ fontSize: '20px', color: '#cbd5e1', marginTop: '10px' }}>Deniz Ağ Kafes İşletmesi - Sinop Açıkları</p>
-        </div>
-      </FullSlide>
-    )
-  },
-  {
-    title: 'Potansiyel Alanlar', desc: 'Harita Görünümü',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image25.png']}
-        leftContent={
-          <>
-            <div style={{ color: '#3b82f6', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Üretim Sahaları</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>1. ve 2. Potansiyel Yetiştiricilik Alanları</h2>
-            <div style={{ background: 'rgba(59,130,246,0.1)', padding: '30px', borderRadius: '16px', border: '1px solid rgba(59,130,246,0.3)' }}>
-                <Map size={48} color="#60a5fa" style={{ marginBottom: '20px' }} />
-                <p style={{ color: '#e2e8f0', fontSize: '18px', lineHeight: 1.6 }}>
-                    Haritada kırmızı ile işaretli bölgeler Sinop ilimizin resmi olarak belirlenmiş 1. ve 2. potansiyel su ürünleri yetiştiricilik alanlarını göstermektedir. Bu alanlarda kafesler planlı bir şekilde konumlandırılmıştır.
-                </p>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Tesis: Uğursun Midye', desc: 'Çift Kabuklu Üretimi',
-    render: () => (
-      <FullSlide bgImg="image26.jpeg">
-        <div style={{ textAlign: 'center', background: 'rgba(0,0,0,0.6)', padding: '40px', borderRadius: '20px', backdropFilter: 'blur(8px)' }}>
-            <Anchor size={64} color="#10b981" style={{ marginBottom: '20px' }} />
-            <h1 style={{ fontSize: '48px', fontWeight: 900, color: '#fff' }}>Uğursun Su Ürünleri</h1>
-            <p style={{ fontSize: '20px', color: '#cbd5e1', marginTop: '10px' }}>Kara Midyesi Yetiştiricilik Tesisi</p>
-        </div>
-      </FullSlide>
-    )
-  },
-  {
-    title: 'İç Sular', desc: 'Genel Durum',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image27.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#10b981', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>İç Sular Yetiştiriciliği</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '24px', fontWeight: 800 }}>Mevcut Durumu</h2>
-            <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: 1.7, marginBottom: '24px' }}>
-              İlimiz sınırları içerisinde iç sularda yetiştiricilik faaliyetleri Saraydüzü İlçesi Boyabat Baraj Gölünde yapılmaktadır.
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981' }}>
-                  <div style={{ color: '#34d399', fontWeight: 700, marginBottom: '8px' }}>İşletme Sayısı & Türler</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}>İç sularda faaliyet gösteren <b>8</b> tesis mevcuttur (6'sı faal). Ana tür <b>Gökkuşağı Alabalığı</b>'dır.</div>
-              </div>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
-                  <div style={{ color: '#fbbf24', fontWeight: 700, marginBottom: '8px' }}>Kapasite</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}>
-                      İç su işletmelerinde <b>3.450 ton/yıl</b> toplam proje kapasitesi ve <b>2.440 ton/yıl</b> fiili kapasite bulunmaktadır.
-                  </div>
-              </div>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Tesis: Ilgaz', desc: 'İç Su Tesisi',
-    render: () => (
-      <FullSlide bgImg="image28.jpeg">
-        <div style={{ textAlign: 'center', background: 'rgba(0,0,0,0.6)', padding: '40px', borderRadius: '20px', backdropFilter: 'blur(8px)' }}>
-            <Fish size={64} color="#f59e0b" style={{ marginBottom: '20px' }} />
-            <h1 style={{ fontSize: '48px', fontWeight: 900, color: '#fff' }}>Ilgaz Su Ürünleri Tesisi</h1>
-            <p style={{ fontSize: '20px', color: '#cbd5e1', marginTop: '10px' }}>İç Su Ağ Kafes İşletmesi - Boyabat Baraj Gölü</p>
-        </div>
-      </FullSlide>
-    )
-  },
-  {
-    title: 'Baraj Gölü', desc: 'Boyabat Barajı Haritası',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image29.png']}
-        leftContent={
-          <>
-            <div style={{ color: '#10b981', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Üretim Sahaları</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Boyabat Baraj Gölü Tesis Alanı</h2>
-            <div style={{ background: 'rgba(16,185,129,0.1)', padding: '30px', borderRadius: '16px', border: '1px solid rgba(16,185,129,0.3)' }}>
-                <Map size={48} color="#34d399" style={{ marginBottom: '20px' }} />
-                <p style={{ color: '#e2e8f0', fontSize: '18px', lineHeight: 1.6 }}>
-                    Saraydüzü ilçesinde yer alan Boyabat Baraj gölü, ilimizin en büyük iç su üretim sahasıdır. Harita üzerinde tesislerin göl içindeki dağılımları ve kapasite konumlandırmaları yer almaktadır.
-                </p>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Karasal Yetiştiricilik', desc: 'Kuluçkahaneler',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image30.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#f59e0b', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Karasal Tesisler</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '24px', fontWeight: 800 }}>Karasal Yetiştiricilik Mevcut Durumu</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
-                  <div style={{ color: '#fbbf24', fontWeight: 700, marginBottom: '8px' }}>İşletme Sayısı & Türler</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}>
-                      Karada <b>3</b> tesis mevcuttur (1 faal). Ayrıca karasal tabanlı deniz tesisi için 4 başvuru vardır.<br/>
-                      Ana tür: <b>Gökkuşağı Alabalığı</b>.
-                  </div>
-              </div>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6' }}>
-                  <div style={{ color: '#a78bfa', fontWeight: 700, marginBottom: '8px' }}>Kapasite</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}>
-                      <b>8.962 ton/yıl</b> proje kapasitesi.<br/>
-                      Kuluçkahane Kapasitesi: <b>60.500.000 adet/yıl</b>.
-                  </div>
-              </div>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Tesis Varlığı Tablosu', desc: 'Tüm Tesislerin Özeti',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image31.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#38bdf8', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Tesis Envanteri</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Sinop Su Ürünleri Yetiştiriciliği Tesis Varlığı</h2>
-            <div style={{ background: 'rgba(59,130,246,0.1)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(59,130,246,0.3)', marginBottom: '20px' }}>
-                <p style={{ color: '#e2e8f0', fontSize: '16px', lineHeight: 1.6, margin: 0 }}>
-                    İlimizde deniz ürünleri olarak <b>Türk Somonu</b>, <b>Levrek</b> ve <b>Midye</b> üretimleri yapılmaktadır. İç su ve kara tesislerinde <b>Gökkuşağı Alabalığı</b> yetiştiriciliği mevcuttur.
-                </p>
-            </div>
-            <table style={{ width: '100%', color: '#fff', borderCollapse: 'collapse', fontSize: '14px' }}>
-                <thead>
-                    <tr style={{ background: 'rgba(255,255,255,0.1)' }}>
-                        <th style={{ padding: '12px', textAlign: 'left' }}>Tesis Türü</th>
-                        <th style={{ padding: '12px', textAlign: 'center' }}>Sayı</th>
-                        <th style={{ padding: '12px', textAlign: 'left' }}>Durumu</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                        <td style={{ padding: '12px' }}>Deniz Ağ Kafes</td>
-                        <td style={{ padding: '12px', textAlign: 'center', fontWeight: 'bold' }}>35</td>
-                        <td style={{ padding: '12px' }}>28 Aktif, 7 Pasif</td>
-                    </tr>
-                    <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                        <td style={{ padding: '12px' }}>İç Su Ağ Kafes</td>
-                        <td style={{ padding: '12px', textAlign: 'center', fontWeight: 'bold' }}>8</td>
-                        <td style={{ padding: '12px' }}>6 Aktif, 2 Pasif</td>
-                    </tr>
-                    <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                        <td style={{ padding: '12px' }}>Midye</td>
-                        <td style={{ padding: '12px', textAlign: 'center', fontWeight: 'bold' }}>5</td>
-                        <td style={{ padding: '12px' }}>4 Aktif, 1 Pasif</td>
-                    </tr>
-                    <tr>
-                        <td style={{ padding: '12px' }}>Karasal Tesis</td>
-                        <td style={{ padding: '12px', textAlign: 'center', fontWeight: 'bold' }}>3</td>
-                        <td style={{ padding: '12px' }}>1 Aktif, 2 Pasif</td>
-                    </tr>
-                </tbody>
-            </table>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Saha Fotoğrafları', desc: 'Hasat ve Tesisler',
-    render: () => (
-      <FullSlide bgImg="image33.jpeg">
-        <div style={{ textAlign: 'center', background: 'rgba(0,0,0,0.6)', padding: '40px', borderRadius: '20px', backdropFilter: 'blur(8px)' }}>
-            <Camera size={64} color="#f59e0b" style={{ marginBottom: '20px' }} />
-            <h1 style={{ fontSize: '48px', fontWeight: 900, color: '#fff' }}>Saha ve Hasat Görünümleri</h1>
-            <p style={{ fontSize: '20px', color: '#cbd5e1', marginTop: '10px' }}>Üretimden sofraya güvenli gıda zinciri</p>
-        </div>
-      </FullSlide>
-    )
-  },
-  {
-    title: 'Saha Ek Görseller', desc: 'Deniz Hasadı',
-    render: () => (
-      <FullSlide bgImg="image34.jpeg">
-        <div style={{ position: 'absolute', bottom: '60px', left: '60px', background: 'rgba(0,0,0,0.6)', padding: '20px 40px', borderRadius: '12px', backdropFilter: 'blur(8px)', borderLeft: '4px solid #38bdf8' }}>
-            <h2 style={{ fontSize: '32px', fontWeight: 800, color: '#fff', margin: 0 }}>Geniş Ölçekli Üretim</h2>
-            <p style={{ fontSize: '18px', color: '#cbd5e1', margin: '8px 0 0 0' }}>Devasa ağ kafeslerde otomatik besleme sistemleri</p>
-        </div>
-      </FullSlide>
-    )
-  },
-  {
-    title: 'Üretim İstatistikleri', desc: 'Yıllara Göre Tonaj',
-    render: () => (
-      <FullSlide>
-        <div style={{ width: '100%', maxWidth: '1200px' }}>
-          <div style={{ color: '#38bdf8', fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '12px', textAlign: 'center' }}>Üretim İstatistikleri</div>
-          <h2 style={{ fontSize: '38px', color: '#fff', textAlign: 'center', marginBottom: '40px', fontWeight: 800 }}>Su Ürünleri Yetiştiriciliği Üretim Miktarları (Ton)</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '40px', alignItems: 'center' }}>
-            <div>
-                <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: 1.6, marginBottom: '24px' }}>
-                    Sinop, <b>Türk Somonu üretiminde Türkiye 1. sıradadır.</b>
-                </p>
-                <div style={{ background: 'rgba(59,130,246,0.1)', borderRadius: '12px', border: '1px solid rgba(59,130,246,0.3)', padding: '20px' }}>
-                    <div style={{ color: '#cbd5e1', fontSize: '15px', marginBottom: '10px' }}>5 Yıllık Toplam Üretim:</div>
-                    <div style={{ color: '#fff', fontSize: '24px', fontWeight: 700, marginBottom: '8px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '8px' }}>Türk Somonu: 141.584 Ton</div>
-                    <div style={{ color: '#fff', fontSize: '20px', fontWeight: 700, marginBottom: '8px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '8px' }}>G. Alabalığı: 1.820 Ton</div>
-                    <div style={{ color: '#fff', fontSize: '20px', fontWeight: 700 }}>Genel Toplam: 143.773 Ton</div>
-                </div>
-            </div>
-            <div style={{ height: '400px', background: 'rgba(255,255,255,0.02)', padding: '20px', borderRadius: '16px' }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={productionData} margin={{ top: 10, right: 30, left: 10, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" vertical={false} />
-                  <XAxis dataKey="year" stroke="#475569" tick={{ fill: '#94a3b8', fontSize: 14 }} axisLine={false} tickLine={false} />
-                  <YAxis stroke="#475569" tick={{ fill: '#94a3b8', fontSize: 12 }} axisLine={false} tickLine={false} tickFormatter={(v) => (v / 1000) + 'k'} />
-                  <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155', borderRadius: '10px', color: '#fff' }} formatter={(value, name) => [new Intl.NumberFormat('tr-TR').format(value) + ' Ton', name]} />
-                  <Line type="monotone" dataKey="Türk Somonu" stroke="#3b82f6" strokeWidth={4} dot={{ r: 6 }} />
-                  <Line type="monotone" dataKey="Toplam" stroke="#10b981" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 4 }} />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-          </div>
-        </div>
-      </FullSlide>
-    )
-  },
-  {
-    title: 'Kalite Kontrol', desc: 'Boylama ve Hasat',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image37.jpeg', 'image36.jpeg', 'image38.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#10b981', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Saha Çalışmaları</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Boylama, Hasat ve Denetim</h2>
-            <div style={{ background: 'rgba(16,185,129,0.1)', padding: '30px', borderRadius: '16px', border: '1px solid rgba(16,185,129,0.3)' }}>
-                <Activity size={48} color="#34d399" style={{ marginBottom: '20px' }} />
-                <p style={{ color: '#e2e8f0', fontSize: '18px', lineHeight: 1.6 }}>
-                    Türk Somonu hasadı sırasında kalite kontrol, boylama ve sağlık taramaları uzman personelimiz gözetiminde titizlikle yürütülmektedir.
-                </p>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Desteklemeler', desc: 'Yıllara Göre Destekler',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image39.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#f59e0b', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Teşvikler</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Su Ürünleri Üretiminin Desteklenmesi</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
-              {supportData.map((d, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 24px', borderLeft: '4px solid #f59e0b' }}>
-                  <div><div style={{ color: '#f59e0b', fontWeight: 800, fontSize: '24px' }}>{d.year}</div><div style={{ color: '#94a3b8', fontSize: '14px' }}>{d.tesis} Tesis</div></div>
-                  <div style={{ color: '#fff', fontSize: '24px', fontWeight: 700 }}>{d.miktar.toLocaleString('tr-TR', { minimumFractionDigits: 2 })} TL</div>
-                </div>
-              ))}
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Eğitim Faaliyetleri', desc: 'Seminer ve Eğitimler',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image41.jpeg', 'image40.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#8b5cf6', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Eğitim ve Faaliyetler</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Eğitim ve Yayım Faaliyetleri</h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {[
-                    'Nakil Belgesi Düzenleme Yetkililerine SUBİS kullanımı Eğitimi',
-                    'Tarımsal Üretim Planlaması Eğitimi',
-                    'Sucul Biyoçeşitliliğin Korunması ve Geliştirilmesi Projesi',
-                    'Hayalet Av Araçları Projesi',
-                    'Sucul İstilacı Türler ve Balık Tüketiminin Sevdirilmesi',
-                    'Su Ürünleri Yetiştiricilik Desteklemeleri Eğitimi'
-                ].map((item, i) => (
-                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', background: 'rgba(139,92,246,0.1)', borderRadius: '8px', border: '1px solid rgba(139,92,246,0.2)' }}>
-                        <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#a78bfa', flexShrink: 0 }} />
-                        <span style={{ color: '#e2e8f0', fontSize: '15px' }}>{item}</span>
-                    </div>
-                ))}
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Eğitim Görselleri', desc: 'Saha Bilinçlendirmesi',
-    render: () => (
-      <FullSlide bgImg="image42.jpeg">
-         <div style={{ position: 'absolute', bottom: '60px', left: '60px', background: 'rgba(0,0,0,0.6)', padding: '20px 40px', borderRadius: '12px', backdropFilter: 'blur(8px)', borderLeft: '4px solid #a78bfa' }}>
-            <h2 style={{ fontSize: '32px', fontWeight: 800, color: '#fff', margin: 0 }}>Sektör Buluşmaları</h2>
-            <p style={{ fontSize: '18px', color: '#cbd5e1', margin: '8px 0 0 0' }}>Balıkçılar ve tesis sahipleriyle düzenli eğitim ve değerlendirme toplantıları</p>
-        </div>
-      </FullSlide>
-    )
-  },
-  {
-    title: 'Hayalet Ağlar', desc: 'İç Su Temizlik Projesi',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image43.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#14b8a6', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Çevre ve Koruma</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>İç Su Hayalet Ağ Projesi Çalışmaları</h2>
-            <div style={{ background: 'rgba(20,184,166,0.1)', padding: '30px', borderRadius: '16px', border: '1px solid rgba(20,184,166,0.3)' }}>
-                <Shield size={48} color="#2dd4bf" style={{ marginBottom: '20px' }} />
-                <p style={{ color: '#e2e8f0', fontSize: '18px', lineHeight: 1.6 }}>
-                    Göllerde ve barajlarda terk edilmiş veya kaybolmuş "Hayalet Ağlar"ın tespit edilip sulardan çıkarılmasıyla doğal yaşam korunmakta ve ekosistem temizlenmektedir.
-                </p>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'Sorunlar & Öneriler', desc: 'Karşılaşılan Sorunlar',
-    render: () => (
-      <FullSlide>
-        <div style={{ textAlign: 'center', maxWidth: '800px', background: 'rgba(239, 68, 68, 0.1)', padding: '60px', borderRadius: '24px', border: '1px solid rgba(239, 68, 68, 0.3)' }}>
-          <AlertTriangle size={80} color="#f87171" style={{ marginBottom: '30px' }} />
-          <h1 style={{ fontSize: '48px', fontWeight: 900, color: '#fff', margin: '0 0 20px 0' }}>Karşılaşılan Sorunlar ve Çözüm Önerileri</h1>
-          <p style={{ fontSize: '18px', color: '#fca5a5', lineHeight: 1.8 }}>
-            Sektörün gelişimindeki darboğazlar, yasal mevzuat eksiklikleri ve saha denetimlerinde karşılaşılan operasyonel zorluklara dair çözüm raporlarımız bakanlık makamına sunulmuştur.
-          </p>
-        </div>
-      </FullSlide>
-    )
-  },
-  {
-    title: 'Kapanış', desc: 'Teşekkürler',
-    render: () => (
-      <FullSlide bgImg="image44.jpg">
-        <div style={{ textAlign: 'center', maxWidth: '800px', background: 'rgba(2, 6, 23, 0.6)', padding: '60px', borderRadius: '24px', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)' }}>
-          <TrendingUp size={80} color="#3b82f6" style={{ marginBottom: '30px' }} />
-          <h1 style={{ fontSize: '64px', fontWeight: 900, color: '#fff', margin: '0 0 20px 0', letterSpacing: '-0.02em' }}>TEŞEKKÜRLER</h1>
-          <div style={{ width: '80px', height: '4px', background: '#3b82f6', margin: '0 auto 30px auto', borderRadius: '2px' }} />
-          <p style={{ fontSize: '20px', color: '#cbd5e1', lineHeight: 1.8, marginBottom: '50px' }}>
-            Balıkçılık ve Su Ürünleri Şube Müdürlüğü<br /><span style={{ color: '#94a3b8' }}>Sinop İl Tarım ve Orman Müdürlüğü — 2026</span>
-          </p>
-        </div>
-      </FullSlide>
-    )
-  },
-
-  // 3- ESKİ VERSİYON (9 SAYFALIK ÖZET SUNUM KOMBİNASYONU)
-  {
-    title: 'ÖZET - Kapak', desc: 'Açılış Slaydı (9 Sayfalık Versiyon)',
-    render: () => (
-      <FullSlide bgImg="image44.jpg">
-        <div style={{ textAlign: 'center', maxWidth: '900px' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '30px' }}><Anchor size={64} color="#3b82f6" /></div>
-          <div style={{ fontSize: '18px', color: '#60a5fa', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '20px' }}>
-            T.C. TARIM VE ORMAN BAKANLIĞI — SİNOP İL MÜDÜRLÜĞÜ
-          </div>
-          <h1 style={{ fontSize: '64px', fontWeight: 900, color: '#fff', lineHeight: 1.15, margin: '0 0 24px 0', letterSpacing: '-0.02em', textShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
-            Su Ürünleri<br /><span style={{ color: '#38bdf8' }}>Yetiştiricilik Sunumu</span>
-          </h1>
-          <p style={{ fontSize: '24px', color: '#e2e8f0', fontWeight: 400, marginBottom: '50px', lineHeight: 1.6, textShadow: '0 4px 10px rgba(0,0,0,0.5)' }}>
-            Balıkçılık ve Su Ürünleri Şubesi — 2026
-          </p>
-          <div style={{ display: 'inline-block', background: 'rgba(30, 41, 59, 0.8)', padding: '14px 32px', borderRadius: '50px', border: '1px solid #3b82f6', color: '#cbd5e1', fontSize: '16px', backdropFilter: 'blur(10px)' }}>
-            Türk Somonu Üretiminde Türkiye'nin Lideri
-          </div>
-        </div>
-      </FullSlide>
-    )
-  },
-  {
-    title: 'ÖZET - Denetim', desc: 'Gemi & Dron Filosu',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image11.jpeg', 'image10.jpeg', 'image12.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#38bdf8', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Denetim ve Kontrol</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Kontrol Gemisi & Görüntüleme</h2>
-            <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: 1.7, marginBottom: '30px' }}>
-              İlimiz envanterinde 2 adet su ürünleri kontrol gemisi mevcuttur. Deniz ve iç sularda denetim ve kontrol amacıyla kullanılmaktadır.
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '30px' }}>
-                <StatBox title="KUZEY YILDIZI" value="10.50m" subtitle="250 Hp (2 Motor) - Aktif" color="#3b82f6" />
-                <StatBox title="KONTROL 57" value="6m" subtitle="100 Hp (1 Motor) - Aktif" color="#6366f1" />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px', background: 'rgba(255,255,255,0.04)', borderRadius: '12px', borderLeft: '4px solid #10b981' }}>
-                  <Camera size={28} color="#10b981" />
-                  <div><div style={{ color: '#fff', fontWeight: 700, fontSize: '16px' }}>3 Adet Hava Dronu</div><div style={{ color: '#64748b', fontSize: '14px' }}>Şubemiz denetimlerinde aktif kullanılmaktadır.</div></div>
-                </div>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'ÖZET - Genel Bakış', desc: 'Sektörel İstatistikler',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image13.jpg']}
-        leftContent={
-          <>
-            <div style={{ color: '#38bdf8', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Genel Bakış</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Sinop'un Su Ürünleri Sektörü</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '30px' }}>
-              <StatBox title="Balıkçı Gemisi & Balıkçı" value="428" subtitle="Kayıtlı gemi / 2555 aktif balıkçı" color="#3b82f6" />
-              <StatBox title="Yetiştiricilik Tesisi" value="51" subtitle="Tüm tesisler" color="#10b981" />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {[{l: 'Örgütlenme', v: '11 Su Ürünleri Koop. | 5 Balıkçı Barınağı', c: '#f59e0b'},
-                  {l: 'Sanayi Entegrasyonu', v: '5 Balık Unu Fabrikası | 9 İşleme Tesisi', c: '#8b5cf6'}].map((item, i) => (
-                    <div key={i} style={{ padding: '16px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', borderLeft: '3px solid ' + item.c }}>
-                        <div style={{ color: item.c, fontSize: '15px', fontWeight: 600 }}>{item.l}</div>
-                        <div style={{ color: '#cbd5e1', fontSize: '15px' }}>{item.v}</div>
-                    </div>
-                ))}
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'ÖZET - Deniz Y.', desc: 'Kapasite ve Türler',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image25.png', 'image23.jpeg', 'image24.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#3b82f6', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Deniz Yetiştiriciliği</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Mevcut Durum ve Potansiyel</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px', marginBottom: '24px' }}>
-              <div style={{ background: 'rgba(59,130,246,0.1)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(59,130,246,0.3)' }}>
-                  <div style={{ color: '#60a5fa', fontWeight: 700, marginBottom: '8px' }}>İşletme Sayısı ve Ana Türler</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}>Denizlerde toplam <b>35</b> yetiştiricilik tesisi mevcuttur (28 faal). Ana türler: <b>Türk Somonu, Levrek, Midye</b>.</div>
-              </div>
-              <div style={{ background: 'rgba(16,185,129,0.1)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(16,185,129,0.3)' }}>
-                  <div style={{ color: '#34d399', fontWeight: 700, marginBottom: '8px' }}>Kapasite Bilgileri</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}>Proje: 67.000 ton/yıl Somon, 15.600 ton/yıl Levrek.<br/>Fiili: 31.792 ton/yıl Somon, 10.600 ton/yıl Levrek.</div>
-              </div>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'ÖZET - İç Sular Y.', desc: 'Baraj Gölleri',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image29.png', 'image27.jpeg', 'image28.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#10b981', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>İç Sular Yetiştiriciliği</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Boyabat Baraj Gölü</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
-              <div style={{ background: 'rgba(16,185,129,0.1)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(16,185,129,0.3)' }}>
-                  <div style={{ color: '#34d399', fontWeight: 700, marginBottom: '8px' }}>İşletme Sayısı ve Türler</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}>İç sularda faaliyet gösteren <b>8</b> yetiştiricilik tesisi mevcuttur. Ana tür: <b>Gökkuşağı Alabalığı</b>.</div>
-              </div>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'ÖZET - Karasal Y.', desc: 'Kuluçkahaneler',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image30.jpeg', 'image31.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#f59e0b', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Karasal Yetiştiricilik</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Tesis Varlığı ve Türler</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
-              <div style={{ background: 'rgba(245,158,11,0.1)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(245,158,11,0.3)' }}>
-                  <div style={{ color: '#fbbf24', fontWeight: 700, marginBottom: '8px' }}>İşletme Sayısı</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}>Karada faaliyet gösteren <b>3</b> yetiştiricilik tesisi mevcuttur.</div>
-              </div>
-              <div style={{ background: 'rgba(139,92,246,0.1)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(139,92,246,0.3)' }}>
-                  <div style={{ color: '#a78bfa', fontWeight: 700, marginBottom: '8px' }}>Kapasite Bilgileri</div>
-                  <div style={{ color: '#e2e8f0', fontSize: '15px', lineHeight: 1.6 }}><b>60.500.000 adet/yıl</b> kuluçkahane kapasitesi mevcuttur.</div>
-              </div>
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'ÖZET - Üretim', desc: 'Türlere Göre Üretim',
-    render: () => (
-      <FullSlide>
-        <div style={{ width: '100%', maxWidth: '1200px' }}>
-          <div style={{ color: '#38bdf8', fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '12px', textAlign: 'center' }}>Üretim İstatistikleri</div>
-          <h2 style={{ fontSize: '38px', color: '#fff', textAlign: 'center', marginBottom: '40px', fontWeight: 800 }}>Su Ürünleri Yetiştiriciliği Üretim Miktarları (Ton)</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '40px', alignItems: 'center' }}>
-            <div>
-                <div style={{ background: 'rgba(59,130,246,0.1)', borderRadius: '12px', border: '1px solid rgba(59,130,246,0.3)', padding: '20px' }}>
-                    <div style={{ color: '#cbd5e1', fontSize: '15px', marginBottom: '10px' }}>5 Yıllık Toplam Üretim:</div>
-                    <div style={{ color: '#fff', fontSize: '24px', fontWeight: 700, marginBottom: '8px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '8px' }}>Türk Somonu: 141.584 Ton</div>
-                    <div style={{ color: '#fff', fontSize: '20px', fontWeight: 700 }}>Genel Toplam: 143.773 Ton</div>
-                </div>
-            </div>
-            <div style={{ height: '400px', background: 'rgba(255,255,255,0.02)', padding: '20px', borderRadius: '16px' }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={productionData} margin={{ top: 10, right: 30, left: 10, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" vertical={false} />
-                  <XAxis dataKey="year" stroke="#475569" tick={{ fill: '#94a3b8', fontSize: 14 }} axisLine={false} tickLine={false} />
-                  <YAxis stroke="#475569" tick={{ fill: '#94a3b8', fontSize: 12 }} axisLine={false} tickLine={false} tickFormatter={(v) => (v / 1000) + 'k'} />
-                  <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155', borderRadius: '10px', color: '#fff' }} formatter={(value, name) => [new Intl.NumberFormat('tr-TR').format(value) + ' Ton', name]} />
-                  <Line type="monotone" dataKey="Türk Somonu" stroke="#3b82f6" strokeWidth={4} dot={{ r: 6 }} />
-                  <Line type="monotone" dataKey="Toplam" stroke="#10b981" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 4 }} />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-          </div>
-        </div>
-      </FullSlide>
-    )
-  },
-  {
-    title: 'ÖZET - Destekler', desc: 'Yıllara Göre Destekler',
-    render: () => (
-      <SplitSlide
-        rightImgUrls={['image39.jpeg']}
-        leftContent={
-          <>
-            <div style={{ color: '#f59e0b', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '16px' }}>Teşvikler</div>
-            <h2 style={{ fontSize: '38px', color: '#fff', marginBottom: '36px', fontWeight: 800 }}>Su Ürünleri Üretiminin Desteklenmesi</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
-              {supportData.map((d, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 24px', borderLeft: '4px solid #f59e0b' }}>
-                  <div><div style={{ color: '#f59e0b', fontWeight: 800, fontSize: '24px' }}>{d.year}</div><div style={{ color: '#94a3b8', fontSize: '14px' }}>{d.tesis} Tesis</div></div>
-                  <div style={{ color: '#fff', fontSize: '24px', fontWeight: 700 }}>{d.miktar.toLocaleString('tr-TR', { minimumFractionDigits: 6 })} TL</div>
-                </div>
-              ))}
-            </div>
-          </>
-        }
-      />
-    )
-  },
-  {
-    title: 'ÖZET - Kapanış', desc: 'Teşekkürler',
-    render: () => (
-      <FullSlide bgImg="image44.jpg">
-        <div style={{ textAlign: 'center', maxWidth: '800px', background: 'rgba(2, 6, 23, 0.6)', padding: '60px', borderRadius: '24px', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)' }}>
-          <TrendingUp size={80} color="#3b82f6" style={{ marginBottom: '30px' }} />
-          <h1 style={{ fontSize: '64px', fontWeight: 900, color: '#fff', margin: '0 0 20px 0', letterSpacing: '-0.02em' }}>TEŞEKKÜRLER</h1>
-          <div style={{ width: '80px', height: '4px', background: '#3b82f6', margin: '0 auto 30px auto', borderRadius: '2px' }} />
-          <p style={{ fontSize: '20px', color: '#cbd5e1', lineHeight: 1.8, marginBottom: '50px' }}>
-            Balıkçılık ve Su Ürünleri Şube Müdürlüğü<br /><span style={{ color: '#94a3b8' }}>Sinop İl Tarım ve Orman Müdürlüğü — 2026</span>
-          </p>
-        </div>
-      </FullSlide>
-    )
-  }
-];
-// -----------------------------------------------------------------------------
 
 export default function Briefing() {
-  const [mode, setMode] = useState('menu'); // 'menu', 'slides', 'dashboard'
   const [slideIndex, setSlideIndex] = useState(0);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [showControls, setShowControls] = useState(true);
+  const [showDashboard, setShowDashboard] = useState(false);
+  const [showSlideHUD, setShowSlideHUD] = useState(false);
+  const [hoveredDot, setHoveredDot] = useState(null);
+  const [isAutoPlay, setIsAutoPlay] = useState(false);
+  const controlsTimeoutRef = useRef(null);
+  const autoPlayTimerRef = useRef(null);
+  const videoRef = useRef(null);
+  const navigate = useNavigate();
 
-  const TOTAL = SLIDES.length;
+  const nextSlide = useCallback(() => {
+    setSlideIndex((prev) => (prev < TOTAL_SLIDES - 1 ? prev + 1 : 0));
+    setShowSlideHUD(false);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setSlideIndex((prev) => (prev > 0 ? prev - 1 : TOTAL_SLIDES - 1));
+    setShowSlideHUD(false);
+  }, []);
+
+  // Klavye / Kumanda dinleyicisi
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (showDashboard) {
+        if (e.key === 'Escape') setShowDashboard(false);
+        return;
+      }
+
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp' || e.key === 'Backspace') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        setSlideIndex(0);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        setSlideIndex(TOTAL_SLIDES - 1);
+      } else if (e.key === 'f' || e.key === 'F') {
+        e.preventDefault();
+        toggleFullscreen();
+      } else if (e.key === 'd' || e.key === 'D') {
+        e.preventDefault();
+        setShowDashboard((prev) => !prev);
+      } else if (e.key === 'h' || e.key === 'H') {
+        e.preventDefault();
+        setShowSlideHUD((prev) => !prev);
+      } else if (e.key === 'Escape') {
+        if (!document.fullscreenElement) {
+          navigate('/');
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [nextSlide, prevSlide, showDashboard, navigate]);
+
+  // Otomatik oynatma
+  useEffect(() => {
+    if (isAutoPlay && !showDashboard) {
+      autoPlayTimerRef.current = setInterval(nextSlide, 8000);
+    } else {
+      if (autoPlayTimerRef.current) clearInterval(autoPlayTimerRef.current);
+    }
+    return () => {
+      if (autoPlayTimerRef.current) clearInterval(autoPlayTimerRef.current);
+    };
+  }, [isAutoPlay, showDashboard, nextSlide]);
+
+  // Fare hareketiyle kontrolleri şıkça göster / gizle
+  const handleMouseMove = () => {
+    setShowControls(true);
+    if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
+    controlsTimeoutRef.current = setTimeout(() => {
+      setShowControls(false);
+    }, 4000);
+  };
+
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      }
+      setIsFullscreen(true);
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      }
+      setIsFullscreen(false);
+    }
+  };
 
   useEffect(() => {
-    const handleKey = (e) => {
-      if (mode !== 'slides') return;
-      if (e.key === 'ArrowRight' || e.key === ' ') setSlideIndex(s => Math.min(s + 1, TOTAL - 1));
-      if (e.key === 'ArrowLeft') setSlideIndex(s => Math.max(s - 1, 0));
-      if (e.key === 'Escape') { setMode('menu'); if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().catch(e=>console.log(e)); } }
+    const onFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
     };
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [mode, TOTAL]);
+    document.addEventListener('fullscreenchange', onFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', onFullscreenChange);
+  }, []);
 
-  if (mode === 'slides') {
-    return (
-      <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 9999, background: '#020617', userSelect: 'none' }}>
-        <style>{`
-            @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-            @keyframes zoomIn { from { transform: scale(1.1); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-            @keyframes kenBurns { from { transform: scale(1); } to { transform: scale(1.1); } }
-        `}</style>
-        
-        {SLIDES[slideIndex].render()}
+  const isVideoSlide = slideIndex === 15; // 16. Slayt Video Slaytı
 
-        {/* Navigation */}
-        <div style={{ position: 'fixed', bottom: '28px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(15,23,42,0.9)', padding: '10px 24px', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(10px)', zIndex: 9999, maxWidth: '90vw', overflowX: 'auto' }}>
-          <button onClick={() => setSlideIndex(s => Math.max(s - 1, 0))} disabled={slideIndex === 0} style={{ background: 'none', border: 'none', cursor: slideIndex === 0 ? 'not-allowed' : 'pointer', color: slideIndex === 0 ? '#334155' : '#94a3b8', padding: '4px', display: 'flex' }}>
-            <ChevronLeft size={22} />
-          </button>
-          {SLIDES.map((_, i) => (
-            <button key={i} onClick={() => setSlideIndex(i)} style={{ width: i === slideIndex ? '16px' : '4px', height: '4px', borderRadius: '2px', background: i === slideIndex ? '#3b82f6' : '#334155', border: 'none', cursor: 'pointer', transition: 'all 0.3s ease', padding: 0, flexShrink: 0 }} />
-          ))}
-          <button onClick={() => setSlideIndex(s => Math.min(s + 1, TOTAL - 1))} disabled={slideIndex === TOTAL - 1} style={{ background: 'none', border: 'none', cursor: slideIndex === TOTAL - 1 ? 'not-allowed' : 'pointer', color: slideIndex === TOTAL - 1 ? '#334155' : '#94a3b8', padding: '4px', display: 'flex' }}>
-            <ChevronRight size={22} />
-          </button>
-        </div>
+  // Hangi slaytlarda Canlı HUD Grafik Butonu gösterilsin?
+  const hasHudGraph = [6, 7, 10, 14, 16, 17, 19, 25].includes(slideIndex);
 
-        <div style={{ position: 'fixed', top: '20px', right: '80px', color: '#cbd5e1', fontSize: '13px', fontWeight: 600, background: 'rgba(0,0,0,0.5)', padding: '4px 12px', borderRadius: '12px' }}>
-          {slideIndex + 1} / {TOTAL}
-        </div>
+  return (
+    <div 
+      onMouseMove={handleMouseMove}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        width: '100vw',
+        height: '100vh',
+        background: 'radial-gradient(circle at 50% 25%, #0f2b48 0%, #081726 50%, #020617 100%)',
+        zIndex: 99999,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+        userSelect: 'none',
+        fontFamily: 'system-ui, -apple-system, sans-serif'
+      }}
+    >
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: scale(0.985); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes pulseGlow {
+          0%, 100% { box-shadow: 0 0 25px rgba(59,130,246,0.3); }
+          50% { box-shadow: 0 0 45px rgba(59,130,246,0.6); }
+        }
+        @keyframes slideUpHUD {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
 
-        <button onClick={() => { setMode('menu'); if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().catch(e=>console.log(e)); } }} style={{ position: 'fixed', top: '16px', right: '20px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', color: '#94a3b8', cursor: 'pointer', padding: '8px', display: 'flex', alignItems: 'center', zIndex: 9999, transition: 'all 0.2s' }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; e.currentTarget.style.color = '#fff'; }}
-          onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = '#94a3b8'; }}
+      {/* --- ANA 16:9 SİNEMATİK SAHNE (KRİSTAL NETLİK & AMBİYANS IŞIĞI) --- */}
+      <div 
+        style={{
+          width: '100vw',
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'relative',
+          padding: '16px'
+        }}
+      >
+        {/* 16:9 Çerçeve Tutucu */}
+        <div
+          style={{
+            position: 'relative',
+            maxWidth: '100%',
+            maxHeight: '100%',
+            aspectRatio: '16 / 9',
+            width: 'calc(100vh * (16 / 9) - 32px)',
+            height: 'calc(100vw * (9 / 16) - 32px)',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            boxShadow: '0 25px 60px -15px rgba(0,0,0,0.9), 0 0 40px rgba(59, 130, 246, 0.2)',
+            border: '1px solid rgba(255, 255, 255, 0.15)',
+            background: '#000000',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
         >
-          <X size={20} />
+          {isVideoSlide ? (
+            /* 16. Slayt: Sinematik Dev Video Tiyatrosu */
+            <div style={{ position: 'relative', width: '100%', height: '100%', background: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <video 
+                ref={videoRef}
+                src="/images/sunu_2026/video_slide_16.mp4"
+                controls
+                autoPlay
+                loop
+                playsInline
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  borderRadius: '14px'
+                }}
+              />
+              {/* Video Üst Başlık Rozeti */}
+              <div 
+                style={{
+                  position: 'absolute',
+                  top: '16px',
+                  left: '20px',
+                  background: 'rgba(15, 23, 42, 0.85)',
+                  padding: '8px 16px',
+                  borderRadius: '30px',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  color: '#fff',
+                  fontSize: '13px',
+                  fontWeight: 800,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backdropFilter: 'blur(10px)',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
+                  pointerEvents: 'none'
+                }}
+              >
+                <Film size={16} color="#38bdf8" />
+                <span>Türk Somonu Hasat ve Kafes Operasyonları • Saha Canlı Kaydı</span>
+              </div>
+            </div>
+          ) : (
+            /* 28 Slaytın Birebir Orijinal HD Görseli */
+            <img 
+              key={slideIndex}
+              src={`/images/sunu_2026/slide_${slideIndex + 1}.png`} 
+              alt={SLIDE_TITLES[slideIndex]}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'contain',
+                animation: 'fadeIn 0.25s ease-out'
+              }}
+            />
+          )}
+
+          {/* --- CANLI HUD GRAFİK KATMANI (İLGİLİ SAYFALARDA SLAYT ÜSTÜNE AÇILIR) --- */}
+          {showSlideHUD && (
+            <div 
+              style={{
+                position: 'absolute',
+                top: '12px',
+                right: '12px',
+                bottom: '12px',
+                width: '42%',
+                background: 'rgba(15, 23, 42, 0.92)',
+                backdropFilter: 'blur(16px)',
+                borderRadius: '14px',
+                border: '1px solid rgba(59, 130, 246, 0.4)',
+                boxShadow: '0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(59,130,246,0.3)',
+                padding: '24px',
+                color: '#fff',
+                zIndex: 50,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                animation: 'slideUpHUD 0.3s ease-out'
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.15)', pb: '12px', marginBottom: '16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Activity size={18} color="#38bdf8" />
+                  <h3 style={{ margin: 0, fontSize: '16px', fontWeight: 900, color: '#38bdf8' }}>CANLI VERİ ANALİZİ</h3>
+                </div>
+                <button 
+                  onClick={() => setShowSlideHUD(false)}
+                  style={{ background: 'rgba(255,255,255,0.1)', border: 'none', borderRadius: '50%', color: '#fff', width: '28px', height: '28px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                >
+                  <X size={16} />
+                </button>
+              </div>
+
+              {/* Grafik Gövdesi */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                {[14, 17].includes(slideIndex) ? (
+                  <>
+                    <p style={{ fontSize: '13px', color: '#94a3b8', margin: '0 0 10px 0', fontWeight: 600 }}>2022-2026 Somon Üretim Artış Eğrisi (Ton):</p>
+                    <div style={{ height: '200px', width: '100%' }}>
+                      <ResponsiveContainer width="100%" height="100%">
+                        <BarChart data={productionData}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
+                          <XAxis dataKey="year" stroke="#94a3b8" tick={{ fontSize: 11 }} />
+                          <YAxis stroke="#94a3b8" tick={{ fontSize: 11 }} />
+                          <Tooltip contentStyle={{ backgroundColor: '#0f172a', borderColor: '#38bdf8', borderRadius: '8px', fontSize: '12px' }} />
+                          <Bar dataKey="turkSomonu" name="Türk Somonu" fill="#38bdf8" radius={[4, 4, 0, 0]} />
+                        </BarChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </>
+                ) : [6, 7, 10, 16].includes(slideIndex) ? (
+                  <>
+                    <p style={{ fontSize: '13px', color: '#94a3b8', margin: '0 0 10px 0', fontWeight: 600 }}>Tesis Sayıları & Proje Kapasiteleri:</p>
+                    <div style={{ height: '180px', width: '100%' }}>
+                      <ResponsiveContainer width="100%" height="100%">
+                        <PieChart>
+                          <Pie data={facilityData} cx="50%" cy="50%" innerRadius={45} outerRadius={75} paddingAngle={5} dataKey="value">
+                            {facilityData.map((e, idx) => <Cell key={idx} fill={e.color} />)}
+                          </Pie>
+                          <Tooltip contentStyle={{ backgroundColor: '#0f172a', borderColor: '#38bdf8', borderRadius: '8px', fontSize: '12px' }} />
+                        </PieChart>
+                      </ResponsiveContainer>
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px', marginTop: '8px' }}>
+                      {facilityData.map((f, i) => (
+                        <div key={i} style={{ fontSize: '11px', color: '#cbd5e1', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: f.color }} />
+                          <span>{f.name}: <b>{f.value}</b></span>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <p style={{ fontSize: '13px', color: '#94a3b8', margin: '0 0 10px 0', fontWeight: 600 }}>Yıllık Destekleme Ödemeleri (Milyon TL):</p>
+                    <div style={{ height: '200px', width: '100%' }}>
+                      <ResponsiveContainer width="100%" height="100%">
+                        <LineChart data={supportData}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
+                          <XAxis dataKey="year" stroke="#94a3b8" tick={{ fontSize: 11 }} />
+                          <YAxis stroke="#94a3b8" tick={{ fontSize: 11 }} />
+                          <Tooltip contentStyle={{ backgroundColor: '#0f172a', borderColor: '#38bdf8', borderRadius: '8px', fontSize: '12px' }} />
+                          <Line type="monotone" dataKey="miktar" name="Destek (Milyon TL)" stroke="#f59e0b" strokeWidth={3} dot={{ r: 5 }} />
+                        </LineChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              <div style={{ fontSize: '11px', color: '#64748b', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '8px', marginTop: '10px' }}>
+                Sinop Balıkçılık ve Su Ürünleri Şube Müdürlüğü • 2026 Antalya
+              </div>
+            </div>
+          )}
+
+          {/* Slayt Üzerinde Parlayan "Canlı Veri Grafiği" Düğmesi */}
+          {hasHudGraph && !showSlideHUD && (
+            <button
+              onClick={() => setShowSlideHUD(true)}
+              style={{
+                position: 'absolute',
+                bottom: '16px',
+                right: '16px',
+                background: 'rgba(15, 23, 42, 0.88)',
+                border: '1px solid rgba(56, 189, 248, 0.5)',
+                borderRadius: '30px',
+                padding: '8px 18px',
+                color: '#fff',
+                fontSize: '12px',
+                fontWeight: 800,
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                cursor: 'pointer',
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 8px 25px rgba(0,0,0,0.5), 0 0 20px rgba(56,189,248,0.3)',
+                transition: 'all 0.2s',
+                zIndex: 40
+              }}
+              title="Bu slayt için canlı grafikleri göster (H)"
+            >
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#38bdf8', boxShadow: '0 0 8px #38bdf8' }} />
+              <Activity size={15} color="#38bdf8" />
+              <span>Canlı Grafik Analizi</span>
+            </button>
+          )}
+
+          {/* Sol / Sağ Geniş Tıklama Alanları */}
+          <div 
+            onClick={prevSlide}
+            style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '15%', cursor: 'pointer', zIndex: 10 }}
+            title="Önceki Slayt (Sol Ok)"
+          />
+          <div 
+            onClick={nextSlide}
+            style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: '15%', cursor: 'pointer', zIndex: 10 }}
+            title="Sonraki Slayt (Sağ Ok)"
+          />
+        </div>
+      </div>
+
+      {/* --- SAĞ ÜST YÖNETİCİ KONTROL KÜMESİ (GLASSMORPHIC) --- */}
+      <div 
+        style={{
+          position: 'fixed',
+          top: '20px',
+          right: '24px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          zIndex: 999999,
+          opacity: showControls ? 1 : 0,
+          transition: 'opacity 0.35s ease',
+          pointerEvents: showControls ? 'auto' : 'none'
+        }}
+      >
+        {/* Slayt Başlık ve Sayaç Rozeti */}
+        <div 
+          style={{
+            color: '#ffffff',
+            fontSize: '13px',
+            fontWeight: 800,
+            background: 'rgba(15, 23, 42, 0.88)',
+            padding: '7px 18px',
+            borderRadius: '30px',
+            border: '1px solid rgba(255, 255, 255, 0.18)',
+            backdropFilter: 'blur(12px)',
+            boxShadow: '0 8px 25px rgba(0,0,0,0.5)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px'
+          }}
+        >
+          <span style={{ color: '#38bdf8', fontWeight: 900 }}>{slideIndex + 1} / {TOTAL_SLIDES}</span>
+          <span style={{ color: '#64748b' }}>•</span>
+          <span style={{ color: '#e2e8f0', maxWidth: '240px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            {SLIDE_TITLES[slideIndex]}
+          </span>
+        </div>
+
+        {/* Dashboard Butonu */}
+        <button 
+          onClick={() => setShowDashboard(true)}
+          style={{
+            background: 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%)',
+            border: '1px solid rgba(255, 255, 255, 0.25)',
+            borderRadius: '30px',
+            color: '#ffffff',
+            cursor: 'pointer',
+            padding: '7px 18px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            fontSize: '13px',
+            fontWeight: 800,
+            backdropFilter: 'blur(12px)',
+            boxShadow: '0 8px 25px rgba(29, 78, 216, 0.5)',
+            transition: 'all 0.2s'
+          }}
+          title="İnteraktif Yönetici Dashboard Paneli (D)"
+        >
+          <BarChart3 size={16} />
+          <span>Dashboard</span>
+        </button>
+
+        {/* Tam Ekran Butonu */}
+        <button 
+          onClick={toggleFullscreen}
+          style={{
+            background: 'rgba(15, 23, 42, 0.88)',
+            border: '1px solid rgba(255, 255, 255, 0.18)',
+            borderRadius: '50%',
+            color: '#ffffff',
+            cursor: 'pointer',
+            width: '38px',
+            height: '38px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backdropFilter: 'blur(12px)',
+            boxShadow: '0 8px 25px rgba(0,0,0,0.5)',
+            transition: 'all 0.2s'
+          }}
+          title={isFullscreen ? 'Tam Ekrandan Çık (F)' : 'Tam Ekran (F)'}
+        >
+          {isFullscreen ? <Minimize size={17} /> : <Maximize size={17} />}
+        </button>
+
+        {/* Kapat / Çıkış Butonu */}
+        <button 
+          onClick={() => {
+            if (document.fullscreenElement && document.exitFullscreen) {
+              document.exitFullscreen().catch(() => {});
+            }
+            navigate('/');
+          }}
+          style={{
+            background: 'rgba(239, 68, 68, 0.88)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            borderRadius: '50%',
+            color: '#ffffff',
+            cursor: 'pointer',
+            width: '38px',
+            height: '38px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backdropFilter: 'blur(12px)',
+            boxShadow: '0 8px 25px rgba(239, 68, 68, 0.4)',
+            transition: 'all 0.2s'
+          }}
+          title="Sunumdan Çık (ESC)"
+        >
+          <X size={18} />
         </button>
       </div>
-    );
-  }
 
-  if (mode === 'dashboard') {
-    return (
-      <div style={{ padding: '24px', maxWidth: '1400px', margin: '0 auto', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-        {/* Header Section */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '32px', background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', padding: '32px', borderRadius: '16px', color: 'white', boxShadow: '0 10px 15px -3px rgba(59, 130, 246, 0.3)', position: 'relative' }}>
-          <button onClick={() => setMode('menu')} style={{ position: 'absolute', top: '16px', right: '16px', background: 'rgba(255,255,255,0.2)', border: 'none', borderRadius: '8px', color: '#fff', cursor: 'pointer', padding: '8px', display: 'flex', alignItems: 'center' }}>
-            <X size={20} />
-          </button>
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-              <Anchor size={32} color="#93c5fd" />
-              <h1 style={{ margin: 0, fontSize: '32px', fontWeight: 800, letterSpacing: '-0.02em' }}>Mavi Vatanın Kuzeydeki Kalbi: Sinop</h1>
-            </div>
-            <p style={{ margin: 0, fontSize: '16px', color: '#bfdbfe', maxWidth: '600px', lineHeight: '1.6' }}>
-              Türkiye'nin somon üretimindeki tartışmasız lideri. 175 km sahil şeridi, eşsiz doğal koyları ve son teknoloji denetim filosuyla sürdürülebilir su ürünleri yönetim merkezi.
-            </p>
-          </div>
-          <div style={{ textAlign: 'right' }}>
-            <div style={{ fontSize: '14px', color: '#93c5fd', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em' }}>2026 Vizyon Raporu</div>
-            <div style={{ fontSize: '42px', fontWeight: 900, color: '#fff', marginTop: '4px' }}>%100</div>
-            <div style={{ fontSize: '14px', color: '#bfdbfe' }}>Kayıtlı & Denetimli Üretim</div>
-          </div>
-        </div>
+      {/* --- ALT GEZİNTİ VE İLERLEME ÇUBUĞU (TOOLTIP'Lİ CAM DOKU) --- */}
+      <div 
+        style={{
+          position: 'fixed',
+          bottom: '24px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '6px',
+          background: 'rgba(15, 23, 42, 0.92)',
+          padding: '10px 24px',
+          borderRadius: '50px',
+          border: '1px solid rgba(255, 255, 255, 0.18)',
+          backdropFilter: 'blur(16px)',
+          zIndex: 999999,
+          maxWidth: '92vw',
+          overflowX: 'auto',
+          boxShadow: '0 15px 40px rgba(0,0,0,0.7), 0 0 25px rgba(59,130,246,0.2)',
+          opacity: showControls ? 1 : 0,
+          transition: 'opacity 0.35s ease',
+          pointerEvents: showControls ? 'auto' : 'none'
+        }}
+      >
+        <button 
+          onClick={prevSlide}
+          disabled={slideIndex === 0}
+          style={{
+            background: 'none',
+            border: 'none',
+            cursor: slideIndex === 0 ? 'not-allowed' : 'pointer',
+            color: slideIndex === 0 ? '#475569' : '#ffffff',
+            padding: '4px',
+            display: 'flex',
+            alignItems: 'center'
+          }}
+          title="Önceki Slayt (Sol Ok)"
+        >
+          <ChevronLeft size={22} />
+        </button>
 
-        {/* Top Stats Cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', marginBottom: '32px' }}>
-          <CustomCard title="Toplam Üretim (2026)" value="43.007 Ton" icon={TrendingUp} color="#3b82f6" subtitle="Tüm türler bazında" />
-          <CustomCard title="Türk Somonu" value="42.609 Ton" icon={Fish} color="#10b981" subtitle="Türkiye Lideri!" />
-          <CustomCard title="Yetiştiricilik Tesisi" value="51 Adet" icon={Building} color="#f59e0b" subtitle="Deniz, İç Su, Midye, Karasal" />
-          <CustomCard title="Balıkçı Gemisi" value="428 Adet" icon={Ship} color="#8b5cf6" subtitle="2.555 Aktif Balıkçı" />
-        </div>
-
-        {/* Charts Section */}
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '24px', marginBottom: '32px' }}>
-          
-          {/* Line Chart: Production Growth */}
-          <div style={{ background: '#fff', padding: '24px', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#1e293b', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Activity size={20} color="#3b82f6" /> 2022-2026 Üretim İvmesi (Ton)
-            </h3>
-            <div style={{ height: '350px' }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={productionData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
-                  <XAxis dataKey="year" stroke="#64748b" tick={{ fill: '#64748b' }} axisLine={false} tickLine={false} />
-                  <YAxis stroke="#64748b" tick={{ fill: '#64748b' }} axisLine={false} tickLine={false} tickFormatter={(val) => (val / 1000) + 'k'} />
-                  <Tooltip 
-                    contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}
-                    formatter={(value) => new Intl.NumberFormat('tr-TR').format(value) + ' Ton'}
-                  />
-                  <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px' }} />
-                  <Line type="monotone" dataKey="turkSomonu" name="Türk Somonu" stroke="#3b82f6" strokeWidth={4} dot={{ r: 6, strokeWidth: 2 }} activeDot={{ r: 8 }} />
-                  <Line type="monotone" dataKey="alabalik" name="Alabalık" stroke="#10b981" strokeWidth={3} />
-                  <Line type="monotone" dataKey="midye" name="Midye" stroke="#f59e0b" strokeWidth={3} />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-          </div>
-
-          {/* Pie Chart: Facility Types */}
-          <div style={{ background: '#fff', padding: '24px', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}>
-            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#1e293b', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Building size={20} color="#8b5cf6" /> Tesis Dağılımı
-            </h3>
-            <div style={{ height: '250px', flex: 1 }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie data={facilityData} cx="50%" cy="50%" innerRadius={60} outerRadius={90} paddingAngle={5} dataKey="value">
-                    {facilityData.map((entry, index) => (
-                      <Cell key={'cell-' + index} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Tooltip formatter={(value) => [value + ' Tesis', 'Sayı']} contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }} />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              {facilityData.map((item, idx) => (
-                <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: item.color }}></div>
-                    <span style={{ fontSize: '14px', color: '#475569', fontWeight: 500 }}>{item.name}</span>
-                  </div>
-                  <span style={{ fontSize: '15px', color: '#1e293b', fontWeight: 700 }}>{item.value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Section: Fleet & Subsidies */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
-          
-          {/* Fleet & Team */}
-          <div style={{ background: '#fff', padding: '24px', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#1e293b', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <ShieldCheck size={20} color="#10b981" /> Denetim ve Kontrol Gücümüz
-            </h3>
-            
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                <div style={{ background: '#3b82f6', padding: '12px', borderRadius: '8px', color: '#fff' }}><Ship size={24} /></div>
-                <div>
-                  <h4 style={{ margin: '0 0 4px 0', fontSize: '16px', color: '#1e293b' }}>KUZEY YILDIZI (Kontrol Gemisi)</h4>
-                  <p style={{ margin: 0, fontSize: '13px', color: '#64748b' }}>10.50 Metre, 250 Hp (2 Adet Motor), Sinop Merkez B.B. Aktif</p>
-                </div>
+        {Array.from({ length: TOTAL_SLIDES }).map((_, i) => (
+          <div key={i} style={{ position: 'relative' }}>
+            <button 
+              onClick={() => setSlideIndex(i)}
+              onMouseEnter={() => setHoveredDot(i)}
+              onMouseLeave={() => setHoveredDot(null)}
+              style={{
+                width: i === slideIndex ? '22px' : '6px',
+                height: '6px',
+                borderRadius: '3px',
+                background: i === slideIndex ? '#38bdf8' : '#475569',
+                boxShadow: i === slideIndex ? '0 0 10px #38bdf8' : 'none',
+                border: 'none',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                padding: 0,
+                flexShrink: 0
+              }}
+            />
+            {/* Hover Tooltip Balonu */}
+            {hoveredDot === i && (
+              <div 
+                style={{
+                  position: 'absolute',
+                  bottom: '22px',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  background: 'rgba(15, 23, 42, 0.96)',
+                  border: '1px solid rgba(56, 189, 248, 0.5)',
+                  borderRadius: '8px',
+                  padding: '5px 12px',
+                  color: '#fff',
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  whiteSpace: 'nowrap',
+                  pointerEvents: 'none',
+                  boxShadow: '0 8px 20px rgba(0,0,0,0.6)',
+                  zIndex: 100
+                }}
+              >
+                {i + 1}. {SLIDE_TITLES[i]}
               </div>
-              
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                <div style={{ background: '#10b981', padding: '12px', borderRadius: '8px', color: '#fff' }}><Camera size={24} /></div>
-                <div>
-                  <h4 style={{ margin: '0 0 4px 0', fontSize: '16px', color: '#1e293b' }}>Hava Filosu ve Görüntüleme</h4>
-                  <p style={{ margin: 0, fontSize: '13px', color: '#64748b' }}>3 Adet Hava Dronu, 83x Zoom Kapasiteli Saha Fotoğraf Makinesi</p>
-                </div>
-              </div>
-
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                <div style={{ background: '#f59e0b', padding: '12px', borderRadius: '8px', color: '#fff' }}><Users size={24} /></div>
-                <div>
-                  <h4 style={{ margin: '0 0 4px 0', fontSize: '16px', color: '#1e293b' }}>Uzman Kadro</h4>
-                  <p style={{ margin: 0, fontSize: '13px', color: '#64748b' }}>Merkezde 17, İlçelerde 8 Uzman Personel (Mühendis, Veteriner, Kaptan)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Subsidies Bar Chart */}
-          <div style={{ background: '#fff', padding: '24px', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#1e293b', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Award size={20} color="#f59e0b" /> Yetiştiricilik Desteklemeleri (Milyon TL)
-            </h3>
-            <div style={{ height: '280px' }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={supportData} margin={{ top: 20, right: 20, left: 0, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
-                  <XAxis dataKey="year" stroke="#64748b" axisLine={false} tickLine={false} />
-                  <YAxis stroke="#64748b" axisLine={false} tickLine={false} tickFormatter={(v) => '₺' + v + 'M'} />
-                  <Tooltip 
-                    cursor={{ fill: '#f1f5f9' }}
-                    contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}
-                    formatter={(value, name) => {
-                      if (name === 'miktar') return [value + ' Milyon TL', 'Destek Tutarı'];
-                      return [value, 'Tesis Sayısı'];
-                    }}
-                  />
-                  <Bar dataKey="miktar" name="Destek Tutarı" fill="#3b82f6" radius={[6, 6, 0, 0]} maxBarSize={50} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    );
-  }
-
-  // mode === 'menu'
-  return (
-    <div style={{ padding: '40px', maxWidth: '1200px', margin: '0 auto', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-      <div style={{ textAlign: 'center', background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%)', borderRadius: '20px', padding: '60px 40px', color: '#fff', marginBottom: '40px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}>
-        <Anchor size={52} color="#93c5fd" style={{ marginBottom: '20px' }} />
-        <div style={{ fontSize: '13px', color: '#93c5fd', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '16px' }}>Balıkçılık ve Su Ürünleri Şube Müdürlüğü</div>
-        <h1 style={{ fontSize: '38px', fontWeight: 900, margin: '0 0 16px 0', letterSpacing: '-0.01em' }}>2026 Yetiştiricilik Sunumu ve Dashboard</h1>
-        <p style={{ color: '#bfdbfe', fontSize: '16px', marginBottom: '40px', lineHeight: 1.6 }}>Orijinal sunum metinleri, görselleri ve interaktif istatistiklerle güçlendirilmiş tam kapsamlı bilgi platformu.</p>
-        
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-            <button
-            onClick={() => { setSlideIndex(0); setMode('slides'); if (document.documentElement.requestFullscreen) { document.documentElement.requestFullscreen().catch(e => console.log(e)); } }}
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', background: '#3b82f6', color: '#fff', border: 'none', borderRadius: '50px', padding: '16px 36px', fontSize: '17px', fontWeight: 700, cursor: 'pointer', boxShadow: '0 8px 24px rgba(59,130,246,0.4)', transition: 'transform 0.2s' }}
-            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            >
-            <Play size={22} fill="#fff" />
-            Slayt Modunda Başlat (35 Sayfa)
-            </button>
-            <button
-            onClick={() => setMode('dashboard')}
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', background: '#10b981', color: '#fff', border: 'none', borderRadius: '50px', padding: '16px 36px', fontSize: '17px', fontWeight: 700, cursor: 'pointer', boxShadow: '0 8px 24px rgba(16,185,129,0.4)', transition: 'transform 0.2s' }}
-            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            >
-            <Activity size={22} />
-            İnteraktif Dashboard (Grafikler)
-            </button>
-        </div>
-      </div>
-      
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '16px' }}>
-        {SLIDES.map((s, i) => (
-          <div key={i} onClick={() => { setSlideIndex(i); setMode('slides'); if (document.documentElement.requestFullscreen) { document.documentElement.requestFullscreen().catch(e => console.log(e)); } }} style={{ background: '#fff', borderRadius: '12px', padding: '20px', cursor: 'pointer', border: '2px solid transparent', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', transition: 'all 0.2s', display: 'flex', flexDirection: 'column' }}
-            onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#3b82f6'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(59,130,246,0.15)'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; }}
-          >
-            <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#3b82f6', marginBottom: '10px', fontSize: '15px' }}>{i + 1}</div>
-            <div style={{ fontWeight: 700, color: '#1e293b', marginBottom: '4px', fontSize: '14px' }}>{s.title}</div>
-            <div style={{ color: '#94a3b8', fontSize: '12px', flexGrow: 1 }}>{s.desc}</div>
+            )}
           </div>
         ))}
+
+        <button 
+          onClick={nextSlide}
+          disabled={slideIndex === TOTAL_SLIDES - 1}
+          style={{
+            background: 'none',
+            border: 'none',
+            cursor: slideIndex === TOTAL_SLIDES - 1 ? 'not-allowed' : 'pointer',
+            color: slideIndex === TOTAL_SLIDES - 1 ? '#475569' : '#ffffff',
+            padding: '4px',
+            display: 'flex',
+            alignItems: 'center'
+          }}
+          title="Sonraki Slayt (Sağ Ok)"
+        >
+          <ChevronRight size={22} />
+        </button>
       </div>
+
+      {/* =========================================================================
+         TAM EKRAN ULTRA PREMİUM YÖNETİCİ DASHBOARD MODALI
+         ========================================================================= */}
+      {showDashboard && (
+        <div 
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(2, 6, 23, 0.96)',
+            backdropFilter: 'blur(20px)',
+            zIndex: 9999999,
+            overflowY: 'auto',
+            padding: '30px',
+            color: '#fff'
+          }}
+        >
+          <div style={{ maxWidth: '1400px', margin: '0 auto', spaceY: '24px' }}>
+            
+            {/* Dashboard Başlık Çubuğu */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%)', padding: '24px 32px', borderRadius: '20px', boxShadow: '0 10px 30px rgba(30,58,138,0.5)', border: '1px solid rgba(255,255,255,0.2)', marginBottom: '24px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: 'rgba(255,255,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Fish size={28} color="#fff" />
+                </div>
+                <div>
+                  <h1 style={{ margin: 0, fontSize: '26px', fontWeight: 900 }}>Sinop Balıkçılık ve Su Ürünleri İstatistik Paneli</h1>
+                  <p style={{ margin: '4px 0 0 0', fontSize: '14px', color: '#bfdbfe' }}>2026 Antalya Sunumu • Güncel Kapasite ve Üretim İcmalleri</p>
+                </div>
+              </div>
+              <div style={{ display: 'flex', gap: '12px' }}>
+                <button 
+                  onClick={() => setShowDashboard(false)}
+                  style={{ background: '#fff', color: '#1e3a8a', border: 'none', borderRadius: '12px', padding: '10px 22px', fontSize: '14px', fontWeight: 800, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.2)' }}
+                >
+                  <Play size={16} /> Sunuma Dön
+                </button>
+              </div>
+            </div>
+
+            {/* 4 Ana Metrik Kartı */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '24px' }}>
+              <div style={{ background: 'rgba(30, 41, 59, 0.7)', borderRadius: '16px', padding: '20px', borderLeft: '5px solid #38bdf8', border: '1px solid rgba(255,255,255,0.1)' }}>
+                <div style={{ fontSize: '12px', color: '#94a3b8', fontWeight: 700, textTransform: 'uppercase' }}>Kıyı Şeridi Uzunluğu</div>
+                <div style={{ fontSize: '32px', fontWeight: 900, color: '#38bdf8', marginTop: '4px' }}>175 km</div>
+                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>Karadeniz'in en uzun kıyısı</div>
+              </div>
+              <div style={{ background: 'rgba(30, 41, 59, 0.7)', borderRadius: '16px', padding: '20px', borderLeft: '5px solid #34d399', border: '1px solid rgba(255,255,255,0.1)' }}>
+                <div style={{ fontSize: '12px', color: '#94a3b8', fontWeight: 700, textTransform: 'uppercase' }}>Deniz Kafes Kapasitesi</div>
+                <div style={{ fontSize: '32px', fontWeight: 900, color: '#34d399', marginTop: '4px' }}>70.620 Ton</div>
+                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>35 Deniz Tesisi (28 Faal)</div>
+              </div>
+              <div style={{ background: 'rgba(30, 41, 59, 0.7)', borderRadius: '16px', padding: '20px', borderLeft: '5px solid #fbbf24', border: '1px solid rgba(255,255,255,0.1)' }}>
+                <div style={{ fontSize: '12px', color: '#94a3b8', fontWeight: 700, textTransform: 'uppercase' }}>2026 Somon Üretimi</div>
+                <div style={{ fontSize: '32px', fontWeight: 900, color: '#fbbf24', marginTop: '4px' }}>42.609 Ton</div>
+                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>Türkiye Üretim Lideri</div>
+              </div>
+              <div style={{ background: 'rgba(30, 41, 59, 0.7)', borderRadius: '16px', padding: '20px', borderLeft: '5px solid #a78bfa', border: '1px solid rgba(255,255,255,0.1)' }}>
+                <div style={{ fontSize: '12px', color: '#94a3b8', fontWeight: 700, textTransform: 'uppercase' }}>Denetim Filosu</div>
+                <div style={{ fontSize: '32px', fontWeight: 900, color: '#a78bfa', marginTop: '4px' }}>2 Gemi + 2 Drone</div>
+                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>Kuzey Yıldızı & Kontrol 57</div>
+              </div>
+            </div>
+
+            {/* Grafikler Alanı */}
+            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '24px', marginBottom: '24px' }}>
+              <div style={{ background: 'rgba(15, 23, 42, 0.8)', padding: '24px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                <h3 style={{ margin: '0 0 20px 0', fontSize: '17px', fontWeight: 800, color: '#38bdf8', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <TrendingUp size={20} /> Yıllara Göre Su Ürünleri Üretimi (Ton)
+                </h3>
+                <div style={{ height: '300px' }}>
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={productionData}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
+                      <XAxis dataKey="year" stroke="#94a3b8" />
+                      <YAxis stroke="#94a3b8" />
+                      <Tooltip contentStyle={{ backgroundColor: '#0f172a', borderColor: '#38bdf8', borderRadius: '8px', color: '#fff' }} />
+                      <Legend />
+                      <Bar dataKey="turkSomonu" name="Türk Somonu" fill="#38bdf8" radius={[4, 4, 0, 0]} />
+                      <Bar dataKey="alabalik" name="Alabalık" fill="#34d399" radius={[4, 4, 0, 0]} />
+                      <Bar dataKey="midye" name="Midye" fill="#fbbf24" radius={[4, 4, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+
+              <div style={{ background: 'rgba(15, 23, 42, 0.8)', padding: '24px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                <h3 style={{ margin: '0 0 20px 0', fontSize: '17px', fontWeight: 800, color: '#34d399', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Layers size={20} /> Tesis Türü Dağılımı
+                </h3>
+                <div style={{ height: '220px' }}>
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                      <Pie data={facilityData} cx="50%" cy="50%" innerRadius={55} outerRadius={85} paddingAngle={5} dataKey="value">
+                        {facilityData.map((e, idx) => <Cell key={idx} fill={e.color} />)}
+                      </Pie>
+                      <Tooltip contentStyle={{ backgroundColor: '#0f172a', borderColor: '#34d399', borderRadius: '8px', color: '#fff' }} />
+                    </PieChart>
+                  </ResponsiveContainer>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '10px' }}>
+                  {facilityData.map((f, i) => (
+                    <div key={i} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#cbd5e1' }}>
+                      <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: f.color }} />
+                        {f.name}
+                      </span>
+                      <b>{f.value} Tesis ({f.capacity})</b>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* 28 Slayt Hızlı Atlama Kataloğu */}
+            <div style={{ background: 'rgba(15, 23, 42, 0.8)', padding: '24px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <h3 style={{ margin: '0 0 16px 0', fontSize: '17px', fontWeight: 800, color: '#fff' }}>
+                28 Slaytlık Sunum Kataloğuna Hızlı Atlama
+              </h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '12px' }}>
+                {SLIDE_TITLES.map((t, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      setSlideIndex(idx);
+                      setShowDashboard(false);
+                    }}
+                    style={{
+                      background: slideIndex === idx ? '#1d4ed8' : 'rgba(30, 41, 59, 0.6)',
+                      border: slideIndex === idx ? '1px solid #38bdf8' : '1px solid rgba(255,255,255,0.08)',
+                      borderRadius: '10px',
+                      padding: '10px 14px',
+                      textAlign: 'left',
+                      color: '#fff',
+                      cursor: 'pointer',
+                      fontSize: '12px',
+                      transition: 'all 0.2s',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px'
+                    }}
+                  >
+                    <span style={{ fontWeight: 900, color: '#38bdf8' }}>#{idx + 1}</span>
+                    <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{t}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
