@@ -68,13 +68,13 @@ const supportData = [
 
 const PROMO_VIDEOS = {
   video1: {
-    id: '8NgtbCFcLX8',
+    id: '9TioUjkM6is',
     buttonLabel: 'Tanıtım Filmi 1',
-    title: 'Sinop Tanıtım & Belgeseli • Hiç Böyle Görmediniz',
-    subtitle: 'Sinop Tarihi, Kıyı ve İlçe Doğal Güzellikleri Kapsamlı Belgesel Prodüksiyonu',
-    badge: 'BELGESEL & TANITIM',
+    title: '2 Dakikada Sinop • Tanıtım & Gezilecek Yerler',
+    subtitle: 'Sinop Merkez, Kıyılar ve Doğal Mekanlar Hızlı Tanıtım Prodüksiyonu',
+    badge: '2 DAKİKADA SİNOP',
     badgeColor: '#059669',
-    url: 'https://www.youtube.com/watch?v=8NgtbCFcLX8'
+    url: 'https://www.youtube.com/watch?v=9TioUjkM6is'
   },
   video2: {
     id: '4UpE03DQctg',
