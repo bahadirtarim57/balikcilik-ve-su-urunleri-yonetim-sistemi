@@ -380,3 +380,149 @@ px vercel --prod) sağlandı.
 - Dinamik 'Genel Dashboard' mimarisi eklendi. Sol menü (Sidebar) konfigürasyonu merkezi bir dosyaya (menuConfig.js) taşındı. Sistem açılışında artık sadece cezalar değil, Ruhsat, Tesis, Stok ve İhlaller gibi tüm modülleri menüden otomatik okuyarak özet istatistikleriyle birlikte büyük modül kartları halinde sunan dev bir kontrol paneli (Genel Dashboard) yer alıyor.
 
 - Genel Dashboard üzerindeki Yetiştiricilik üretim kapasitesi hesaplama hatası (string birleştirme) düzeltildi, kapasiteler sayıya çevrilerek toplanıyor. Sistem Ayarları kartındaki personel sayısının tüm ili değil, sadece 'Aktif Seçilen Birim'i (örneğin seçili şubeyi) yansıtması sağlandı.
+
+- Yetiştiricilik (Tesis Yönetimi) ekranında üst tarafta yazan 'Müracaat Numarasına göre XX tesis listeleniyor' düz metni değiştirildi. Artık filtrelenen güncel tesislerin sayısını ve bu tesislerin toplam üretim kapasitelerini toplayarak 'XX Adet tesis - Toplam Kapasite YYY Ton/Yıl' şeklinde analitik bir özet başlığı sunuluyor.
+
+- Genel Kontrol Paneli (Genel Dashboard) üzerindeki Yetiştiricilik İşlemleri modül kartına, sadece tesis sayısı ve toplam tonaj yerine 'İhlaller' kartına benzer şekilde daha detaylı bir analitik alt panel eklendi. Ana vurgu aktif tesislerde tutulurken, kesik çizginin altında Kiralama Aşamasında Olanlar ile Pasif/İptal edilen tesislerin de sayımları dinamik olarak JSON'dan taranıp listelenmeye başlandı.
+
+- Genel Dashboard üzerindeki Yetiştiricilik Kartı tamamen yenilendi. Standart tek satırlık vurgu yerine, Aktif, Kiralama Aşamasında, Pasif, Devredilen ve İptal Edilen tesisler olmak üzere 5 satırlı detaylı bir liste oluşturuldu. Her satırın karşısına tesis sayısı ve toplam üretim kapasitesi (Ton/Yıl) hesaplanarak estetik kesik çizgilerle rapora eklendi.
+
+- Tesis Yönetimi sayfasındaki sol menü (İlçeler) filtresi düzeltildi. Daha önce ilçesi hatalı veya dış şehir girilen tesisler (Örn: Milas) filtreye takılıp sistemden gizleniyordu (yutuluyordu). Artık bu tür hatalı kayıtlı tesisler sol menüdeki 'Belirsiz / Diğer' kategorisi altında otomatik olarak listeleniyor. Böylece eksik tesis sorunu çözüldü ve Dashboard ile rakamlar eşitlendi.
+
+- KÖK NEDEN ÇÖZÜMÜ: Tesis Yönetimi modülünde yer alan ve resmi numarası '57' ile başlamayan (başka illere kayıtlı veya hatalı) tesisleri sistemden tamamen silen kısıtlayıcı güvenlik filtresi kaldırıldı. Ayrıca 'Belirsiz (Ön İzin Alındı)' statüsündeki tesislerin de Kiralama Aşamasında sekmesine dahil edilmesi sağlandı. Böylece Ana Ekran ile Tesis Yönetimi modülü arasındaki veri kayıpları ve rakamsal eşitsizlik %100 çözüldü.
+
+- Tesis Yönetimi sayfasına yeni bir kullanıcı deneyimi (UX) özelliği eklendi: 'Alt Filtreleme Butonları'. Hangi sekmede olunursa olunsun (Aktif, Kiralama vb.), tabloların hemen üstünde 'Kafes/Deniz', 'Karasal/Havuz', 'Baraj/Göl', 'Midye' şeklinde hap butonlar belirir. Bu butonlar o an ekranda bulunan tesislerin türlerine göre anlık sayılarını da parantez içinde gösterir. Butonlara tıklandığında liste saniyesinde filtrelenerek çok daha profesyonel ve analitik bir raporlama altyapısı sunar.
+
+- Tesis Yönetimi > Alt Filtreleme Butonlarına 'Avcılık' mantığı entegre edildi. Artık sistem, türü 'Baraj / Göl' olan tesisleri analiz edip; eğer tesise ait hiçbir kafes verisi (0 veya boş) yoksa onu otomatik olarak 'Baraj / Göl (Avcılık)' sekmesine atıyor. Kafesi olanları ise 'Baraj / Göl (Yetiştiricilik)' sekmesinde tutuyor. Bu sayede İç Sulardaki kooperatif kiralamaları ile yetiştiricilik tesisleri sistem tarafından akıllıca birbirlerinden ayrıştırılmış oldu.
+
+- 'Kimliğe Bürün' (Ghost Login) sistemine akıllı görev tanıma algoritması eklendi. Önceden, personelin giriş yapabilmesi için mutlaka 'Sistem Yetki Yönetimi' sayfasından özel bir rol alması gerekiyordu ve bu işlem unutulduğunda sistem hata veriyordu. Yeni sistemde, eğer kullanıcı sadece 'Personel Listesi' sayfasından kişiye herhangi bir görev kutucuğu (Ruhsat, Stok, vb.) işaretleyip kaydederse, güvenlik kapısı personelin görevli olduğunu otomatik algılayıp giriş iznini anında onaylıyor (Otomasyon).
+
+- Sisteme Merkezi Hiyerarşi Algoritması eklendi. Artık 'Personel Listesi', 'Sistem Yetki Yönetimi' ve 'Kimliğe Bürün' dahil tüm sayfalardaki personel listeleri resmi devlet hiyerarşisine uygun olarak (İl Müdürü > İl Müdür Yardımcısı > Şube Müdürü > İlçe Müdürü > Birim Sorumlusu > Mühendis > Tekniker > Memur > İşçi vb.) otomatik olarak dizilmektedir. Aynı unvana sahip personeller ise kendi içlerinde alfabetik olarak sıralanarak tam bir kurumsal nizam sağlanmıştır.
+
+- Yan menülerin (Sidebar) Personel yetkisiyle giriş yapıldığında tıklanamaması (tıklamaların algılanmaması) sorunu çözüldü. React sürükle-bırak kütüphanesinin tıklamaları yutmasını engellemek için, menülerin yerini değiştirme özelliği yalnızca Sistem Yöneticisi için açık bırakıldı, diğer personeller için tıklamaların yutulması kesin olarak önlendi.
+
+- Yan menülerin (Sidebar) tıklama yutma sorunu, tıklanabilir alan ile sürükle-bırak alanının birbirinden tamamen ayrıştırılması (izole edilmesi) ile kesin çözüme kavuşturuldu. Artık Personel rolü de dahil hiçbir rolde DOM (belge) hiyerarşisindeki z-index ve click propagation sorunları yaşanmamaktadır.
+
+- Yan menü (Sidebar) render mimarisi ikiye ayrıldı. Personeller giriş yaptığında menüler Draggable/Droppable etiketlerinden tamamen yalıtılmış (isole) saf HTML div yapısına geçecek şekilde kodlandı. Kütüphanenin render bloke etme sorunu Personeller için fiziksel olarak imkansız hale getirildi.
+
+- Yan menü tıklanabildiği ve açıldığı halde, sayfalara (Yetiştiricilik vb.) girilememe ve Dashboard'a geri atılma (redirect) sorunu çözüldü. App.jsx içindeki ProtectedRoute kalkanı, Sidebar ile birebir aynı 'modulePermissionsData' kontrollerini yapacak şekilde senkronize edildi.
+
+- Personel Listesi hiyerarşisi yeniden yapılandırıldı. Kaptan vb. mesleklerin Mühendislerin üzerine çıkması sorunu çözüldü. Sicil numarasına göre kıdem sıralaması eklendi (Örn: 86 ile başlayanların 1986 kabul edilip, 2012'nin üstüne çıkarılması sağlandı).
+
+- Genel Kontrol Paneli (Dashboard) üzerindeki ana modül kartları, giriş yapan personelin 'modulePermissionsData' (Checkbox) yetkilerine göre filtrelenerek gizlendi. Personelin yan menüde göremediği hiçbir modül artık Dashboard'da kart olarak belirmiyor.
+
+- Sistem Ayarları altındaki tüm sayfalara gömülü eski kilitler kırılarak, 'Genel Koordinatör'e %100 limitsiz yetki tanımlandı. Diğer yetkililer için ise Sistem Ayarları menüsü sadece 'Personel Listesi' ve 'Yeniden Değerlendirme' ile sınırlandırıldı, geri kalan sayfalar tamamen gizlendi.
+
+- Veri Yönetimi ve Yeniden Değerlendirme sayfalarında başarısız olan kilit kırma (silme) işlemi tamamen düzeltildi. Hatalı komut nedeniyle silinemeyen kırmızı yetkisiz erişim yazısı ve onu tetikleyen kodlar kalıcı olarak sökülüp atıldı.
+
+- Sistem Yetki Yönetimi (Rol Atamaları) ve Kimliğine Bürün özelliklerinde meydana gelen, personeli veritabanından bulamayıp zorla 'Personel' rütbesine atama hatası giderildi. İsim ve sicil eşleştirmeleri doğru anahtarlara bağlandı.
+
+- Kimliğine Bürün penceresindeki isim okuma (eşleştirme) sistemine 'Esnek Arama (Fuzzy Lookup)' özelliği eklendi. Artık isimlerdeki boşluk hataları veya Türkçe karakter (ı/i, u/ü) uyuşmazlıkları olsa bile sistem kişinin atanan rolünü kusursuz şekilde buluyor.
+
+- Kod düzenlemeleri sırasında oluşan Türkçe karakter bozulmaları giderildi ve yetki atamaları, esnek arama özelliğiyle birlikte hatasız biçimde canlıya alındı.
+
+- Personel Listesi sayfasına 'AYARLAR' yetki kutucuğu eklendi. Sistem ayarlarını (Sadece Personel Listesi ve Yeniden Değerlendirme) görmesi istenen personeller için bu kutucuğun işaretlenmesi yeterli hale getirildi. İsim-Rütbe eşleştirme zorunluluğu ortadan kaldırıldı.
+
+- Sol menüdeki 'Sistem Ayarları' ana başlığının, alt menülere henüz tıklanmadığı durumda (menuId === undefined) kaybolmasına neden olan aşırı katı kısıtlama esnetildi.
+
+- Sol menüdeki 'Sistem Ayarları' izin kontrolünde, alt menü kimliklerinin yanlış isimle kontrol edilmesinden kaynaklanan gizlenme sorunu çözüldü. Artık yetkisi olan kullanıcılarda SİSTEM AYARLARI başlığı sol menüde de sorunsuz görünmekte.
+- Önceki komut işlemleri sırasında bozulan Emoji unicode karakterleri tespit edilip onarıldı (ğŸı, -> 👍).
+
+- Personel Listesi (/personel) ve Yeniden Değerlendirme (/yeniden-degerlendirme) sayfalarının App.jsx üzerindeki rota koruma kalkanları (Router Security) 'Ayarlar' yetkisi (perms.ayarlar) için özel olarak esnetildi. Butonlar aktif hale getirildi.
+
+- Kimliğine bürünme (Ghost Login) uyarı bandında '(Personel)' bilgisinin sabit olarak (hardcoded) yazdırılması engellendi. Artık o anki kişinin Sistem Yetki Yönetimi'ndeki güncel Sistem Rolü (Örn: Şube Müdürü) ne ise dinamik olarak o rol gösteriliyor ve ona uygun yetkiler veriliyor.
+
+- Aylar öncesinden kalan eski bir tarayıcı hafıza değişkeni olan 'view_as_personel' nedeniyle Ghost Login sisteminin yetkiyi her halükarda '(Personel)' seviyesine düşürme bug'ı tamamen kökünden kazındı. Kırmızı banner içindeki veri artık sahte/eski kurallardan değil, doğrudan {currentUser.role} objesinden okuyacak şekilde düzeltildi.
+
+- Ghost Login kırmızı uyarı bandındaki parantez içi rol ibaresi, eski tarayıcı localStorage kalıntıları ve senkronizasyon problemleri nedeniyle kafa karışıklığı yaratmaması adına tamamen kaldırılarak sadece kişinin adı gösterilecek şekilde sadeleştirildi.
+
+- Ghost Login kırmızı uyarı bandına kullanıcının anlık 'Sistem Rolü/Yetkisi' (Örn: Şube Müdürü) yeniden eklendi. Rol verisinin doğrudan 'assignedRolesData' tablosundan, isim ve sicil kontrolü yapılarak anlık çekilmesi sağlandı; böylece eski statik/yanlış okuma problemleri kalıcı olarak engellendi.
+
+- Kırmızı uyarı bandı için yazılan rol okuma algoritması, Sicil numarasının boş geldiği durumlarda da %100 doğrulukla eşleşecek şekilde try/catch bloguyla sarmalanarak güçlendirildi. En sağdaki rol bilgisi (Şube Müdürü vb.) anlık olarak okunuyor.
+
+- Personel Listesi sayfasındaki 'GÖREVİ' sütunu akıllı hale getirildi: Sadece yönetici kadrosunda olanların (Şube Müdürü, Koordinatör, Sorumlu vb.) görev unvanları ekrana basılırken, diğer herkes için standart 'Personel' yazdırılması sağlandı.
+- Kırmızı uyarı bandındaki sorunlu rol gösterme işlevi tamamen silinerek, sadece kişinin adını gösterecek şekilde sadeleştirildi.
+
+- GhostLoginModal.jsx içindeki, yetkisi olmayan personellerin sahte girişini tamamen engelleyen katı kural ('Bu personelin henüz bir sistem yetkisi... bulunmamaktadır' uyarısı) kaldırılarak, bu kişilere standart 'Personel' yetkisi atanıp sisteme giriş yapabilmeleri sağlandı.
+
+- İsimlendirme hatası (Sol menüde Sistem Yöneticisi yazması) giderildi. GhostLoginModal içerisine ekstra bir fallback eklenerek; localStorage'da yetki bulunmasa bile sabit Excel verisindeki (PERSONELLER) unvan okunarak kişinin sistem rolü %100 doğru bir şekilde eşleştirildi. Kırmızı banta da bu dinamik rol başarıyla geri eklendi.
+
+- Kırmızı uyarı bandına '(Şube Müdürü)' vb. kişinin sistem rolü başarıyla geri eklendi. Rol eşleştirmesi GhostLoginModal üzerinden tamamen dinamik ve Excel verisini de okuyacak kadar garantili hale getirildi.
+
+- Sisteme tamamen interaktif, grafik destekli, animasyonlu 'Kurumsal Brifing' (Briefing.jsx) sayfası eklendi. Sol menüdeki 'Genel' sekmesi altından erişilebilir.
+
+- Kurumsal Brifing sayfası, orijinal PPTX sunumundaki görseller ve metinler çıkarılarak tam ekran slayt gösterisi (slideshow) moduna çevrildi.
+
+- Kurumsal Brifing sayfasının mimarisi tamamen değiştirildi: Slaytlar artık sabit if-else bloklarıyla değil, kodun en üstünde yer alan 'SLIDES' isimli sonsuz genişletilebilir bir dizi (array) üzerinden yönetiliyor. Bu sayede 20-50-100 slayt eklemek çok kolaylaştırıldı.
+
+- Kurumsal Brifing sunumu gerçek içeriklere uygun olarak (tesisler, üretim haritaları, hasat fotoğrafları, desteklemeler) 24 sayfaya genişletildi. Sunum dinamik SLIDES mimarisi üzerinde kusursuz çalışıyor.
+
+- Kurumsal Brifing sunumunun 1. sayfası, kullanıcı tarafından yüklenen özel kapak resmi ile değiştirildi.
+
+- Kurumsal Brifing sunumunun 2. sayfası (Sunum İçeriği), kullanıcı tarafından yüklenen özel görsel ile tam ekran kaplanacak şekilde değiştirildi.
+
+- Kurumsal Brifing sunumu tüm versiyonların (Özel Resimler, 24 Sayfalık Geniş Versiyon, 9 Sayfalık Özet Versiyon) birleşimiyle 35 sayfaya çıkarıldı. Hiçbir slayt silinmedi, sıralama korundu.
+
+- Kurumsal Brifing bölümüne, baştaki grafiksel interaktif 'Dashboard Modu' geri getirildi. Kullanıcılar artık Slayt Modu ve Dashboard Modu arasında seçim yapabiliyor.
+
+- Kurumsal Brifing sunumunun 3. sayfası olarak kullanıcı tarafından yüklenen 'Sinop İl Tanıtımı' görseli eklendi (toplam 36 sayfa).
+- Sunum moduna geçildiğinde F11'e basmaya gerek kalmadan Otomatik Tam Ekran (Fullscreen API) özelliği entegre edildi.
+
+- Kurumsal Brifing sunumuna 3 yeni sayfa eklendi (Kapak Sayfası 1. sıraya, Misyon & Vizyon 5. sıraya, Kurumsal Yapı 6. sıraya). Eski sayfalar silinmeden kaydırıldı. Toplam sayfa sayısı 39 oldu.
+
+
+### Güncelleme: 07.09.2026 - Kurumsal Brifing Sunumu Mimari ve Görsel Revizyonu (SplitSlide, 60/40 Altın Oran, HD Medya ve Akış Optimizasyonu)
+
+1. **SplitSlide Bileşeni ve 60/40 Altın Oran Tasarımı:**
+   - Sunumdaki slaytlar asimetrik, modern bölünmüş ekran yapısına (`SplitSlide`) geçirildi.
+   - Panel oranları metin alanı %40 (buzlu cam panel), görsel alanı %60 olacak şekilde optimize edildi.
+   - `reverse` özelliği ile metin ve görsellerin sağ-sol asimetrisi sağlandı.
+   - Arka planda `sinop_real_bg.jpg` manzara altlığı ve üzerinde `backdropFilter: blur(20px)` buzlu cam panel tasarımı entegre edildi.
+
+2. **Görsel Kalite, Canlılık ve HDR İşleme:**
+   - **Müdürlük Binası (`mudurluk_bina_canli.png`):** Google Street View görseli Python Pillow ile doygunluk (+%60), kontrast (+%15) ve parlaklık artırılarak güneşli yaz günü atmosferine kavuşturuldu.
+   - **Sinop Limanı (`sinop_liman_1080p.jpg`):** Habertürk kaynağından 1920x1080 orijinal Full HD çözünürlükte, Türk bayraklı kristal netlikte çekilerek sisteme entegre edildi.
+   - **Tesis Fotoğrafları (`tesis_gumusdoga_clean.jpg`, `tesis_ugursun_midye_clean.png`, `tesis_ilgaz_clean.jpg`):** Orijinal fotoğrafların sağ alt köşesindeki eski sarı metinler su dokusu klonlama algoritmasıyla temizlendi.
+
+3. **Sayfa ve Bölüm Hiyerarşisi Akışı:**
+   - **Slayt 1:** Yeni Kapak (`kapak_son.jpg`)
+   - **Slayt 2:** Sunum İçeriği (Yarımada manzarası eşliğinde)
+   - **Slayt 3:** Sinop İl Tanıtımı (Google Earth uydu haritası)
+   - **Slayt 4:** Kurumsal Yapı (Canlandırılmış İl Müdürlüğü Binası)
+   - **Slayt 5 & 6:** Denetim Gücü 1 & 2
+   - **Slayt 7:** Misyon ve Vizyon (Balıkçı teknesi görseli ve kurumsal mühür/imza)
+   - **Slayt 8:** Bölgesel Potansiyel ve Mevcut Durum (3 Panelli Kokpit: 1080p Bayraklı Liman + 9 Karaya Çıkış Noktası Uydusu + 4'lü Eşit Punto Yatay İstatistik Kartları)
+   - **Slayt 9:** Deniz Yetiştiriciliği - Mevcut Durum (1. ve 2. Potansiyel Alanlar Tesis Haritası)
+   - **Slayt 10:** Örnek Tesisler (Tam Ekran %50/%50 Bölmeli Gümüşdoğa Ağ Kafes & Uğursun Midye Tesisleri, Yüzen Cam Etiketler)
+   - **Slayt 11:** İç Sular Yetiştiriciliği (Boyabat Baraj Gölü Tesis Haritası)
+   - **Slayt 12:** Örnek İç Su Tesisi (Ilgaz Alabalık - Boyabat Barajı Tam Ekran Sinematik Görünüm)
+   - **Slayt 13:** Karasal Yetiştiricilik (Detaylı işletme sayıları, ön izin ve kuluçkahane kapasite açıklamaları)
+
+4. **Navigasyon ve UI İyileştirmeleri:**
+   - Slayt geçiş butonlarının (ileri/geri okları) bilgi kartlarıyla çakışması önlenerek kart konumları optimize edildi.
+   - Eski gereksiz ara slaytlar temizlenerek sunum ritmi ve anlatım bütünlüğü sağlandı.
+
+
+### Güncelleme: 07.09.2026 - 2026 Yetiştiricilik Sunumu Nihai Akış, 22 Sayfa Standardizasyonu, Tipografi ve Kapanış Revizyonu
+
+1. **22 Sayfalık Kusursuz Sunum Akışı ve Hayalet Slayt Temizliği:**
+   - SLIDES dizisindeki mükerrer virgül ve boş slot (undefined) kalıntıları temizlenerek slayt yapısı tam 22 sayfaya kilitlendi.
+   - Slayt Modunda Başlat butonundaki sayaç dinamik olarak (22 Sayfa) gösterecek şekilde güncellendi.
+   - Sayfa arkaplanlarında meydana gelen mükerrer kapak resmi örtüşmesi kaldırılarak içeriğin temiz ve ferah degrade zemin üzerinde çalışması sağlandı.
+
+2. **Slayt Sıralaması ve İçerik Yenilemeleri:**
+   - **Slayt 15:** Türk Somonu Yetiştiriciliği (Bölgesel kapasiteler ve hasat verileri).
+   - **Slayt 16:** Kara Midyesi Yetiştiriciliği (Açık deniz midye çiftlikleri ve potansiyel).
+   - **Slayt 17:** Üretim İstatistikleri (Yıllara sari üretim trendleri ve hedefler).
+   - **Slayt 18:** Su Ürünleri Desteklemeleri (2025-2027 destekleme kalemleri ve katsayılar).
+   - **Slayt 20 (Eski Eğitim Görselleri):** Kullanıcı talebi doğrultusunda sunumdan tamamen çıkarıldı.
+   - **Slayt 21 (Sorunlar ve Çözüm Önerileri):** Modern, 4 kartlı (Hammadde/Yem, Çevre & Alan, Pazarlama & Lojistik, İklim Değişikliği) stratejik eylem planı layout'u ile yeniden modellendi.
+   - **Slayt 22 (Kapanış & Teşekkür):** Sinop İnceburun gün batımı manzaralı (kapanis_inceburun.jpg) TEŞEKKÜRLER görseli ve kurumsal alt bilgiyle tamamlandı.
+
+3. **Tipografi ve Okunabilirlik Artırımı:**
+   - Tüm slaytlardaki metin bloklarının yazı puntoları (+2px) ve satır yükseklikleri büyütüldü.
+   - SplitSlide panel oranları %45 (metin) / %55 (görsel) olarak revize edilerek sunumun projeksiyon ve ekranlarda çok daha rahat okunması sağlandı.
+
+4. **PWA ve Canlı Derleme Uyumluluğu:**
+   - Geliştirici modunda eski sürümlerin servis çalışanı (Service Worker) tarafından önbelleklenmesini önleyen unregister mekanizması eklendi.
+   - Üretim derlemesi (npm run build) 22 slayt ile sıfır hatayla doğrulandı.

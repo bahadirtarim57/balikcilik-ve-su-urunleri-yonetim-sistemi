@@ -1,4 +1,4 @@
-﻿# Logs
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -27,10 +27,11 @@ dist-ssr
 .vercel
 
 *.zip
+*.pptx
+~$*
 Yedekler/
 Eski_Arsivler/
+Eski_Dosyalar_Arsivi/
 temp_restore/
 dist/
-.env*
-.vercel
 .env*
