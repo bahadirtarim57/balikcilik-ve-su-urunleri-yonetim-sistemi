@@ -829,17 +829,18 @@ export default function Briefing() {
               </div>
               <div>
                 <h2 style={{ margin: 0, fontSize: '20px', fontWeight: 900, color: '#f8fafc', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  Sinop İl Tanıtım Filmi
-                  <span style={{ fontSize: '11px', background: '#0284c7', padding: '2px 8px', borderRadius: '10px', color: '#fff', fontWeight: 700 }}>1080p FULL HD</span>
+                  Sinop Tanıtım Filmi • Mutluluk Sinop'ta
+                  <span style={{ fontSize: '11px', background: '#e11d48', padding: '2px 8px', borderRadius: '10px', color: '#fff', fontWeight: 700 }}>4K ULTRA HD</span>
                 </h2>
-                <p style={{ margin: '2px 0 0 0', fontSize: '13px', color: '#94a3b8' }}>Tarihi Cezaevi • Hamsilos Koyu • İnceburun • Erfelek Şelaleleri • Liman & Su Ürünleri</p>
+                <p style={{ margin: '2px 0 0 0', fontSize: '13px', color: '#94a3b8' }}>Sinop Ticaret ve Sanayi Odası Resmi Tanıtım Prodüksiyonu</p>
               </div>
             </div>
 
             <div style={{ display: 'flex', gap: '10px' }}>
               <a 
-                href="/videos/sinop_tanitim_filmi.mp4" 
-                download="Sinop_Tanitim_Filmi.mp4"
+                href="https://www.youtube.com/watch?v=4UpE03DQctg" 
+                target="_blank"
+                rel="noreferrer"
                 style={{
                   background: 'rgba(255,255,255,0.1)',
                   border: '1px solid rgba(255,255,255,0.2)',
@@ -854,7 +855,7 @@ export default function Briefing() {
                   gap: '6px'
                 }}
               >
-                İndir
+                YouTube'da Aç
               </a>
               <button 
                 onClick={() => setShowSinopVideoModal(false)}
@@ -877,7 +878,7 @@ export default function Briefing() {
             </div>
           </div>
 
-          {/* 16:9 Video Oynatıcı */}
+          {/* 16:9 4K YouTube Video Oynatıcı */}
           <div 
             style={{
               width: '100%',
@@ -891,12 +892,12 @@ export default function Briefing() {
               position: 'relative'
             }}
           >
-            <video 
-              src="/videos/sinop_tanitim_filmi.mp4"
-              controls
-              autoPlay
-              playsInline
-              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+            <iframe 
+              src="https://www.youtube-nocookie.com/embed/4UpE03DQctg?autoplay=1&rel=0&modestbranding=1"
+              title="Sinop Tanıtım Filmi - Mutluluk Sinop'ta"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              style={{ width: '100%', height: '100%', border: 'none' }}
             />
           </div>
 
