@@ -66,13 +66,34 @@ const supportData = [
   { year: '2026', miktar: 7.14, tesis: 20 },
 ];
 
+const PROMO_VIDEOS = {
+  video1: {
+    id: '8NgtbCFcLX8',
+    buttonLabel: 'Tanıtım Filmi 1',
+    title: 'Sinop Tanıtım & Belgeseli • Hiç Böyle Görmediniz',
+    subtitle: 'Sinop Tarihi, Kıyı ve İlçe Doğal Güzellikleri Kapsamlı Belgesel Prodüksiyonu',
+    badge: 'BELGESEL & TANITIM',
+    badgeColor: '#059669',
+    url: 'https://www.youtube.com/watch?v=8NgtbCFcLX8'
+  },
+  video2: {
+    id: '4UpE03DQctg',
+    buttonLabel: 'Tanıtım Filmi 2',
+    title: "Sinop Tanıtım Filmi • Mutluluk Sinop'ta",
+    subtitle: 'Sinop Ticaret ve Sanayi Odası Resmi 4K Tanıtım Prodüksiyonu',
+    badge: '4K ULTRA HD',
+    badgeColor: '#e11d48',
+    url: 'https://www.youtube.com/watch?v=4UpE03DQctg'
+  }
+};
+
 export default function Briefing() {
   const [slideIndex, setSlideIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showControls, setShowControls] = useState(true);
   const [showDashboard, setShowDashboard] = useState(false);
   const [showSlideHUD, setShowSlideHUD] = useState(false);
-  const [showSinopVideoModal, setShowSinopVideoModal] = useState(false);
+  const [activePromoVideo, setActivePromoVideo] = useState(null);
   const controlsTimeoutRef = useRef(null);
   const videoRef = useRef(null);
   const navigate = useNavigate();
@@ -90,8 +111,8 @@ export default function Briefing() {
   // Klavye / Kumanda dinleyicisi
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (showSinopVideoModal) {
-        if (e.key === 'Escape') setShowSinopVideoModal(false);
+      if (activePromoVideo) {
+        if (e.key === 'Escape') setActivePromoVideo(null);
         return;
       }
 
@@ -536,9 +557,34 @@ export default function Briefing() {
           </span>
         </div>
 
-        {/* Sinop Tanıtım Filmi Butonu */}
+        {/* Sinop Tanıtım Filmi 1 Butonu (Yeni Kapsamlı Belgesel) */}
         <button 
-          onClick={(e) => { e.stopPropagation(); setShowSinopVideoModal(true); }}
+          onClick={(e) => { e.stopPropagation(); setActivePromoVideo('video1'); }}
+          style={{
+            background: 'linear-gradient(135deg, #059669 0%, #047857 100%)',
+            border: '1px solid rgba(52, 211, 153, 0.4)',
+            borderRadius: '30px',
+            color: '#ffffff',
+            cursor: 'pointer',
+            padding: '7px 18px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            fontSize: '13px',
+            fontWeight: 800,
+            backdropFilter: 'blur(12px)',
+            boxShadow: '0 8px 25px rgba(5, 150, 105, 0.4)',
+            transition: 'all 0.2s'
+          }}
+          title="Sinop Tanıtım Filmi 1 (Kapsamlı Sinop Tanıtım & Belgeseli)"
+        >
+          <Film size={16} color="#6ee7b7" />
+          <span>Tanıtım Filmi 1</span>
+        </button>
+
+        {/* Sinop Tanıtım Filmi 2 Butonu (4K Tanıtım) */}
+        <button 
+          onClick={(e) => { e.stopPropagation(); setActivePromoVideo('video2'); }}
           style={{
             background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
             border: '1px solid rgba(56, 189, 248, 0.4)',
@@ -555,10 +601,10 @@ export default function Briefing() {
             boxShadow: '0 8px 25px rgba(2, 132, 199, 0.5)',
             transition: 'all 0.2s'
           }}
-          title="Sinop Tanıtım Filmini İzle"
+          title="Sinop Tanıtım Filmi 2 (4K Ultra HD Prodüksiyon)"
         >
           <Film size={16} color="#38bdf8" />
-          <span>Tanıtım Filmi</span>
+          <span>Tanıtım Filmi 2</span>
         </button>
 
         {/* Dashboard Butonu */}
@@ -797,9 +843,9 @@ export default function Briefing() {
       )}
 
       {/* =========================================================================
-         SİNOP İL TANITIM FİLMİ ULTRA HD VİDEO MODALI
+         SİNOP İL TANITIM FİLMLERİ VİDEO MODALI (BELGESEL & 4K PRODÜKSİYON)
          ========================================================================= */}
-      {showSinopVideoModal && (
+      {activePromoVideo && PROMO_VIDEOS[activePromoVideo] && (
         <div 
           onClick={(e) => e.stopPropagation()}
           style={{
@@ -824,21 +870,46 @@ export default function Briefing() {
           {/* Üst Başlık ve Kapat Butonu */}
           <div style={{ width: '100%', maxWidth: '1200px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-              <div style={{ width: '42px', height: '42px', borderRadius: '12px', background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 15px rgba(2,132,199,0.5)' }}>
+              <div style={{ width: '42px', height: '42px', borderRadius: '12px', background: activePromoVideo === 'video1' ? 'linear-gradient(135deg, #059669 0%, #047857 100%)' : 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.5)' }}>
                 <Film size={22} color="#fff" />
               </div>
               <div>
                 <h2 style={{ margin: 0, fontSize: '20px', fontWeight: 900, color: '#f8fafc', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  Sinop Tanıtım Filmi • Mutluluk Sinop'ta
-                  <span style={{ fontSize: '11px', background: '#e11d48', padding: '2px 8px', borderRadius: '10px', color: '#fff', fontWeight: 700 }}>4K ULTRA HD</span>
+                  {PROMO_VIDEOS[activePromoVideo].title}
+                  <span style={{ fontSize: '11px', background: PROMO_VIDEOS[activePromoVideo].badgeColor, padding: '2px 8px', borderRadius: '10px', color: '#fff', fontWeight: 700 }}>
+                    {PROMO_VIDEOS[activePromoVideo].badge}
+                  </span>
                 </h2>
-                <p style={{ margin: '2px 0 0 0', fontSize: '13px', color: '#94a3b8' }}>Sinop Ticaret ve Sanayi Odası Resmi Tanıtım Prodüksiyonu</p>
+                <p style={{ margin: '2px 0 0 0', fontSize: '13px', color: '#94a3b8' }}>
+                  {PROMO_VIDEOS[activePromoVideo].subtitle}
+                </p>
               </div>
             </div>
 
-            <div style={{ display: 'flex', gap: '10px' }}>
+            <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+              {/* Filmler Arası Hızlı Geçiş Butonu */}
+              <button
+                onClick={() => setActivePromoVideo(activePromoVideo === 'video1' ? 'video2' : 'video1')}
+                style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(255,255,255,0.25)',
+                  color: '#38bdf8',
+                  borderRadius: '10px',
+                  padding: '8px 16px',
+                  fontSize: '13px',
+                  fontWeight: 800,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  transition: 'all 0.2s'
+                }}
+              >
+                {activePromoVideo === 'video1' ? "Tanıtım Filmi 2'ye Geç (4K)" : "Tanıtım Filmi 1'e Geç (Belgesel)"}
+              </button>
+
               <a 
-                href="https://www.youtube.com/watch?v=4UpE03DQctg" 
+                href={PROMO_VIDEOS[activePromoVideo].url} 
                 target="_blank"
                 rel="noreferrer"
                 style={{
@@ -858,7 +929,7 @@ export default function Briefing() {
                 YouTube'da Aç
               </a>
               <button 
-                onClick={() => setShowSinopVideoModal(false)}
+                onClick={() => setActivePromoVideo(null)}
                 style={{
                   background: 'rgba(239, 68, 68, 0.2)',
                   border: '1px solid rgba(239, 68, 68, 0.4)',
@@ -878,7 +949,7 @@ export default function Briefing() {
             </div>
           </div>
 
-          {/* 16:9 4K YouTube Video Oynatıcı */}
+          {/* 16:9 YouTube Video Oynatıcı */}
           <div 
             style={{
               width: '100%',
@@ -893,8 +964,9 @@ export default function Briefing() {
             }}
           >
             <iframe 
-              src="https://www.youtube-nocookie.com/embed/4UpE03DQctg?autoplay=1&rel=0&modestbranding=1"
-              title="Sinop Tanıtım Filmi - Mutluluk Sinop'ta"
+              key={PROMO_VIDEOS[activePromoVideo].id}
+              src={`https://www.youtube-nocookie.com/embed/${PROMO_VIDEOS[activePromoVideo].id}?autoplay=1&rel=0&modestbranding=1`}
+              title={PROMO_VIDEOS[activePromoVideo].title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               style={{ width: '100%', height: '100%', border: 'none' }}
